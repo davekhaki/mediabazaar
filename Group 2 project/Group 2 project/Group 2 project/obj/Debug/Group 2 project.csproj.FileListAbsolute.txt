@@ -1,0 +1,27 @@
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.exe.config
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.exe
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.pdb
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csprojAssemblyReference.cache
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form1.resources
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form2.resources
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form3.resources
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form4.resources
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form5.resources
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Properties.Resources.resources
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.GenerateResource.cache
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.exe
+C:\Users\Gebruiker\Documents\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.exe.config
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.exe
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csprojAssemblyReference.cache
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form1.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form2.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form3.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form4.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form5.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Properties.Resources.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.GenerateResource.cache
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.exe
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.pdb

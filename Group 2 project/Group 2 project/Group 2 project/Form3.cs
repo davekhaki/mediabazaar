@@ -53,5 +53,10 @@ namespace Group_2_project
                 LoginSuccessTextBox.Text = $"Error: {0}, {ex.ToString()}";
             }
         }
+
+        private void PasswordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

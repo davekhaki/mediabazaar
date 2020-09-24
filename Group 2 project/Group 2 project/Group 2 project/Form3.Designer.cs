@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlLogIn = new System.Windows.Forms.Panel();
+            this.LoginSuccessTextBox = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.EmailBox = new System.Windows.Forms.TextBox();
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.LoginSuccessTextBox = new System.Windows.Forms.TextBox();
             this.pnlLogIn.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,13 @@
             this.pnlLogIn.Name = "pnlLogIn";
             this.pnlLogIn.Size = new System.Drawing.Size(553, 415);
             this.pnlLogIn.TabIndex = 1;
+            // 
+            // LoginSuccessTextBox
+            // 
+            this.LoginSuccessTextBox.Location = new System.Drawing.Point(199, 246);
+            this.LoginSuccessTextBox.Name = "LoginSuccessTextBox";
+            this.LoginSuccessTextBox.Size = new System.Drawing.Size(185, 22);
+            this.LoginSuccessTextBox.TabIndex = 4;
             // 
             // lblEmail
             // 
@@ -86,7 +93,7 @@
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(185, 22);
             this.PasswordBox.TabIndex = 2;
-            this.PasswordBox.UseSystemPasswordChar = true;
+            this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
             // 
             // btnLogin
             // 
@@ -98,13 +105,6 @@
             this.btnLogin.Text = "Log in";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // LoginSuccessTextBox
-            // 
-            this.LoginSuccessTextBox.Location = new System.Drawing.Point(199, 246);
-            this.LoginSuccessTextBox.Name = "LoginSuccessTextBox";
-            this.LoginSuccessTextBox.Size = new System.Drawing.Size(185, 22);
-            this.LoginSuccessTextBox.TabIndex = 4;
             // 
             // Form3
             // 

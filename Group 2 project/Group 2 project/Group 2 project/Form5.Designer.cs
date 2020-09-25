@@ -34,14 +34,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Homebtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.loadStockBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Addbtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.stockBox = new System.Windows.Forms.ListBox();
-            this.loadStockBtn = new System.Windows.Forms.Button();
+            this.dataGridViewStock = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,16 +101,26 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.dataGridViewStock);
             this.panel4.Controls.Add(this.loadStockBtn);
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.Addbtn);
             this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.stockBox);
             this.panel4.Location = new System.Drawing.Point(298, 28);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(920, 591);
             this.panel4.TabIndex = 8;
+            // 
+            // loadStockBtn
+            // 
+            this.loadStockBtn.Location = new System.Drawing.Point(497, 292);
+            this.loadStockBtn.Name = "loadStockBtn";
+            this.loadStockBtn.Size = new System.Drawing.Size(235, 101);
+            this.loadStockBtn.TabIndex = 8;
+            this.loadStockBtn.Text = "Load Stock";
+            this.loadStockBtn.UseVisualStyleBackColor = true;
+            this.loadStockBtn.Click += new System.EventHandler(this.loadStockBtn_Click);
             // 
             // comboBox1
             // 
@@ -149,24 +160,14 @@
             this.button5.Text = "Request";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // stockBox
+            // dataGridViewStock
             // 
-            this.stockBox.FormattingEnabled = true;
-            this.stockBox.ItemHeight = 16;
-            this.stockBox.Location = new System.Drawing.Point(58, 47);
-            this.stockBox.Name = "stockBox";
-            this.stockBox.Size = new System.Drawing.Size(370, 516);
-            this.stockBox.TabIndex = 2;
-            // 
-            // loadStockBtn
-            // 
-            this.loadStockBtn.Location = new System.Drawing.Point(497, 292);
-            this.loadStockBtn.Name = "loadStockBtn";
-            this.loadStockBtn.Size = new System.Drawing.Size(235, 101);
-            this.loadStockBtn.TabIndex = 8;
-            this.loadStockBtn.Text = "Load Stock";
-            this.loadStockBtn.UseVisualStyleBackColor = true;
-            this.loadStockBtn.Click += new System.EventHandler(this.loadStockBtn_Click);
+            this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStock.Location = new System.Drawing.Point(41, 98);
+            this.dataGridViewStock.Name = "dataGridViewStock";
+            this.dataGridViewStock.RowTemplate.Height = 24;
+            this.dataGridViewStock.Size = new System.Drawing.Size(417, 439);
+            this.dataGridViewStock.TabIndex = 9;
             // 
             // Form5
             // 
@@ -181,6 +182,7 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,7 +199,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListBox stockBox;
         private System.Windows.Forms.Button loadStockBtn;
+        private System.Windows.Forms.DataGridView dataGridViewStock;
     }
 }

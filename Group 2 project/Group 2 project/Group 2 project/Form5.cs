@@ -29,8 +29,27 @@ namespace Group_2_project
 
         }
 
-        private List<TempStock> LoadStock()
+        public void /*private List<TempStock> */ LoadStock()
         {
+            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conDataBase);
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDataBase;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                dataGridViewStock.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            /*
             List<TempStock> stocks = new List<TempStock>();
 
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
@@ -56,6 +75,8 @@ namespace Group_2_project
             conn.Close();
 
             return stocks;
+            */
+
         }
     }
 }

@@ -29,5 +29,17 @@ namespace Group_2_project
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form5 stockForm = new Form5();
+            stockForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 employeeForm = new Form2();
+            employeeForm.Show();
+        }
     }
 }

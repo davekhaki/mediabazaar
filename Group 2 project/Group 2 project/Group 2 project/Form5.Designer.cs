@@ -38,7 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Addbtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.stockBox = new System.Windows.Forms.ListBox();
+            this.loadStockBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -99,11 +100,12 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.loadStockBtn);
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.Addbtn);
             this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.listBox5);
+            this.panel4.Controls.Add(this.stockBox);
             this.panel4.Location = new System.Drawing.Point(298, 28);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(920, 591);
@@ -147,14 +149,24 @@
             this.button5.Text = "Request";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // listBox5
+            // stockBox
             // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(58, 47);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(370, 516);
-            this.listBox5.TabIndex = 2;
+            this.stockBox.FormattingEnabled = true;
+            this.stockBox.ItemHeight = 16;
+            this.stockBox.Location = new System.Drawing.Point(58, 47);
+            this.stockBox.Name = "stockBox";
+            this.stockBox.Size = new System.Drawing.Size(370, 516);
+            this.stockBox.TabIndex = 2;
+            // 
+            // loadStockBtn
+            // 
+            this.loadStockBtn.Location = new System.Drawing.Point(497, 292);
+            this.loadStockBtn.Name = "loadStockBtn";
+            this.loadStockBtn.Size = new System.Drawing.Size(235, 101);
+            this.loadStockBtn.TabIndex = 8;
+            this.loadStockBtn.Text = "Load Stock";
+            this.loadStockBtn.UseVisualStyleBackColor = true;
+            this.loadStockBtn.Click += new System.EventHandler(this.loadStockBtn_Click);
             // 
             // Form5
             // 
@@ -185,6 +197,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ListBox stockBox;
+        private System.Windows.Forms.Button loadStockBtn;
     }
 }

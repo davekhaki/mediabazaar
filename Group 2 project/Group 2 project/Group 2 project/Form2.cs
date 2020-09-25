@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,40 @@ namespace Group_2_project
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeeLoadBtn_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlCommand query = new MySqlCommand($"SELECT * FROM employee", conn);
+
+            conn.Open();
+
+            var reader = query.ExecuteReader();
+            while (reader.Read())
+            {
+                TempEmployee employee = new TempEmployee()
+                {
+                    Id = reader.GetInt32(0),
+                    FirstName = reader.GetString(1),
+                    LastName = reader.GetString(2),
+                    Age = reader.GetInt32(3),
+                    Gender = reader.GetString(4),
+                    DepartmentId = reader.GetInt32(5),
+                    HireDate = reader.GetString(6),
+                    Salary = reader.GetInt32(7),
+                    Adress = reader.GetString(8),
+                    Role = reader.GetString(9)
+                };
+
+                employeeBox.Items.Add(employee);
+            }
+            conn.Close();
+        }
+
+        private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -144,9 +144,9 @@
             // 
             // loadStockBtn
             // 
-            this.loadStockBtn.Location = new System.Drawing.Point(98, 515);
+            this.loadStockBtn.Location = new System.Drawing.Point(41, 509);
             this.loadStockBtn.Name = "loadStockBtn";
-            this.loadStockBtn.Size = new System.Drawing.Size(118, 41);
+            this.loadStockBtn.Size = new System.Drawing.Size(239, 41);
             this.loadStockBtn.TabIndex = 8;
             this.loadStockBtn.Text = "Load Stock";
             this.loadStockBtn.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(216, 10);
+            this.label3.Location = new System.Drawing.Point(206, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 17);
             this.label3.TabIndex = 6;

@@ -50,6 +50,7 @@
             this.tbPprice = new System.Windows.Forms.TextBox();
             this.tbBrand = new System.Windows.Forms.TextBox();
             this.tbQuantity = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
@@ -111,6 +112,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.tbQuantity);
             this.panel4.Controls.Add(this.tbBrand);
             this.panel4.Controls.Add(this.tbPprice);
@@ -172,10 +174,10 @@
             // 
             // Addbtn
             // 
-            this.Addbtn.BackColor = System.Drawing.Color.White;
-            this.Addbtn.Location = new System.Drawing.Point(422, 385);
+            this.Addbtn.BackColor = System.Drawing.Color.Lime;
+            this.Addbtn.Location = new System.Drawing.Point(422, 384);
             this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(235, 38);
+            this.Addbtn.Size = new System.Drawing.Size(235, 54);
             this.Addbtn.TabIndex = 5;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
@@ -183,10 +185,10 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.BackColor = System.Drawing.Color.Red;
             this.button5.Location = new System.Drawing.Point(422, 454);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(235, 38);
+            this.button5.Size = new System.Drawing.Size(235, 49);
             this.button5.TabIndex = 4;
             this.button5.Text = "Request";
             this.button5.UseVisualStyleBackColor = false;
@@ -271,6 +273,16 @@
             this.tbQuantity.Size = new System.Drawing.Size(100, 22);
             this.tbQuantity.TabIndex = 19;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(422, 509);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(246, 54);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Edit Stock Details";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -313,5 +325,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
     }
 }

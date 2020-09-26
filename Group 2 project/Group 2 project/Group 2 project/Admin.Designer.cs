@@ -54,6 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnShow = new System.Windows.Forms.Button();
+            this.btnAddDept = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dShow)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAddDept);
             this.groupBox1.Controls.Add(this.btnShow);
             this.groupBox1.Controls.Add(this.btnDeleteEmp);
             this.groupBox1.Controls.Add(this.btnUpdateEmp);
@@ -106,7 +108,7 @@
             this.btnDeleteEmp.BackColor = System.Drawing.Color.Red;
             this.btnDeleteEmp.Location = new System.Drawing.Point(299, 183);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
-            this.btnDeleteEmp.Size = new System.Drawing.Size(126, 56);
+            this.btnDeleteEmp.Size = new System.Drawing.Size(126, 53);
             this.btnDeleteEmp.TabIndex = 22;
             this.btnDeleteEmp.Text = "Delete Employee";
             this.btnDeleteEmp.UseVisualStyleBackColor = false;
@@ -126,9 +128,9 @@
             // btnAddEmp
             // 
             this.btnAddEmp.BackColor = System.Drawing.Color.White;
-            this.btnAddEmp.Location = new System.Drawing.Point(299, 21);
+            this.btnAddEmp.Location = new System.Drawing.Point(290, 42);
             this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(126, 49);
+            this.btnAddEmp.Size = new System.Drawing.Size(126, 38);
             this.btnAddEmp.TabIndex = 20;
             this.btnAddEmp.Text = "Add Employee";
             this.btnAddEmp.UseVisualStyleBackColor = false;
@@ -307,13 +309,25 @@
             // 
             // btnShow
             // 
-            this.btnShow.Location = new System.Drawing.Point(290, 262);
+            this.btnShow.BackColor = System.Drawing.Color.Yellow;
+            this.btnShow.ForeColor = System.Drawing.Color.Black;
+            this.btnShow.Location = new System.Drawing.Point(299, 262);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(135, 57);
+            this.btnShow.Size = new System.Drawing.Size(126, 46);
             this.btnShow.TabIndex = 23;
             this.btnShow.Text = "Show Employees";
-            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // btnAddDept
+            // 
+            this.btnAddDept.Location = new System.Drawing.Point(299, 368);
+            this.btnAddDept.Name = "btnAddDept";
+            this.btnAddDept.Size = new System.Drawing.Size(75, 23);
+            this.btnAddDept.TabIndex = 24;
+            this.btnAddDept.Text = "button1";
+            this.btnAddDept.UseVisualStyleBackColor = true;
+         
             // 
             // Admin
             // 
@@ -360,5 +374,6 @@
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.TextBox tbRole;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button btnAddDept;
     }
 }

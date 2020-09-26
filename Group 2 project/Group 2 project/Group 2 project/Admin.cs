@@ -26,7 +26,7 @@ namespace Group_2_project
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "insert into dbi434661.employee(ID,Firstname,LastName,Age,Gender,DepartmentID,HireDate,Salary,Adress,Role)values('"+this.tbId.Text+"','"+this.tbFn.Text+"','"+this.tbSn.Text+"','"+this.tbAge.Text+"','"+this.tbGen.Text+"','"+this.tbDid.Text+"','"+this.tbHdate.Text+"','"+this.tbSal.Text+"','"+this.tbAdd.Text+"','"+this.tbRole.Text+"');";
+            string query = "insert into dbi434661.employee(ID,Firstname,LastName,Age,Gender,DepartmentID,HireDate,Salary,Adress,Role)values('" + this.tbId.Text + "','" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.tbGen.Text + "','" + this.tbDid.Text + "','" + this.tbHdate.Text + "','" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.tbRole.Text + "');";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -40,7 +40,7 @@ namespace Group_2_project
                 {
 
                 }
-                
+
 
             }
             catch (Exception ex)
@@ -88,7 +88,7 @@ namespace Group_2_project
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = "delete from dbi434661.employee where ID='" + this.tbId.Text + "';";
-            string query2= "delete from dbi434661.departments where DeptID='" +this.tbDid.Text + "';";
+            string query2 = "delete from dbi434661.departments where DeptID='" + this.tbDid.Text + "';";
             string query3 = "delete from dbi434661.login where eID='" + this.tbDid.Text + "';";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlCommand command2 = new MySqlCommand(query2, conn);
@@ -97,12 +97,12 @@ namespace Group_2_project
 
 
 
-           
+
 
             try
             {
                 conn.Open();
-               
+
 
                 // Object result = command.ExecuteScalar();
                 //Object result2 = command2.ExecuteScalar();
@@ -127,7 +127,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
-            
+
 
 
         }
@@ -148,12 +148,14 @@ namespace Group_2_project
                 BindingSource bSource = new BindingSource();
 
                 bSource.DataSource = dbaTableset;
-                
+
                 dShow.DataSource = bSource;
                 sda.Update(dbaTableset);
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+        
     }
 }

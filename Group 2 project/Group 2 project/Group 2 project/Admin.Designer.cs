@@ -54,6 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dShow)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,12 +66,12 @@
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
             this.dShow.RowTemplate.Height = 24;
-            this.dShow.Size = new System.Drawing.Size(292, 415);
+            this.dShow.Size = new System.Drawing.Size(292, 365);
             this.dShow.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnShow);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnDeleteEmp);
             this.groupBox1.Controls.Add(this.btnUpdateEmp);
             this.groupBox1.Controls.Add(this.btnAddEmp);
@@ -105,9 +106,9 @@
             // 
             this.btnShow.BackColor = System.Drawing.Color.Yellow;
             this.btnShow.ForeColor = System.Drawing.Color.Black;
-            this.btnShow.Location = new System.Drawing.Point(299, 262);
+            this.btnShow.Location = new System.Drawing.Point(496, 392);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(126, 46);
+            this.btnShow.Size = new System.Drawing.Size(292, 46);
             this.btnShow.TabIndex = 23;
             this.btnShow.Text = "Show Employees";
             this.btnShow.UseVisualStyleBackColor = false;
@@ -116,20 +117,20 @@
             // btnDeleteEmp
             // 
             this.btnDeleteEmp.BackColor = System.Drawing.Color.Red;
-            this.btnDeleteEmp.Location = new System.Drawing.Point(299, 183);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(317, 183);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
-            this.btnDeleteEmp.Size = new System.Drawing.Size(126, 53);
+            this.btnDeleteEmp.Size = new System.Drawing.Size(115, 58);
             this.btnDeleteEmp.TabIndex = 22;
-            this.btnDeleteEmp.Text = "Delete Employee";
+            this.btnDeleteEmp.Text = "Remove Employee";
             this.btnDeleteEmp.UseVisualStyleBackColor = false;
             this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
             // btnUpdateEmp
             // 
             this.btnUpdateEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUpdateEmp.Location = new System.Drawing.Point(299, 98);
+            this.btnUpdateEmp.Location = new System.Drawing.Point(317, 110);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
-            this.btnUpdateEmp.Size = new System.Drawing.Size(126, 48);
+            this.btnUpdateEmp.Size = new System.Drawing.Size(115, 66);
             this.btnUpdateEmp.TabIndex = 21;
             this.btnUpdateEmp.Text = "Update Employee Details";
             this.btnUpdateEmp.UseVisualStyleBackColor = false;
@@ -138,7 +139,7 @@
             // btnAddEmp
             // 
             this.btnAddEmp.BackColor = System.Drawing.Color.White;
-            this.btnAddEmp.Location = new System.Drawing.Point(290, 42);
+            this.btnAddEmp.Location = new System.Drawing.Point(317, 54);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(126, 38);
             this.btnAddEmp.TabIndex = 20;
@@ -150,70 +151,70 @@
             // 
             this.tbRole.Location = new System.Drawing.Point(142, 333);
             this.tbRole.Name = "tbRole";
-            this.tbRole.Size = new System.Drawing.Size(100, 22);
+            this.tbRole.Size = new System.Drawing.Size(160, 22);
             this.tbRole.TabIndex = 19;
             // 
             // tbAdd
             // 
             this.tbAdd.Location = new System.Drawing.Point(142, 302);
             this.tbAdd.Name = "tbAdd";
-            this.tbAdd.Size = new System.Drawing.Size(100, 22);
+            this.tbAdd.Size = new System.Drawing.Size(160, 22);
             this.tbAdd.TabIndex = 18;
             // 
             // tbSal
             // 
             this.tbSal.Location = new System.Drawing.Point(142, 262);
             this.tbSal.Name = "tbSal";
-            this.tbSal.Size = new System.Drawing.Size(100, 22);
+            this.tbSal.Size = new System.Drawing.Size(160, 22);
             this.tbSal.TabIndex = 17;
             // 
             // tbHdate
             // 
             this.tbHdate.Location = new System.Drawing.Point(142, 219);
             this.tbHdate.Name = "tbHdate";
-            this.tbHdate.Size = new System.Drawing.Size(100, 22);
+            this.tbHdate.Size = new System.Drawing.Size(160, 22);
             this.tbHdate.TabIndex = 16;
             // 
             // tbDid
             // 
             this.tbDid.Location = new System.Drawing.Point(142, 183);
             this.tbDid.Name = "tbDid";
-            this.tbDid.Size = new System.Drawing.Size(100, 22);
+            this.tbDid.Size = new System.Drawing.Size(160, 22);
             this.tbDid.TabIndex = 15;
             // 
             // tbGen
             // 
             this.tbGen.Location = new System.Drawing.Point(142, 154);
             this.tbGen.Name = "tbGen";
-            this.tbGen.Size = new System.Drawing.Size(100, 22);
+            this.tbGen.Size = new System.Drawing.Size(160, 22);
             this.tbGen.TabIndex = 14;
             // 
             // tbAge
             // 
             this.tbAge.Location = new System.Drawing.Point(142, 126);
             this.tbAge.Name = "tbAge";
-            this.tbAge.Size = new System.Drawing.Size(100, 22);
+            this.tbAge.Size = new System.Drawing.Size(160, 22);
             this.tbAge.TabIndex = 13;
             // 
             // tbSn
             // 
             this.tbSn.Location = new System.Drawing.Point(142, 98);
             this.tbSn.Name = "tbSn";
-            this.tbSn.Size = new System.Drawing.Size(100, 22);
+            this.tbSn.Size = new System.Drawing.Size(160, 22);
             this.tbSn.TabIndex = 12;
             // 
             // tbFn
             // 
             this.tbFn.Location = new System.Drawing.Point(142, 70);
             this.tbFn.Name = "tbFn";
-            this.tbFn.Size = new System.Drawing.Size(100, 22);
+            this.tbFn.Size = new System.Drawing.Size(160, 22);
             this.tbFn.TabIndex = 11;
             // 
             // tbId
             // 
             this.tbId.Location = new System.Drawing.Point(142, 42);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(100, 22);
+            this.tbId.Size = new System.Drawing.Size(160, 22);
             this.tbId.TabIndex = 10;
             // 
             // label10
@@ -317,12 +318,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(317, 260);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 59);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Sign Out";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dShow);
             this.Name = "Admin";
@@ -362,5 +374,6 @@
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.TextBox tbRole;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button button1;
     }
 }

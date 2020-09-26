@@ -156,6 +156,12 @@ namespace Group_2_project
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Hide();
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
     }
 }

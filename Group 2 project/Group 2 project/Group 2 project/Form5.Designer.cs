@@ -52,6 +52,7 @@
             this.tbQuantity = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
@@ -113,6 +114,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.tbQuantity);
@@ -140,18 +142,18 @@
             // dataGridViewStock
             // 
             this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStock.Location = new System.Drawing.Point(41, 98);
+            this.dataGridViewStock.Location = new System.Drawing.Point(359, 39);
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
             this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(239, 394);
+            this.dataGridViewStock.Size = new System.Drawing.Size(410, 478);
             this.dataGridViewStock.TabIndex = 9;
             // 
             // loadStockBtn
             // 
-            this.loadStockBtn.Location = new System.Drawing.Point(41, 509);
+            this.loadStockBtn.Location = new System.Drawing.Point(359, 523);
             this.loadStockBtn.Name = "loadStockBtn";
-            this.loadStockBtn.Size = new System.Drawing.Size(239, 41);
+            this.loadStockBtn.Size = new System.Drawing.Size(410, 41);
             this.loadStockBtn.TabIndex = 8;
             this.loadStockBtn.Text = "Load Stock";
             this.loadStockBtn.UseVisualStyleBackColor = true;
@@ -160,16 +162,16 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(384, 44);
+            this.comboBox1.Location = new System.Drawing.Point(142, 70);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 24);
+            this.comboBox1.Size = new System.Drawing.Size(156, 24);
             this.comboBox1.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(206, 20);
+            this.label3.Location = new System.Drawing.Point(310, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 17);
             this.label3.TabIndex = 6;
@@ -178,7 +180,7 @@
             // Addbtn
             // 
             this.Addbtn.BackColor = System.Drawing.Color.Lime;
-            this.Addbtn.Location = new System.Drawing.Point(413, 316);
+            this.Addbtn.Location = new System.Drawing.Point(63, 349);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(235, 43);
             this.Addbtn.TabIndex = 5;
@@ -189,7 +191,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(413, 380);
+            this.button5.Location = new System.Drawing.Point(63, 398);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(235, 49);
             this.button5.TabIndex = 4;
@@ -199,7 +201,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(381, 103);
+            this.label1.Location = new System.Drawing.Point(38, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 10;
@@ -208,7 +210,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(381, 159);
+            this.label2.Location = new System.Drawing.Point(33, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 17);
             this.label2.TabIndex = 11;
@@ -217,7 +219,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(381, 213);
+            this.label4.Location = new System.Drawing.Point(33, 225);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 17);
             this.label4.TabIndex = 12;
@@ -226,7 +228,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(622, 156);
+            this.label5.Location = new System.Drawing.Point(60, 316);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 13;
@@ -235,7 +237,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(618, 98);
+            this.label6.Location = new System.Drawing.Point(45, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 17);
             this.label6.TabIndex = 14;
@@ -243,43 +245,44 @@
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(470, 98);
+            this.tbId.Location = new System.Drawing.Point(142, 134);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(100, 22);
+            this.tbId.Size = new System.Drawing.Size(156, 22);
             this.tbId.TabIndex = 15;
             // 
             // tbPname
             // 
-            this.tbPname.Location = new System.Drawing.Point(479, 159);
+            this.tbPname.Location = new System.Drawing.Point(142, 170);
             this.tbPname.Name = "tbPname";
-            this.tbPname.Size = new System.Drawing.Size(100, 22);
+            this.tbPname.Size = new System.Drawing.Size(156, 22);
             this.tbPname.TabIndex = 16;
             // 
             // tbPprice
             // 
-            this.tbPprice.Location = new System.Drawing.Point(479, 208);
+            this.tbPprice.Location = new System.Drawing.Point(142, 222);
             this.tbPprice.Name = "tbPprice";
-            this.tbPprice.Size = new System.Drawing.Size(100, 22);
+            this.tbPprice.Size = new System.Drawing.Size(156, 22);
             this.tbPprice.TabIndex = 17;
             // 
             // tbBrand
             // 
-            this.tbBrand.Location = new System.Drawing.Point(712, 156);
+            this.tbBrand.Location = new System.Drawing.Point(142, 311);
+            this.tbBrand.Multiline = true;
             this.tbBrand.Name = "tbBrand";
-            this.tbBrand.Size = new System.Drawing.Size(100, 22);
+            this.tbBrand.Size = new System.Drawing.Size(156, 22);
             this.tbBrand.TabIndex = 18;
             // 
             // tbQuantity
             // 
-            this.tbQuantity.Location = new System.Drawing.Point(712, 103);
+            this.tbQuantity.Location = new System.Drawing.Point(142, 270);
             this.tbQuantity.Name = "tbQuantity";
-            this.tbQuantity.Size = new System.Drawing.Size(100, 22);
+            this.tbQuantity.Size = new System.Drawing.Size(156, 22);
             this.tbQuantity.TabIndex = 19;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(413, 438);
+            this.button4.BackColor = System.Drawing.Color.Yellow;
+            this.button4.Location = new System.Drawing.Point(63, 453);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(235, 43);
             this.button4.TabIndex = 20;
@@ -289,13 +292,22 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(413, 487);
+            this.btnDelete.Location = new System.Drawing.Point(63, 513);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(235, 42);
             this.btnDelete.TabIndex = 21;
             this.btnDelete.Text = "Delete Product";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 17);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Product IDS";
             // 
             // Form5
             // 
@@ -341,5 +353,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label7;
     }
 }

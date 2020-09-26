@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dShow = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
@@ -53,22 +53,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnShow = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dShow)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dShow
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(559, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(229, 415);
-            this.dataGridView1.TabIndex = 0;
+            this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dShow.Location = new System.Drawing.Point(496, 12);
+            this.dShow.Name = "dShow";
+            this.dShow.RowHeadersWidth = 51;
+            this.dShow.RowTemplate.Height = 24;
+            this.dShow.Size = new System.Drawing.Size(292, 415);
+            this.dShow.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnShow);
             this.groupBox1.Controls.Add(this.btnDeleteEmp);
             this.groupBox1.Controls.Add(this.btnUpdateEmp);
             this.groupBox1.Controls.Add(this.btnAddEmp);
@@ -108,6 +110,7 @@
             this.btnDeleteEmp.TabIndex = 22;
             this.btnDeleteEmp.Text = "Delete Employee";
             this.btnDeleteEmp.UseVisualStyleBackColor = false;
+            this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
             // btnUpdateEmp
             // 
@@ -118,6 +121,7 @@
             this.btnUpdateEmp.TabIndex = 21;
             this.btnUpdateEmp.Text = "Update Employee Details";
             this.btnUpdateEmp.UseVisualStyleBackColor = false;
+            this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
             // btnAddEmp
             // 
@@ -301,6 +305,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
+            // btnShow
+            // 
+            this.btnShow.Location = new System.Drawing.Point(290, 262);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(135, 57);
+            this.btnShow.TabIndex = 23;
+            this.btnShow.Text = "Show Employees";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -308,10 +322,10 @@
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dShow);
             this.Name = "Admin";
             this.Text = "Admin";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dShow)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -320,7 +334,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dShow;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbAdd;
         private System.Windows.Forms.TextBox tbSal;
@@ -345,5 +359,6 @@
         private System.Windows.Forms.Button btnUpdateEmp;
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.TextBox tbRole;
+        private System.Windows.Forms.Button btnShow;
     }
 }

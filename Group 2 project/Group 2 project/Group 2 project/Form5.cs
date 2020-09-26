@@ -78,5 +78,41 @@ namespace Group_2_project
             */
 
         }
+
+        private void Addbtn_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "insert into dbi434661.stock(ProductID,ProductName,ProductPrice,Brand,Quantity)values('" + this.tbId + "','" + this.tbPname.Text + "','" + this.tbPprice.Text + "','" + this.tbBrand.Text + "','" + this.tbQuantity.Text+ "');";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+                MessageBox.Show("New Product added");
+
+                while (reader.Read())
+                {
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+
+
+
+
+        }
     }
 }

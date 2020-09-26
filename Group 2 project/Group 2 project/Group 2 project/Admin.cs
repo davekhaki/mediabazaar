@@ -88,58 +88,46 @@ namespace Group_2_project
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = "delete from dbi434661.employee where ID='" + this.tbId.Text + "';";
-            string query2= "delete from dbi434661.employee where DepartmentID='" +this.tbDid.Text + "';";
-
-            conn.Open();
-            //MySqlCommand cm= new MySqlCommand(query, conn);
-            ////MySqlCommand cm = new MySqlCommand(query2, conn);
-            //cm.CommandType = CommandType.Text;
-            //obj=cm.ExecuteScalar();
-            
-            
+            string query2= "delete from dbi434661.departments where DeptID='" +this.tbDid.Text + "';";
+            string query3 = "delete from dbi434661.login where eID='" + this.tbDid.Text + "';";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlCommand command2 = new MySqlCommand(query2, conn);
-            
+            MySqlCommand command3 = new MySqlCommand(query3, conn);
 
-          // Object result = command.ExecuteScalar();
-            //Object result2 = command2.ExecuteScalar();
 
-            command.CommandType = CommandType.Text;
-            command.ExecuteScalar();
-            
+
+
            
 
-            command2.CommandType = CommandType.Text;
-            command2.ExecuteScalar();
+            try
+            {
+                conn.Open();
+               
 
-            MessageBox.Show("Deleted");
+                // Object result = command.ExecuteScalar();
+                //Object result2 = command2.ExecuteScalar();
 
-            //MySqlDataReader reader;
-
-            //try
-            //{
-            //    conn.Open();
-            //    reader = command.ExecuteReader();
-            //    MessageBox.Show("Employee data deleted");
-
-            //    while (reader.Read())
-            //    {
-
-            //    }
-
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show(ex.Message);
-            //}
+                command.CommandType = CommandType.Text;
+                command.ExecuteScalar();
 
 
 
+                command2.CommandType = CommandType.Text;
+                command2.ExecuteScalar();
+
+                command3.CommandType = CommandType.Text;
+                command3.ExecuteScalar();
+
+                MessageBox.Show("Deleted");
 
 
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message);
+            }
+            
 
 
         }

@@ -82,6 +82,96 @@ namespace Group_2_project
 
         private void Addbtn_Click(object sender, EventArgs e)
         {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "insert into dbi434661.stock(ProductID,ProductName,ProductPrice,Brand,Quantity)values('" + this.tbId.Text + "','" + this.tbPname.Text + "','" + this.tbPprice.Text+ "','" + this.tbBrand.Text + "','" + this.tbQuantity.Text + "');";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+                MessageBox.Show("New Product added");
+
+                while (reader.Read())
+                {
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "update dbi434661.stock set ProductID='" + this.tbId.Text + "',ProductName='" + this.tbPname.Text + "',ProductPrice='" + this.tbPprice.Text + "',Brand='" + this.tbBrand + "',Quantity='" + this.tbQuantity.Text + "' ;";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+                MessageBox.Show("Product Details Updated successfully!");
+
+                while (reader.Read())
+                {
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "delete from dbi434661.stock where ProductID='" + this.tbId + "';";
+            
+            MySqlCommand command = new MySqlCommand(query, conn);
+
+            try
+            {
+                conn.Open();
+
+
+                // Object result = command.ExecuteScalar();
+                //Object result2 = command2.ExecuteScalar();
+
+                command.CommandType = CommandType.Text;
+                command.ExecuteScalar();
+
+
+
+                
+
+                MessageBox.Show("Product Deleted");
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
 
         }

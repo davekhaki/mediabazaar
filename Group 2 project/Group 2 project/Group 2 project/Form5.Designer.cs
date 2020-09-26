@@ -51,6 +51,7 @@
             this.tbBrand = new System.Windows.Forms.TextBox();
             this.tbQuantity = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
@@ -112,6 +113,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.tbQuantity);
             this.panel4.Controls.Add(this.tbBrand);
@@ -133,6 +135,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(920, 591);
             this.panel4.TabIndex = 8;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // dataGridViewStock
             // 
@@ -175,9 +178,9 @@
             // Addbtn
             // 
             this.Addbtn.BackColor = System.Drawing.Color.Lime;
-            this.Addbtn.Location = new System.Drawing.Point(422, 384);
+            this.Addbtn.Location = new System.Drawing.Point(413, 316);
             this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(235, 54);
+            this.Addbtn.Size = new System.Drawing.Size(235, 43);
             this.Addbtn.TabIndex = 5;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
@@ -186,7 +189,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(422, 454);
+            this.button5.Location = new System.Drawing.Point(413, 380);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(235, 49);
             this.button5.TabIndex = 4;
@@ -223,7 +226,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(381, 265);
+            this.label5.Location = new System.Drawing.Point(622, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 13;
@@ -232,7 +235,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(381, 318);
+            this.label6.Location = new System.Drawing.Point(618, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 17);
             this.label6.TabIndex = 14;
@@ -261,14 +264,14 @@
             // 
             // tbBrand
             // 
-            this.tbBrand.Location = new System.Drawing.Point(479, 265);
+            this.tbBrand.Location = new System.Drawing.Point(712, 156);
             this.tbBrand.Name = "tbBrand";
             this.tbBrand.Size = new System.Drawing.Size(100, 22);
             this.tbBrand.TabIndex = 18;
             // 
             // tbQuantity
             // 
-            this.tbQuantity.Location = new System.Drawing.Point(479, 318);
+            this.tbQuantity.Location = new System.Drawing.Point(712, 103);
             this.tbQuantity.Name = "tbQuantity";
             this.tbQuantity.Size = new System.Drawing.Size(100, 22);
             this.tbQuantity.TabIndex = 19;
@@ -276,12 +279,23 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(422, 509);
+            this.button4.Location = new System.Drawing.Point(413, 438);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(246, 54);
+            this.button4.Size = new System.Drawing.Size(235, 43);
             this.button4.TabIndex = 20;
             this.button4.Text = "Edit Stock Details";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(413, 487);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(235, 42);
+            this.btnDelete.TabIndex = 21;
+            this.btnDelete.Text = "Delete Product";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form5
             // 
@@ -326,5 +340,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

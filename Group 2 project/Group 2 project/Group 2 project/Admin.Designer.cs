@@ -30,6 +30,7 @@
         {
             this.dShow = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnShow = new System.Windows.Forms.Button();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
@@ -53,8 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.btnAddDept = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dShow)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +70,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnAddDept);
             this.groupBox1.Controls.Add(this.btnShow);
             this.groupBox1.Controls.Add(this.btnDeleteEmp);
             this.groupBox1.Controls.Add(this.btnUpdateEmp);
@@ -102,6 +100,18 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Admin Page";
+            // 
+            // btnShow
+            // 
+            this.btnShow.BackColor = System.Drawing.Color.Yellow;
+            this.btnShow.ForeColor = System.Drawing.Color.Black;
+            this.btnShow.Location = new System.Drawing.Point(299, 262);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(126, 46);
+            this.btnShow.TabIndex = 23;
+            this.btnShow.Text = "Show Employees";
+            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnDeleteEmp
             // 
@@ -307,28 +317,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
-            // btnShow
-            // 
-            this.btnShow.BackColor = System.Drawing.Color.Yellow;
-            this.btnShow.ForeColor = System.Drawing.Color.Black;
-            this.btnShow.Location = new System.Drawing.Point(299, 262);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(126, 46);
-            this.btnShow.TabIndex = 23;
-            this.btnShow.Text = "Show Employees";
-            this.btnShow.UseVisualStyleBackColor = false;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
-            // 
-            // btnAddDept
-            // 
-            this.btnAddDept.Location = new System.Drawing.Point(299, 368);
-            this.btnAddDept.Name = "btnAddDept";
-            this.btnAddDept.Size = new System.Drawing.Size(75, 23);
-            this.btnAddDept.TabIndex = 24;
-            this.btnAddDept.Text = "button1";
-            this.btnAddDept.UseVisualStyleBackColor = true;
-         
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,6 +362,5 @@
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.TextBox tbRole;
         private System.Windows.Forms.Button btnShow;
-        private System.Windows.Forms.Button btnAddDept;
     }
 }

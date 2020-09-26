@@ -30,29 +30,29 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.btnAddEmp = new System.Windows.Forms.Button();
-            this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
+            this.btnUpdateEmp = new System.Windows.Forms.Button();
+            this.btnAddEmp = new System.Windows.Forms.Button();
+            this.tbRole = new System.Windows.Forms.TextBox();
+            this.tbAdd = new System.Windows.Forms.TextBox();
+            this.tbSal = new System.Windows.Forms.TextBox();
+            this.tbHdate = new System.Windows.Forms.TextBox();
+            this.tbDid = new System.Windows.Forms.TextBox();
+            this.tbGen = new System.Windows.Forms.TextBox();
+            this.tbAge = new System.Windows.Forms.TextBox();
+            this.tbSn = new System.Windows.Forms.TextBox();
+            this.tbFn = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,16 +72,16 @@
             this.groupBox1.Controls.Add(this.btnDeleteEmp);
             this.groupBox1.Controls.Add(this.btnUpdateEmp);
             this.groupBox1.Controls.Add(this.btnAddEmp);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbRole);
+            this.groupBox1.Controls.Add(this.tbAdd);
+            this.groupBox1.Controls.Add(this.tbSal);
+            this.groupBox1.Controls.Add(this.tbHdate);
+            this.groupBox1.Controls.Add(this.tbDid);
+            this.groupBox1.Controls.Add(this.tbGen);
+            this.groupBox1.Controls.Add(this.tbAge);
+            this.groupBox1.Controls.Add(this.tbSn);
+            this.groupBox1.Controls.Add(this.tbFn);
+            this.groupBox1.Controls.Add(this.tbId);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -99,25 +99,176 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Admin Page";
             // 
-            // label1
+            // btnDeleteEmp
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(30, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id";
+            this.btnDeleteEmp.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteEmp.Location = new System.Drawing.Point(299, 183);
+            this.btnDeleteEmp.Name = "btnDeleteEmp";
+            this.btnDeleteEmp.Size = new System.Drawing.Size(126, 56);
+            this.btnDeleteEmp.TabIndex = 22;
+            this.btnDeleteEmp.Text = "Delete Employee";
+            this.btnDeleteEmp.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // btnUpdateEmp
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(30, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "FirstName";
+            this.btnUpdateEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnUpdateEmp.Location = new System.Drawing.Point(299, 98);
+            this.btnUpdateEmp.Name = "btnUpdateEmp";
+            this.btnUpdateEmp.Size = new System.Drawing.Size(126, 48);
+            this.btnUpdateEmp.TabIndex = 21;
+            this.btnUpdateEmp.Text = "Update Employee Details";
+            this.btnUpdateEmp.UseVisualStyleBackColor = false;
+            // 
+            // btnAddEmp
+            // 
+            this.btnAddEmp.BackColor = System.Drawing.Color.White;
+            this.btnAddEmp.Location = new System.Drawing.Point(299, 21);
+            this.btnAddEmp.Name = "btnAddEmp";
+            this.btnAddEmp.Size = new System.Drawing.Size(126, 49);
+            this.btnAddEmp.TabIndex = 20;
+            this.btnAddEmp.Text = "Add Employee";
+            this.btnAddEmp.UseVisualStyleBackColor = false;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
+            // 
+            // tbRole
+            // 
+            this.tbRole.Location = new System.Drawing.Point(142, 333);
+            this.tbRole.Name = "tbRole";
+            this.tbRole.Size = new System.Drawing.Size(100, 22);
+            this.tbRole.TabIndex = 19;
+            // 
+            // tbAdd
+            // 
+            this.tbAdd.Location = new System.Drawing.Point(142, 302);
+            this.tbAdd.Name = "tbAdd";
+            this.tbAdd.Size = new System.Drawing.Size(100, 22);
+            this.tbAdd.TabIndex = 18;
+            // 
+            // tbSal
+            // 
+            this.tbSal.Location = new System.Drawing.Point(142, 262);
+            this.tbSal.Name = "tbSal";
+            this.tbSal.Size = new System.Drawing.Size(100, 22);
+            this.tbSal.TabIndex = 17;
+            // 
+            // tbHdate
+            // 
+            this.tbHdate.Location = new System.Drawing.Point(142, 219);
+            this.tbHdate.Name = "tbHdate";
+            this.tbHdate.Size = new System.Drawing.Size(100, 22);
+            this.tbHdate.TabIndex = 16;
+            // 
+            // tbDid
+            // 
+            this.tbDid.Location = new System.Drawing.Point(142, 183);
+            this.tbDid.Name = "tbDid";
+            this.tbDid.Size = new System.Drawing.Size(100, 22);
+            this.tbDid.TabIndex = 15;
+            // 
+            // tbGen
+            // 
+            this.tbGen.Location = new System.Drawing.Point(142, 154);
+            this.tbGen.Name = "tbGen";
+            this.tbGen.Size = new System.Drawing.Size(100, 22);
+            this.tbGen.TabIndex = 14;
+            // 
+            // tbAge
+            // 
+            this.tbAge.Location = new System.Drawing.Point(142, 126);
+            this.tbAge.Name = "tbAge";
+            this.tbAge.Size = new System.Drawing.Size(100, 22);
+            this.tbAge.TabIndex = 13;
+            // 
+            // tbSn
+            // 
+            this.tbSn.Location = new System.Drawing.Point(142, 98);
+            this.tbSn.Name = "tbSn";
+            this.tbSn.Size = new System.Drawing.Size(100, 22);
+            this.tbSn.TabIndex = 12;
+            // 
+            // tbFn
+            // 
+            this.tbFn.Location = new System.Drawing.Point(142, 70);
+            this.tbFn.Name = "tbFn";
+            this.tbFn.Size = new System.Drawing.Size(100, 22);
+            this.tbFn.TabIndex = 11;
+            // 
+            // tbId
+            // 
+            this.tbId.Location = new System.Drawing.Point(142, 42);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(100, 22);
+            this.tbId.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(28, 339);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 17);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Role";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(30, 302);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 17);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Address";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(30, 262);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 17);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Salary";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(30, 219);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Hire Date";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(33, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "DepartId";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(36, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Gender";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(33, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Age";
             // 
             // label3
             // 
@@ -130,175 +281,25 @@
             this.label3.Text = "SecondName";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(33, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Age";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(30, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "FirstName";
             // 
-            // label5
+            // label1
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(36, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Gender";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(33, 183);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "DepartId";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(30, 219);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Hire Date";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(30, 262);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Salary";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(30, 302);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Address";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(28, 339);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Role";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(142, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(142, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(142, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(142, 126);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 13;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(142, 154);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 14;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(142, 183);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(142, 219);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 16;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(142, 262);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 17;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(142, 302);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 18;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(142, 333);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 19;
-            // 
-            // btnAddEmp
-            // 
-            this.btnAddEmp.BackColor = System.Drawing.Color.White;
-            this.btnAddEmp.Location = new System.Drawing.Point(299, 21);
-            this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(126, 49);
-            this.btnAddEmp.TabIndex = 20;
-            this.btnAddEmp.Text = "Add Employee";
-            this.btnAddEmp.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdateEmp
-            // 
-            this.btnUpdateEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUpdateEmp.Location = new System.Drawing.Point(299, 98);
-            this.btnUpdateEmp.Name = "btnUpdateEmp";
-            this.btnUpdateEmp.Size = new System.Drawing.Size(126, 48);
-            this.btnUpdateEmp.TabIndex = 21;
-            this.btnUpdateEmp.Text = "Update Employee Details";
-            this.btnUpdateEmp.UseVisualStyleBackColor = false;
-            // 
-            // btnDeleteEmp
-            // 
-            this.btnDeleteEmp.BackColor = System.Drawing.Color.Red;
-            this.btnDeleteEmp.Location = new System.Drawing.Point(299, 183);
-            this.btnDeleteEmp.Name = "btnDeleteEmp";
-            this.btnDeleteEmp.Size = new System.Drawing.Size(126, 56);
-            this.btnDeleteEmp.TabIndex = 22;
-            this.btnDeleteEmp.Text = "Delete Employee";
-            this.btnDeleteEmp.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(30, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Id";
             // 
             // Admin
             // 
@@ -321,15 +322,15 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbAdd;
+        private System.Windows.Forms.TextBox tbSal;
+        private System.Windows.Forms.TextBox tbHdate;
+        private System.Windows.Forms.TextBox tbDid;
+        private System.Windows.Forms.TextBox tbGen;
+        private System.Windows.Forms.TextBox tbAge;
+        private System.Windows.Forms.TextBox tbSn;
+        private System.Windows.Forms.TextBox tbFn;
+        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -343,6 +344,6 @@
         private System.Windows.Forms.Button btnDeleteEmp;
         private System.Windows.Forms.Button btnUpdateEmp;
         private System.Windows.Forms.Button btnAddEmp;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tbRole;
     }
 }

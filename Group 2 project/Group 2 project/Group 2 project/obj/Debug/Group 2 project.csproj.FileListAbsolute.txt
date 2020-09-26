@@ -415,3 +415,4 @@ C:\Users\Gebruiker\artichoke\Group 2 project\Group 2 project\Group 2 project\obj
 C:\Users\Gebruiker\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.CopyComplete
 C:\Users\Gebruiker\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.exe
 C:\Users\Gebruiker\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.pdb
+C:\Users\Gebruiker\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Admin.resources

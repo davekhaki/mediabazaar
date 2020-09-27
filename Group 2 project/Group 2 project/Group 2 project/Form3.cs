@@ -60,5 +60,10 @@ namespace Group_2_project
         {
 
         }
+
+        private void pnlLogIn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

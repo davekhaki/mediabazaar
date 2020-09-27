@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Group_2_project
 {
-    public partial class Form4 : Form
+    public partial class Employeeselfservice : Form
     {
-        public Form4()
+        public Employeeselfservice()
         {
             InitializeComponent();
-        }
-
-        private void Addbtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

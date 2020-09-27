@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Group_2_project
 {
@@ -17,19 +16,5 @@ namespace Group_2_project
         {
             InitializeComponent();
         }
-
-             
-
-        
-
-
     }
-
-
-   }
-
-       
-        
-
-            
-        
+}

@@ -1,6 +1,6 @@
 ﻿namespace Group_2_project
 {
-    partial class Form4
+    partial class ManageEmployees
     {
         /// <summary>
         /// Required designer variable.

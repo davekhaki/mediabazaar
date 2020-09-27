@@ -30,55 +30,75 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSignoutAdmin = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.tbRole = new System.Windows.Forms.TextBox();
+            this.tbAdd = new System.Windows.Forms.TextBox();
+            this.tbSal = new System.Windows.Forms.TextBox();
+            this.tbDid = new System.Windows.Forms.TextBox();
+            this.tbGen = new System.Windows.Forms.TextBox();
+            this.tbAge = new System.Windows.Forms.TextBox();
+            this.tbSn = new System.Windows.Forms.TextBox();
+            this.tbFn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tbFn = new System.Windows.Forms.TextBox();
-            this.tbSn = new System.Windows.Forms.TextBox();
-            this.tbAge = new System.Windows.Forms.TextBox();
-            this.tbGen = new System.Windows.Forms.TextBox();
-            this.tbDid = new System.Windows.Forms.TextBox();
-            this.tbSal = new System.Windows.Forms.TextBox();
-            this.tbAdd = new System.Windows.Forms.TextBox();
-            this.tbRole = new System.Windows.Forms.TextBox();
-            this.tbId = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnSignoutAdmin = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.dShow = new System.Windows.Forms.DataGridView();
-            this.btnSignoUT = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnGetEmployee = new System.Windows.Forms.Button();
+            this.btnSignoUT = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dShow = new System.Windows.Forms.DataGridView();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnAddDept = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dShow)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dShow)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(35, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -98,107 +118,64 @@
             this.tabPage1.Text = "Welcome to your Employee Admin Page";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // groupBox2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Lavender;
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(844, 537);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Welcome to your Employee Admin Page";
+            this.groupBox2.BackColor = System.Drawing.Color.Teal;
+            this.groupBox2.Controls.Add(this.btnSignoutAdmin);
+            this.groupBox2.Controls.Add(this.btnRemove);
+            this.groupBox2.Controls.Add(this.btnEdit);
+            this.groupBox2.Controls.Add(this.btnAdd);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(512, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(269, 493);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "All at your reach!";
             // 
-            // label1
+            // btnSignoutAdmin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "EmployeeId";
+            this.btnSignoutAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSignoutAdmin.Location = new System.Drawing.Point(39, 288);
+            this.btnSignoutAdmin.Name = "btnSignoutAdmin";
+            this.btnSignoutAdmin.Size = new System.Drawing.Size(205, 50);
+            this.btnSignoutAdmin.TabIndex = 3;
+            this.btnSignoutAdmin.Text = "Sign Out";
+            this.btnSignoutAdmin.UseVisualStyleBackColor = false;
+            this.btnSignoutAdmin.Click += new System.EventHandler(this.btnSignoutAdmin_Click);
             // 
-            // label2
+            // btnRemove
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "FirstName";
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.Location = new System.Drawing.Point(39, 215);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(205, 54);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "Remove Employee";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // label3
+            // btnEdit
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "SecondName";
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnEdit.Location = new System.Drawing.Point(28, 144);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(209, 47);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Edit Employee Details";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // label4
+            // btnAdd
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 218);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Gender";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Age";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 272);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Department Id";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 319);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "HireDate";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 367);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Salary";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 416);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Address";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 458);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Role";
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAdd.Location = new System.Drawing.Point(28, 55);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(209, 58);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add Employee";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // groupBox1
             // 
@@ -231,128 +208,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Details";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Teal;
-            this.groupBox2.Controls.Add(this.btnSignoutAdmin);
-            this.groupBox2.Controls.Add(this.btnRemove);
-            this.groupBox2.Controls.Add(this.btnEdit);
-            this.groupBox2.Controls.Add(this.btnAdd);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(512, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 493);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "All at your reach!";
-            // 
-            // tbFn
-            // 
-            this.tbFn.Location = new System.Drawing.Point(113, 64);
-            this.tbFn.Name = "tbFn";
-            this.tbFn.Size = new System.Drawing.Size(116, 22);
-            this.tbFn.TabIndex = 10;
-            // 
-            // tbSn
-            // 
-            this.tbSn.Location = new System.Drawing.Point(113, 110);
-            this.tbSn.Name = "tbSn";
-            this.tbSn.Size = new System.Drawing.Size(116, 22);
-            this.tbSn.TabIndex = 11;
-            // 
-            // tbAge
-            // 
-            this.tbAge.Location = new System.Drawing.Point(113, 156);
-            this.tbAge.Name = "tbAge";
-            this.tbAge.Size = new System.Drawing.Size(116, 22);
-            this.tbAge.TabIndex = 12;
-            // 
-            // tbGen
-            // 
-            this.tbGen.Location = new System.Drawing.Point(113, 215);
-            this.tbGen.Name = "tbGen";
-            this.tbGen.Size = new System.Drawing.Size(116, 22);
-            this.tbGen.TabIndex = 13;
-            // 
-            // tbDid
-            // 
-            this.tbDid.Location = new System.Drawing.Point(113, 272);
-            this.tbDid.Name = "tbDid";
-            this.tbDid.Size = new System.Drawing.Size(116, 22);
-            this.tbDid.TabIndex = 14;
-            // 
-            // tbSal
-            // 
-            this.tbSal.Location = new System.Drawing.Point(113, 364);
-            this.tbSal.Name = "tbSal";
-            this.tbSal.Size = new System.Drawing.Size(116, 22);
-            this.tbSal.TabIndex = 16;
-            // 
-            // tbAdd
-            // 
-            this.tbAdd.Location = new System.Drawing.Point(113, 413);
-            this.tbAdd.Name = "tbAdd";
-            this.tbAdd.Size = new System.Drawing.Size(116, 22);
-            this.tbAdd.TabIndex = 17;
-            // 
-            // tbRole
-            // 
-            this.tbRole.Location = new System.Drawing.Point(113, 458);
-            this.tbRole.Name = "tbRole";
-            this.tbRole.Size = new System.Drawing.Size(116, 22);
-            this.tbRole.TabIndex = 18;
-            // 
-            // tbId
-            // 
-            this.tbId.Location = new System.Drawing.Point(113, 36);
-            this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(116, 22);
-            this.tbId.TabIndex = 19;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAdd.Location = new System.Drawing.Point(28, 55);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(209, 58);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add Employee";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnEdit.Location = new System.Drawing.Point(28, 144);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(209, 47);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit Employee Details";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(39, 215);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(205, 54);
-            this.btnRemove.TabIndex = 2;
-            this.btnRemove.Text = "Remove Employee";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnSignoutAdmin
-            // 
-            this.btnSignoutAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSignoutAdmin.Location = new System.Drawing.Point(39, 288);
-            this.btnSignoutAdmin.Name = "btnSignoutAdmin";
-            this.btnSignoutAdmin.Size = new System.Drawing.Size(205, 50);
-            this.btnSignoutAdmin.TabIndex = 3;
-            this.btnSignoutAdmin.Text = "Sign Out";
-            this.btnSignoutAdmin.UseVisualStyleBackColor = false;
-            this.btnSignoutAdmin.Click += new System.EventHandler(this.btnSignoutAdmin_Click);
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
@@ -362,45 +217,185 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(116, 22);
             this.dateTimePicker1.TabIndex = 20;
             // 
-            // btnShow
+            // tbId
             // 
-            this.btnShow.BackColor = System.Drawing.Color.Lime;
-            this.btnShow.Location = new System.Drawing.Point(78, 414);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(268, 37);
-            this.btnShow.TabIndex = 0;
-            this.btnShow.Text = "Show All Employees";
-            this.btnShow.UseVisualStyleBackColor = false;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            this.tbId.Location = new System.Drawing.Point(113, 36);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(116, 22);
+            this.tbId.TabIndex = 19;
             // 
-            // dShow
+            // tbRole
             // 
-            this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dShow.Location = new System.Drawing.Point(21, 20);
-            this.dShow.Name = "dShow";
-            this.dShow.RowHeadersWidth = 51;
-            this.dShow.RowTemplate.Height = 24;
-            this.dShow.Size = new System.Drawing.Size(386, 378);
-            this.dShow.TabIndex = 1;
+            this.tbRole.Location = new System.Drawing.Point(113, 458);
+            this.tbRole.Name = "tbRole";
+            this.tbRole.Size = new System.Drawing.Size(116, 22);
+            this.tbRole.TabIndex = 18;
             // 
-            // btnSignoUT
+            // tbAdd
             // 
-            this.btnSignoUT.BackColor = System.Drawing.Color.Red;
-            this.btnSignoUT.Location = new System.Drawing.Point(181, 414);
-            this.btnSignoUT.Name = "btnSignoUT";
-            this.btnSignoUT.Size = new System.Drawing.Size(139, 41);
-            this.btnSignoUT.TabIndex = 2;
-            this.btnSignoUT.Text = "Sign Out";
-            this.btnSignoUT.UseVisualStyleBackColor = false;
-            this.btnSignoUT.Click += new System.EventHandler(this.btnSignoUT_Click);
+            this.tbAdd.Location = new System.Drawing.Point(113, 416);
+            this.tbAdd.Name = "tbAdd";
+            this.tbAdd.Size = new System.Drawing.Size(116, 22);
+            this.tbAdd.TabIndex = 17;
             // 
-            // comboBox1
+            // tbSal
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 24);
-            this.comboBox1.TabIndex = 4;
+            this.tbSal.Location = new System.Drawing.Point(113, 364);
+            this.tbSal.Name = "tbSal";
+            this.tbSal.Size = new System.Drawing.Size(116, 22);
+            this.tbSal.TabIndex = 16;
+            // 
+            // tbDid
+            // 
+            this.tbDid.Location = new System.Drawing.Point(113, 272);
+            this.tbDid.Name = "tbDid";
+            this.tbDid.Size = new System.Drawing.Size(116, 22);
+            this.tbDid.TabIndex = 14;
+            // 
+            // tbGen
+            // 
+            this.tbGen.Location = new System.Drawing.Point(113, 215);
+            this.tbGen.Name = "tbGen";
+            this.tbGen.Size = new System.Drawing.Size(116, 22);
+            this.tbGen.TabIndex = 13;
+            // 
+            // tbAge
+            // 
+            this.tbAge.Location = new System.Drawing.Point(113, 156);
+            this.tbAge.Name = "tbAge";
+            this.tbAge.Size = new System.Drawing.Size(116, 22);
+            this.tbAge.TabIndex = 12;
+            // 
+            // tbSn
+            // 
+            this.tbSn.Location = new System.Drawing.Point(113, 110);
+            this.tbSn.Name = "tbSn";
+            this.tbSn.Size = new System.Drawing.Size(116, 22);
+            this.tbSn.TabIndex = 11;
+            // 
+            // tbFn
+            // 
+            this.tbFn.Location = new System.Drawing.Point(113, 64);
+            this.tbFn.Name = "tbFn";
+            this.tbFn.Size = new System.Drawing.Size(116, 22);
+            this.tbFn.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "EmployeeId";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "FirstName";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(29, 458);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 17);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Role";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "SecondName";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 416);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 17);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Address";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 218);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Gender";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(20, 367);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 17);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Salary";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Age";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 319);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "HireDate";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 272);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Department Id";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.Lavender;
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(844, 537);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Welcome to your Employee Admin Page";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Teal;
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.btnGetEmployee);
+            this.groupBox4.Controls.Add(this.btnSignoUT);
+            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(494, 33);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(350, 479);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Search";
             // 
             // label12
             // 
@@ -421,6 +416,25 @@
             this.btnGetEmployee.Text = "Get Employee Details";
             this.btnGetEmployee.UseVisualStyleBackColor = false;
             // 
+            // btnSignoUT
+            // 
+            this.btnSignoUT.BackColor = System.Drawing.Color.Red;
+            this.btnSignoUT.Location = new System.Drawing.Point(181, 414);
+            this.btnSignoUT.Name = "btnSignoUT";
+            this.btnSignoUT.Size = new System.Drawing.Size(139, 41);
+            this.btnSignoUT.TabIndex = 2;
+            this.btnSignoUT.Text = "Sign Out";
+            this.btnSignoUT.UseVisualStyleBackColor = false;
+            this.btnSignoUT.Click += new System.EventHandler(this.btnSignoUT_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(120, 85);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(154, 24);
+            this.comboBox1.TabIndex = 4;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Teal;
@@ -434,20 +448,180 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Show All";
             // 
-            // groupBox4
+            // dShow
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Teal;
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.btnGetEmployee);
-            this.groupBox4.Controls.Add(this.btnSignoUT);
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(494, 33);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(350, 479);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Search";
+            this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dShow.Location = new System.Drawing.Point(21, 20);
+            this.dShow.Name = "dShow";
+            this.dShow.RowHeadersWidth = 51;
+            this.dShow.RowTemplate.Height = 24;
+            this.dShow.Size = new System.Drawing.Size(386, 378);
+            this.dShow.TabIndex = 1;
+            // 
+            // btnShow
+            // 
+            this.btnShow.BackColor = System.Drawing.Color.Lime;
+            this.btnShow.Location = new System.Drawing.Point(78, 414);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(268, 37);
+            this.btnShow.TabIndex = 0;
+            this.btnShow.Text = "Show All Employees";
+            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Teal;
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(844, 537);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Welcome to Departments Admin page!";
+            // 
+            // btnAddDept
+            // 
+            this.btnAddDept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddDept.Location = new System.Drawing.Point(25, 268);
+            this.btnAddDept.Name = "btnAddDept";
+            this.btnAddDept.Size = new System.Drawing.Size(244, 40);
+            this.btnAddDept.TabIndex = 0;
+            this.btnAddDept.Text = "Add Department";
+            this.btnAddDept.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(28, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(343, 352);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(32, 160);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 17);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Dept-Id";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 219);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Dept-Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(124, 160);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(124, 214);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 5;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.dataGridView1);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(399, 26);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(404, 491);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "All here!";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button4);
+            this.groupBox6.Controls.Add(this.btnUpdate);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.label13);
+            this.groupBox6.Controls.Add(this.btnAddDept);
+            this.groupBox6.Controls.Add(this.textBox2);
+            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(63, 26);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(290, 464);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Department Details";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Location = new System.Drawing.Point(15, 401);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(185, 41);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "View All ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnUpdate.Location = new System.Drawing.Point(25, 328);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(244, 37);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Edit Department Details";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(25, 382);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(244, 40);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Remove Department";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(233, 451);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Olive;
+            this.button1.Location = new System.Drawing.Point(15, 451);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(185, 34);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Get Dept";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(263, 413);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 17);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Dept Ids";
             // 
             // Administration
             // 
@@ -460,14 +634,20 @@
             this.Text = "Administration";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dShow)).EndInit();
-            this.groupBox3.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dShow)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -511,5 +691,20 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnGetEmployee;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnAddDept;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

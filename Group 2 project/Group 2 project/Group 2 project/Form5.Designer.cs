@@ -57,6 +57,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
@@ -70,18 +71,18 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Homebtn);
-            this.panel1.Location = new System.Drawing.Point(12, 28);
+            this.panel1.Location = new System.Drawing.Point(12, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 598);
+            this.panel1.Size = new System.Drawing.Size(205, 608);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Homebtn
             // 
             this.Homebtn.BackColor = System.Drawing.Color.White;
-            this.Homebtn.Location = new System.Drawing.Point(12, 114);
+            this.Homebtn.Location = new System.Drawing.Point(12, 111);
             this.Homebtn.Name = "Homebtn";
-            this.Homebtn.Size = new System.Drawing.Size(177, 40);
+            this.Homebtn.Size = new System.Drawing.Size(177, 43);
             this.Homebtn.TabIndex = 0;
             this.Homebtn.Text = "Home";
             this.Homebtn.UseVisualStyleBackColor = false;
@@ -92,9 +93,9 @@
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(231, 28);
+            this.panel4.Location = new System.Drawing.Point(223, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(919, 591);
+            this.panel4.Size = new System.Drawing.Size(919, 608);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -242,13 +243,13 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Teal;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(194, 17);
+            this.label3.Location = new System.Drawing.Point(255, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(321, 28);
+            this.label3.Size = new System.Drawing.Size(133, 24);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Welcome to Stock Portal";
+            this.label3.Text = "Stock Portal";
             // 
             // Addbtn
             // 
@@ -358,12 +359,25 @@
             this.button2.Text = "Sign Out";
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Teal;
+            this.label10.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(322, -3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(354, 28);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Welcome to Managers Space!";
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1264, 660);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "Form5";
@@ -377,6 +391,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -411,5 +426,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -55,15 +55,15 @@
             this.pnlLogIn.Controls.Add(this.EmailBox);
             this.pnlLogIn.Controls.Add(this.PasswordBox);
             this.pnlLogIn.Controls.Add(this.btnLogin);
-            this.pnlLogIn.Location = new System.Drawing.Point(573, 68);
+            this.pnlLogIn.Location = new System.Drawing.Point(525, 86);
             this.pnlLogIn.Name = "pnlLogIn";
-            this.pnlLogIn.Size = new System.Drawing.Size(594, 348);
+            this.pnlLogIn.Size = new System.Drawing.Size(514, 332);
             this.pnlLogIn.TabIndex = 1;
             this.pnlLogIn.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogIn_Paint);
             // 
             // LoginSuccessTextBox
             // 
-            this.LoginSuccessTextBox.Location = new System.Drawing.Point(199, 246);
+            this.LoginSuccessTextBox.Location = new System.Drawing.Point(163, 246);
             this.LoginSuccessTextBox.Name = "LoginSuccessTextBox";
             this.LoginSuccessTextBox.Size = new System.Drawing.Size(185, 22);
             this.LoginSuccessTextBox.TabIndex = 4;
@@ -72,7 +72,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Teal;
-            this.lblEmail.Location = new System.Drawing.Point(126, 74);
+            this.lblEmail.Location = new System.Drawing.Point(72, 74);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(46, 17);
             this.lblEmail.TabIndex = 0;
@@ -82,7 +82,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Teal;
-            this.lblPassword.Location = new System.Drawing.Point(99, 115);
+            this.lblPassword.Location = new System.Drawing.Point(72, 115);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(73, 17);
             this.lblPassword.TabIndex = 0;
@@ -90,14 +90,14 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(199, 69);
+            this.EmailBox.Location = new System.Drawing.Point(151, 71);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(185, 22);
             this.EmailBox.TabIndex = 1;
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(199, 112);
+            this.PasswordBox.Location = new System.Drawing.Point(151, 115);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(185, 22);
             this.PasswordBox.TabIndex = 2;
@@ -106,7 +106,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(199, 158);
+            this.btnLogin.Location = new System.Drawing.Point(151, 162);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(185, 37);
             this.btnLogin.TabIndex = 3;
@@ -117,9 +117,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 86);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(548, 341);
+            this.pictureBox1.Size = new System.Drawing.Size(523, 332);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -130,7 +130,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(197, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(683, 33);
+            this.label1.Size = new System.Drawing.Size(704, 34);
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome to Jupiter Ware Eindhoven,We care!";
             // 
@@ -141,9 +141,9 @@
             this.groupBox1.Controls.Add(this.pnlLogIn);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(40, 63);
+            this.groupBox1.Location = new System.Drawing.Point(30, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1197, 540);
+            this.groupBox1.Size = new System.Drawing.Size(1039, 540);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Welcome to your Personal Environment";
@@ -156,7 +156,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(381, 463);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 28);
+            this.label2.Size = new System.Drawing.Size(350, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Media Bazaar-Eindhoven!";
             // 
@@ -165,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1272, 636);
+            this.ClientSize = new System.Drawing.Size(1073, 636);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form3";

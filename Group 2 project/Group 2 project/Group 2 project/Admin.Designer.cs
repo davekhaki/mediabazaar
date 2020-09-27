@@ -30,7 +30,8 @@
         {
             this.dShow = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnShow = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnDeleteEmp = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dShow)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnDeleteEmp);
             this.groupBox1.Controls.Add(this.btnUpdateEmp);
@@ -102,17 +104,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Admin Page";
             // 
-            // btnShow
+            // dateTimePicker1
             // 
-            this.btnShow.BackColor = System.Drawing.Color.Yellow;
-            this.btnShow.ForeColor = System.Drawing.Color.Black;
-            this.btnShow.Location = new System.Drawing.Point(496, 392);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(292, 46);
-            this.btnShow.TabIndex = 23;
-            this.btnShow.Text = "Show Employees";
-            this.btnShow.UseVisualStyleBackColor = false;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(142, 218);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(145, 22);
+            this.dateTimePicker1.TabIndex = 24;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(317, 260);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 59);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Sign Out";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnDeleteEmp
             // 
@@ -123,7 +131,6 @@
             this.btnDeleteEmp.TabIndex = 22;
             this.btnDeleteEmp.Text = "Remove Employee";
             this.btnDeleteEmp.UseVisualStyleBackColor = false;
-            this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
             // btnUpdateEmp
             // 
@@ -134,7 +141,6 @@
             this.btnUpdateEmp.TabIndex = 21;
             this.btnUpdateEmp.Text = "Update Employee Details";
             this.btnUpdateEmp.UseVisualStyleBackColor = false;
-            this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
             // btnAddEmp
             // 
@@ -145,7 +151,6 @@
             this.btnAddEmp.TabIndex = 20;
             this.btnAddEmp.Text = "Add Employee";
             this.btnAddEmp.UseVisualStyleBackColor = false;
-            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
             // tbRole
             // 
@@ -170,7 +175,7 @@
             // 
             // tbHdate
             // 
-            this.tbHdate.Location = new System.Drawing.Point(142, 219);
+            this.tbHdate.Location = new System.Drawing.Point(127, 375);
             this.tbHdate.Name = "tbHdate";
             this.tbHdate.Size = new System.Drawing.Size(160, 22);
             this.tbHdate.TabIndex = 16;
@@ -241,7 +246,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(30, 262);
+            this.label8.Location = new System.Drawing.Point(30, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 17);
             this.label8.TabIndex = 7;
@@ -251,7 +256,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(30, 219);
+            this.label7.Location = new System.Drawing.Point(22, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 6;
@@ -296,7 +301,6 @@
             this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "SecondName";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -318,15 +322,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
             // 
-            // button1
+            // btnShow
             // 
-            this.button1.Location = new System.Drawing.Point(317, 260);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 59);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Sign Out";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnShow.BackColor = System.Drawing.Color.Yellow;
+            this.btnShow.ForeColor = System.Drawing.Color.Black;
+            this.btnShow.Location = new System.Drawing.Point(496, 392);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(292, 46);
+            this.btnShow.TabIndex = 23;
+            this.btnShow.Text = "Show Employees";
+            this.btnShow.UseVisualStyleBackColor = false;
+            
             // 
             // Admin
             // 
@@ -375,5 +381,6 @@
         private System.Windows.Forms.TextBox tbRole;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

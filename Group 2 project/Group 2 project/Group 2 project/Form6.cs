@@ -7,29 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Group_2_project
 {
-    public partial class Admin : Form
+    public partial class Form6 : Form
     {
-        public Admin()
+        public Form6()
         {
             InitializeComponent();
         }
-
-             
-
-        
-
-
     }
-
-
-   }
-
-       
-        
-
-            
-        
+}

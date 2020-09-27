@@ -39,6 +39,8 @@ namespace Group_2_project
                     if (password == pass)
                     {
                         LoginSuccessTextBox.Text = "Success";
+                        Admin admin = new Admin();
+                       
                     }
                     else
                     {

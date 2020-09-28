@@ -32,7 +32,6 @@
             this.pnlLogIn = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.cmUsers = new System.Windows.Forms.ComboBox();
-            this.LoginSuccessTextBox = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -42,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlLogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -51,9 +51,9 @@
             // 
             this.pnlLogIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlLogIn.BackColor = System.Drawing.Color.Teal;
+            this.pnlLogIn.Controls.Add(this.label4);
             this.pnlLogIn.Controls.Add(this.label3);
             this.pnlLogIn.Controls.Add(this.cmUsers);
-            this.pnlLogIn.Controls.Add(this.LoginSuccessTextBox);
             this.pnlLogIn.Controls.Add(this.lblEmail);
             this.pnlLogIn.Controls.Add(this.lblPassword);
             this.pnlLogIn.Controls.Add(this.tbEmail);
@@ -68,11 +68,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 150);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 143);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.Size = new System.Drawing.Size(123, 24);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Select User";
+            this.label3.Text = "Select User:";
             // 
             // cmUsers
             // 
@@ -86,30 +87,25 @@
             this.cmUsers.Size = new System.Drawing.Size(185, 24);
             this.cmUsers.TabIndex = 5;
             // 
-            // LoginSuccessTextBox
-            // 
-            this.LoginSuccessTextBox.Location = new System.Drawing.Point(163, 246);
-            this.LoginSuccessTextBox.Name = "LoginSuccessTextBox";
-            this.LoginSuccessTextBox.Size = new System.Drawing.Size(185, 22);
-            this.LoginSuccessTextBox.TabIndex = 4;
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Teal;
-            this.lblEmail.Location = new System.Drawing.Point(72, 74);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(34, 71);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(46, 17);
+            this.lblEmail.Size = new System.Drawing.Size(111, 24);
             this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "Email:";
+            this.lblEmail.Text = "Username:";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Teal;
-            this.lblPassword.Location = new System.Drawing.Point(72, 115);
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(34, 113);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(73, 17);
+            this.lblPassword.Size = new System.Drawing.Size(106, 24);
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Password:";
             // 
@@ -142,7 +138,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 86);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(523, 332);
             this.pictureBox1.TabIndex = 2;
@@ -185,12 +181,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Media Bazaar-Eindhoven!";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(137, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(190, 23);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Enter Login Details";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1073, 636);
+            this.ClientSize = new System.Drawing.Size(1093, 636);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
@@ -213,12 +219,12 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox LoginSuccessTextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmUsers;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

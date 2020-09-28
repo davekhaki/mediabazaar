@@ -82,7 +82,7 @@
             "admin",
             "manager",
             "employee"});
-            this.cmUsers.Location = new System.Drawing.Point(151, 143);
+            this.cmUsers.Location = new System.Drawing.Point(177, 145);
             this.cmUsers.Name = "cmUsers";
             this.cmUsers.Size = new System.Drawing.Size(185, 24);
             this.cmUsers.TabIndex = 5;
@@ -111,14 +111,14 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(151, 71);
+            this.tbEmail.Location = new System.Drawing.Point(177, 73);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(185, 22);
             this.tbEmail.TabIndex = 1;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(151, 115);
+            this.tbPassword.Location = new System.Drawing.Point(177, 113);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(185, 22);
             this.tbPassword.TabIndex = 2;

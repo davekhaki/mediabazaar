@@ -127,9 +127,9 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnLogin.Location = new System.Drawing.Point(151, 183);
+            this.btnLogin.Location = new System.Drawing.Point(177, 187);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(185, 37);
+            this.btnLogin.Size = new System.Drawing.Size(185, 46);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Log in";
             this.btnLogin.UseVisualStyleBackColor = false;

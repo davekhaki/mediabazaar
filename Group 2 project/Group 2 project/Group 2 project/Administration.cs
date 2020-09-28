@@ -156,7 +156,9 @@ namespace Group_2_project
 
         private void btnSignoUT_Click(object sender, EventArgs e)
         {
-
+            Administration ad = new Administration();
+            ad.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

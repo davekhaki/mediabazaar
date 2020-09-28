@@ -185,8 +185,8 @@ namespace Group_2_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ManageEmployees manageWmployees = new ManageEmployees();
-            manageWmployees.Show();
+            Form2 form2 = new Form2();
+            form2.Show();
             this.Hide();
         }
 

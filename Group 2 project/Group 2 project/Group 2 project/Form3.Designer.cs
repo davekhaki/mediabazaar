@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.pnlLogIn = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmUsers = new System.Windows.Forms.ComboBox();
             this.LoginSuccessTextBox = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.EmailBox = new System.Windows.Forms.TextBox();
-            this.PasswordBox = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,17 +51,40 @@
             // 
             this.pnlLogIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlLogIn.BackColor = System.Drawing.Color.Teal;
+            this.pnlLogIn.Controls.Add(this.label3);
+            this.pnlLogIn.Controls.Add(this.cmUsers);
             this.pnlLogIn.Controls.Add(this.LoginSuccessTextBox);
             this.pnlLogIn.Controls.Add(this.lblEmail);
             this.pnlLogIn.Controls.Add(this.lblPassword);
-            this.pnlLogIn.Controls.Add(this.EmailBox);
-            this.pnlLogIn.Controls.Add(this.PasswordBox);
+            this.pnlLogIn.Controls.Add(this.tbEmail);
+            this.pnlLogIn.Controls.Add(this.tbPassword);
             this.pnlLogIn.Controls.Add(this.btnLogin);
             this.pnlLogIn.Location = new System.Drawing.Point(525, 86);
             this.pnlLogIn.Name = "pnlLogIn";
             this.pnlLogIn.Size = new System.Drawing.Size(514, 332);
             this.pnlLogIn.TabIndex = 1;
             this.pnlLogIn.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogIn_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(64, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Select User";
+            // 
+            // cmUsers
+            // 
+            this.cmUsers.FormattingEnabled = true;
+            this.cmUsers.Items.AddRange(new object[] {
+            "admin",
+            "manager",
+            "employee"});
+            this.cmUsers.Location = new System.Drawing.Point(151, 143);
+            this.cmUsers.Name = "cmUsers";
+            this.cmUsers.Size = new System.Drawing.Size(185, 24);
+            this.cmUsers.TabIndex = 5;
             // 
             // LoginSuccessTextBox
             // 
@@ -88,25 +113,25 @@
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Password:";
             // 
-            // EmailBox
+            // tbEmail
             // 
-            this.EmailBox.Location = new System.Drawing.Point(151, 71);
-            this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(185, 22);
-            this.EmailBox.TabIndex = 1;
+            this.tbEmail.Location = new System.Drawing.Point(151, 71);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(185, 22);
+            this.tbEmail.TabIndex = 1;
             // 
-            // PasswordBox
+            // tbPassword
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(151, 115);
-            this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(185, 22);
-            this.PasswordBox.TabIndex = 2;
-            this.PasswordBox.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
+            this.tbPassword.Location = new System.Drawing.Point(151, 115);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(185, 22);
+            this.tbPassword.TabIndex = 2;
+            this.tbPassword.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(151, 162);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnLogin.Location = new System.Drawing.Point(151, 183);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(185, 37);
             this.btnLogin.TabIndex = 3;
@@ -185,13 +210,15 @@
         private System.Windows.Forms.Panel pnlLogIn;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox EmailBox;
-        private System.Windows.Forms.TextBox PasswordBox;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox LoginSuccessTextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmUsers;
+        private System.Windows.Forms.Label label3;
     }
 }

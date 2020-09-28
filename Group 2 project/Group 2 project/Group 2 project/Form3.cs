@@ -21,39 +21,111 @@ namespace Group_2_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = EmailBox.Text;
-            string pass = PasswordBox.Text;
+            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand query = new MySqlCommand ("select  * from dbi434661.credentials where username='" + this.tbEmail.Text+"' and password='"+this.tbPassword.Text+ "'",conDataBase);
+            MySqlDataAdapter sda = new MySqlDataAdapter(query);
 
             try
             {
-                
-                MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-                MySqlCommand query = new MySqlCommand($"SELECT * FROM login WHERE email = '{email}'", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                string comboboxitem = this.cmUsers.SelectedItem.ToString();
 
-                conn.Open();
+                //what happenes
 
-                var reader = query.ExecuteReader();
-                while (reader.Read())
+                if (dt.Rows.Count > 0)
                 {
-                    string password = reader.GetString(2);
-                    if (password == pass)
+                    for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        LoginSuccessTextBox.Text = "Success";
-                        Admin admin = new Admin();
-                       
+                        if (dt.Rows[i]["username"].ToString() == comboboxitem)
+                        {
+                            MessageBox.Show("Welcome to your personal space" + dt.Rows[i][2]);
+
+                            if (cmUsers.SelectedIndex == 0)
+                            {
+                                Administration adminpage = new Administration();
+                                adminpage.Show();
+                                this.Hide();
+
+                            }
+                            else if (cmUsers.SelectedIndex == 1)
+                            {
+                                Form5 form5 = new Form5();
+                                form5.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                Employeeselfservice employeeselfservice = new Employeeselfservice();
+                                employeeselfservice.Show();
+                                this.Hide();
+                            }
+
+                        }
+
                     }
-                    else
-                    {
-                        LoginSuccessTextBox.Text = "Fail";
-                    }
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Enter correct details");
+
                 }
 
-                conn.Close();
             }
             catch (Exception ex)
             {
-                LoginSuccessTextBox.Text = $"Error: {0}, {ex.ToString()}";
+
+                MessageBox.Show(ex.Message);
             }
+
+
+
+            //sda.SelectCommand = cmdDataBase;
+            //DataTable dbaTableset = new DataTable();
+            //sda.Fill(dbaTableset);
+            //BindingSource bSource = new BindingSource();
+
+            //bSource.DataSource = dbaTableset;
+
+            //cmUsers.DataSource = bSource;
+            //sda.Update(dbaTableset);
+
+            //string email = EmailBox.Text;
+            //string pass = PasswordBox.Text;
+
+            //try
+            //{
+
+            //    MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            //    MySqlCommand query = new MySqlCommand($"SELECT * FROM login WHERE email = '{email}'", conn);
+
+            //    conn.Open();
+
+            //    var reader = query.ExecuteReader();
+            //    while (reader.Read())
+            //    {
+            //        string password = reader.GetString(2);
+            //        if (password == pass)
+            //        {
+            //            LoginSuccessTextBox.Text = "Success";
+            //            Admin admin = new Admin();
+
+            //        }
+            //        else
+            //        {
+            //            LoginSuccessTextBox.Text = "Fail";
+            //        }
+            //    }
+
+            //    conn.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    LoginSuccessTextBox.Text = $"Error: {0}, {ex.ToString()}";
+            //}
         }
 
         private void PasswordBox_TextChanged(object sender, EventArgs e)

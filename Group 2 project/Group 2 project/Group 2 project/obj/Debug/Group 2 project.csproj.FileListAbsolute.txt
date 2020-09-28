@@ -281,3 +281,4 @@ C:\Users\sbokk\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Deb
 C:\Users\sbokk\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\sbokk\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\sbokk\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.CopyComplete
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form6.resources

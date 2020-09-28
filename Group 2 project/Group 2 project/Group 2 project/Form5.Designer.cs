@@ -34,12 +34,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Homebtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridViewStock = new System.Windows.Forms.DataGridView();
             this.loadStockBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Addbtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridViewStock = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -112,6 +114,16 @@
             this.panel4.Size = new System.Drawing.Size(920, 591);
             this.panel4.TabIndex = 8;
             // 
+            // dataGridViewStock
+            // 
+            this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStock.Location = new System.Drawing.Point(41, 98);
+            this.dataGridViewStock.Name = "dataGridViewStock";
+            this.dataGridViewStock.RowHeadersWidth = 51;
+            this.dataGridViewStock.RowTemplate.Height = 24;
+            this.dataGridViewStock.Size = new System.Drawing.Size(417, 439);
+            this.dataGridViewStock.TabIndex = 9;
+            // 
             // loadStockBtn
             // 
             this.loadStockBtn.Location = new System.Drawing.Point(497, 292);
@@ -160,14 +172,15 @@
             this.button5.Text = "Request";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewStock
+            // button4
             // 
-            this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStock.Location = new System.Drawing.Point(41, 98);
-            this.dataGridViewStock.Name = "dataGridViewStock";
-            this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(417, 439);
-            this.dataGridViewStock.TabIndex = 9;
+            this.button4.Location = new System.Drawing.Point(18, 314);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 26);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form5
             // 
@@ -201,5 +214,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button loadStockBtn;
         private System.Windows.Forms.DataGridView dataGridViewStock;
+        private System.Windows.Forms.Button button4;
     }
 }

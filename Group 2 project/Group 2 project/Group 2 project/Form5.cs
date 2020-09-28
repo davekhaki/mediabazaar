@@ -189,5 +189,14 @@ namespace Group_2_project
             manageWmployees.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Comments by Mary
+            //I suggest if you click this request button  it should take you to another form
+            //The form should have a way to show all stocks that are below minimum quantity and there fore
+            //From that the mnager shud be able to do all requests
+            //Manager shud be able to all all functionalities related to low stocks
+        }
     }
 }

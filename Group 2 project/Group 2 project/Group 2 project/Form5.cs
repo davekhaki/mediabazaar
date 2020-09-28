@@ -197,6 +197,10 @@ namespace Group_2_project
             //The form should have a way to show all stocks that are below minimum quantity and there fore
             //From that the mnager shud be able to do all requests
             //Manager shud be able to all all functionalities related to low stocks
+
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
     }
 }

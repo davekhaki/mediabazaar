@@ -36,6 +36,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.employeeLoadBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Addbtn = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.employeeLoadBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -155,6 +155,16 @@
             this.panel4.Size = new System.Drawing.Size(823, 577);
             this.panel4.TabIndex = 7;
             // 
+            // employeeLoadBtn
+            // 
+            this.employeeLoadBtn.Location = new System.Drawing.Point(510, 277);
+            this.employeeLoadBtn.Name = "employeeLoadBtn";
+            this.employeeLoadBtn.Size = new System.Drawing.Size(186, 97);
+            this.employeeLoadBtn.TabIndex = 8;
+            this.employeeLoadBtn.Text = "Load Employees";
+            this.employeeLoadBtn.UseVisualStyleBackColor = true;
+            this.employeeLoadBtn.Click += new System.EventHandler(this.employeeLoadBtn_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -182,6 +192,7 @@
             this.Addbtn.TabIndex = 5;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
             // button5
             // 
@@ -192,6 +203,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Delete";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // employeeBox
             // 
@@ -373,16 +385,6 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(135, 244);
             this.listBox2.TabIndex = 9;
-            // 
-            // employeeLoadBtn
-            // 
-            this.employeeLoadBtn.Location = new System.Drawing.Point(510, 277);
-            this.employeeLoadBtn.Name = "employeeLoadBtn";
-            this.employeeLoadBtn.Size = new System.Drawing.Size(186, 97);
-            this.employeeLoadBtn.TabIndex = 8;
-            this.employeeLoadBtn.Text = "Load Employees";
-            this.employeeLoadBtn.UseVisualStyleBackColor = true;
-            this.employeeLoadBtn.Click += new System.EventHandler(this.employeeLoadBtn_Click);
             // 
             // Form2
             // 

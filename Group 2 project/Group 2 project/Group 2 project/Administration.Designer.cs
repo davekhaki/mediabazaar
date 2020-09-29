@@ -72,8 +72,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnAddDept = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbDeptName = new System.Windows.Forms.TextBox();
+            this.tbDeptId = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -488,8 +488,8 @@
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.btnAddDept);
-            this.groupBox6.Controls.Add(this.textBox2);
-            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.tbDeptName);
+            this.groupBox6.Controls.Add(this.tbDeptId);
             this.groupBox6.ForeColor = System.Drawing.Color.White;
             this.groupBox6.Location = new System.Drawing.Point(63, 26);
             this.groupBox6.Name = "groupBox6";
@@ -517,6 +517,7 @@
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Edit Department Details";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label11
             // 
@@ -545,20 +546,21 @@
             this.btnAddDept.TabIndex = 0;
             this.btnAddDept.Text = "Add Department";
             this.btnAddDept.UseVisualStyleBackColor = false;
+            this.btnAddDept.Click += new System.EventHandler(this.btnAddDept_Click);
             // 
-            // textBox2
+            // tbDeptName
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 214);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
+            this.tbDeptName.Location = new System.Drawing.Point(124, 214);
+            this.tbDeptName.Name = "tbDeptName";
+            this.tbDeptName.Size = new System.Drawing.Size(100, 22);
+            this.tbDeptName.TabIndex = 5;
             // 
-            // textBox1
+            // tbDeptId
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
+            this.tbDeptId.Location = new System.Drawing.Point(124, 160);
+            this.tbDeptId.Name = "tbDeptId";
+            this.tbDeptId.Size = new System.Drawing.Size(100, 22);
+            this.tbDeptId.TabIndex = 4;
             // 
             // groupBox5
             // 
@@ -698,8 +700,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnAddDept;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDeptName;
+        private System.Windows.Forms.TextBox tbDeptId;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;

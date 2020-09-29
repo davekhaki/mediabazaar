@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Homebtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.tbBrand = new System.Windows.Forms.TextBox();
             this.tbQuantity = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.Addbtn = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tbId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -117,21 +118,21 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(223, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(919, 608);
+            this.panel4.Size = new System.Drawing.Size(1153, 608);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btnEdit);
             this.groupBox2.Controls.Add(this.tbBrand);
             this.groupBox2.Controls.Add(this.tbQuantity);
             this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.Addbtn);
+            this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.tbId);
             this.groupBox2.Controls.Add(this.label2);
@@ -146,6 +147,18 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Products Details";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(24, 354);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(174, 34);
+            this.btnDelete.TabIndex = 23;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label7
             // 
@@ -164,16 +177,6 @@
             this.comboBox1.Size = new System.Drawing.Size(91, 24);
             this.comboBox1.TabIndex = 7;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(45, 502);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(114, 42);
-            this.btnDelete.TabIndex = 21;
-            this.btnDelete.Text = "Delete Product";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -183,16 +186,16 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Prod-Id";
             // 
-            // button4
+            // btnEdit
             // 
-            this.button4.BackColor = System.Drawing.Color.Yellow;
-            this.button4.Location = new System.Drawing.Point(24, 394);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 36);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Edit Stock Details";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnEdit.BackColor = System.Drawing.Color.Gold;
+            this.btnEdit.Location = new System.Drawing.Point(24, 394);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(174, 36);
+            this.btnEdit.TabIndex = 20;
+            this.btnEdit.Text = "Edit Stock Details";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // tbBrand
             // 
@@ -211,25 +214,25 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(16, 448);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button5.Location = new System.Drawing.Point(24, 439);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(182, 42);
+            this.button5.Size = new System.Drawing.Size(174, 42);
             this.button5.TabIndex = 4;
             this.button5.Text = "Request";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // Addbtn
+            // btnAdd
             // 
-            this.Addbtn.BackColor = System.Drawing.Color.Lime;
-            this.Addbtn.Location = new System.Drawing.Point(24, 332);
-            this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(171, 43);
-            this.Addbtn.TabIndex = 5;
-            this.Addbtn.Text = "Add";
-            this.Addbtn.UseVisualStyleBackColor = false;
-            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
+            this.btnAdd.BackColor = System.Drawing.Color.Lime;
+            this.btnAdd.Location = new System.Drawing.Point(24, 305);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(171, 43);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label5
             // 
@@ -298,7 +301,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(310, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(554, 505);
+            this.groupBox1.Size = new System.Drawing.Size(804, 505);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "All here!";
@@ -324,12 +327,21 @@
             // dataGridViewStock
             // 
             this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStock.Location = new System.Drawing.Point(22, 15);
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
             this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(501, 409);
+            this.dataGridViewStock.Size = new System.Drawing.Size(747, 409);
             this.dataGridViewStock.TabIndex = 9;
+            this.dataGridViewStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStock_CellContentClick);
             // 
             // comboBox2
             // 
@@ -354,11 +366,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Teal;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(255, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 24);
+            this.label3.Size = new System.Drawing.Size(117, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Stock Portal";
             // 
@@ -366,11 +378,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Teal;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(322, -3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(378, 29);
+            this.label10.Size = new System.Drawing.Size(335, 29);
             this.label10.TabIndex = 9;
             this.label10.Text = "Welcome to Managers Space!";
             // 
@@ -379,7 +391,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1264, 660);
+            this.ClientSize = new System.Drawing.Size(1388, 660);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -405,7 +417,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Addbtn;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button loadStockBtn;
         private System.Windows.Forms.DataGridView dataGridViewStock;
@@ -419,8 +431,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -430,5 +441,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

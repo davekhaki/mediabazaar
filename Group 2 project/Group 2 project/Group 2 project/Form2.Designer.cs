@@ -36,6 +36,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.employeeLoadBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Addbtn = new System.Windows.Forms.Button();
@@ -44,20 +45,20 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.empIdBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.EmpIdTextBox = new System.Windows.Forms.TextBox();
+            this.GetShiftsBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.employeeLoadBtn = new System.Windows.Forms.Button();
+            this.ShiftListBox = new System.Windows.Forms.ListBox();
+            this.dateTimeShiftPicker = new System.Windows.Forms.DateTimePicker();
+            this.morningBtn = new System.Windows.Forms.RadioButton();
+            this.AfternoonBtn = new System.Windows.Forms.RadioButton();
+            this.EveningBtn = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -155,6 +156,16 @@
             this.panel4.Size = new System.Drawing.Size(823, 577);
             this.panel4.TabIndex = 7;
             // 
+            // employeeLoadBtn
+            // 
+            this.employeeLoadBtn.Location = new System.Drawing.Point(510, 277);
+            this.employeeLoadBtn.Name = "employeeLoadBtn";
+            this.employeeLoadBtn.Size = new System.Drawing.Size(186, 97);
+            this.employeeLoadBtn.TabIndex = 8;
+            this.employeeLoadBtn.Text = "Load Employees";
+            this.employeeLoadBtn.UseVisualStyleBackColor = true;
+            this.employeeLoadBtn.Click += new System.EventHandler(this.employeeLoadBtn_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -223,166 +234,165 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(823, 591);
             this.panel2.TabIndex = 8;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.EveningBtn);
+            this.groupBox2.Controls.Add(this.AfternoonBtn);
+            this.groupBox2.Controls.Add(this.morningBtn);
+            this.groupBox2.Controls.Add(this.dateTimeShiftPicker);
             this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(448, 60);
+            this.groupBox2.Controls.Add(this.empIdBox);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(333, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 469);
-            this.groupBox2.TabIndex = 17;
+            this.groupBox2.Size = new System.Drawing.Size(460, 433);
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(53, 214);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(230, 44);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Remove";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(58, 152);
+            this.button4.Location = new System.Drawing.Point(121, 286);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(230, 41);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(53, 99);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(235, 24);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(104, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Shift time";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.listBox3);
-            this.groupBox1.Controls.Add(this.listBox4);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.listBox2);
-            this.groupBox1.Location = new System.Drawing.Point(34, 59);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 470);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(9, 51);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(371, 84);
-            this.listBox1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(174, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 19);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Shift time";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(150, 165);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 19);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Night time";
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(297, 189);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(111, 244);
-            this.listBox3.TabIndex = 10;
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(150, 188);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(131, 244);
-            this.listBox4.TabIndex = 11;
+            this.button4.Size = new System.Drawing.Size(195, 57);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Add Shift";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(27, 165);
+            this.label4.Location = new System.Drawing.Point(16, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 19);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Day shift";
+            this.label4.Size = new System.Drawing.Size(95, 17);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Select a date:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Employee ID:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // empIdBox
+            // 
+            this.empIdBox.Location = new System.Drawing.Point(164, 44);
+            this.empIdBox.Name = "empIdBox";
+            this.empIdBox.Size = new System.Drawing.Size(91, 22);
+            this.empIdBox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Select a time:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.EmpIdTextBox);
+            this.groupBox1.Controls.Add(this.GetShiftsBtn);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.ShiftListBox);
+            this.groupBox1.Location = new System.Drawing.Point(20, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(289, 433);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // EmpIdTextBox
+            // 
+            this.EmpIdTextBox.Location = new System.Drawing.Point(89, 58);
+            this.EmpIdTextBox.Name = "EmpIdTextBox";
+            this.EmpIdTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EmpIdTextBox.TabIndex = 3;
+            this.EmpIdTextBox.Text = "Employee ID";
+            // 
+            // GetShiftsBtn
+            // 
+            this.GetShiftsBtn.Location = new System.Drawing.Point(169, 114);
+            this.GetShiftsBtn.Name = "GetShiftsBtn";
+            this.GetShiftsBtn.Size = new System.Drawing.Size(75, 23);
+            this.GetShiftsBtn.TabIndex = 2;
+            this.GetShiftsBtn.Text = "GetShifts";
+            this.GetShiftsBtn.UseVisualStyleBackColor = true;
+            this.GetShiftsBtn.Click += new System.EventHandler(this.button6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(308, 165);
+            this.label5.Location = new System.Drawing.Point(23, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Afternoon";
+            this.label5.Size = new System.Drawing.Size(140, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Your upcoming shifts";
             // 
-            // listBox2
+            // ShiftListBox
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(9, 189);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(135, 244);
-            this.listBox2.TabIndex = 9;
+            this.ShiftListBox.FormattingEnabled = true;
+            this.ShiftListBox.ItemHeight = 16;
+            this.ShiftListBox.Location = new System.Drawing.Point(26, 162);
+            this.ShiftListBox.Name = "ShiftListBox";
+            this.ShiftListBox.Size = new System.Drawing.Size(240, 228);
+            this.ShiftListBox.TabIndex = 0;
+            this.ShiftListBox.SelectedIndexChanged += new System.EventHandler(this.ShiftListBox_SelectedIndexChanged);
             // 
-            // employeeLoadBtn
+            // dateTimeShiftPicker
             // 
-            this.employeeLoadBtn.Location = new System.Drawing.Point(510, 277);
-            this.employeeLoadBtn.Name = "employeeLoadBtn";
-            this.employeeLoadBtn.Size = new System.Drawing.Size(186, 97);
-            this.employeeLoadBtn.TabIndex = 8;
-            this.employeeLoadBtn.Text = "Load Employees";
-            this.employeeLoadBtn.UseVisualStyleBackColor = true;
-            this.employeeLoadBtn.Click += new System.EventHandler(this.employeeLoadBtn_Click);
+            this.dateTimeShiftPicker.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeShiftPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeShiftPicker.Location = new System.Drawing.Point(164, 105);
+            this.dateTimeShiftPicker.Name = "dateTimeShiftPicker";
+            this.dateTimeShiftPicker.Size = new System.Drawing.Size(271, 22);
+            this.dateTimeShiftPicker.TabIndex = 9;
+            this.dateTimeShiftPicker.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
+            // 
+            // morningBtn
+            // 
+            this.morningBtn.AutoSize = true;
+            this.morningBtn.Location = new System.Drawing.Point(164, 162);
+            this.morningBtn.Name = "morningBtn";
+            this.morningBtn.Size = new System.Drawing.Size(80, 21);
+            this.morningBtn.TabIndex = 10;
+            this.morningBtn.TabStop = true;
+            this.morningBtn.Text = "Morning";
+            this.morningBtn.UseVisualStyleBackColor = true;
+            this.morningBtn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // AfternoonBtn
+            // 
+            this.AfternoonBtn.AutoSize = true;
+            this.AfternoonBtn.Location = new System.Drawing.Point(164, 190);
+            this.AfternoonBtn.Name = "AfternoonBtn";
+            this.AfternoonBtn.Size = new System.Drawing.Size(91, 21);
+            this.AfternoonBtn.TabIndex = 11;
+            this.AfternoonBtn.TabStop = true;
+            this.AfternoonBtn.Text = "Afternoon";
+            this.AfternoonBtn.UseVisualStyleBackColor = true;
+            // 
+            // EveningBtn
+            // 
+            this.EveningBtn.AutoSize = true;
+            this.EveningBtn.Location = new System.Drawing.Point(164, 218);
+            this.EveningBtn.Name = "EveningBtn";
+            this.EveningBtn.Size = new System.Drawing.Size(80, 21);
+            this.EveningBtn.TabIndex = 12;
+            this.EveningBtn.TabStop = true;
+            this.EveningBtn.Text = "Evening";
+            this.EveningBtn.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
@@ -427,20 +437,21 @@
         private System.Windows.Forms.ListBox employeeBox;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button employeeLoadBtn;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox empIdBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox ShiftListBox;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox EmpIdTextBox;
+        private System.Windows.Forms.Button GetShiftsBtn;
+        private System.Windows.Forms.DateTimePicker dateTimeShiftPicker;
+        private System.Windows.Forms.RadioButton EveningBtn;
+        private System.Windows.Forms.RadioButton AfternoonBtn;
+        private System.Windows.Forms.RadioButton morningBtn;
     }
 }

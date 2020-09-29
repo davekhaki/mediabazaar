@@ -135,7 +135,7 @@ namespace Group_2_project
         {
             string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
             MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from employee;", conDataBase);
+            MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.employee;", conDataBase);
 
             try
             {
@@ -163,7 +163,27 @@ namespace Group_2_project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            {
+                string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+                MySqlConnection conDataBase = new MySqlConnection(constring);
+                MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.departments;", conDataBase);
 
+                try
+                {
+                    MySqlDataAdapter sda = new MySqlDataAdapter();
+                    sda.SelectCommand = cmdDataBase;
+                    DataTable dbaTableset = new DataTable();
+                    sda.Fill(dbaTableset);
+                    BindingSource bSource = new BindingSource();
+
+                    bSource.DataSource = dbaTableset;
+
+                    this.dgDepartments.DataSource = bSource;
+                    sda.Update(dbaTableset);
+
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
+            }
         }
 
         private void btnAddDept_Click(object sender, EventArgs e)
@@ -218,6 +238,50 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "delete from dbi434661.departments where DeptID='" + this.tbDeptId.Text + "';";
+            //string query2 = "delete from dbi434661.departments where DeptID='" + this.tbDid.Text + "';";
+            //string query3 = "delete from dbi434661.login where eID='" + this.tbDid.Text + "';";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            //MySqlCommand command2 = new MySqlCommand(query2, conn);
+            //MySqlCommand command3 = new MySqlCommand(query3, conn);
+
+            try
+            {
+                conn.Open();
+
+
+                // Object result = command.ExecuteScalar();
+                //Object result2 = command2.ExecuteScalar();
+
+                command.CommandType = CommandType.Text;
+                command.ExecuteScalar();
+
+
+
+                //command2.CommandType = CommandType.Text;
+                //command2.ExecuteScalar();
+
+                //command3.CommandType = CommandType.Text;
+                //command3.ExecuteScalar();
+
+                MessageBox.Show("Department Deleted");
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
         }
     }
 }

@@ -202,5 +202,10 @@ namespace Group_2_project
             form1.Show();
             this.Hide();
         }
+
+        private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

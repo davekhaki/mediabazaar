@@ -17,6 +17,7 @@ namespace Group_2_project
         public Form2()
         {
             InitializeComponent();
+            GetEmp();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -34,6 +35,23 @@ namespace Group_2_project
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             MySqlCommand query = new MySqlCommand($"SELECT * FROM employee", conn);
 
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = query;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                empDataGrid.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
+
+            /*
             conn.Open();
 
             var reader = query.ExecuteReader();
@@ -56,6 +74,8 @@ namespace Group_2_project
                 employeeBox.Items.Add(employee);
             }
             conn.Close();
+
+        */
         }
 
         private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,8 +141,10 @@ namespace Group_2_project
         {
             TimeOfDayInput = GetTimeOfDay();
 
+            
+
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"INSERT INTO `schedule` (`EmployeeID`, `TimeOfDay`, `Day`) VALUES ('{empIdBox.Text}', '{TimeOfDayInput}', '{dateTimeShiftPicker.Text}')", conn);
+            MySqlCommand query = new MySqlCommand($"INSERT INTO `schedule` (`EmployeeID`, `TimeOfDay`, `Day`) VALUES ('{SelectedEmpTxt.Text}', '{TimeOfDayInput}', '{dateTimeShiftPicker.Text}')", conn);
 
             conn.Open();
 
@@ -161,6 +183,41 @@ namespace Group_2_project
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void empDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void empListForSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >=0)
+            {
+                DataGridViewRow row = this.empListForSchedule.Rows[e.RowIndex];
+
+                SelectedEmpTxt.Text = row.Cells["ID"].Value.ToString();
+            }
+        }
+
+        private void GetEmp()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlCommand query = new MySqlCommand($"SELECT `ID`,`FirstName`,`LastName` FROM employee", conn);
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = query;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                empListForSchedule.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

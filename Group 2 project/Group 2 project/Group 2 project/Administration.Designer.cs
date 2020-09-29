@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -79,10 +78,13 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmDeptNames = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dgDepartments = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.cmeIds = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmDeptIds = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -183,6 +185,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.cmeIds);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.tbId);
             this.groupBox1.Controls.Add(this.tbRole);
@@ -438,6 +443,7 @@
             this.cmEmployeeNames.Name = "cmEmployeeNames";
             this.cmEmployeeNames.Size = new System.Drawing.Size(154, 24);
             this.cmEmployeeNames.TabIndex = 4;
+            this.cmEmployeeNames.SelectedIndexChanged += new System.EventHandler(this.cmEmployeeNames_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -455,14 +461,14 @@
             // dShow
             // 
             this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dShow.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dShow.DefaultCellStyle = dataGridViewCellStyle1;
             this.dShow.Location = new System.Drawing.Point(21, 20);
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
@@ -580,7 +586,7 @@
             // 
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.cmDeptNames);
+            this.groupBox5.Controls.Add(this.cmDeptIds);
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Controls.Add(this.dgDepartments);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
@@ -610,14 +616,6 @@
             this.button1.Text = "Search Dept Details";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // cmDeptNames
-            // 
-            this.cmDeptNames.FormattingEnabled = true;
-            this.cmDeptNames.Location = new System.Drawing.Point(233, 451);
-            this.cmDeptNames.Name = "cmDeptNames";
-            this.cmDeptNames.Size = new System.Drawing.Size(121, 24);
-            this.cmDeptNames.TabIndex = 8;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -632,14 +630,6 @@
             // dgDepartments
             // 
             this.dgDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgDepartments.Location = new System.Drawing.Point(28, 33);
             this.dgDepartments.Name = "dgDepartments";
             this.dgDepartments.RowHeadersWidth = 51;
@@ -657,6 +647,43 @@
             this.button3.Text = "Sign Out";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cmeIds
+            // 
+            this.cmeIds.FormattingEnabled = true;
+            this.cmeIds.Location = new System.Drawing.Point(309, 36);
+            this.cmeIds.Name = "cmeIds";
+            this.cmeIds.Size = new System.Drawing.Size(135, 24);
+            this.cmeIds.TabIndex = 21;
+            this.cmeIds.SelectedIndexChanged += new System.EventHandler(this.cmeIds_SelectedIndexChanged);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.Location = new System.Drawing.Point(315, 75);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(129, 29);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Text = "Search Employee";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(324, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(93, 17);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Employee-Ids";
+            // 
+            // cmDeptIds
+            // 
+            this.cmDeptIds.FormattingEnabled = true;
+            this.cmDeptIds.Location = new System.Drawing.Point(233, 451);
+            this.cmDeptIds.Name = "cmDeptIds";
+            this.cmDeptIds.Size = new System.Drawing.Size(121, 24);
+            this.cmDeptIds.TabIndex = 8;
+            this.cmDeptIds.SelectedIndexChanged += new System.EventHandler(this.cmDeptNames_SelectedIndexChanged);
             // 
             // Administration
             // 
@@ -738,9 +765,12 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cmDeptNames;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgDepartments;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cmeIds;
+        private System.Windows.Forms.ComboBox cmDeptIds;
     }
 }

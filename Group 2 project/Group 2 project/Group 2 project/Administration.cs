@@ -16,7 +16,69 @@ namespace Group_2_project
         public Administration()
         {
             InitializeComponent();
+            FillEmployeeNames();
+            FillDeptNames();
         }
+        void FillEmployeeNames()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "select * from dbi434661.employee;";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+                
+
+                while (reader.Read())
+                {
+                    string names = reader.GetString("LastName");
+                    this.cmEmployeeNames.Items.Add(names);
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        void FillDeptNames()
+        {
+            {
+                MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+                string query = "select * from dbi434661.departments;";
+                MySqlCommand command = new MySqlCommand(query, conn);
+                MySqlDataReader reader;
+
+                try
+                {
+                    conn.Open();
+                    reader = command.ExecuteReader();
+
+
+                    while (reader.Read())
+                    {
+                        string dptnames = reader.GetString("DeptName");
+                        this.cmDeptNames.Items.Add(dptnames);
+
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }   
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -281,6 +343,18 @@ namespace Group_2_project
 
 
 
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
+
+        private void btnGetEmployee_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -61,7 +63,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnGetEmployee = new System.Windows.Forms.Button();
             this.btnSignoUT = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmEmployeeNames = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dShow = new System.Windows.Forms.DataGridView();
             this.btnShow = new System.Windows.Forms.Button();
@@ -77,9 +79,10 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmDeptNames = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dgDepartments = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -388,7 +391,7 @@
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.btnGetEmployee);
             this.groupBox4.Controls.Add(this.btnSignoUT);
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.cmEmployeeNames);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(494, 33);
             this.groupBox4.Name = "groupBox4";
@@ -413,8 +416,9 @@
             this.btnGetEmployee.Name = "btnGetEmployee";
             this.btnGetEmployee.Size = new System.Drawing.Size(134, 51);
             this.btnGetEmployee.TabIndex = 7;
-            this.btnGetEmployee.Text = "Get Employee Details";
+            this.btnGetEmployee.Text = "Search Employee Details\r\n";
             this.btnGetEmployee.UseVisualStyleBackColor = false;
+            this.btnGetEmployee.Click += new System.EventHandler(this.btnGetEmployee_Click);
             // 
             // btnSignoUT
             // 
@@ -427,13 +431,13 @@
             this.btnSignoUT.UseVisualStyleBackColor = false;
             this.btnSignoUT.Click += new System.EventHandler(this.btnSignoUT_Click);
             // 
-            // comboBox1
+            // cmEmployeeNames
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(154, 24);
-            this.comboBox1.TabIndex = 4;
+            this.cmEmployeeNames.FormattingEnabled = true;
+            this.cmEmployeeNames.Location = new System.Drawing.Point(120, 85);
+            this.cmEmployeeNames.Name = "cmEmployeeNames";
+            this.cmEmployeeNames.Size = new System.Drawing.Size(154, 24);
+            this.cmEmployeeNames.TabIndex = 4;
             // 
             // groupBox3
             // 
@@ -451,6 +455,14 @@
             // dShow
             // 
             this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dShow.DefaultCellStyle = dataGridViewCellStyle4;
             this.dShow.Location = new System.Drawing.Point(21, 20);
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
@@ -483,6 +495,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button3);
             this.groupBox6.Controls.Add(this.button4);
             this.groupBox6.Controls.Add(this.btnUpdate);
             this.groupBox6.Controls.Add(this.label11);
@@ -493,14 +506,14 @@
             this.groupBox6.ForeColor = System.Drawing.Color.White;
             this.groupBox6.Location = new System.Drawing.Point(63, 26);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(290, 464);
+            this.groupBox6.Size = new System.Drawing.Size(290, 491);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Department Details";
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.BackColor = System.Drawing.Color.RosyBrown;
             this.button4.Location = new System.Drawing.Point(25, 382);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(244, 40);
@@ -567,7 +580,7 @@
             // 
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.cmDeptNames);
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Controls.Add(this.dgDepartments);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
@@ -594,16 +607,16 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 34);
             this.button1.TabIndex = 9;
-            this.button1.Text = "Get Dept";
+            this.button1.Text = "Search Dept Details";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // cmDeptNames
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(233, 451);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 8;
+            this.cmDeptNames.FormattingEnabled = true;
+            this.cmDeptNames.Location = new System.Drawing.Point(233, 451);
+            this.cmDeptNames.Name = "cmDeptNames";
+            this.cmDeptNames.Size = new System.Drawing.Size(121, 24);
+            this.cmDeptNames.TabIndex = 8;
             // 
             // button2
             // 
@@ -619,12 +632,31 @@
             // dgDepartments
             // 
             this.dgDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgDepartments.Location = new System.Drawing.Point(28, 33);
             this.dgDepartments.Name = "dgDepartments";
             this.dgDepartments.RowHeadersWidth = 51;
             this.dgDepartments.RowTemplate.Height = 24;
             this.dgDepartments.Size = new System.Drawing.Size(343, 352);
             this.dgDepartments.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(25, 428);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(244, 47);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Sign Out";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Administration
             // 
@@ -688,7 +720,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.DataGridView dShow;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmEmployeeNames;
         private System.Windows.Forms.Button btnSignoUT;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
@@ -706,8 +738,9 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmDeptNames;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgDepartments;
+        private System.Windows.Forms.Button button3;
     }
 }

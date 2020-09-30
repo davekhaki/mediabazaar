@@ -137,5 +137,17 @@ namespace Group_2_project
         {
 
         }
+
+        private void chbPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbPassword.Checked)
+            {
+
+                tbPassword.UseSystemPasswordChar = false;
+            }
+            else {
+                tbPassword.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

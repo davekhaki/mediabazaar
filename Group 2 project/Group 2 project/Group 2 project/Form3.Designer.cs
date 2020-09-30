@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.pnlLogIn = new System.Windows.Forms.Panel();
+            this.chbPassword = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmUsers = new System.Windows.Forms.ComboBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -41,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pnlLogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             this.pnlLogIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlLogIn.BackColor = System.Drawing.Color.Teal;
+            this.pnlLogIn.Controls.Add(this.chbPassword);
             this.pnlLogIn.Controls.Add(this.label4);
             this.pnlLogIn.Controls.Add(this.label3);
             this.pnlLogIn.Controls.Add(this.cmUsers);
@@ -64,6 +66,27 @@
             this.pnlLogIn.Size = new System.Drawing.Size(514, 332);
             this.pnlLogIn.TabIndex = 1;
             this.pnlLogIn.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogIn_Paint);
+            // 
+            // chbPassword
+            // 
+            this.chbPassword.AutoSize = true;
+            this.chbPassword.Location = new System.Drawing.Point(387, 115);
+            this.chbPassword.Name = "chbPassword";
+            this.chbPassword.Size = new System.Drawing.Size(120, 21);
+            this.chbPassword.TabIndex = 8;
+            this.chbPassword.Text = "See Password";
+            this.chbPassword.UseVisualStyleBackColor = true;
+            this.chbPassword.CheckedChanged += new System.EventHandler(this.chbPassword_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(137, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(167, 24);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Enter Login Details";
             // 
             // label3
             // 
@@ -122,6 +145,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(185, 22);
             this.tbPassword.TabIndex = 2;
+            this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
             // 
             // btnLogin
@@ -147,11 +171,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(197, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(704, 34);
+            this.label1.Size = new System.Drawing.Size(636, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome to Jupiter Ware Eindhoven,We care!";
             // 
@@ -173,23 +197,13 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Teal;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(381, 463);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(350, 29);
+            this.label2.Size = new System.Drawing.Size(311, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Media Bazaar-Eindhoven!";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(137, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Enter Login Details";
             // 
             // Form3
             // 
@@ -226,5 +240,6 @@
         private System.Windows.Forms.ComboBox cmUsers;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox chbPassword;
     }
 }

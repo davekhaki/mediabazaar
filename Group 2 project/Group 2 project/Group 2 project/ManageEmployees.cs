@@ -26,5 +26,10 @@ namespace Group_2_project
         {
 
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -240,5 +240,10 @@ namespace Group_2_project
                 tbQuantity.Text = row.Cells["Quantity"].Value.ToString();
             }
         }
+
+        private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -61,5 +61,15 @@ namespace Group_2_project
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Addbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

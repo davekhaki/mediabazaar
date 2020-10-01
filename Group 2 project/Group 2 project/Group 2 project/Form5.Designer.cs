@@ -56,11 +56,42 @@
             this.loadStockBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Stock = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.SelectedEmpTxt = new System.Windows.Forms.TextBox();
+            this.empListForSchedule = new System.Windows.Forms.DataGridView();
+            this.EveningBtn = new System.Windows.Forms.RadioButton();
+            this.AfternoonBtn = new System.Windows.Forms.RadioButton();
+            this.morningBtn = new System.Windows.Forms.RadioButton();
+            this.dateTimeShiftPicker = new System.Windows.Forms.DateTimePicker();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.scheduleGridView = new System.Windows.Forms.DataGridView();
+            this.firstnametxt = new System.Windows.Forms.TextBox();
+            this.lastnametxt = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.Stock.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -113,9 +144,9 @@
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(223, 40);
+            this.panel4.Location = new System.Drawing.Point(6, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1029, 608);
+            this.panel4.Size = new System.Drawing.Size(1026, 608);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -305,7 +336,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -314,7 +345,7 @@
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
             this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(672, 409);
+            this.dataGridViewStock.Size = new System.Drawing.Size(667, 409);
             this.dataGridViewStock.TabIndex = 9;
             this.dataGridViewStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStock_CellContentClick);
             // 
@@ -353,14 +384,252 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Welcome to Managers Space!";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Stock);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(236, 40);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1016, 608);
+            this.tabControl1.TabIndex = 24;
+            // 
+            // Stock
+            // 
+            this.Stock.Controls.Add(this.panel4);
+            this.Stock.Location = new System.Drawing.Point(4, 25);
+            this.Stock.Name = "Stock";
+            this.Stock.Padding = new System.Windows.Forms.Padding(3);
+            this.Stock.Size = new System.Drawing.Size(1008, 579);
+            this.Stock.TabIndex = 0;
+            this.Stock.Text = "Stock";
+            this.Stock.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1008, 579);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Scheduling";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Controls.Add(this.groupBox4);
+            this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Location = new System.Drawing.Point(-9, -15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1026, 608);
+            this.panel2.TabIndex = 9;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.SelectedEmpTxt);
+            this.groupBox3.Controls.Add(this.empListForSchedule);
+            this.groupBox3.Controls.Add(this.EveningBtn);
+            this.groupBox3.Controls.Add(this.AfternoonBtn);
+            this.groupBox3.Controls.Add(this.morningBtn);
+            this.groupBox3.Controls.Add(this.dateTimeShiftPicker);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Location = new System.Drawing.Point(15, 21);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(499, 567);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Assign a schedule";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(50, 287);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(133, 17);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Selected Employee:";
+            // 
+            // SelectedEmpTxt
+            // 
+            this.SelectedEmpTxt.Location = new System.Drawing.Point(189, 283);
+            this.SelectedEmpTxt.Name = "SelectedEmpTxt";
+            this.SelectedEmpTxt.Size = new System.Drawing.Size(237, 22);
+            this.SelectedEmpTxt.TabIndex = 14;
+            // 
+            // empListForSchedule
+            // 
+            this.empListForSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.empListForSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empListForSchedule.Location = new System.Drawing.Point(11, 59);
+            this.empListForSchedule.Name = "empListForSchedule";
+            this.empListForSchedule.RowHeadersWidth = 51;
+            this.empListForSchedule.RowTemplate.Height = 24;
+            this.empListForSchedule.Size = new System.Drawing.Size(482, 218);
+            this.empListForSchedule.TabIndex = 13;
+            this.empListForSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empListForSchedule_CellContentClick);
+            // 
+            // EveningBtn
+            // 
+            this.EveningBtn.AutoSize = true;
+            this.EveningBtn.Location = new System.Drawing.Point(227, 419);
+            this.EveningBtn.Name = "EveningBtn";
+            this.EveningBtn.Size = new System.Drawing.Size(80, 21);
+            this.EveningBtn.TabIndex = 12;
+            this.EveningBtn.TabStop = true;
+            this.EveningBtn.Text = "Evening";
+            this.EveningBtn.UseVisualStyleBackColor = true;
+            // 
+            // AfternoonBtn
+            // 
+            this.AfternoonBtn.AutoSize = true;
+            this.AfternoonBtn.Location = new System.Drawing.Point(227, 392);
+            this.AfternoonBtn.Name = "AfternoonBtn";
+            this.AfternoonBtn.Size = new System.Drawing.Size(91, 21);
+            this.AfternoonBtn.TabIndex = 11;
+            this.AfternoonBtn.TabStop = true;
+            this.AfternoonBtn.Text = "Afternoon";
+            this.AfternoonBtn.UseVisualStyleBackColor = true;
+            // 
+            // morningBtn
+            // 
+            this.morningBtn.AutoSize = true;
+            this.morningBtn.Location = new System.Drawing.Point(227, 365);
+            this.morningBtn.Name = "morningBtn";
+            this.morningBtn.Size = new System.Drawing.Size(80, 21);
+            this.morningBtn.TabIndex = 10;
+            this.morningBtn.TabStop = true;
+            this.morningBtn.Text = "Morning";
+            this.morningBtn.UseVisualStyleBackColor = true;
+            // 
+            // dateTimeShiftPicker
+            // 
+            this.dateTimeShiftPicker.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeShiftPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeShiftPicker.Location = new System.Drawing.Point(189, 318);
+            this.dateTimeShiftPicker.Name = "dateTimeShiftPicker";
+            this.dateTimeShiftPicker.Size = new System.Drawing.Size(271, 22);
+            this.dateTimeShiftPicker.TabIndex = 9;
+            this.dateTimeShiftPicker.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(123, 458);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(195, 57);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Add Shift";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(49, 323);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 17);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Select a date:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(136, 17);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Select an employee:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(49, 373);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 17);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Select a time:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.lastnametxt);
+            this.groupBox4.Controls.Add(this.firstnametxt);
+            this.groupBox4.Controls.Add(this.scheduleGridView);
+            this.groupBox4.Location = new System.Drawing.Point(521, 22);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(490, 566);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "View schedules";
+            // 
+            // scheduleGridView
+            // 
+            this.scheduleGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.scheduleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.scheduleGridView.Location = new System.Drawing.Point(6, 29);
+            this.scheduleGridView.Name = "scheduleGridView";
+            this.scheduleGridView.RowHeadersWidth = 51;
+            this.scheduleGridView.RowTemplate.Height = 24;
+            this.scheduleGridView.Size = new System.Drawing.Size(478, 333);
+            this.scheduleGridView.TabIndex = 0;
+            // 
+            // firstnametxt
+            // 
+            this.firstnametxt.Location = new System.Drawing.Point(93, 388);
+            this.firstnametxt.Name = "firstnametxt";
+            this.firstnametxt.Size = new System.Drawing.Size(100, 22);
+            this.firstnametxt.TabIndex = 1;
+            // 
+            // lastnametxt
+            // 
+            this.lastnametxt.Location = new System.Drawing.Point(93, 418);
+            this.lastnametxt.Name = "lastnametxt";
+            this.lastnametxt.Size = new System.Drawing.Size(100, 22);
+            this.lastnametxt.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 391);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "First Name:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 418);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 17);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Surname:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(83, 471);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(338, 67);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Get Shifts";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1264, 660);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "Form5";
             this.Text = "Form5";
@@ -371,6 +640,16 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.Stock.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,5 +684,28 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Stock;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox SelectedEmpTxt;
+        private System.Windows.Forms.DataGridView empListForSchedule;
+        private System.Windows.Forms.RadioButton EveningBtn;
+        private System.Windows.Forms.RadioButton AfternoonBtn;
+        private System.Windows.Forms.RadioButton morningBtn;
+        private System.Windows.Forms.DateTimePicker dateTimeShiftPicker;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox lastnametxt;
+        private System.Windows.Forms.TextBox firstnametxt;
+        private System.Windows.Forms.DataGridView scheduleGridView;
     }
 }

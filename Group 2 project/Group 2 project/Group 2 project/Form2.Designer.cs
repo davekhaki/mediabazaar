@@ -41,6 +41,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SelectedEmpTxt = new System.Windows.Forms.TextBox();
             this.empListForSchedule = new System.Windows.Forms.DataGridView();
             this.EveningBtn = new System.Windows.Forms.RadioButton();
             this.AfternoonBtn = new System.Windows.Forms.RadioButton();
@@ -55,8 +57,6 @@
             this.GetShiftsBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.ShiftListBox = new System.Windows.Forms.ListBox();
-            this.SelectedEmpTxt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -215,6 +215,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(50, 287);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 17);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Selected Employee:";
+            // 
+            // SelectedEmpTxt
+            // 
+            this.SelectedEmpTxt.Location = new System.Drawing.Point(189, 283);
+            this.SelectedEmpTxt.Name = "SelectedEmpTxt";
+            this.SelectedEmpTxt.Size = new System.Drawing.Size(237, 22);
+            this.SelectedEmpTxt.TabIndex = 14;
+            this.SelectedEmpTxt.TextChanged += new System.EventHandler(this.SelectedEmpTxt_TextChanged);
+            // 
             // empListForSchedule
             // 
             this.empListForSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -236,6 +253,7 @@
             this.EveningBtn.TabStop = true;
             this.EveningBtn.Text = "Evening";
             this.EveningBtn.UseVisualStyleBackColor = true;
+            this.EveningBtn.CheckedChanged += new System.EventHandler(this.EveningBtn_CheckedChanged);
             // 
             // AfternoonBtn
             // 
@@ -247,6 +265,7 @@
             this.AfternoonBtn.TabStop = true;
             this.AfternoonBtn.Text = "Afternoon";
             this.AfternoonBtn.UseVisualStyleBackColor = true;
+            this.AfternoonBtn.CheckedChanged += new System.EventHandler(this.AfternoonBtn_CheckedChanged);
             // 
             // morningBtn
             // 
@@ -269,6 +288,7 @@
             this.dateTimeShiftPicker.Size = new System.Drawing.Size(271, 22);
             this.dateTimeShiftPicker.TabIndex = 9;
             this.dateTimeShiftPicker.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
+            this.dateTimeShiftPicker.ValueChanged += new System.EventHandler(this.dateTimeShiftPicker_ValueChanged);
             // 
             // button4
             // 
@@ -358,22 +378,6 @@
             this.ShiftListBox.Size = new System.Drawing.Size(240, 228);
             this.ShiftListBox.TabIndex = 0;
             this.ShiftListBox.SelectedIndexChanged += new System.EventHandler(this.ShiftListBox_SelectedIndexChanged);
-            // 
-            // SelectedEmpTxt
-            // 
-            this.SelectedEmpTxt.Location = new System.Drawing.Point(189, 283);
-            this.SelectedEmpTxt.Name = "SelectedEmpTxt";
-            this.SelectedEmpTxt.Size = new System.Drawing.Size(237, 22);
-            this.SelectedEmpTxt.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 287);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 17);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Selected Employee:";
             // 
             // Form2
             // 

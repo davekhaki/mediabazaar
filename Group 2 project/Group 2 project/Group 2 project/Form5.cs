@@ -17,6 +17,7 @@ namespace Group_2_project
         public Form5()
         {
             InitializeComponent();
+            GetEmp();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -269,5 +270,97 @@ namespace Group_2_project
             }
         }
 
+        private void empListForSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.empListForSchedule.Rows[e.RowIndex];
+
+                SelectedEmpTxt.Text = row.Cells["ID"].Value.ToString();
+            }
+        }
+
+        public string TimeOfDayInput;
+
+        private string GetTimeOfDay()
+        {
+            if (morningBtn.Checked == true)
+            {
+                return "Morning";
+            }
+            else if (AfternoonBtn.Checked == true)
+            {
+                return "Afternoon";
+            }
+            else
+            {
+                return "Evening";
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e) //add shift btn
+        {
+            TimeOfDayInput = GetTimeOfDay();
+
+
+
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlCommand query = new MySqlCommand($"INSERT INTO `schedule` (`EmployeeID`, `TimeOfDay`, `Day`) VALUES ('{SelectedEmpTxt.Text}', '{TimeOfDayInput}', '{dateTimeShiftPicker.Text}')", conn);
+
+            conn.Open();
+
+            int affectedRows = query.ExecuteNonQuery();
+
+            if (affectedRows == 0)
+            {
+                MessageBox.Show("Error adding the shift");
+            }
+            else MessageBox.Show("Shift added successfully!");
+
+            conn.Close();
+        }
+
+        private void GetEmp()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlCommand query = new MySqlCommand($"SELECT `ID`,`FirstName`,`LastName` FROM employee", conn);
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = query;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                empListForSchedule.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID WHERE e.FirstName = '{firstnametxt.Text}' AND LastName = '{lastnametxt.Text}' AND YEARWEEK(s.DAY) = YEARWEEK(NOW() + INTERVAL 1 WEEK)", conn);
+            //MySqlCommand query = new MySqlCommand($"SELECT * FROM schedule WHERE FirstName = '{firstnametxt.Text}' AND LastName = '{lastnametxt.Text}'", conn);
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = query;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                scheduleGridView.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
     }
 }

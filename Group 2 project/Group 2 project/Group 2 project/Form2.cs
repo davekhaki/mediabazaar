@@ -219,5 +219,25 @@ namespace Group_2_project
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+        private void SelectedEmpTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimeShiftPicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AfternoonBtn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EveningBtn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

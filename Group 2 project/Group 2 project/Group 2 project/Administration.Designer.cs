@@ -37,6 +37,9 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmeIds = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbId = new System.Windows.Forms.TextBox();
             this.tbRole = new System.Windows.Forms.TextBox();
@@ -68,6 +71,7 @@
             this.btnShow = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -78,13 +82,11 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmDeptIds = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dgDepartments = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.cmeIds = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmDeptIds = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -185,6 +187,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.cmeIds);
@@ -216,11 +220,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employee Details";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(324, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(93, 17);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Employee-Ids";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.Location = new System.Drawing.Point(315, 75);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(129, 29);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Text = "Search Employee";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // cmeIds
+            // 
+            this.cmeIds.FormattingEnabled = true;
+            this.cmeIds.Location = new System.Drawing.Point(309, 36);
+            this.cmeIds.Name = "cmeIds";
+            this.cmeIds.Size = new System.Drawing.Size(135, 24);
+            this.cmeIds.TabIndex = 21;
+            this.cmeIds.SelectedIndexChanged += new System.EventHandler(this.cmeIds_SelectedIndexChanged);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 314);
+            this.dateTimePicker1.Location = new System.Drawing.Point(113, 267);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(116, 22);
             this.dateTimePicker1.TabIndex = 20;
@@ -255,14 +287,14 @@
             // 
             // tbDid
             // 
-            this.tbDid.Location = new System.Drawing.Point(113, 272);
+            this.tbDid.Location = new System.Drawing.Point(113, 234);
             this.tbDid.Name = "tbDid";
             this.tbDid.Size = new System.Drawing.Size(116, 22);
             this.tbDid.TabIndex = 14;
             // 
             // tbGen
             // 
-            this.tbGen.Location = new System.Drawing.Point(113, 215);
+            this.tbGen.Location = new System.Drawing.Point(113, 196);
             this.tbGen.Name = "tbGen";
             this.tbGen.Size = new System.Drawing.Size(116, 22);
             this.tbGen.TabIndex = 13;
@@ -336,7 +368,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 218);
+            this.label4.Location = new System.Drawing.Point(20, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 17);
             this.label4.TabIndex = 3;
@@ -363,7 +395,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 319);
+            this.label7.Location = new System.Drawing.Point(20, 272);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 17);
             this.label7.TabIndex = 6;
@@ -372,7 +404,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 272);
+            this.label6.Location = new System.Drawing.Point(14, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 17);
             this.label6.TabIndex = 5;
@@ -464,7 +496,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -516,6 +548,17 @@
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Department Details";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(25, 428);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(244, 47);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Sign Out";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -616,6 +659,15 @@
             this.button1.Text = "Search Dept Details";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // cmDeptIds
+            // 
+            this.cmDeptIds.FormattingEnabled = true;
+            this.cmDeptIds.Location = new System.Drawing.Point(233, 451);
+            this.cmDeptIds.Name = "cmDeptIds";
+            this.cmDeptIds.Size = new System.Drawing.Size(121, 24);
+            this.cmDeptIds.TabIndex = 8;
+            this.cmDeptIds.SelectedIndexChanged += new System.EventHandler(this.cmDeptNames_SelectedIndexChanged);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -637,53 +689,23 @@
             this.dgDepartments.Size = new System.Drawing.Size(343, 352);
             this.dgDepartments.TabIndex = 1;
             // 
-            // button3
+            // label16
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(25, 428);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(244, 47);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Sign Out";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(20, 321);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 17);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "EndDate";
             // 
-            // cmeIds
+            // dateTimePicker2
             // 
-            this.cmeIds.FormattingEnabled = true;
-            this.cmeIds.Location = new System.Drawing.Point(309, 36);
-            this.cmeIds.Name = "cmeIds";
-            this.cmeIds.Size = new System.Drawing.Size(135, 24);
-            this.cmeIds.TabIndex = 21;
-            this.cmeIds.SelectedIndexChanged += new System.EventHandler(this.cmeIds_SelectedIndexChanged);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(315, 75);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(129, 29);
-            this.btnSearch.TabIndex = 22;
-            this.btnSearch.Text = "Search Employee";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(324, 13);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 17);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Employee-Ids";
-            // 
-            // cmDeptIds
-            // 
-            this.cmDeptIds.FormattingEnabled = true;
-            this.cmDeptIds.Location = new System.Drawing.Point(233, 451);
-            this.cmDeptIds.Name = "cmDeptIds";
-            this.cmDeptIds.Size = new System.Drawing.Size(121, 24);
-            this.cmDeptIds.TabIndex = 8;
-            this.cmDeptIds.SelectedIndexChanged += new System.EventHandler(this.cmDeptNames_SelectedIndexChanged);
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(113, 316);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(116, 22);
+            this.dateTimePicker2.TabIndex = 25;
             // 
             // Administration
             // 
@@ -772,5 +794,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cmeIds;
         private System.Windows.Forms.ComboBox cmDeptIds;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label16;
     }
 }

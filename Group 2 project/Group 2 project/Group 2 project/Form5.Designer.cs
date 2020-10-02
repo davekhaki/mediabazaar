@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.Homebtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbMinQ = new System.Windows.Forms.TextBox();
@@ -103,7 +102,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.Homebtn);
             this.panel1.Location = new System.Drawing.Point(12, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(205, 608);
@@ -120,16 +118,6 @@
             this.button2.Text = "Sign Out";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Homebtn
-            // 
-            this.Homebtn.BackColor = System.Drawing.Color.White;
-            this.Homebtn.Location = new System.Drawing.Point(12, 111);
-            this.Homebtn.Name = "Homebtn";
-            this.Homebtn.Size = new System.Drawing.Size(177, 43);
-            this.Homebtn.TabIndex = 0;
-            this.Homebtn.Text = "Home";
-            this.Homebtn.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -345,7 +333,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -373,7 +361,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -705,7 +693,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Homebtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;

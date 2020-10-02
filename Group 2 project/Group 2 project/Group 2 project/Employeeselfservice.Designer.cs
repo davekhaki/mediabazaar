@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ScheduleTab = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,23 +43,38 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.firstNametext = new System.Windows.Forms.TextBox();
+            this.lastNametext = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.scheduleGridView = new System.Windows.Forms.DataGridView();
+            this.ScheduleTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabPage2
+            // ScheduleTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1021, 575);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Request";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ScheduleTab.Controls.Add(this.scheduleGridView);
+            this.ScheduleTab.Controls.Add(this.button1);
+            this.ScheduleTab.Controls.Add(this.label6);
+            this.ScheduleTab.Controls.Add(this.label5);
+            this.ScheduleTab.Controls.Add(this.lastNametext);
+            this.ScheduleTab.Controls.Add(this.firstNametext);
+            this.ScheduleTab.Location = new System.Drawing.Point(4, 25);
+            this.ScheduleTab.Name = "ScheduleTab";
+            this.ScheduleTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ScheduleTab.Size = new System.Drawing.Size(1021, 575);
+            this.ScheduleTab.TabIndex = 1;
+            this.ScheduleTab.Text = "Schedule";
+            this.ScheduleTab.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -73,16 +87,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Request";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(48, 25);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1029, 604);
-            this.tabControl1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -209,6 +213,68 @@
             this.dataGridView1.Size = new System.Drawing.Size(460, 203);
             this.dataGridView1.TabIndex = 0;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.ScheduleTab);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(48, 25);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1029, 604);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // firstNametext
+            // 
+            this.firstNametext.Location = new System.Drawing.Point(240, 53);
+            this.firstNametext.Name = "firstNametext";
+            this.firstNametext.Size = new System.Drawing.Size(100, 22);
+            this.firstNametext.TabIndex = 0;
+            // 
+            // lastNametext
+            // 
+            this.lastNametext.Location = new System.Drawing.Point(449, 52);
+            this.lastNametext.Name = "lastNametext";
+            this.lastNametext.Size = new System.Drawing.Size(100, 22);
+            this.lastNametext.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(240, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Your first name:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(449, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 17);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Your last name:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(651, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(241, 59);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Get shifts for the week";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // scheduleGridView
+            // 
+            this.scheduleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.scheduleGridView.Location = new System.Drawing.Point(67, 160);
+            this.scheduleGridView.Name = "scheduleGridView";
+            this.scheduleGridView.RowHeadersWidth = 51;
+            this.scheduleGridView.RowTemplate.Height = 24;
+            this.scheduleGridView.Size = new System.Drawing.Size(825, 263);
+            this.scheduleGridView.TabIndex = 5;
+            // 
             // Employeeselfservice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,21 +284,24 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Employeeselfservice";
             this.Text = "Employeeselfservice";
+            this.ScheduleTab.ResumeLayout(false);
+            this.ScheduleTab.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage ScheduleTab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
@@ -247,5 +316,11 @@
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.DataGridView scheduleGridView;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox lastNametext;
+        private System.Windows.Forms.TextBox firstNametext;
     }
 }

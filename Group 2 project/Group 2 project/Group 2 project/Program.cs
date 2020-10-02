@@ -16,7 +16,7 @@ namespace Group_2_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Administration());
+            Application.Run(new Employeeselfservice());
         }
     }
 }

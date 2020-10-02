@@ -52,6 +52,7 @@
             this.tbPname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.dataGridViewMin = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridViewStock = new System.Windows.Forms.DataGridView();
@@ -82,7 +83,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -328,6 +328,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Available";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(19, 298);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(159, 17);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Need To Restock Items:";
+            // 
             // dataGridViewMin
             // 
             this.dataGridViewMin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -364,7 +373,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -657,15 +666,6 @@
             this.label12.Size = new System.Drawing.Size(93, 17);
             this.label12.TabIndex = 1;
             this.label12.Text = "Select a time:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 298);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(159, 17);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Need To Restock Items:";
             // 
             // Form5
             // 

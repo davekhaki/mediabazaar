@@ -17,8 +17,31 @@ namespace Group_2_project
         {
             InitializeComponent();
             LoadRequest();
+            LoadStock();
         }
-        string Done;
+        public void LoadStock()
+        {
+            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            MySqlConnection conDataBase = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conDataBase);
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDataBase;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                dataGridViewStock.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+string Done;
         public void LoadRequest() {
             string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
             MySqlConnection conDataBase = new MySqlConnection(constring);
@@ -75,8 +98,45 @@ namespace Group_2_project
                 MessageBox.Show(ex.Message);
             }
         }
-    
-        
 
+        private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = dataGridViewStock.Rows[e.RowIndex];
+               
+                tbID.Text = row.Cells["ProductID"].Value.ToString();
+                tbQuantity.Text = row.Cells["Quantity"].Value.ToString();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "update dbi434661.stock set ProductID=" + this.tbID.Text + ",Quantity=" + this.tbQuantity.Text + " where ProductID=" + this.tbID.Text + " ;";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+                MessageBox.Show("Product Details Updated successfully!");
+                
+
+                /*   while (reader.Read())
+                   {
+
+                   }*/
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

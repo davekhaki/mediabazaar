@@ -90,7 +90,7 @@ namespace Group_2_project
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = "insert into dbi434661.employee(ID,Firstname,LastName,Age,Gender,DepartmentName" +
-                ",HireDate,EndDate,Salary,Adress,Role)values('" + this.tbId.Text + "','" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.tbGen.Text + "','" + this.tbDid.Text + "','" + this.dateTimePicker1.Text + "','"+this.dateTimePicker2.Text+"''" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.tbRole.Text + "');";
+                ",HireDate,EndDate,Salary,Adress,Role)values('" + this.tbId.Text + "','" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.cmbGender.Text + "','" + this.cmDeptNames.Text + "','" + this.dateTimePicker1.Text + "','"+this.dateTimePicker2.Text+"','" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.cmbRole.Text + "');";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -117,7 +117,7 @@ namespace Group_2_project
         private void btnEdit_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "update dbi434661.employee set ID='" + this.tbId.Text + "',FirstName='" + this.tbFn.Text + "',LastName='" + this.tbSn.Text + "',Age='" + this.tbAge.Text + "',Gender='" + this.tbGen.Text + "',DepartmentName='" + this.tbDid.Text + "',HireDate='" + this.dateTimePicker1.Text + "',EndDate='"+this.dateTimePicker2.Text+"',Salary='" + this.tbSal.Text + "',Adress='" + this.tbAdd.Text + "',Role='" + this.tbRole.Text + "' where ID='" + this.tbId.Text + "' ;";
+            string query = "update dbi434661.employee set ID='" + this.tbId.Text + "',FirstName='" + this.tbFn.Text + "',LastName='" + this.tbSn.Text + "',Age='" + this.tbAge.Text + "',Gender='" + this.cmbGender.Text+ "',DepartmentName='" + this.cmDeptNames.Text+ "',HireDate='" + this.dateTimePicker1.Text + "',EndDate='"+this.dateTimePicker2.Text+"',Salary='" + this.tbSal.Text + "',Adress='" + this.tbAdd.Text + "',Role='" + this.cmbRole.Text + "' where ID='" + this.tbId.Text + "' ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -149,8 +149,8 @@ namespace Group_2_project
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = "delete from dbi434661.employee where ID='" + this.tbId.Text + "';";
-            string query2 = "delete from dbi434661.departments where DeptName='" + this.tbDid.Text + "';";
-            string query3 = "delete from dbi434661.login where eID='" + this.tbDid.Text + "';";
+            string query2 = "delete from dbi434661.departments where DeptName='" + this.cmDeptNames.Text + "';";
+            string query3 = "delete from dbi434661.login where eID='" + this.cmDeptNames.Text + "';";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlCommand command2 = new MySqlCommand(query2, conn);
             MySqlCommand command3 = new MySqlCommand(query3, conn);
@@ -442,12 +442,12 @@ namespace Group_2_project
                 this.tbFn.Text = FirstName;
                 this.tbSn.Text = LastName;
                 this.tbAge.Text = Age;
-                this.tbGen.Text = Gender;
+                this.cmbGender.Text = Gender;
                 this.tbDeptId.Text = DepartmentID;
                 this.dateTimePicker1.Text = HireDate;
                 this.tbSal.Text = Salary;
                 this.tbAdd.Text = Adress;
-                this.tbRole.Text = Role;
+                this.cmbRole.Text = Role;
 
 
 

@@ -28,38 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSignoutAdmin = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.cmeIds = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tbId = new System.Windows.Forms.TextBox();
-            this.tbRole = new System.Windows.Forms.TextBox();
-            this.tbAdd = new System.Windows.Forms.TextBox();
-            this.tbSal = new System.Windows.Forms.TextBox();
-            this.tbDid = new System.Windows.Forms.TextBox();
-            this.tbGen = new System.Windows.Forms.TextBox();
-            this.tbAge = new System.Windows.Forms.TextBox();
-            this.tbSn = new System.Windows.Forms.TextBox();
-            this.tbFn = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -85,12 +55,39 @@
             this.cmDeptIds = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dgDepartments = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSignoutAdmin = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.cmDeptNames = new System.Windows.Forms.ComboBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmeIds = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.tbAdd = new System.Windows.Forms.TextBox();
+            this.tbSal = new System.Windows.Forms.TextBox();
+            this.tbAge = new System.Windows.Forms.TextBox();
+            this.tbSn = new System.Windows.Forms.TextBox();
+            this.tbFn = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -99,316 +96,21 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepartments)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(35, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(852, 566);
+            this.tabControl1.Size = new System.Drawing.Size(1239, 566);
             this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Lavender;
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(844, 537);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Welcome to your Employee Admin Page";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Teal;
-            this.groupBox2.Controls.Add(this.btnSignoutAdmin);
-            this.groupBox2.Controls.Add(this.btnRemove);
-            this.groupBox2.Controls.Add(this.btnEdit);
-            this.groupBox2.Controls.Add(this.btnAdd);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(512, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 493);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "All at your reach!";
-            // 
-            // btnSignoutAdmin
-            // 
-            this.btnSignoutAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSignoutAdmin.Location = new System.Drawing.Point(39, 288);
-            this.btnSignoutAdmin.Name = "btnSignoutAdmin";
-            this.btnSignoutAdmin.Size = new System.Drawing.Size(205, 50);
-            this.btnSignoutAdmin.TabIndex = 3;
-            this.btnSignoutAdmin.Text = "Sign Out";
-            this.btnSignoutAdmin.UseVisualStyleBackColor = false;
-            this.btnSignoutAdmin.Click += new System.EventHandler(this.btnSignoutAdmin_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(39, 215);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(205, 54);
-            this.btnRemove.TabIndex = 2;
-            this.btnRemove.Text = "Remove Employee";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnEdit.Location = new System.Drawing.Point(39, 138);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(198, 53);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit Employee Details";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAdd.Location = new System.Drawing.Point(39, 56);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(198, 48);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add Employee";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Teal;
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.cmeIds);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.tbId);
-            this.groupBox1.Controls.Add(this.tbRole);
-            this.groupBox1.Controls.Add(this.tbAdd);
-            this.groupBox1.Controls.Add(this.tbSal);
-            this.groupBox1.Controls.Add(this.tbDid);
-            this.groupBox1.Controls.Add(this.tbGen);
-            this.groupBox1.Controls.Add(this.tbAge);
-            this.groupBox1.Controls.Add(this.tbSn);
-            this.groupBox1.Controls.Add(this.tbFn);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(20, 26);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(457, 493);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Employee Details";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(324, 13);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 17);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Employee-Ids";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(315, 75);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(129, 29);
-            this.btnSearch.TabIndex = 22;
-            this.btnSearch.Text = "Search Employee";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // cmeIds
-            // 
-            this.cmeIds.FormattingEnabled = true;
-            this.cmeIds.Location = new System.Drawing.Point(309, 36);
-            this.cmeIds.Name = "cmeIds";
-            this.cmeIds.Size = new System.Drawing.Size(135, 24);
-            this.cmeIds.TabIndex = 21;
-            this.cmeIds.SelectedIndexChanged += new System.EventHandler(this.cmeIds_SelectedIndexChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 267);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(116, 22);
-            this.dateTimePicker1.TabIndex = 20;
-            // 
-            // tbId
-            // 
-            this.tbId.Location = new System.Drawing.Point(113, 36);
-            this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(116, 22);
-            this.tbId.TabIndex = 19;
-            // 
-            // tbRole
-            // 
-            this.tbRole.Location = new System.Drawing.Point(113, 458);
-            this.tbRole.Name = "tbRole";
-            this.tbRole.Size = new System.Drawing.Size(116, 22);
-            this.tbRole.TabIndex = 18;
-            // 
-            // tbAdd
-            // 
-            this.tbAdd.Location = new System.Drawing.Point(113, 416);
-            this.tbAdd.Name = "tbAdd";
-            this.tbAdd.Size = new System.Drawing.Size(116, 22);
-            this.tbAdd.TabIndex = 17;
-            // 
-            // tbSal
-            // 
-            this.tbSal.Location = new System.Drawing.Point(113, 364);
-            this.tbSal.Name = "tbSal";
-            this.tbSal.Size = new System.Drawing.Size(116, 22);
-            this.tbSal.TabIndex = 16;
-            // 
-            // tbDid
-            // 
-            this.tbDid.Location = new System.Drawing.Point(113, 234);
-            this.tbDid.Name = "tbDid";
-            this.tbDid.Size = new System.Drawing.Size(116, 22);
-            this.tbDid.TabIndex = 14;
-            // 
-            // tbGen
-            // 
-            this.tbGen.Location = new System.Drawing.Point(113, 196);
-            this.tbGen.Name = "tbGen";
-            this.tbGen.Size = new System.Drawing.Size(116, 22);
-            this.tbGen.TabIndex = 13;
-            // 
-            // tbAge
-            // 
-            this.tbAge.Location = new System.Drawing.Point(113, 156);
-            this.tbAge.Name = "tbAge";
-            this.tbAge.Size = new System.Drawing.Size(116, 22);
-            this.tbAge.TabIndex = 12;
-            // 
-            // tbSn
-            // 
-            this.tbSn.Location = new System.Drawing.Point(113, 110);
-            this.tbSn.Name = "tbSn";
-            this.tbSn.Size = new System.Drawing.Size(116, 22);
-            this.tbSn.TabIndex = 11;
-            // 
-            // tbFn
-            // 
-            this.tbFn.Location = new System.Drawing.Point(113, 64);
-            this.tbFn.Name = "tbFn";
-            this.tbFn.Size = new System.Drawing.Size(116, 22);
-            this.tbFn.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "EmployeeId";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "FirstName";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 458);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Role";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "SecondName";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 416);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 17);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Address";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 196);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Gender";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 367);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Salary";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Age";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 272);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "HireDate";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 234);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Department Id";
             // 
             // tabPage2
             // 
@@ -418,7 +120,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(844, 537);
+            this.tabPage2.Size = new System.Drawing.Size(1231, 537);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Welcome to your Employee Admin Page";
             // 
@@ -430,7 +132,7 @@
             this.groupBox4.Controls.Add(this.btnSignoUT);
             this.groupBox4.Controls.Add(this.cmEmployeeNames);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(494, 33);
+            this.groupBox4.Location = new System.Drawing.Point(857, 33);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(350, 479);
             this.groupBox4.TabIndex = 9;
@@ -485,7 +187,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(32, 33);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(445, 479);
+            this.groupBox3.Size = new System.Drawing.Size(825, 479);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Show All";
@@ -493,25 +195,25 @@
             // dShow
             // 
             this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dShow.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dShow.DefaultCellStyle = dataGridViewCellStyle2;
             this.dShow.Location = new System.Drawing.Point(21, 20);
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
             this.dShow.RowTemplate.Height = 24;
-            this.dShow.Size = new System.Drawing.Size(386, 378);
+            this.dShow.Size = new System.Drawing.Size(763, 378);
             this.dShow.TabIndex = 1;
             // 
             // btnShow
             // 
             this.btnShow.BackColor = System.Drawing.Color.Lime;
-            this.btnShow.Location = new System.Drawing.Point(21, 404);
+            this.btnShow.Location = new System.Drawing.Point(150, 404);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(386, 52);
             this.btnShow.TabIndex = 0;
@@ -527,7 +229,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(844, 537);
+            this.tabPage3.Size = new System.Drawing.Size(1231, 537);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Welcome to Departments Admin page!";
             // 
@@ -542,9 +244,9 @@
             this.groupBox6.Controls.Add(this.tbDeptName);
             this.groupBox6.Controls.Add(this.tbDeptId);
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(63, 26);
+            this.groupBox6.Location = new System.Drawing.Point(63, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(290, 491);
+            this.groupBox6.Size = new System.Drawing.Size(387, 511);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Department Details";
@@ -633,9 +335,9 @@
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Controls.Add(this.dgDepartments);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(399, 26);
+            this.groupBox5.Location = new System.Drawing.Point(476, 10);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(404, 491);
+            this.groupBox5.Size = new System.Drawing.Size(714, 491);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "All here!";
@@ -643,7 +345,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(263, 413);
+            this.label14.Location = new System.Drawing.Point(590, 401);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 17);
             this.label14.TabIndex = 10;
@@ -652,7 +354,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Olive;
-            this.button1.Location = new System.Drawing.Point(15, 451);
+            this.button1.Location = new System.Drawing.Point(492, 451);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 34);
             this.button1.TabIndex = 9;
@@ -662,7 +364,7 @@
             // cmDeptIds
             // 
             this.cmDeptIds.FormattingEnabled = true;
-            this.cmDeptIds.Location = new System.Drawing.Point(233, 451);
+            this.cmDeptIds.Location = new System.Drawing.Point(556, 424);
             this.cmDeptIds.Name = "cmDeptIds";
             this.cmDeptIds.Size = new System.Drawing.Size(121, 24);
             this.cmDeptIds.TabIndex = 8;
@@ -671,7 +373,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(15, 401);
+            this.button2.Location = new System.Drawing.Point(156, 391);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(185, 41);
             this.button2.TabIndex = 2;
@@ -686,8 +388,168 @@
             this.dgDepartments.Name = "dgDepartments";
             this.dgDepartments.RowHeadersWidth = 51;
             this.dgDepartments.RowTemplate.Height = 24;
-            this.dgDepartments.Size = new System.Drawing.Size(343, 352);
+            this.dgDepartments.Size = new System.Drawing.Size(658, 352);
             this.dgDepartments.TabIndex = 1;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.Lavender;
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1231, 537);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Welcome to your Employee Admin Page";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Teal;
+            this.groupBox2.Controls.Add(this.btnSignoutAdmin);
+            this.groupBox2.Controls.Add(this.btnRemove);
+            this.groupBox2.Controls.Add(this.btnEdit);
+            this.groupBox2.Controls.Add(this.btnAdd);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(860, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(335, 493);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "All at your reach!";
+            // 
+            // btnSignoutAdmin
+            // 
+            this.btnSignoutAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSignoutAdmin.Location = new System.Drawing.Point(39, 288);
+            this.btnSignoutAdmin.Name = "btnSignoutAdmin";
+            this.btnSignoutAdmin.Size = new System.Drawing.Size(205, 50);
+            this.btnSignoutAdmin.TabIndex = 3;
+            this.btnSignoutAdmin.Text = "Sign Out";
+            this.btnSignoutAdmin.UseVisualStyleBackColor = false;
+            this.btnSignoutAdmin.Click += new System.EventHandler(this.btnSignoutAdmin_Click);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.Location = new System.Drawing.Point(39, 215);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(205, 54);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "Remove Employee";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnEdit.Location = new System.Drawing.Point(39, 138);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(198, 53);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Edit Employee Details";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAdd.Location = new System.Drawing.Point(39, 56);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(198, 48);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add Employee";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Controls.Add(this.cmbRole);
+            this.groupBox1.Controls.Add(this.cmDeptNames);
+            this.groupBox1.Controls.Add(this.cmbGender);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.cmeIds);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.tbId);
+            this.groupBox1.Controls.Add(this.tbAdd);
+            this.groupBox1.Controls.Add(this.tbSal);
+            this.groupBox1.Controls.Add(this.tbAge);
+            this.groupBox1.Controls.Add(this.tbSn);
+            this.groupBox1.Controls.Add(this.tbFn);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(20, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(819, 493);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Employee Details";
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Admin",
+            "Manager",
+            "SalesMan",
+            "SalesWoman",
+            "Clerk",
+            "Accountant",
+            "Trainer",
+            "Marketer",
+            "Stock Controller"});
+            this.cmbRole.Location = new System.Drawing.Point(113, 458);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(403, 24);
+            this.cmbRole.TabIndex = 28;
+            // 
+            // cmDeptNames
+            // 
+            this.cmDeptNames.FormattingEnabled = true;
+            this.cmDeptNames.Items.AddRange(new object[] {
+            "Finance",
+            "Marketing",
+            "Logistics",
+            "Engineering",
+            "Customer Care"});
+            this.cmDeptNames.Location = new System.Drawing.Point(113, 234);
+            this.cmDeptNames.Name = "cmDeptNames";
+            this.cmDeptNames.Size = new System.Drawing.Size(403, 24);
+            this.cmDeptNames.TabIndex = 27;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(113, 193);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(403, 24);
+            this.cmbGender.TabIndex = 26;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(113, 316);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(403, 22);
+            this.dateTimePicker2.TabIndex = 25;
             // 
             // label16
             // 
@@ -698,29 +560,185 @@
             this.label16.TabIndex = 24;
             this.label16.Text = "EndDate";
             // 
-            // dateTimePicker2
+            // label15
             // 
-            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(113, 316);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(116, 22);
-            this.dateTimePicker2.TabIndex = 25;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(567, 39);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(93, 17);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Employee-Ids";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.Location = new System.Drawing.Point(666, 75);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(129, 29);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Text = "Search Employee";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // cmeIds
+            // 
+            this.cmeIds.FormattingEnabled = true;
+            this.cmeIds.Location = new System.Drawing.Point(666, 36);
+            this.cmeIds.Name = "cmeIds";
+            this.cmeIds.Size = new System.Drawing.Size(135, 24);
+            this.cmeIds.TabIndex = 21;
+            this.cmeIds.SelectedIndexChanged += new System.EventHandler(this.cmeIds_SelectedIndexChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(113, 267);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(403, 22);
+            this.dateTimePicker1.TabIndex = 20;
+            // 
+            // tbId
+            // 
+            this.tbId.Location = new System.Drawing.Point(113, 36);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(403, 22);
+            this.tbId.TabIndex = 19;
+            // 
+            // tbAdd
+            // 
+            this.tbAdd.Location = new System.Drawing.Point(113, 416);
+            this.tbAdd.Name = "tbAdd";
+            this.tbAdd.Size = new System.Drawing.Size(403, 22);
+            this.tbAdd.TabIndex = 17;
+            // 
+            // tbSal
+            // 
+            this.tbSal.Location = new System.Drawing.Point(113, 364);
+            this.tbSal.Name = "tbSal";
+            this.tbSal.Size = new System.Drawing.Size(403, 22);
+            this.tbSal.TabIndex = 16;
+            // 
+            // tbAge
+            // 
+            this.tbAge.Location = new System.Drawing.Point(113, 156);
+            this.tbAge.Name = "tbAge";
+            this.tbAge.Size = new System.Drawing.Size(403, 22);
+            this.tbAge.TabIndex = 12;
+            // 
+            // tbSn
+            // 
+            this.tbSn.Location = new System.Drawing.Point(113, 110);
+            this.tbSn.Name = "tbSn";
+            this.tbSn.Size = new System.Drawing.Size(403, 22);
+            this.tbSn.TabIndex = 11;
+            // 
+            // tbFn
+            // 
+            this.tbFn.Location = new System.Drawing.Point(113, 64);
+            this.tbFn.Name = "tbFn";
+            this.tbFn.Size = new System.Drawing.Size(403, 22);
+            this.tbFn.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "EmployeeId";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "FirstName";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(29, 458);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 17);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Role";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "LastName";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 416);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 17);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Address";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Gender";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(20, 367);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 17);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Salary";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Age";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 272);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "HireDate";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 234);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Dept-Name";
             // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(933, 599);
+            this.ClientSize = new System.Drawing.Size(1313, 599);
             this.Controls.Add(this.tabControl1);
             this.Name = "Administration";
             this.Text = "Administration";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -732,6 +750,10 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDepartments)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -743,11 +765,8 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbRole;
         private System.Windows.Forms.TextBox tbAdd;
         private System.Windows.Forms.TextBox tbSal;
-        private System.Windows.Forms.TextBox tbDid;
-        private System.Windows.Forms.TextBox tbGen;
         private System.Windows.Forms.TextBox tbAge;
         private System.Windows.Forms.TextBox tbSn;
         private System.Windows.Forms.TextBox tbFn;
@@ -796,5 +815,8 @@
         private System.Windows.Forms.ComboBox cmDeptIds;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.ComboBox cmDeptNames;
+        private System.Windows.Forms.ComboBox cmbGender;
     }
 }

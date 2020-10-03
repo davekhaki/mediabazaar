@@ -61,16 +61,16 @@
             this.pnlLogIn.Controls.Add(this.tbEmail);
             this.pnlLogIn.Controls.Add(this.tbPassword);
             this.pnlLogIn.Controls.Add(this.btnLogin);
-            this.pnlLogIn.Location = new System.Drawing.Point(525, 86);
+            this.pnlLogIn.Location = new System.Drawing.Point(524, 86);
             this.pnlLogIn.Name = "pnlLogIn";
-            this.pnlLogIn.Size = new System.Drawing.Size(514, 332);
+            this.pnlLogIn.Size = new System.Drawing.Size(551, 332);
             this.pnlLogIn.TabIndex = 1;
             this.pnlLogIn.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogIn_Paint);
             // 
             // chbPassword
             // 
             this.chbPassword.AutoSize = true;
-            this.chbPassword.Location = new System.Drawing.Point(387, 115);
+            this.chbPassword.Location = new System.Drawing.Point(425, 117);
             this.chbPassword.Name = "chbPassword";
             this.chbPassword.Size = new System.Drawing.Size(120, 21);
             this.chbPassword.TabIndex = 8;
@@ -107,7 +107,7 @@
             "employee"});
             this.cmUsers.Location = new System.Drawing.Point(177, 145);
             this.cmUsers.Name = "cmUsers";
-            this.cmUsers.Size = new System.Drawing.Size(185, 24);
+            this.cmUsers.Size = new System.Drawing.Size(238, 24);
             this.cmUsers.TabIndex = 5;
             // 
             // lblEmail
@@ -136,14 +136,14 @@
             // 
             this.tbEmail.Location = new System.Drawing.Point(177, 73);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(185, 22);
+            this.tbEmail.Size = new System.Drawing.Size(238, 22);
             this.tbEmail.TabIndex = 1;
             // 
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(177, 113);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(185, 22);
+            this.tbPassword.Size = new System.Drawing.Size(238, 22);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.UseSystemPasswordChar = true;
             this.tbPassword.TextChanged += new System.EventHandler(this.PasswordBox_TextChanged);
@@ -153,7 +153,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnLogin.Location = new System.Drawing.Point(177, 187);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(185, 46);
+            this.btnLogin.Size = new System.Drawing.Size(238, 46);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Log in";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -188,7 +188,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(30, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1039, 540);
+            this.groupBox1.Size = new System.Drawing.Size(1075, 540);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Welcome to your Personal Environment";
@@ -210,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1093, 636);
+            this.ClientSize = new System.Drawing.Size(1172, 636);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form3";

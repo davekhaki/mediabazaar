@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -152,9 +152,9 @@
             // btnGetEmployee
             // 
             this.btnGetEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnGetEmployee.Location = new System.Drawing.Point(28, 404);
+            this.btnGetEmployee.Location = new System.Drawing.Point(21, 336);
             this.btnGetEmployee.Name = "btnGetEmployee";
-            this.btnGetEmployee.Size = new System.Drawing.Size(134, 51);
+            this.btnGetEmployee.Size = new System.Drawing.Size(323, 51);
             this.btnGetEmployee.TabIndex = 7;
             this.btnGetEmployee.Text = "Search Employee Details\r\n";
             this.btnGetEmployee.UseVisualStyleBackColor = false;
@@ -163,9 +163,9 @@
             // btnSignoUT
             // 
             this.btnSignoUT.BackColor = System.Drawing.Color.Red;
-            this.btnSignoUT.Location = new System.Drawing.Point(181, 404);
+            this.btnSignoUT.Location = new System.Drawing.Point(21, 404);
             this.btnSignoUT.Name = "btnSignoUT";
-            this.btnSignoUT.Size = new System.Drawing.Size(139, 51);
+            this.btnSignoUT.Size = new System.Drawing.Size(323, 51);
             this.btnSignoUT.TabIndex = 2;
             this.btnSignoUT.Text = "Sign Out";
             this.btnSignoUT.UseVisualStyleBackColor = false;
@@ -196,14 +196,14 @@
             // dShow
             // 
             this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dShow.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dShow.DefaultCellStyle = dataGridViewCellStyle1;
             this.dShow.Location = new System.Drawing.Point(21, 20);
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
@@ -257,7 +257,7 @@
             this.button3.BackColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(25, 428);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(244, 47);
+            this.button3.Size = new System.Drawing.Size(334, 49);
             this.button3.TabIndex = 11;
             this.button3.Text = "Sign Out";
             this.button3.UseVisualStyleBackColor = false;
@@ -266,9 +266,9 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.RosyBrown;
-            this.button4.Location = new System.Drawing.Point(25, 382);
+            this.button4.Location = new System.Drawing.Point(25, 371);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(244, 40);
+            this.button4.Size = new System.Drawing.Size(334, 51);
             this.button4.TabIndex = 7;
             this.button4.Text = "Remove Department";
             this.button4.UseVisualStyleBackColor = false;
@@ -277,9 +277,9 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUpdate.Location = new System.Drawing.Point(25, 328);
+            this.btnUpdate.Location = new System.Drawing.Point(25, 314);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(244, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(334, 51);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Edit Department Details";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -306,9 +306,9 @@
             // btnAddDept
             // 
             this.btnAddDept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddDept.Location = new System.Drawing.Point(25, 268);
+            this.btnAddDept.Location = new System.Drawing.Point(25, 260);
             this.btnAddDept.Name = "btnAddDept";
-            this.btnAddDept.Size = new System.Drawing.Size(244, 40);
+            this.btnAddDept.Size = new System.Drawing.Size(334, 48);
             this.btnAddDept.TabIndex = 0;
             this.btnAddDept.Text = "Add Department";
             this.btnAddDept.UseVisualStyleBackColor = false;
@@ -346,7 +346,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(590, 401);
+            this.label14.Location = new System.Drawing.Point(479, 410);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 17);
             this.label14.TabIndex = 10;
@@ -355,9 +355,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Olive;
-            this.button1.Location = new System.Drawing.Point(492, 451);
+            this.button1.Location = new System.Drawing.Point(372, 437);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 34);
+            this.button1.Size = new System.Drawing.Size(305, 48);
             this.button1.TabIndex = 9;
             this.button1.Text = "Search Dept Details";
             this.button1.UseVisualStyleBackColor = false;
@@ -365,7 +365,7 @@
             // cmDeptIds
             // 
             this.cmDeptIds.FormattingEnabled = true;
-            this.cmDeptIds.Location = new System.Drawing.Point(556, 424);
+            this.cmDeptIds.Location = new System.Drawing.Point(556, 407);
             this.cmDeptIds.Name = "cmDeptIds";
             this.cmDeptIds.Size = new System.Drawing.Size(121, 24);
             this.cmDeptIds.TabIndex = 8;
@@ -374,9 +374,9 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(156, 391);
+            this.button2.Location = new System.Drawing.Point(28, 437);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 41);
+            this.button2.Size = new System.Drawing.Size(313, 48);
             this.button2.TabIndex = 2;
             this.button2.Text = "View All ";
             this.button2.UseVisualStyleBackColor = false;
@@ -385,14 +385,14 @@
             // dgDepartments
             // 
             this.dgDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgDepartments.Location = new System.Drawing.Point(28, 33);
             this.dgDepartments.Name = "dgDepartments";
             this.dgDepartments.RowHeadersWidth = 51;
@@ -433,7 +433,7 @@
             this.btnSignoutAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSignoutAdmin.Location = new System.Drawing.Point(39, 288);
             this.btnSignoutAdmin.Name = "btnSignoutAdmin";
-            this.btnSignoutAdmin.Size = new System.Drawing.Size(205, 50);
+            this.btnSignoutAdmin.Size = new System.Drawing.Size(271, 50);
             this.btnSignoutAdmin.TabIndex = 3;
             this.btnSignoutAdmin.Text = "Sign Out";
             this.btnSignoutAdmin.UseVisualStyleBackColor = false;
@@ -444,7 +444,7 @@
             this.btnRemove.BackColor = System.Drawing.Color.Red;
             this.btnRemove.Location = new System.Drawing.Point(39, 215);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(205, 54);
+            this.btnRemove.Size = new System.Drawing.Size(271, 54);
             this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove Employee";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -455,7 +455,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnEdit.Location = new System.Drawing.Point(39, 138);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(198, 53);
+            this.btnEdit.Size = new System.Drawing.Size(271, 53);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit Employee Details";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -466,7 +466,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAdd.Location = new System.Drawing.Point(39, 56);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(198, 48);
+            this.btnAdd.Size = new System.Drawing.Size(271, 48);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add Employee";
             this.btnAdd.UseVisualStyleBackColor = false;

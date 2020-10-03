@@ -64,11 +64,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.lastnametxt = new System.Windows.Forms.TextBox();
-            this.firstnametxt = new System.Windows.Forms.TextBox();
             this.scheduleGridView = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
+            this.firstnametxt = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.SelectedEmpTxt = new System.Windows.Forms.TextBox();
@@ -76,8 +76,8 @@
             this.EveningBtn = new System.Windows.Forms.RadioButton();
             this.AfternoonBtn = new System.Windows.Forms.RadioButton();
             this.morningBtn = new System.Windows.Forms.RadioButton();
-            this.dateTimeShiftPicker = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
+            this.dateTimeShiftPicker = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -475,38 +475,13 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(35, 523);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 17);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Surname:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(35, 493);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 17);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "First Name:";
-            // 
             // lastnametxt
             // 
-            this.lastnametxt.ForeColor = System.Drawing.Color.White;
+            this.lastnametxt.ForeColor = System.Drawing.Color.Black;
             this.lastnametxt.Location = new System.Drawing.Point(121, 523);
             this.lastnametxt.Name = "lastnametxt";
             this.lastnametxt.Size = new System.Drawing.Size(241, 22);
             this.lastnametxt.TabIndex = 2;
-            // 
-            // firstnametxt
-            // 
-            this.firstnametxt.Location = new System.Drawing.Point(121, 493);
-            this.firstnametxt.Name = "firstnametxt";
-            this.firstnametxt.Size = new System.Drawing.Size(241, 22);
-            this.firstnametxt.TabIndex = 1;
             // 
             // scheduleGridView
             // 
@@ -518,6 +493,32 @@
             this.scheduleGridView.RowTemplate.Height = 24;
             this.scheduleGridView.Size = new System.Drawing.Size(717, 407);
             this.scheduleGridView.TabIndex = 0;
+            this.scheduleGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.scheduleGridView_CellContentClick);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(35, 523);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 17);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Surname:";
+            // 
+            // firstnametxt
+            // 
+            this.firstnametxt.Location = new System.Drawing.Point(121, 493);
+            this.firstnametxt.Name = "firstnametxt";
+            this.firstnametxt.Size = new System.Drawing.Size(241, 22);
+            this.firstnametxt.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(35, 493);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 17);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "First Name:";
             // 
             // groupBox3
             // 
@@ -601,16 +602,6 @@
             this.morningBtn.Text = "Morning";
             this.morningBtn.UseVisualStyleBackColor = true;
             // 
-            // dateTimeShiftPicker
-            // 
-            this.dateTimeShiftPicker.CustomFormat = "yyyy-MM-dd";
-            this.dateTimeShiftPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeShiftPicker.Location = new System.Drawing.Point(146, 488);
-            this.dateTimeShiftPicker.Name = "dateTimeShiftPicker";
-            this.dateTimeShiftPicker.Size = new System.Drawing.Size(158, 22);
-            this.dateTimeShiftPicker.TabIndex = 9;
-            this.dateTimeShiftPicker.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -621,6 +612,16 @@
             this.button4.Text = "Add Shift";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dateTimeShiftPicker
+            // 
+            this.dateTimeShiftPicker.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeShiftPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeShiftPicker.Location = new System.Drawing.Point(146, 488);
+            this.dateTimeShiftPicker.Name = "dateTimeShiftPicker";
+            this.dateTimeShiftPicker.Size = new System.Drawing.Size(158, 22);
+            this.dateTimeShiftPicker.TabIndex = 9;
+            this.dateTimeShiftPicker.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
             // 
             // label9
             // 

@@ -18,6 +18,9 @@ namespace Group_2_project
             InitializeComponent();
             FillEmployeeIds();
             FillDeptIds();
+            dShow.DefaultCellStyle.ForeColor = Color.Black;
+            dgDepartments.DefaultCellStyle.ForeColor = Color.Black;
+     
         }
         void FillEmployeeIds()
         {
@@ -69,7 +72,7 @@ namespace Group_2_project
                         this.cmDeptIds.Items.Add(dpname);
 
                     }
-
+                    conn.Close();
 
                 }
                 catch (Exception ex)
@@ -136,6 +139,7 @@ namespace Group_2_project
                 {
 
                 }
+                conn.Close();
 
 
             }
@@ -167,7 +171,7 @@ namespace Group_2_project
 
                 }
 
-
+                conn.Close();
             }
             catch (Exception ex)
             {
@@ -210,7 +214,7 @@ namespace Group_2_project
                 command3.ExecuteScalar();
 
                 MessageBox.Show("Deleted");
-
+                conn.Close();
 
             }
             catch (Exception ex)
@@ -249,14 +253,15 @@ namespace Group_2_project
                 dShow.DataSource = bSource;
                 sda.Update(dbaTableset);
 
+
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btnSignoUT_Click(object sender, EventArgs e)
         {
-            Administration ad = new Administration();
-            ad.Show();
+            Form3 form3 = new Form3();
+            form3.Show();
             this.Hide();
         }
 

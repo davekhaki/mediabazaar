@@ -13,11 +13,37 @@ namespace Group_2_project
 {
     public partial class Employeeselfservice : Form
     {
-        public Employeeselfservice()
+        public Employeeselfservice(string username)
         {
             InitializeComponent();
+            this.Text = username;
+          
             LoadRequest();
             LoadStock();
+           GetSchedule(username);
+            dataGridViewSchedule.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridViewStock.DefaultCellStyle.ForeColor = Color.Black;
+           
+        }
+
+        public void GetSchedule(string username) {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM ((employee e INNER JOIN schedule s ON e.ID = s.EmployeeID) INNER JOIN login l ON l.empId = e.ID) WHERE l.username = '{username}' AND YEARWEEK(s.DAY) = YEARWEEK(NOW() + INTERVAL 1 WEEK)", conn);
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = query;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                dataGridViewSchedule.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         public void LoadStock()
         {
@@ -67,6 +93,7 @@ string Done;
       
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            dataGridView1.ForeColor = System.Drawing.Color.Black;
             if (e.RowIndex >= 0)
             {
 
@@ -101,6 +128,7 @@ string Done;
 
         private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            dataGridViewStock.ForeColor = System.Drawing.Color.Black;
             if (e.RowIndex >= 0)
             {
 
@@ -139,25 +167,16 @@ string Done;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridViewSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID WHERE e.FirstName = '{firstNametext.Text}' AND LastName = '{lastNametext.Text}' AND YEARWEEK(s.DAY) = YEARWEEK(NOW() + INTERVAL 1 WEEK)", conn);
-            
-            try
-            {
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = query;
-                DataTable dbaTableset = new DataTable();
-                sda.Fill(dbaTableset);
-                BindingSource bSource = new BindingSource();
+            dataGridViewSchedule.ForeColor = System.Drawing.Color.Black;
+        }
 
-                bSource.DataSource = dbaTableset;
-                scheduleGridView.DataSource = bSource;
-                sda.Update(dbaTableset);
-
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Hide();
         }
     }
 }

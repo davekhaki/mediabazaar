@@ -32,8 +32,6 @@
             this.pnlLogIn = new System.Windows.Forms.Panel();
             this.chbPassword = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmUsers = new System.Windows.Forms.ComboBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -54,8 +52,6 @@
             this.pnlLogIn.BackColor = System.Drawing.Color.Teal;
             this.pnlLogIn.Controls.Add(this.chbPassword);
             this.pnlLogIn.Controls.Add(this.label4);
-            this.pnlLogIn.Controls.Add(this.label3);
-            this.pnlLogIn.Controls.Add(this.cmUsers);
             this.pnlLogIn.Controls.Add(this.lblEmail);
             this.pnlLogIn.Controls.Add(this.lblPassword);
             this.pnlLogIn.Controls.Add(this.tbEmail);
@@ -87,28 +83,6 @@
             this.label4.Size = new System.Drawing.Size(167, 24);
             this.label4.TabIndex = 4;
             this.label4.Text = "Enter Login Details";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 24);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Select User:";
-            // 
-            // cmUsers
-            // 
-            this.cmUsers.FormattingEnabled = true;
-            this.cmUsers.Items.AddRange(new object[] {
-            "admin",
-            "manager",
-            "employee"});
-            this.cmUsers.Location = new System.Drawing.Point(177, 145);
-            this.cmUsers.Name = "cmUsers";
-            this.cmUsers.Size = new System.Drawing.Size(238, 24);
-            this.cmUsers.TabIndex = 5;
             // 
             // lblEmail
             // 
@@ -238,8 +212,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmUsers;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chbPassword;
     }

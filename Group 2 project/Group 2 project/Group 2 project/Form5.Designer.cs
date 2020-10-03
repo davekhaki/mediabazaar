@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -82,7 +81,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,20 +96,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(12, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 608);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(13, 173);
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(629, 436);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 40);
             this.button2.TabIndex = 3;
@@ -125,9 +113,9 @@
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Controls.Add(this.groupBox1);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(6, 3);
+            this.panel4.Location = new System.Drawing.Point(6, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1026, 608);
+            this.panel4.Size = new System.Drawing.Size(1200, 579);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -150,26 +138,26 @@
             this.groupBox2.Controls.Add(this.tbPname);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(28, 54);
+            this.groupBox2.Location = new System.Drawing.Point(28, 39);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(221, 499);
+            this.groupBox2.Size = new System.Drawing.Size(300, 514);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Products Details";
             // 
             // tbMinQ
             // 
-            this.tbMinQ.Location = new System.Drawing.Point(132, 239);
+            this.tbMinQ.Location = new System.Drawing.Point(95, 226);
             this.tbMinQ.Name = "tbMinQ";
-            this.tbMinQ.Size = new System.Drawing.Size(54, 22);
+            this.tbMinQ.Size = new System.Drawing.Size(199, 22);
             this.tbMinQ.TabIndex = 24;
             // 
             // Deletebtn
             // 
             this.Deletebtn.BackColor = System.Drawing.Color.Blue;
-            this.Deletebtn.Location = new System.Drawing.Point(24, 333);
+            this.Deletebtn.Location = new System.Drawing.Point(9, 333);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(171, 43);
+            this.Deletebtn.Size = new System.Drawing.Size(278, 41);
             this.Deletebtn.TabIndex = 23;
             this.Deletebtn.Text = "Delete";
             this.Deletebtn.UseVisualStyleBackColor = false;
@@ -195,19 +183,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 245);
+            this.label1.Location = new System.Drawing.Point(5, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 17);
+            this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Minimum Quantity";
+            this.label1.Text = "Min-Quantity";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnEdit.Location = new System.Drawing.Point(24, 394);
+            this.btnEdit.BackColor = System.Drawing.Color.Olive;
+            this.btnEdit.Location = new System.Drawing.Point(6, 383);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(174, 36);
+            this.btnEdit.Size = new System.Drawing.Size(278, 46);
             this.btnEdit.TabIndex = 20;
             this.btnEdit.Text = "Edit Stock Details";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -218,22 +206,22 @@
             this.tbBrand.Location = new System.Drawing.Point(95, 189);
             this.tbBrand.Multiline = true;
             this.tbBrand.Name = "tbBrand";
-            this.tbBrand.Size = new System.Drawing.Size(91, 22);
+            this.tbBrand.Size = new System.Drawing.Size(199, 22);
             this.tbBrand.TabIndex = 18;
             // 
             // tbQuantity
             // 
             this.tbQuantity.Location = new System.Drawing.Point(95, 149);
             this.tbQuantity.Name = "tbQuantity";
-            this.tbQuantity.Size = new System.Drawing.Size(91, 22);
+            this.tbQuantity.Size = new System.Drawing.Size(199, 22);
             this.tbQuantity.TabIndex = 19;
             // 
             // btnRequest
             // 
-            this.btnRequest.BackColor = System.Drawing.Color.Red;
-            this.btnRequest.Location = new System.Drawing.Point(16, 448);
+            this.btnRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnRequest.Location = new System.Drawing.Point(6, 442);
             this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(182, 42);
+            this.btnRequest.Size = new System.Drawing.Size(278, 41);
             this.btnRequest.TabIndex = 4;
             this.btnRequest.Text = "Request";
             this.btnRequest.UseVisualStyleBackColor = false;
@@ -242,9 +230,9 @@
             // Addbtn
             // 
             this.Addbtn.BackColor = System.Drawing.Color.Lime;
-            this.Addbtn.Location = new System.Drawing.Point(24, 284);
+            this.Addbtn.Location = new System.Drawing.Point(9, 287);
             this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(171, 43);
+            this.Addbtn.Size = new System.Drawing.Size(275, 40);
             this.Addbtn.TabIndex = 5;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
@@ -281,14 +269,14 @@
             // 
             this.tbPprice.Location = new System.Drawing.Point(95, 109);
             this.tbPprice.Name = "tbPprice";
-            this.tbPprice.Size = new System.Drawing.Size(91, 22);
+            this.tbPprice.Size = new System.Drawing.Size(199, 22);
             this.tbPprice.TabIndex = 17;
             // 
             // tbPname
             // 
             this.tbPname.Location = new System.Drawing.Point(95, 66);
             this.tbPname.Name = "tbPname";
-            this.tbPname.Size = new System.Drawing.Size(91, 22);
+            this.tbPname.Size = new System.Drawing.Size(199, 22);
             this.tbPname.TabIndex = 16;
             // 
             // label4
@@ -302,6 +290,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.dataGridViewMin);
             this.groupBox1.Controls.Add(this.label15);
@@ -309,9 +298,9 @@
             this.groupBox1.Controls.Add(this.loadStockBtn);
             this.groupBox1.Controls.Add(this.tbId);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(310, 39);
+            this.groupBox1.Location = new System.Drawing.Point(334, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 505);
+            this.groupBox1.Size = new System.Drawing.Size(828, 514);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Available";
@@ -319,7 +308,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(19, 298);
+            this.label16.Location = new System.Drawing.Point(94, 287);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(159, 17);
             this.label16.TabIndex = 18;
@@ -330,19 +319,19 @@
             this.dataGridViewMin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewMin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewMin.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewMin.Location = new System.Drawing.Point(22, 318);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMin.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewMin.Location = new System.Drawing.Point(69, 307);
             this.dataGridViewMin.Name = "dataGridViewMin";
             this.dataGridViewMin.RowHeadersWidth = 51;
             this.dataGridViewMin.RowTemplate.Height = 24;
-            this.dataGridViewMin.Size = new System.Drawing.Size(664, 115);
+            this.dataGridViewMin.Size = new System.Drawing.Size(753, 115);
             this.dataGridViewMin.TabIndex = 17;
             // 
             // label15
@@ -358,26 +347,26 @@
             // 
             this.dataGridViewStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewStock.Location = new System.Drawing.Point(22, 15);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewStock.Location = new System.Drawing.Point(69, 22);
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
             this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(664, 262);
+            this.dataGridViewStock.Size = new System.Drawing.Size(753, 262);
             this.dataGridViewStock.TabIndex = 9;
             this.dataGridViewStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStock_CellContentClick);
             // 
             // loadStockBtn
             // 
             this.loadStockBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.loadStockBtn.Location = new System.Drawing.Point(42, 442);
+            this.loadStockBtn.Location = new System.Drawing.Point(66, 432);
             this.loadStockBtn.Name = "loadStockBtn";
             this.loadStockBtn.Size = new System.Drawing.Size(205, 41);
             this.loadStockBtn.TabIndex = 8;
@@ -387,9 +376,9 @@
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(384, 451);
+            this.tbId.Location = new System.Drawing.Point(374, 454);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(91, 22);
+            this.tbId.Size = new System.Drawing.Size(158, 22);
             this.tbId.TabIndex = 15;
             this.tbId.TextChanged += new System.EventHandler(this.tbId_TextChanged);
             // 
@@ -411,7 +400,7 @@
             this.label10.BackColor = System.Drawing.Color.Teal;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(322, -3);
+            this.label10.Location = new System.Drawing.Point(492, -3);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(335, 29);
             this.label10.TabIndex = 9;
@@ -421,10 +410,10 @@
             // 
             this.tabControl1.Controls.Add(this.Stock);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(236, 40);
+            this.tabControl1.Location = new System.Drawing.Point(42, 29);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1016, 608);
+            this.tabControl1.Size = new System.Drawing.Size(1308, 619);
             this.tabControl1.TabIndex = 24;
             // 
             // Stock
@@ -433,7 +422,7 @@
             this.Stock.Location = new System.Drawing.Point(4, 25);
             this.Stock.Name = "Stock";
             this.Stock.Padding = new System.Windows.Forms.Padding(3);
-            this.Stock.Size = new System.Drawing.Size(1008, 579);
+            this.Stock.Size = new System.Drawing.Size(1300, 590);
             this.Stock.TabIndex = 0;
             this.Stock.Text = "Stock";
             this.Stock.UseVisualStyleBackColor = true;
@@ -444,7 +433,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1008, 579);
+            this.tabPage2.Size = new System.Drawing.Size(1300, 590);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Scheduling";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -454,40 +443,42 @@
             this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Controls.Add(this.groupBox4);
             this.panel2.Controls.Add(this.groupBox3);
-            this.panel2.Location = new System.Drawing.Point(-9, -15);
+            this.panel2.Location = new System.Drawing.Point(0, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1026, 608);
+            this.panel2.Size = new System.Drawing.Size(1297, 590);
             this.panel2.TabIndex = 9;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.lastnametxt);
-            this.groupBox4.Controls.Add(this.firstnametxt);
             this.groupBox4.Controls.Add(this.scheduleGridView);
-            this.groupBox4.Location = new System.Drawing.Point(521, 22);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.firstnametxt);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(548, -28);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(490, 566);
+            this.groupBox4.Size = new System.Drawing.Size(745, 612);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "View schedules";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(83, 471);
+            this.button3.BackColor = System.Drawing.Color.Olive;
+            this.button3.Location = new System.Drawing.Point(390, 497);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(338, 67);
+            this.button3.Size = new System.Drawing.Size(348, 48);
             this.button3.TabIndex = 5;
             this.button3.Text = "Get Shifts";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 418);
+            this.label14.Location = new System.Drawing.Point(35, 523);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 17);
             this.label14.TabIndex = 4;
@@ -496,7 +487,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 391);
+            this.label13.Location = new System.Drawing.Point(35, 493);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(80, 17);
             this.label13.TabIndex = 3;
@@ -504,27 +495,28 @@
             // 
             // lastnametxt
             // 
-            this.lastnametxt.Location = new System.Drawing.Point(93, 418);
+            this.lastnametxt.ForeColor = System.Drawing.Color.White;
+            this.lastnametxt.Location = new System.Drawing.Point(121, 523);
             this.lastnametxt.Name = "lastnametxt";
-            this.lastnametxt.Size = new System.Drawing.Size(100, 22);
+            this.lastnametxt.Size = new System.Drawing.Size(241, 22);
             this.lastnametxt.TabIndex = 2;
             // 
             // firstnametxt
             // 
-            this.firstnametxt.Location = new System.Drawing.Point(93, 388);
+            this.firstnametxt.Location = new System.Drawing.Point(121, 493);
             this.firstnametxt.Name = "firstnametxt";
-            this.firstnametxt.Size = new System.Drawing.Size(100, 22);
+            this.firstnametxt.Size = new System.Drawing.Size(241, 22);
             this.firstnametxt.TabIndex = 1;
             // 
             // scheduleGridView
             // 
             this.scheduleGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.scheduleGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.scheduleGridView.Location = new System.Drawing.Point(6, 29);
+            this.scheduleGridView.Location = new System.Drawing.Point(21, 41);
             this.scheduleGridView.Name = "scheduleGridView";
             this.scheduleGridView.RowHeadersWidth = 51;
             this.scheduleGridView.RowTemplate.Height = 24;
-            this.scheduleGridView.Size = new System.Drawing.Size(478, 333);
+            this.scheduleGridView.Size = new System.Drawing.Size(717, 407);
             this.scheduleGridView.TabIndex = 0;
             // 
             // groupBox3
@@ -535,14 +527,15 @@
             this.groupBox3.Controls.Add(this.EveningBtn);
             this.groupBox3.Controls.Add(this.AfternoonBtn);
             this.groupBox3.Controls.Add(this.morningBtn);
-            this.groupBox3.Controls.Add(this.dateTimeShiftPicker);
             this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.dateTimeShiftPicker);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Location = new System.Drawing.Point(15, 21);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(21, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(499, 567);
+            this.groupBox3.Size = new System.Drawing.Size(521, 585);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Assign a schedule";
@@ -550,7 +543,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(50, 287);
+            this.label8.Location = new System.Drawing.Point(6, 449);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(133, 17);
             this.label8.TabIndex = 15;
@@ -558,27 +551,27 @@
             // 
             // SelectedEmpTxt
             // 
-            this.SelectedEmpTxt.Location = new System.Drawing.Point(189, 283);
+            this.SelectedEmpTxt.Location = new System.Drawing.Point(146, 446);
             this.SelectedEmpTxt.Name = "SelectedEmpTxt";
-            this.SelectedEmpTxt.Size = new System.Drawing.Size(237, 22);
+            this.SelectedEmpTxt.Size = new System.Drawing.Size(158, 22);
             this.SelectedEmpTxt.TabIndex = 14;
             // 
             // empListForSchedule
             // 
             this.empListForSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.empListForSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empListForSchedule.Location = new System.Drawing.Point(11, 59);
+            this.empListForSchedule.Location = new System.Drawing.Point(14, 30);
             this.empListForSchedule.Name = "empListForSchedule";
             this.empListForSchedule.RowHeadersWidth = 51;
             this.empListForSchedule.RowTemplate.Height = 24;
-            this.empListForSchedule.Size = new System.Drawing.Size(482, 218);
+            this.empListForSchedule.Size = new System.Drawing.Size(466, 406);
             this.empListForSchedule.TabIndex = 13;
             this.empListForSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empListForSchedule_CellContentClick);
             // 
             // EveningBtn
             // 
             this.EveningBtn.AutoSize = true;
-            this.EveningBtn.Location = new System.Drawing.Point(227, 419);
+            this.EveningBtn.Location = new System.Drawing.Point(430, 517);
             this.EveningBtn.Name = "EveningBtn";
             this.EveningBtn.Size = new System.Drawing.Size(80, 21);
             this.EveningBtn.TabIndex = 12;
@@ -589,7 +582,7 @@
             // AfternoonBtn
             // 
             this.AfternoonBtn.AutoSize = true;
-            this.AfternoonBtn.Location = new System.Drawing.Point(227, 392);
+            this.AfternoonBtn.Location = new System.Drawing.Point(430, 479);
             this.AfternoonBtn.Name = "AfternoonBtn";
             this.AfternoonBtn.Size = new System.Drawing.Size(91, 21);
             this.AfternoonBtn.TabIndex = 11;
@@ -600,7 +593,7 @@
             // morningBtn
             // 
             this.morningBtn.AutoSize = true;
-            this.morningBtn.Location = new System.Drawing.Point(227, 365);
+            this.morningBtn.Location = new System.Drawing.Point(430, 442);
             this.morningBtn.Name = "morningBtn";
             this.morningBtn.Size = new System.Drawing.Size(80, 21);
             this.morningBtn.TabIndex = 10;
@@ -612,26 +605,27 @@
             // 
             this.dateTimeShiftPicker.CustomFormat = "yyyy-MM-dd";
             this.dateTimeShiftPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeShiftPicker.Location = new System.Drawing.Point(189, 318);
+            this.dateTimeShiftPicker.Location = new System.Drawing.Point(146, 488);
             this.dateTimeShiftPicker.Name = "dateTimeShiftPicker";
-            this.dateTimeShiftPicker.Size = new System.Drawing.Size(271, 22);
+            this.dateTimeShiftPicker.Size = new System.Drawing.Size(158, 22);
             this.dateTimeShiftPicker.TabIndex = 9;
             this.dateTimeShiftPicker.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(123, 458);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button4.Location = new System.Drawing.Point(47, 527);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(195, 57);
+            this.button4.Size = new System.Drawing.Size(262, 39);
             this.button4.TabIndex = 6;
             this.button4.Text = "Add Shift";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(49, 323);
+            this.label9.Location = new System.Drawing.Point(44, 479);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 17);
             this.label9.TabIndex = 5;
@@ -640,7 +634,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 30);
+            this.label11.Location = new System.Drawing.Point(321, 10);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(136, 17);
             this.label11.TabIndex = 4;
@@ -649,7 +643,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(49, 373);
+            this.label12.Location = new System.Drawing.Point(331, 446);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 17);
             this.label12.TabIndex = 1;
@@ -659,14 +653,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1264, 660);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(1351, 660);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel1);
             this.Name = "Form5";
             this.Text = "Form5";
-            this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -691,8 +683,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;

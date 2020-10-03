@@ -34,7 +34,7 @@ namespace Group_2_project
 
                 while (reader.Read())
                 {
-                    int eId = reader.GetInt32("ID");
+                    int eId = reader.GetInt32("FirstName");
                     this.cmEmployeeNames.Items.Add(eId);
                     this.cmeIds.Items.Add(eId);
 

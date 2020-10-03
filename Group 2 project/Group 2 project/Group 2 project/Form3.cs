@@ -149,5 +149,10 @@ namespace Group_2_project
                 tbPassword.UseSystemPasswordChar = true;
             }
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

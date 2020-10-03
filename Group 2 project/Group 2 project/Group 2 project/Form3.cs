@@ -21,65 +21,92 @@ namespace Group_2_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand query = new MySqlCommand ("select  * from dbi434661.credentials where username='" + this.tbEmail.Text+"' and password='"+this.tbPassword.Text+ "'",conDataBase);
-            MySqlDataAdapter sda = new MySqlDataAdapter(query);
+            LoginManager loginM = new LoginManager();
 
-            try
+            if(loginM.Login(tbEmail.Text, tbPassword.Text))
             {
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                string comboboxitem = this.cmUsers.SelectedItem.ToString();
-
-                //what happenes
-
-                if (dt.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        if (dt.Rows[i]["username"].ToString() == comboboxitem)
-                        {
-                            MessageBox.Show("Welcome to your personal space" + dt.Rows[i][2]);
-
-                            if (cmUsers.SelectedIndex == 0)
-                            {
-                                Administration adminpage = new Administration();
-                                adminpage.Show();
-                                this.Hide();
-
-                            }
-                            else if (cmUsers.SelectedIndex == 1)
-                            {
-                                Form5 form5 = new Form5();
-                                form5.Show();
-                                this.Hide();
-                            }
-                            else
-                            {
-                                Employeeselfservice employeeselfservice = new Employeeselfservice();
-                                employeeselfservice.Show();
-                                this.Hide();
-                            }
-
-                        }
-
-                    }
+                switch (loginM.GetRole(tbEmail.Text)) {
+                    case "Manager":
+                        Form5 form5 = new Form5();
+                        form5.Show();
+                        this.Hide();
+                        break;
+                    case "Employee":
+                        Employeeselfservice employeeselfservice = new Employeeselfservice();
+                        employeeselfservice.Show();
+                        this.Hide();
+                        break;
+                    case "Admin":
+                        Administration adminpage = new Administration();
+                        adminpage.Show();
+                        this.Hide();
+                        break;
 
                 }
-                else
-                {
-
-                    MessageBox.Show("Enter correct details");
-
-                }
-
             }
-            catch (Exception ex)
-            {
+             
 
-                MessageBox.Show(ex.Message);
-            }
+
+
+            //string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            //MySqlConnection conDataBase = new MySqlConnection(constring);
+            //MySqlCommand query = new MySqlCommand ("select  * from dbi434661.credentials where username='" + this.tbEmail.Text+"' and password='"+this.tbPassword.Text+ "'",conDataBase);
+            //MySqlDataAdapter sda = new MySqlDataAdapter(query);
+
+            //try
+            //{
+            //    DataTable dt = new DataTable();
+            //    sda.Fill(dt);
+            //    string comboboxitem = this.cmUsers.SelectedItem.ToString();
+
+            //    //what happenes
+
+            //    if (dt.Rows.Count > 0)
+            //    {
+            //        for (int i = 0; i < dt.Rows.Count; i++)
+            //        {
+            //            if (dt.Rows[i]["username"].ToString() == comboboxitem)
+            //            {
+            //                MessageBox.Show("Welcome to your personal space" + dt.Rows[i][2]);
+
+            //                if (cmUsers.SelectedIndex == 0)
+            //                {
+            //                    Administration adminpage = new Administration();
+            //                    adminpage.Show();
+            //                    this.Hide();
+
+            //                }
+            //                else if (cmUsers.SelectedIndex == 1)
+            //                {
+            //                    Form5 form5 = new Form5();
+            //                    form5.Show();
+            //                    this.Hide();
+            //                }
+            //                else
+            //                {
+            //                    Employeeselfservice employeeselfservice = new Employeeselfservice();
+            //                    employeeselfservice.Show();
+            //                    this.Hide();
+            //                }
+
+            //            }
+
+            //        }
+
+            //    }
+            //    else
+            //    {
+
+            //        MessageBox.Show("Enter correct details");
+
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    MessageBox.Show(ex.Message);
+            //}
 
 
 

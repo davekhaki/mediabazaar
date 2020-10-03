@@ -15,8 +15,6 @@ C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 projec
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.exe
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\Group 2 project.pdb
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csprojAssemblyReference.cache
-C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form1.resources
-C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form2.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form3.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form5.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Properties.Resources.resources
@@ -418,8 +416,6 @@ C:\Users\Gebruiker\artichoke\Group 2 project\Group 2 project\Group 2 project\obj
 C:\Users\Gebruiker\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.ManageEmployees.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Administration.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Employeeselfservice.resources
-C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.ManageEmployees.resources
-C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form6.resources
 C:\Users\sbokk\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Administration.resources
 C:\Users\sbokk\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Employeeselfservice.resources
 C:\Users\sbokk\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.ManageEmployees.resources

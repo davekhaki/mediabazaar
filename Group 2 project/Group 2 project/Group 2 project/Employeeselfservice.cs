@@ -138,5 +138,26 @@ string Done;
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID WHERE e.FirstName = '{firstNametext.Text}' AND LastName = '{lastNametext.Text}' AND YEARWEEK(s.DAY) = YEARWEEK(NOW() + INTERVAL 1 WEEK)", conn);
+            
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = query;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbaTableset;
+                scheduleGridView.DataSource = bSource;
+                sda.Update(dbaTableset);
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
     }
 }

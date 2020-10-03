@@ -86,18 +86,50 @@ namespace Group_2_project
 
         }
 
+        private string GeneratePassword()
+        {
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            var stringChars = new char[8];
+            var random = new Random();
+
+            for (int i = 0; i < stringChars.Length; i++)
+            {
+                stringChars[i] = chars[random.Next(chars.Length)];
+            }
+
+            return new String(stringChars);
+        }
+
+        private void CreateLoginDetails()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query2 = $"INSERT INTO `login` (`empId`, `username`, `password`) VALUES ('{this.tbId.Text}', '{tbFn.Text}1', '{GeneratePassword()}')";
+
+            MySqlCommand command2 = new MySqlCommand(query2, conn);
+
+            conn.Open();
+            MySqlDataReader reader;
+            reader = command2.ExecuteReader();
+
+            conn.Close();
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = "insert into dbi434661.employee(ID,Firstname,LastName,Age,Gender,DepartmentName" +
                 ",HireDate,EndDate,Salary,Adress,Role)values('" + this.tbId.Text + "','" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.cmbGender.Text + "','" + this.cmDeptNames.Text + "','" + this.dateTimePicker1.Text + "','"+this.dateTimePicker2.Text+"','" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.cmbRole.Text + "');";
+           
             MySqlCommand command = new MySqlCommand(query, conn);
+           
             MySqlDataReader reader;
 
             try
             {
                 conn.Open();
                 reader = command.ExecuteReader();
+               
+                
                 MessageBox.Show("New Employee added");
 
                 while (reader.Read())
@@ -111,6 +143,9 @@ namespace Group_2_project
             {
 
                 MessageBox.Show(ex.Message);
+            }
+            finally{
+                CreateLoginDetails();
             }
         }
 

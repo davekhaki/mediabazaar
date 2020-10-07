@@ -29,7 +29,7 @@ namespace Group_2_project
 
         public void GetSchedule(string username) {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM ((employee e INNER JOIN schedule s ON e.ID = s.EmployeeID) INNER JOIN login l ON l.empId = e.ID) WHERE l.username = '{username}' AND YEARWEEK(s.DAY) = YEARWEEK(NOW() + INTERVAL 1 WEEK)", conn);
+            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM ((employee e INNER JOIN schedule s ON e.ID = s.EmployeeID) INNER JOIN login l ON l.empId = e.ID) WHERE l.username = '{username}' ;", conn);
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter();

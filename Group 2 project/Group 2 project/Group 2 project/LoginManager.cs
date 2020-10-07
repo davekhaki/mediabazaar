@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Group_2_project
 {
@@ -29,6 +30,7 @@ namespace Group_2_project
                 }
                 else
                 {
+                    MessageBox.Show("The username or password given is incorrect, please try again.");
                     return false;
                 }
                 

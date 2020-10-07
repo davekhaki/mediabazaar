@@ -124,8 +124,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shift.cs" />
-    <Compile Include="TempEmployee.cs" />
-    <Compile Include="TempStock.cs" />
     <EmbeddedResource Include="Administration.resx">
       <DependentUpon>Administration.cs</DependentUpon>
     </EmbeddedResource>

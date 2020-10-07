@@ -32,7 +32,7 @@ namespace Group_2_project
                         this.Hide();
                         break;
                     case "Employee":
-                        Employeeselfservice employeeselfservice = new Employeeselfservice();
+                        Employeeselfservice employeeselfservice = new Employeeselfservice(tbEmail.Text);
                         employeeselfservice.Show();
                         this.Hide();
                         break;
@@ -175,6 +175,11 @@ namespace Group_2_project
             else {
                 tbPassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

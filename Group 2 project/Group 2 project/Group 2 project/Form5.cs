@@ -19,6 +19,10 @@ namespace Group_2_project
         {
             InitializeComponent();
             GetEmp();
+            empListForSchedule.DefaultCellStyle.ForeColor = Color.Black;
+            scheduleGridView.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridViewStock.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridViewMin.DefaultCellStyle.ForeColor = Color.Black;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -148,12 +152,6 @@ namespace Group_2_project
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            
-            this.Hide();
-        }
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
@@ -198,7 +196,8 @@ namespace Group_2_project
 
         private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0){
+            
+            if (e.RowIndex >= 0){
 
                 DataGridViewRow row =dataGridViewStock.Rows[e.RowIndex];
                 tbId.Text = row.Cells["ProductID"].Value.ToString();
@@ -240,6 +239,8 @@ namespace Group_2_project
 
         private void empListForSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.empListForSchedule.Rows[e.RowIndex];
@@ -362,6 +363,12 @@ namespace Group_2_project
 
         private void tbId_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void scheduleGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
 
         }
     }

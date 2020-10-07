@@ -355,11 +355,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewStock.Location = new System.Drawing.Point(69, 22);
+            this.dataGridViewStock.Location = new System.Drawing.Point(69, 13);
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
             this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(753, 262);
+            this.dataGridViewStock.Size = new System.Drawing.Size(753, 271);
             this.dataGridViewStock.TabIndex = 9;
             this.dataGridViewStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStock_CellContentClick);
             // 

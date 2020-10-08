@@ -37,9 +37,9 @@ namespace Group_2_project
 
                 while (reader.Read())
                 {
-                    int eId = reader.GetInt32("FirstName");
-                    this.cmEmployeeNames.Items.Add(eId);
-                    this.cmeIds.Items.Add(eId);
+                    string name = reader.GetString(1);
+                    this.cmEmployeeNames.Items.Add(name);
+                    this.cmeIds.Items.Add(name);
 
                 }
 
@@ -117,40 +117,120 @@ namespace Group_2_project
             conn.Close();
         }
 
+        private bool CheckExistingEmployee()
+        {
+            bool doesExist = false;
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = $"SELECT * FROM employee WHERE ID = '{tbId.Text}'";
+
+            MySqlCommand command = new MySqlCommand(query, conn);
+
+            conn.Open();
+            int rows = command.ExecuteNonQuery();
+            if(rows == 0)
+            {
+                doesExist = false;
+                
+            }
+            else
+            {
+                doesExist = true;
+                
+            }
+
+            conn.Close();
+            return doesExist;
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //check if there a inputs
+            if(string.IsNullOrEmpty(tbFn.Text) || string.IsNullOrEmpty(tbSn.Text))
+            {
+                MessageBox.Show("Please fill in all the details.");
+                return;
+            }
+
+            if(CheckExistingEmployee() == true)
+            {
+                MessageBox.Show("A previously selected employee's ID cannot be used");
+                return;
+            }
+
+
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "insert into dbi434661.employee(ID,Firstname,LastName,Age,Gender,DepartmentName" +
-                ",HireDate,EndDate,Salary,Adress,Role)values('" + this.tbId.Text + "','" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.cmbGender.Text + "','" + this.cmDeptNames.Text + "','" + this.dateTimePicker1.Text + "','"+this.dateTimePicker2.Text+"','" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.cmbRole.Text + "');";
-           
+
+
+
+
+            string firstName = tbFn.Text;
+            string lastName = tbSn.Text;
+            int salary = int.Parse(tbSal.Text);
+
+            string query = "insert into dbi434661.employee(Firstname,LastName,Age,Gender,DepartmentName" +
+                ",HireDate,EndDate,Salary,Adress,Role)values('" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.cmbGender.Text + "','" + this.cmDeptNames.Text + "','" + this.dateTimePicker1.Text + "','" + this.dateTimePicker2.Text + "','" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.cmbRole.Text + "');";
+
             MySqlCommand command = new MySqlCommand(query, conn);
-           
-            MySqlDataReader reader;
+
+
 
             try
             {
                 conn.Open();
-                reader = command.ExecuteReader();
-               
-                
-                MessageBox.Show("New Employee added");
+                int affectedRows = command.ExecuteNonQuery();
 
-                while (reader.Read())
+                if (affectedRows == 0)
                 {
-
+                    MessageBox.Show("Error adding the employee");
                 }
+                else MessageBox.Show("New Employee added");
                 conn.Close();
-
 
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-            finally{
-                CreateLoginDetails();
+            finally
+            {
+                try
+                {
+                    int loginID = 0;
+                    string getIdQuery = $"SELECT ID FROM employee where FirstName = '{firstName}' AND LastName = '{lastName}' AND Salary = '{salary}'";
+                    MySqlCommand getIdCommand = new MySqlCommand(getIdQuery, conn);
+                    conn.Open();
+                    var reader = getIdCommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        loginID = reader.GetInt32(0);
+                    }
+                    conn.Close();
+
+
+                    string insertLogin = $"INSERT INTO `login` (`empId`, `username`, `password`) VALUES ('{loginID}', '{firstName}1', '{GeneratePassword()}')";
+
+                    MySqlCommand command2 = new MySqlCommand(insertLogin, conn);
+
+                    conn.Open();
+                    int rows2 = command2.ExecuteNonQuery();
+                    if (rows2 == 0)
+                    {
+                        MessageBox.Show("Creating login details failed.");
+                    }
+                    else MessageBox.Show("Successfully added login details for the employee");
+                    conn.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                conn.Close();
             }
+
+
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -456,7 +536,7 @@ namespace Group_2_project
         private void cmeIds_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "select * from dbi434661.employee where FirstName='" + this.cmEmployeeNames.Text + "';";
+            string query = "select * from dbi434661.employee where FirstName='" + cmeIds.Text + "';";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -466,15 +546,15 @@ namespace Group_2_project
                 reader = command.ExecuteReader();
 
 
-                //while (reader.Read())
-                // {
+                while (reader.Read())
+                {
                 string ID = reader.GetInt32("ID").ToString();
                 string FirstName = reader.GetString("FirstName");
                 string LastName = reader.GetString("LastName");
                 string Age = reader.GetInt32("Age").ToString();
                 string Gender = reader.GetString("Gender");
-                string DepartmentID = reader.GetInt32("DepartmentID").ToString();
-                string HireDate = reader.GetString("HireDate");
+                string DepartmentName = reader.GetString("DepartmentName");
+                string HireDate = reader.GetDateTime("HireDate").ToString();
                 string Salary = reader.GetInt32("Salary").ToString();
                 string Adress = reader.GetString("Adress");
                 string Role = reader.GetString("Role");
@@ -483,7 +563,7 @@ namespace Group_2_project
                 this.tbSn.Text = LastName;
                 this.tbAge.Text = Age;
                 this.cmbGender.Text = Gender;
-                this.tbDeptId.Text = DepartmentID;
+                this.cmDeptNames.Text = DepartmentName;
                 this.dateTimePicker1.Text = HireDate;
                 this.tbSal.Text = Salary;
                 this.tbAdd.Text = Adress;
@@ -493,7 +573,7 @@ namespace Group_2_project
 
 
 
-                //}
+                }
 
 
             }
@@ -539,7 +619,10 @@ namespace Group_2_project
 
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }   
 

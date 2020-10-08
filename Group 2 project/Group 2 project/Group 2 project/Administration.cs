@@ -25,7 +25,7 @@ namespace Group_2_project
             dgDepartments.DefaultCellStyle.ForeColor = Color.Black;
      
         }
-        void ConnectToDatabase()
+        public void ConnectToDatabase()
         {
              conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
 

@@ -158,7 +158,7 @@
             this.btnGetEmployee.TabIndex = 7;
             this.btnGetEmployee.Text = "Search Employee Details\r\n";
             this.btnGetEmployee.UseVisualStyleBackColor = false;
-            this.btnGetEmployee.Click += new System.EventHandler(this.btnGetEmployee_Click);
+           
             // 
             // btnSignoUT
             // 
@@ -178,7 +178,7 @@
             this.cmEmployeeNames.Name = "cmEmployeeNames";
             this.cmEmployeeNames.Size = new System.Drawing.Size(189, 24);
             this.cmEmployeeNames.TabIndex = 4;
-            this.cmEmployeeNames.SelectedIndexChanged += new System.EventHandler(this.cmEmployeeNames_SelectedIndexChanged);
+           
             // 
             // groupBox3
             // 

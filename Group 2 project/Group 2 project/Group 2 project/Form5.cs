@@ -15,20 +15,24 @@ namespace Group_2_project
 {
     public partial class Form5 : Form
     {
+        private string constring;
         public Form5()
         {
             InitializeComponent();
             GetEmp();
+            ConnectDatabase();
+
             empListForSchedule.DefaultCellStyle.ForeColor = Color.Black;
             scheduleGridView.DefaultCellStyle.ForeColor = Color.Black;
             dataGridViewStock.DefaultCellStyle.ForeColor = Color.Black;
             dataGridViewMin.DefaultCellStyle.ForeColor = Color.Black;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        void ConnectDatabase()
         {
+            constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
 
         }
+       
 
         private void loadStockBtn_Click(object sender, EventArgs e)
         {
@@ -39,7 +43,7 @@ namespace Group_2_project
 
         public void MinQuantity() {
 
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand("select * from stock where Quantity < MinimumQuantity;", conDataBase);
 
@@ -61,7 +65,7 @@ namespace Group_2_project
 
         public void /*private List<TempStock> */ LoadStock()
         {
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            
             MySqlConnection conDataBase = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conDataBase);
 
@@ -79,39 +83,12 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-            /*
-            List<TempStock> stocks = new List<TempStock>();
-
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT * FROM stock", conn);
-
-            conn.Open();
-
-            var reader = query.ExecuteReader();
-            while (reader.Read())
-            {
-                TempStock item = new TempStock
-                {
-                    id = reader.GetInt32(0),
-                    name = reader.GetString(1),
-                    price = reader.GetInt32(2),
-                    brand = reader.GetString(3),
-                    quantity = reader.GetInt32(4)
-                };
-
-                stocks.Add(item);
-                stockBox.Items.Add(item);
-            }
-            conn.Close();
-
-            return stocks;
-            */
-
+           
         }
         
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection(constring);
             string query = "update dbi434661.stock set ProductID=" + this.tbId.Text + ",ProductName='" + this.tbPname.Text + "',ProductPrice='" + this.tbPprice.Text + "',Brand='" + this.tbBrand.Text + "',Quantity=" + this.tbQuantity.Text + " ,MinimumQuantity '"+ this.tbMinQ.Text+"' where ProductID=" + this.tbId.Text + " ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
@@ -166,7 +143,7 @@ namespace Group_2_project
             this.Hide();
             */
             string restock= "Restock";
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection(constring);
             string query = "insert dbi434661.request (Request)values('"+restock+"') ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
@@ -178,10 +155,7 @@ namespace Group_2_project
                 MessageBox.Show("Request Sent successfully!");
                 LoadStock();
 
-                /*   while (reader.Read())
-                   {
-
-                   }*/
+                
 
 
             }
@@ -211,7 +185,7 @@ namespace Group_2_project
 
         private void Addbtn_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection(constring);
             string query = "insert into dbi434661.stock(ProductName,ProductPrice,Brand,Quantity,MinimumQuantity)values('" + this.tbPname.Text + "','" + this.tbPprice.Text + "','" + this.tbBrand.Text + "','" + this.tbQuantity.Text + "','"+this.tbMinQ.Text+"');";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
@@ -273,7 +247,7 @@ namespace Group_2_project
 
 
 
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection(constring);
             MySqlCommand query = new MySqlCommand($"INSERT INTO `schedule` (`EmployeeID`, `TimeOfDay`, `Day`) VALUES ('{SelectedEmpTxt.Text}', '{TimeOfDayInput}', '{dateTimeShiftPicker.Text}')", conn);
 
             conn.Open();
@@ -291,7 +265,7 @@ namespace Group_2_project
 
         private void GetEmp()
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection(constring);
             MySqlCommand query = new MySqlCommand($"SELECT `ID`,`FirstName`,`LastName` FROM employee", conn);
 
             try
@@ -312,7 +286,7 @@ namespace Group_2_project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection(constring);
             MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID WHERE e.FirstName = '{firstnametxt.Text}' AND LastName = '{lastnametxt.Text}'", conn);
             //MySqlCommand query = new MySqlCommand($"SELECT * FROM schedule WHERE FirstName = '{firstnametxt.Text}' AND LastName = '{lastnametxt.Text}'", conn);
 
@@ -334,7 +308,7 @@ namespace Group_2_project
 
         private void Deletebtn_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection(constring);
             string query = "delete from dbi434661.stock where ProductID=" + this.tbId.Text + " ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;

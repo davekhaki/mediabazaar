@@ -19,6 +19,8 @@ namespace Group_2_project
         {
             InitializeComponent();
             GetEmp();
+            MinQuantity();
+            LoadStock();
             empListForSchedule.DefaultCellStyle.ForeColor = Color.Black;
             scheduleGridView.DefaultCellStyle.ForeColor = Color.Black;
             dataGridViewStock.DefaultCellStyle.ForeColor = Color.Black;
@@ -30,13 +32,7 @@ namespace Group_2_project
 
         }
 
-        private void loadStockBtn_Click(object sender, EventArgs e)
-        {
-            LoadStock();
-            MinQuantity();
-
-        }
-
+     
         public void MinQuantity() {
 
             string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
@@ -116,7 +112,7 @@ namespace Group_2_project
         private void btnEdit_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "update dbi434661.stock set ProductID=" + this.tbId.Text + ",ProductName='" + this.tbPname.Text + "',ProductPrice='" + this.tbPprice.Text + "',Brand='" + this.tbBrand.Text + "',Quantity=" + this.tbQuantity.Text + " ,MinimumQuantity '"+ this.tbMinQ.Text+"' where ProductID=" + this.tbId.Text + " ;";
+            string query = "update dbi434661.stock set ProductID='" + this.tbStockId.Text + "',ProductName='" + this.tbProdName.Text + "',ProductPrice='" + this.tbProdPrice.Text + "',Brand='" + this.tbProdBrand.Text + "',Quantity='" + this.tbProdQuantity.Text + "' ,MinimumQuantity='"+ this.tbMinQuantity.Text+"' where ProductID='" + this.tbStockId.Text + "' ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -203,7 +199,7 @@ namespace Group_2_project
             finally { conn.Close(); }
 
         }
-
+        string restock;
 
         private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -211,19 +207,68 @@ namespace Group_2_project
             if (e.RowIndex >= 0){
 
                 DataGridViewRow row =dataGridViewStock.Rows[e.RowIndex];
-                tbId.Text = row.Cells["ProductID"].Value.ToString();
-                tbPname.Text = row.Cells["ProductName"].Value.ToString();
-                tbPprice.Text = row.Cells["ProductPrice"].Value.ToString();
-                tbBrand.Text = row.Cells["Brand"].Value.ToString();
-                tbQuantity.Text = row.Cells["Quantity"].Value.ToString();
-                tbMinQ.Text = row.Cells["MinimumQuantity"].Value.ToString();
+                tbStockId.Text = row.Cells["ProductID"].Value.ToString();
+                tbProdName.Text = row.Cells["ProductName"].Value.ToString();
+                tbProdPrice.Text = row.Cells["ProductPrice"].Value.ToString();
+                tbProdBrand.Text = row.Cells["Brand"].Value.ToString();
+                tbProdQuantity.Text = row.Cells["Quantity"].Value.ToString();
+                restock= row.Cells["Quantity"].Value.ToString();
+                tbMinQuantity.Text = row.Cells["MinimumQuantity"].Value.ToString();
             }
+        }
+        private void dataGridViewMin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = dataGridViewMin.Rows[e.RowIndex];
+                tbStockId.Text = row.Cells["ProductID"].Value.ToString();
+                
+                restock = row.Cells["MinimumQuantity"].Value.ToString();
+                tbMinQuantity.Text = row.Cells["MinimumQuantity"].Value.ToString();
+
+
+            }
+        }
+        private void loadStockBtn_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "update dbi434661.stock set MinimumQuantity='" + restock + "' where ProductID='" + this.tbStockId.Text + "' ;";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+                MessageBox.Show("Product Details Updated successfully!");
+                MinQuantity();
+                LoadStock();
+
+                /*   while (reader.Read())
+                   {
+
+                   }*/
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally {
+                
+                conn.Close(); }
+           
+
         }
 
         private void Addbtn_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "insert into dbi434661.stock(ProductName,ProductPrice,Brand,Quantity,MinimumQuantity)values('" + this.tbPname.Text + "','" + this.tbPprice.Text + "','" + this.tbBrand.Text + "','" + this.tbQuantity.Text + "','"+this.tbMinQ.Text+"');";
+            string query = "insert into dbi434661.stock(ProductName,ProductPrice,Brand,Quantity,MinimumQuantity)values('" + this.tbProdName.Text + "','" + this.tbProdPrice.Text + "','" + this.tbProdBrand.Text + "','" + this.tbProdQuantity.Text + "','"+this.tbProdQuantity.Text+"');";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -318,6 +363,7 @@ namespace Group_2_project
 
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = query;
                 DataTable dbaTableset = new DataTable();
@@ -327,6 +373,7 @@ namespace Group_2_project
                 bSource.DataSource = dbaTableset;
                 empListForSchedule.DataSource = bSource;
                 sda.Update(dbaTableset);
+                conn.Close();
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -350,6 +397,7 @@ namespace Group_2_project
                 bSource.DataSource = dbaTableset;
                 scheduleGridView.DataSource = bSource;
                 sda.Update(dbaTableset);
+                conn.Close();
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -359,7 +407,7 @@ namespace Group_2_project
         private void Deletebtn_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "delete from dbi434661.stock where ProductID=" + this.tbId.Text + " ;";
+            string query = "delete from dbi434661.stock where ProductID=" + this.tbStockId.Text + " ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -400,5 +448,7 @@ namespace Group_2_project
         {
 
         }
+
+       
     }
 }

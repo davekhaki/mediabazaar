@@ -70,8 +70,6 @@
             this.firstnametxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.SelectedEmpTxt = new System.Windows.Forms.TextBox();
             this.empListForSchedule = new System.Windows.Forms.DataGridView();
             this.EveningBtn = new System.Windows.Forms.RadioButton();
             this.AfternoonBtn = new System.Windows.Forms.RadioButton();
@@ -81,6 +79,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.addShiftSurnameText = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.addShiftFirstNameText = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -522,8 +524,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.addShiftFirstNameText);
+            this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.SelectedEmpTxt);
+            this.groupBox3.Controls.Add(this.addShiftSurnameText);
             this.groupBox3.Controls.Add(this.empListForSchedule);
             this.groupBox3.Controls.Add(this.EveningBtn);
             this.groupBox3.Controls.Add(this.AfternoonBtn);
@@ -541,22 +545,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Assign a schedule";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 449);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 17);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Selected Employee:";
-            // 
-            // SelectedEmpTxt
-            // 
-            this.SelectedEmpTxt.Location = new System.Drawing.Point(146, 446);
-            this.SelectedEmpTxt.Name = "SelectedEmpTxt";
-            this.SelectedEmpTxt.Size = new System.Drawing.Size(158, 22);
-            this.SelectedEmpTxt.TabIndex = 14;
-            // 
             // empListForSchedule
             // 
             this.empListForSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -572,7 +560,7 @@
             // EveningBtn
             // 
             this.EveningBtn.AutoSize = true;
-            this.EveningBtn.Location = new System.Drawing.Point(430, 517);
+            this.EveningBtn.Location = new System.Drawing.Point(400, 545);
             this.EveningBtn.Name = "EveningBtn";
             this.EveningBtn.Size = new System.Drawing.Size(80, 21);
             this.EveningBtn.TabIndex = 12;
@@ -583,7 +571,7 @@
             // AfternoonBtn
             // 
             this.AfternoonBtn.AutoSize = true;
-            this.AfternoonBtn.Location = new System.Drawing.Point(430, 479);
+            this.AfternoonBtn.Location = new System.Drawing.Point(400, 518);
             this.AfternoonBtn.Name = "AfternoonBtn";
             this.AfternoonBtn.Size = new System.Drawing.Size(91, 21);
             this.AfternoonBtn.TabIndex = 11;
@@ -594,7 +582,7 @@
             // morningBtn
             // 
             this.morningBtn.AutoSize = true;
-            this.morningBtn.Location = new System.Drawing.Point(430, 442);
+            this.morningBtn.Location = new System.Drawing.Point(400, 488);
             this.morningBtn.Name = "morningBtn";
             this.morningBtn.Size = new System.Drawing.Size(80, 21);
             this.morningBtn.TabIndex = 10;
@@ -617,16 +605,16 @@
             // 
             this.dateTimeShiftPicker.CustomFormat = "yyyy-MM-dd";
             this.dateTimeShiftPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeShiftPicker.Location = new System.Drawing.Point(146, 488);
+            this.dateTimeShiftPicker.Location = new System.Drawing.Point(112, 487);
             this.dateTimeShiftPicker.Name = "dateTimeShiftPicker";
-            this.dateTimeShiftPicker.Size = new System.Drawing.Size(158, 22);
+            this.dateTimeShiftPicker.Size = new System.Drawing.Size(221, 22);
             this.dateTimeShiftPicker.TabIndex = 9;
             this.dateTimeShiftPicker.Value = new System.DateTime(2020, 9, 30, 0, 0, 0, 0);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(44, 479);
+            this.label9.Location = new System.Drawing.Point(11, 488);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 17);
             this.label9.TabIndex = 5;
@@ -644,11 +632,44 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(331, 446);
+            this.label12.Location = new System.Drawing.Point(397, 451);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 17);
             this.label12.TabIndex = 1;
             this.label12.Text = "Select a time:";
+            // 
+            // addShiftSurnameText
+            // 
+            this.addShiftSurnameText.Location = new System.Drawing.Point(269, 448);
+            this.addShiftSurnameText.Name = "addShiftSurnameText";
+            this.addShiftSurnameText.Size = new System.Drawing.Size(90, 22);
+            this.addShiftSurnameText.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(194, 451);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 17);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Surname:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(11, 451);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 17);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "First Name:";
+            // 
+            // addShiftFirstNameText
+            // 
+            this.addShiftFirstNameText.Location = new System.Drawing.Point(97, 448);
+            this.addShiftFirstNameText.Name = "addShiftFirstNameText";
+            this.addShiftFirstNameText.Size = new System.Drawing.Size(91, 22);
+            this.addShiftFirstNameText.TabIndex = 6;
+            this.addShiftFirstNameText.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Form5
             // 
@@ -712,8 +733,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox SelectedEmpTxt;
         private System.Windows.Forms.DataGridView empListForSchedule;
         private System.Windows.Forms.RadioButton EveningBtn;
         private System.Windows.Forms.RadioButton AfternoonBtn;
@@ -735,5 +754,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dataGridViewMin;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox addShiftFirstNameText;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox addShiftSurnameText;
     }
 }

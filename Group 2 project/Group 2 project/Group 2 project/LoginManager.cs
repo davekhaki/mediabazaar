@@ -36,14 +36,17 @@ namespace Group_2_project
                 
             }
             conn.Close();
-            return true;
+            MessageBox.Show("The username or password given is incorrect, please try again.");
+            return false;
+
+            
         }
 
         public string GetRole(string username)
         {
             string role = "";
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT e.Role FROM employee e INNER JOIN login l ON e.ID = l.empId WHERE username = '{username}'", conn);
+            MySqlCommand query = new MySqlCommand($"SELECT e.Role FROM employee e INNER JOIN login l ON e.ID = l.empId WHERE l.username = '{username}'", conn);
 
             conn.Open();
 

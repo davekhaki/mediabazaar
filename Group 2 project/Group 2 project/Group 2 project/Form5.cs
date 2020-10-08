@@ -155,6 +155,11 @@ namespace Group_2_project
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(tbPname.Text))
+            {
+                MessageBox.Show("Please enter the product name.");
+                return;
+            }
             //Comments by Mary
             //I suggest if you click this request button  it should take you to another form
             //The form should have a way to show all stocks that are below minimum quantity and there fore
@@ -245,7 +250,7 @@ namespace Group_2_project
             {
                 DataGridViewRow row = this.empListForSchedule.Rows[e.RowIndex];
 
-                SelectedEmpTxt.Text = row.Cells["ID"].Value.ToString();
+                //SelectedEmpTxt.Text = row.Cells["ID"].Value.ToString();
             }
         }
 
@@ -271,14 +276,24 @@ namespace Group_2_project
         {
             TimeOfDayInput = GetTimeOfDay();
 
-
-
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"INSERT INTO `schedule` (`EmployeeID`, `TimeOfDay`, `Day`) VALUES ('{SelectedEmpTxt.Text}', '{TimeOfDayInput}', '{dateTimeShiftPicker.Text}')", conn);
+
+            //first need a query to get the id based on the filled in name 
+            int empId = 0;
+            MySqlCommand idQuery = new MySqlCommand($"SELECT ID FROM employee WHERE FirstName = '{addShiftFirstNameText.Text}' AND LastName = '{addShiftSurnameText.Text}'", conn);
+            conn.Open();
+            var reader = idQuery.ExecuteReader();
+            while (reader.Read())
+            {
+                empId = reader.GetInt32(0);
+            }
+            conn.Close();
+            
+            MySqlCommand addQuery = new MySqlCommand($"INSERT INTO `schedule` (`EmployeeID`, `TimeOfDay`, `Day`) VALUES ('{empId}', '{TimeOfDayInput}', '{dateTimeShiftPicker.Text}')", conn);
 
             conn.Open();
 
-            int affectedRows = query.ExecuteNonQuery();
+            int affectedRows = addQuery.ExecuteNonQuery();
 
             if (affectedRows == 0)
             {
@@ -369,6 +384,11 @@ namespace Group_2_project
         private void scheduleGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

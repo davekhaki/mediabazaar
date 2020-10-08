@@ -1,6 +1,6 @@
 ﻿namespace Group_2_project
 {
-    partial class Form3
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlLogIn = new System.Windows.Forms.Panel();
             this.chbPassword = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();

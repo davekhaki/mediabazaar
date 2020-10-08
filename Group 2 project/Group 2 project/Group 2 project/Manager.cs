@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Group_2_project
 {
-    public partial class Form5 : Form
+    public partial class Manager : Form
     {
-        public Form5()
+        public Manager()
         {
             InitializeComponent();
             GetEmp();
@@ -45,6 +45,7 @@ namespace Group_2_project
 
             try
             {
+                conDataBase.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = cmdDataBase;
                 DataTable dbaTableset = new DataTable();
@@ -57,6 +58,7 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { conDataBase.Close(); }
         }
 
         public void /*private List<TempStock> */ LoadStock()
@@ -67,6 +69,7 @@ namespace Group_2_project
 
             try
             {
+                conDataBase.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = cmdDataBase;
                 DataTable dbaTableset = new DataTable();
@@ -79,6 +82,7 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { conDataBase.Close(); }
             /*
             List<TempStock> stocks = new List<TempStock>();
 
@@ -136,6 +140,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -147,7 +152,7 @@ namespace Group_2_project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 form3 =new  Form3();
+            Login form3 =new  Login();
             form3.Show();
             this.Hide();
         }
@@ -195,6 +200,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
 
         }
 
@@ -240,6 +246,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
 
         private void empListForSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -333,6 +340,7 @@ namespace Group_2_project
 
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = query;
                 DataTable dbaTableset = new DataTable();
@@ -345,6 +353,7 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { conn.Close(); }
         }
 
         private void Deletebtn_Click(object sender, EventArgs e)

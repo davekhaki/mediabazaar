@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnGetEmployee = new System.Windows.Forms.Button();
             this.btnSignoUT = new System.Windows.Forms.Button();
-            this.cmEmployeeNames = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dShow = new System.Windows.Forms.DataGridView();
             this.btnShow = new System.Windows.Forms.Button();
@@ -69,7 +66,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.cmeIds = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbId = new System.Windows.Forms.TextBox();
@@ -128,10 +125,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Teal;
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.btnGetEmployee);
             this.groupBox4.Controls.Add(this.btnSignoUT);
-            this.groupBox4.Controls.Add(this.cmEmployeeNames);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(857, 33);
             this.groupBox4.Name = "groupBox4";
@@ -140,45 +134,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Search";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 85);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 17);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Employee-Names";
-            // 
-            // btnGetEmployee
-            // 
-            this.btnGetEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnGetEmployee.Location = new System.Drawing.Point(21, 336);
-            this.btnGetEmployee.Name = "btnGetEmployee";
-            this.btnGetEmployee.Size = new System.Drawing.Size(323, 51);
-            this.btnGetEmployee.TabIndex = 7;
-            this.btnGetEmployee.Text = "Search Employee Details\r\n";
-            this.btnGetEmployee.UseVisualStyleBackColor = false;
-            this.btnGetEmployee.Click += new System.EventHandler(this.btnGetEmployee_Click);
-            // 
             // btnSignoUT
             // 
             this.btnSignoUT.BackColor = System.Drawing.Color.Red;
-            this.btnSignoUT.Location = new System.Drawing.Point(21, 404);
+            this.btnSignoUT.Location = new System.Drawing.Point(21, 191);
             this.btnSignoUT.Name = "btnSignoUT";
             this.btnSignoUT.Size = new System.Drawing.Size(323, 51);
             this.btnSignoUT.TabIndex = 2;
             this.btnSignoUT.Text = "Sign Out";
             this.btnSignoUT.UseVisualStyleBackColor = false;
             this.btnSignoUT.Click += new System.EventHandler(this.btnSignoUT_Click);
-            // 
-            // cmEmployeeNames
-            // 
-            this.cmEmployeeNames.FormattingEnabled = true;
-            this.cmEmployeeNames.Location = new System.Drawing.Point(131, 85);
-            this.cmEmployeeNames.Name = "cmEmployeeNames";
-            this.cmEmployeeNames.Size = new System.Drawing.Size(189, 24);
-            this.cmEmployeeNames.TabIndex = 4;
-            this.cmEmployeeNames.SelectedIndexChanged += new System.EventHandler(this.cmEmployeeNames_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -196,14 +161,14 @@
             // dShow
             // 
             this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dShow.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dShow.DefaultCellStyle = dataGridViewCellStyle1;
             this.dShow.Location = new System.Drawing.Point(21, 20);
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
@@ -385,14 +350,14 @@
             // dgDepartments
             // 
             this.dgDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgDepartments.Location = new System.Drawing.Point(28, 33);
             this.dgDepartments.Name = "dgDepartments";
             this.dgDepartments.RowHeadersWidth = 51;
@@ -481,7 +446,7 @@
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.cmeIds);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.tbId);
@@ -572,16 +537,16 @@
             this.label15.TabIndex = 23;
             this.label15.Text = "Employee Names";
             // 
-            // btnSearch
+            // btnClear
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(666, 75);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(129, 29);
-            this.btnSearch.TabIndex = 22;
-            this.btnSearch.Text = "Search Employee";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClear.Location = new System.Drawing.Point(666, 75);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(129, 29);
+            this.btnClear.TabIndex = 22;
+            this.btnClear.Text = "Clear Fields";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // cmeIds
             // 
@@ -746,7 +711,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dShow)).EndInit();
             this.tabPage3.ResumeLayout(false);
@@ -793,11 +757,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.DataGridView dShow;
-        private System.Windows.Forms.ComboBox cmEmployeeNames;
         private System.Windows.Forms.Button btnSignoUT;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnGetEmployee;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -815,7 +776,7 @@
         private System.Windows.Forms.DataGridView dgDepartments;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ComboBox cmeIds;
         private System.Windows.Forms.ComboBox cmDeptIds;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;

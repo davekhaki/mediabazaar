@@ -44,11 +44,12 @@ namespace Group_2_project
         public void MinQuantity() {
 
             
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock where Quantity < MinimumQuantity;", conDataBase);
+            MySqlConnection conn = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock where Quantity < MinimumQuantity;", conn);
 
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = cmdDataBase;
                 DataTable dbaTableset = new DataTable();
@@ -61,16 +62,18 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { conn.Close(); }
         }
 
         public void /*private List<TempStock> */ LoadStock()
         {
             
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conDataBase);
+            MySqlConnection conn = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conn);
 
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = cmdDataBase;
                 DataTable dbaTableset = new DataTable();
@@ -83,7 +86,8 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-           
+            finally { conn.Close(); }
+
         }
         
         private void btnEdit_Click(object sender, EventArgs e)
@@ -113,6 +117,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -132,16 +137,7 @@ namespace Group_2_project
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
-            //Comments by Mary
-            //I suggest if you click this request button  it should take you to another form
-            //The form should have a way to show all stocks that are below minimum quantity and there fore
-            //From that the mnager shud be able to do all requests
-            //Manager shud be able to all all functionalities related to low stocks
-            /*
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
-            */
+            
             string restock= "Restock";
             MySqlConnection conn = new MySqlConnection(constring);
             string query = "insert dbi434661.request (Request)values('"+restock+"') ;";
@@ -164,6 +160,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
 
         }
 
@@ -209,6 +206,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
 
         private void empListForSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -282,6 +280,7 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { conn.Close(); }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -304,6 +303,7 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { conn.Close(); }
         }
 
         private void Deletebtn_Click(object sender, EventArgs e)

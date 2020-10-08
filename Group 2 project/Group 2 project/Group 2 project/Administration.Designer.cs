@@ -72,13 +72,11 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmeIds = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tbId = new System.Windows.Forms.TextBox();
             this.tbAdd = new System.Windows.Forms.TextBox();
             this.tbSal = new System.Windows.Forms.TextBox();
             this.tbAge = new System.Windows.Forms.TextBox();
             this.tbSn = new System.Windows.Forms.TextBox();
             this.tbFn = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -158,7 +156,6 @@
             this.btnGetEmployee.TabIndex = 7;
             this.btnGetEmployee.Text = "Search Employee Details\r\n";
             this.btnGetEmployee.UseVisualStyleBackColor = false;
-           
             // 
             // btnSignoUT
             // 
@@ -178,7 +175,6 @@
             this.cmEmployeeNames.Name = "cmEmployeeNames";
             this.cmEmployeeNames.Size = new System.Drawing.Size(189, 24);
             this.cmEmployeeNames.TabIndex = 4;
-           
             // 
             // groupBox3
             // 
@@ -484,13 +480,11 @@
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.cmeIds);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.tbId);
             this.groupBox1.Controls.Add(this.tbAdd);
             this.groupBox1.Controls.Add(this.tbSal);
             this.groupBox1.Controls.Add(this.tbAge);
             this.groupBox1.Controls.Add(this.tbSn);
             this.groupBox1.Controls.Add(this.tbFn);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label3);
@@ -600,13 +594,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(403, 22);
             this.dateTimePicker1.TabIndex = 20;
             // 
-            // tbId
-            // 
-            this.tbId.Location = new System.Drawing.Point(113, 36);
-            this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(403, 22);
-            this.tbId.TabIndex = 19;
-            // 
             // tbAdd
             // 
             this.tbAdd.Location = new System.Drawing.Point(113, 416);
@@ -641,15 +628,6 @@
             this.tbFn.Name = "tbFn";
             this.tbFn.Size = new System.Drawing.Size(403, 22);
             this.tbFn.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "EmployeeId";
             // 
             // label2
             // 
@@ -773,7 +751,6 @@
         private System.Windows.Forms.TextBox tbAge;
         private System.Windows.Forms.TextBox tbSn;
         private System.Windows.Forms.TextBox tbFn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
@@ -783,7 +760,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Button btnSignoutAdmin;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnEdit;

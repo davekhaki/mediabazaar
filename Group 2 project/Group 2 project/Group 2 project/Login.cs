@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Group_2_project
 {
-    public partial class Form3 : Form
+    public partial class Login : Form
     {
-        public Form3()
+        public Login()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace Group_2_project
             {
                 switch (loginM.GetRole(tbEmail.Text)) {
                     case "Manager":
-                        Form5 form5 = new Form5();
+                        Manager form5 = new Manager();
                         form5.Show();
                         this.Hide();
                         break;

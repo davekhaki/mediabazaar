@@ -22,6 +22,21 @@ namespace Group_2_project
             dgDepartments.DefaultCellStyle.ForeColor = Color.Black;
      
         }
+        void ClearBoxes() {
+
+            tbDeptName.Clear();
+            tbFn.Clear();
+            tbId.Clear();
+            tbSn.Clear();
+            tbSal.Clear();
+            tbAge.Clear();
+            cmbGender.Text="";
+            cmDeptNames.Text = "";
+            tbSal.Clear();
+            tbAdd.Clear();
+            cmbRole.Text = "";
+
+        }
         void FillEmployeeIds()
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
@@ -38,7 +53,7 @@ namespace Group_2_project
                 while (reader.Read())
                 {
                     string name = reader.GetString(1);
-                    this.cmEmployeeNames.Items.Add(name);
+                    
                     this.cmeIds.Items.Add(name);
 
                 }
@@ -103,7 +118,7 @@ namespace Group_2_project
             return new String(stringChars);
         }
 
-        private void CreateLoginDetails()
+      /*  private void CreateLoginDetails()
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query2 = $"INSERT INTO `login` (`empId`, `username`, `password`) VALUES ('{this.tbId.Text}', '{tbFn.Text}1', '{GeneratePassword()}')";
@@ -115,7 +130,7 @@ namespace Group_2_project
             reader = command2.ExecuteReader();
 
             conn.Close();
-        }
+        }*/
 
         private bool CheckExistingEmployee()
         {
@@ -227,6 +242,7 @@ namespace Group_2_project
                 }
 
                 conn.Close();
+                ClearBoxes();
             }
 
 
@@ -260,7 +276,7 @@ namespace Group_2_project
             }
 
 
-
+           
 
         }
 
@@ -303,14 +319,14 @@ namespace Group_2_project
                 MessageBox.Show(ex.Message);
             }
 
-
+            ClearBoxes();
 
         }
 
         private void btnSignoutAdmin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 form3 = new Form3();
+            Login form3 = new Login();
             form3.Show();
         }
 
@@ -336,11 +352,12 @@ namespace Group_2_project
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+
         }
 
         private void btnSignoUT_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Login form3 = new Login();
             form3.Show();
             this.Hide();
         }
@@ -474,7 +491,7 @@ namespace Group_2_project
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form3 form3 = new Form3();
+            Login form3 = new Login();
             form3.Show();
         }
 
@@ -622,9 +639,9 @@ namespace Group_2_project
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
+            ClearBoxes();
         }
     }
 }   

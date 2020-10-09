@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -49,14 +49,12 @@
             this.tbDeptId = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.cmDeptIds = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dgDepartments = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSignoutAdmin = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -161,14 +159,14 @@
             // dShow
             // 
             this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dShow.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dShow.DefaultCellStyle = dataGridViewCellStyle8;
             this.dShow.Location = new System.Drawing.Point(21, 20);
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
@@ -297,7 +295,6 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.button1);
             this.groupBox5.Controls.Add(this.cmDeptIds);
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Controls.Add(this.dgDepartments);
@@ -317,16 +314,6 @@
             this.label14.Size = new System.Drawing.Size(128, 17);
             this.label14.TabIndex = 10;
             this.label14.Text = "Department names";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Olive;
-            this.button1.Location = new System.Drawing.Point(372, 437);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(305, 48);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Search Dept Details";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // cmDeptIds
             // 
@@ -350,15 +337,16 @@
             // 
             // dgDepartments
             // 
+            this.dgDepartments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgDepartments.Location = new System.Drawing.Point(28, 33);
             this.dgDepartments.Name = "dgDepartments";
             this.dgDepartments.RowHeadersWidth = 51;
@@ -383,7 +371,6 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Teal;
             this.groupBox2.Controls.Add(this.btnSignoutAdmin);
-            this.groupBox2.Controls.Add(this.btnRemove);
             this.groupBox2.Controls.Add(this.btnEdit);
             this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
@@ -397,24 +384,13 @@
             // btnSignoutAdmin
             // 
             this.btnSignoutAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSignoutAdmin.Location = new System.Drawing.Point(39, 288);
+            this.btnSignoutAdmin.Location = new System.Drawing.Point(39, 350);
             this.btnSignoutAdmin.Name = "btnSignoutAdmin";
             this.btnSignoutAdmin.Size = new System.Drawing.Size(271, 50);
             this.btnSignoutAdmin.TabIndex = 3;
             this.btnSignoutAdmin.Text = "Sign Out";
             this.btnSignoutAdmin.UseVisualStyleBackColor = false;
             this.btnSignoutAdmin.Click += new System.EventHandler(this.btnSignoutAdmin_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(39, 215);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(271, 54);
-            this.btnRemove.TabIndex = 2;
-            this.btnRemove.Text = "Remove Employee";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnEdit
             // 
@@ -752,7 +728,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Button btnSignoutAdmin;
-        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -772,7 +747,6 @@
         private System.Windows.Forms.TextBox tbDeptId;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgDepartments;
         private System.Windows.Forms.Button button3;

@@ -545,8 +545,6 @@ C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 projec
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.exe.config
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Administration.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Employeeselfservice.resources
-C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form3.resources
-C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Form5.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Properties.Resources.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.GenerateResource.cache
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.CoreCompileInputs.cache
@@ -687,3 +685,5 @@ C:\Users\sbokk\Moment\artichoke\Group 2 project\Group 2 project\Group 2 project\
 C:\Users\sbokk\Moment\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.CopyComplete
 C:\Users\sbokk\Moment\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.exe
 C:\Users\sbokk\Moment\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Login.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Manager.resources

@@ -142,7 +142,7 @@ namespace Group_2_project
 
             conn.Open();
             int rows = command.ExecuteNonQuery();
-            if(rows == 0)
+            if(rows == 0 || rows == -1)
             {
                 doesExist = false;
                 
@@ -254,18 +254,21 @@ namespace Group_2_project
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = "update dbi434661.employee set ID='" + this.tbId.Text + "',FirstName='" + this.tbFn.Text + "',LastName='" + this.tbSn.Text + "',Age='" + this.tbAge.Text + "',Gender='" + this.cmbGender.Text+ "',DepartmentName='" + this.cmDeptNames.Text+ "',HireDate='" + this.dateTimePicker1.Text + "',EndDate='"+this.dateTimePicker2.Text+"',Salary='" + this.tbSal.Text + "',Adress='" + this.tbAdd.Text + "',Role='" + this.cmbRole.Text + "' where ID='" + this.tbId.Text + "' ;";
             MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
+            
 
             try
             {
                 conn.Open();
-                reader = command.ExecuteReader();
-                MessageBox.Show("Employee Details Updated successfully!");
-
-                while (reader.Read())
+                int rows = command.ExecuteNonQuery();
+                if(rows == 0 || rows == -1)
                 {
-
+                    MessageBox.Show("Error changing this employees details.");
                 }
+                else
+                {
+                    MessageBox.Show("Employee Details Updated successfully!");
+                }
+              
 
                 conn.Close();
             }
@@ -404,8 +407,8 @@ namespace Group_2_project
                     MessageBox.Show("New Department added!");
                 }
                 else MessageBox.Show("Error adding the new department.");
-              
 
+                conn.Close();
 
 
 
@@ -420,20 +423,25 @@ namespace Group_2_project
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "update dbi434661.departments set DeptName='" + this.tbDeptName.Text + "' where DeptID='" + this.tbDeptId + "' ;";
+            string query = $"update departments set DeptName='{this.tbDeptName.Text}' where DeptID='{tbDeptId.Text}' ;";
             MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
+            
 
             try
             {
                 conn.Open();
-                reader = command.ExecuteReader();
-                MessageBox.Show("Department Details Updated successfully!");
-
-                while (reader.Read())
+                int rows = command.ExecuteNonQuery();
+                if (rows == 0)
                 {
-
+                    MessageBox.Show("Error changing the department details");
+                }else
+                {
+                    MessageBox.Show("Department Details Updated successfully!");
                 }
+                conn.Close();
+                return;
+             
+
 
 
             }
@@ -609,7 +617,7 @@ namespace Group_2_project
 
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "select * from dbi434661.departments;";
+            string query = $"select * from departments WHERE DeptName = '{cmDeptIds.SelectedItem.ToString()}'";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -619,15 +627,17 @@ namespace Group_2_project
                 reader = command.ExecuteReader();
 
 
-                //while (reader.Read())
-                // {
+                while (reader.Read())
+                 {
                 
                 string dptmentId = reader.GetInt32("DeptID").ToString();
                 string dptName = reader.GetString("DeptName");
                 this.tbDeptId.Text = dptmentId;
                 this.tbDeptName.Text = dptName;
 
-                // }
+                 }
+
+                conn.Close();
 
 
             }
@@ -642,6 +652,11 @@ namespace Group_2_project
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearBoxes();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }   

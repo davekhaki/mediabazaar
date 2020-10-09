@@ -56,6 +56,8 @@ namespace Group_2_project
                 role = reader.GetString(0);
                 
             }
+            
+            conn.Close();
             return role;
 
 

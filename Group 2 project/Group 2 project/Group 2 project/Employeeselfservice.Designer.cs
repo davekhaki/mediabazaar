@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -42,16 +44,14 @@
             this.btnDone = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -65,6 +65,28 @@
             this.tabPage2.Size = new System.Drawing.Size(1199, 575);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "My Shift Schedules";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(38, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 40);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Sign Out";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dataGridViewSchedule
+            // 
+            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(261, 49);
+            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
+            this.dataGridViewSchedule.RowHeadersWidth = 51;
+            this.dataGridViewSchedule.RowTemplate.Height = 24;
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(661, 348);
+            this.dataGridViewSchedule.TabIndex = 0;
+            this.dataGridViewSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSchedule_CellContentClick);
             // 
             // tabPage1
             // 
@@ -103,6 +125,7 @@
             this.btnUpdate.TabIndex = 22;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // label2
             // 
@@ -176,6 +199,7 @@
             this.btnDone.TabIndex = 1;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click_1);
             // 
             // dataGridView1
             // 
@@ -188,6 +212,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(500, 450);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // tabControl1
             // 
@@ -199,28 +224,6 @@
             this.tabControl1.Size = new System.Drawing.Size(1207, 604);
             this.tabControl1.TabIndex = 0;
             // 
-            // dataGridViewSchedule
-            // 
-            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(261, 49);
-            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
-            this.dataGridViewSchedule.RowHeadersWidth = 51;
-            this.dataGridViewSchedule.RowTemplate.Height = 24;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(661, 348);
-            this.dataGridViewSchedule.TabIndex = 0;
-            this.dataGridViewSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSchedule_CellContentClick);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(38, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Sign Out";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Employeeselfservice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,6 +234,7 @@
             this.Name = "Employeeselfservice";
             this.Text = "Employeeselfservice";
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -238,7 +242,6 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             this.ResumeLayout(false);
 
         }

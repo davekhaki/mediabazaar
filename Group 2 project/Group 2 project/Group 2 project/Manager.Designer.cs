@@ -32,7 +32,43 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tbStockId = new System.Windows.Forms.TextBox();
+            this.tbMinQuantity = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.tbProdBrand = new System.Windows.Forms.TextBox();
+            this.tbProdQuantity = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbProdPrice = new System.Windows.Forms.TextBox();
+            this.tbProdName = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.tbMinQ = new System.Windows.Forms.TextBox();
             this.Deletebtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -81,44 +117,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tbMinQuantity = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.tbProdBrand = new System.Windows.Forms.TextBox();
-            this.tbProdQuantity = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tbProdPrice = new System.Windows.Forms.TextBox();
-            this.tbProdName = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.tbStockId = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
@@ -130,8 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.scheduleGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -157,6 +157,194 @@
             this.panel4.Size = new System.Drawing.Size(1200, 579);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label30);
+            this.groupBox5.Controls.Add(this.tbStockId);
+            this.groupBox5.Controls.Add(this.tbMinQuantity);
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Controls.Add(this.tbProdBrand);
+            this.groupBox5.Controls.Add(this.tbProdQuantity);
+            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Controls.Add(this.button7);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.tbProdPrice);
+            this.groupBox5.Controls.Add(this.tbProdName);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(28, 39);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(300, 514);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Products Details";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(11, 72);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(56, 17);
+            this.label30.TabIndex = 25;
+            this.label30.Text = "Prod-ID";
+            // 
+            // tbStockId
+            // 
+            this.tbStockId.Location = new System.Drawing.Point(93, 69);
+            this.tbStockId.Name = "tbStockId";
+            this.tbStockId.ReadOnly = true;
+            this.tbStockId.Size = new System.Drawing.Size(199, 22);
+            this.tbStockId.TabIndex = 26;
+            // 
+            // tbMinQuantity
+            // 
+            this.tbMinQuantity.Location = new System.Drawing.Point(93, 267);
+            this.tbMinQuantity.Name = "tbMinQuantity";
+            this.tbMinQuantity.Size = new System.Drawing.Size(199, 22);
+            this.tbMinQuantity.TabIndex = 24;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.Location = new System.Drawing.Point(6, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(278, 41);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Deletebtn_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 21);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 17);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Product IDS";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(377, 76);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(91, 24);
+            this.comboBox2.TabIndex = 7;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 267);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(88, 17);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Min-Quantity";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Olive;
+            this.button5.Location = new System.Drawing.Point(6, 413);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(278, 46);
+            this.button5.TabIndex = 20;
+            this.button5.Text = "Edit Stock Details";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // tbProdBrand
+            // 
+            this.tbProdBrand.Location = new System.Drawing.Point(93, 230);
+            this.tbProdBrand.Multiline = true;
+            this.tbProdBrand.Name = "tbProdBrand";
+            this.tbProdBrand.Size = new System.Drawing.Size(199, 22);
+            this.tbProdBrand.TabIndex = 18;
+            // 
+            // tbProdQuantity
+            // 
+            this.tbProdQuantity.Location = new System.Drawing.Point(93, 190);
+            this.tbProdQuantity.Name = "tbProdQuantity";
+            this.tbProdQuantity.Size = new System.Drawing.Size(199, 22);
+            this.tbProdQuantity.TabIndex = 19;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button6.Location = new System.Drawing.Point(6, 467);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(278, 41);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Request";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.btnRequest_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Lime;
+            this.button7.Location = new System.Drawing.Point(6, 320);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(275, 40);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Add";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.Addbtn_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(40, 230);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(46, 17);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Brand";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(11, 110);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(80, 17);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Prod-Name";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(26, 190);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(61, 17);
+            this.label22.TabIndex = 14;
+            this.label22.Text = "Quantity";
+            // 
+            // tbProdPrice
+            // 
+            this.tbProdPrice.Location = new System.Drawing.Point(93, 150);
+            this.tbProdPrice.Name = "tbProdPrice";
+            this.tbProdPrice.Size = new System.Drawing.Size(199, 22);
+            this.tbProdPrice.TabIndex = 17;
+            // 
+            // tbProdName
+            // 
+            this.tbProdName.Location = new System.Drawing.Point(93, 107);
+            this.tbProdName.Name = "tbProdName";
+            this.tbProdName.Size = new System.Drawing.Size(199, 22);
+            this.tbProdName.TabIndex = 16;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 155);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(75, 17);
+            this.label23.TabIndex = 12;
+            this.label23.Text = "Prod-Price";
             // 
             // groupBox2
             // 
@@ -184,6 +372,175 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Products Details";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.textBox6);
+            this.groupBox6.Controls.Add(this.button8);
+            this.groupBox6.Controls.Add(this.label24);
+            this.groupBox6.Controls.Add(this.comboBox3);
+            this.groupBox6.Controls.Add(this.label25);
+            this.groupBox6.Controls.Add(this.button9);
+            this.groupBox6.Controls.Add(this.textBox7);
+            this.groupBox6.Controls.Add(this.textBox8);
+            this.groupBox6.Controls.Add(this.button10);
+            this.groupBox6.Controls.Add(this.button11);
+            this.groupBox6.Controls.Add(this.label26);
+            this.groupBox6.Controls.Add(this.label27);
+            this.groupBox6.Controls.Add(this.label28);
+            this.groupBox6.Controls.Add(this.textBox9);
+            this.groupBox6.Controls.Add(this.textBox10);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(0, 0);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(300, 514);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Products Details";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(95, 226);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(199, 22);
+            this.textBox6.TabIndex = 24;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Blue;
+            this.button8.Location = new System.Drawing.Point(6, 366);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(278, 41);
+            this.button8.TabIndex = 23;
+            this.button8.Text = "Delete";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.Deletebtn_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 21);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(83, 17);
+            this.label24.TabIndex = 22;
+            this.label24.Text = "Product IDS";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(377, 76);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(91, 24);
+            this.comboBox3.TabIndex = 7;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(5, 226);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(88, 17);
+            this.label25.TabIndex = 10;
+            this.label25.Text = "Min-Quantity";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Olive;
+            this.button9.Location = new System.Drawing.Point(6, 413);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(278, 46);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "Edit Stock Details";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(95, 189);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(199, 22);
+            this.textBox7.TabIndex = 18;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(95, 149);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(199, 22);
+            this.textBox8.TabIndex = 19;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(6, 467);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(278, 41);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "Request";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.btnRequest_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Lime;
+            this.button11.Location = new System.Drawing.Point(6, 320);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(275, 40);
+            this.button11.TabIndex = 5;
+            this.button11.Text = "Add";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.Addbtn_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(42, 189);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(46, 17);
+            this.label26.TabIndex = 13;
+            this.label26.Text = "Brand";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(13, 69);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(80, 17);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Prod-Name";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(28, 149);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(61, 17);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "Quantity";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(95, 109);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(199, 22);
+            this.textBox9.TabIndex = 17;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(95, 66);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(199, 22);
+            this.textBox10.TabIndex = 16;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(14, 114);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(75, 17);
+            this.label29.TabIndex = 12;
+            this.label29.Text = "Prod-Price";
             // 
             // tbMinQ
             // 
@@ -400,7 +757,7 @@
             this.loadStockBtn.Name = "loadStockBtn";
             this.loadStockBtn.Size = new System.Drawing.Size(205, 41);
             this.loadStockBtn.TabIndex = 8;
-            this.loadStockBtn.Text = "Load Stock";
+            this.loadStockBtn.Text = "Order Stock";
             this.loadStockBtn.UseVisualStyleBackColor = false;
             this.loadStockBtn.Click += new System.EventHandler(this.loadStockBtn_Click);
             // 
@@ -691,363 +1048,6 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Select a time:";
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label30);
-            this.groupBox5.Controls.Add(this.tbStockId);
-            this.groupBox5.Controls.Add(this.tbMinQuantity);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.comboBox2);
-            this.groupBox5.Controls.Add(this.label19);
-            this.groupBox5.Controls.Add(this.button5);
-            this.groupBox5.Controls.Add(this.tbProdBrand);
-            this.groupBox5.Controls.Add(this.tbProdQuantity);
-            this.groupBox5.Controls.Add(this.button6);
-            this.groupBox5.Controls.Add(this.button7);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.tbProdPrice);
-            this.groupBox5.Controls.Add(this.tbProdName);
-            this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(28, 39);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(300, 514);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Products Details";
-            // 
-            // tbMinQuantity
-            // 
-            this.tbMinQuantity.Location = new System.Drawing.Point(93, 267);
-            this.tbMinQuantity.Name = "tbMinQuantity";
-            this.tbMinQuantity.Size = new System.Drawing.Size(199, 22);
-            this.tbMinQuantity.TabIndex = 24;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(6, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(278, 41);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Deletebtn_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 21);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 17);
-            this.label18.TabIndex = 22;
-            this.label18.Text = "Product IDS";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(377, 76);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(91, 24);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 267);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(88, 17);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "Min-Quantity";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Olive;
-            this.button5.Location = new System.Drawing.Point(6, 413);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(278, 46);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Edit Stock Details";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // tbProdBrand
-            // 
-            this.tbProdBrand.Location = new System.Drawing.Point(93, 230);
-            this.tbProdBrand.Multiline = true;
-            this.tbProdBrand.Name = "tbProdBrand";
-            this.tbProdBrand.Size = new System.Drawing.Size(199, 22);
-            this.tbProdBrand.TabIndex = 18;
-            // 
-            // tbProdQuantity
-            // 
-            this.tbProdQuantity.Location = new System.Drawing.Point(93, 190);
-            this.tbProdQuantity.Name = "tbProdQuantity";
-            this.tbProdQuantity.Size = new System.Drawing.Size(199, 22);
-            this.tbProdQuantity.TabIndex = 19;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(6, 467);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(278, 41);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Request";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.btnRequest_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Lime;
-            this.button7.Location = new System.Drawing.Point(6, 320);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(275, 40);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Add";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.Addbtn_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(40, 230);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(46, 17);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "Brand";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(11, 110);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 17);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "Prod-Name";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(26, 190);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(61, 17);
-            this.label22.TabIndex = 14;
-            this.label22.Text = "Quantity";
-            // 
-            // tbProdPrice
-            // 
-            this.tbProdPrice.Location = new System.Drawing.Point(93, 150);
-            this.tbProdPrice.Name = "tbProdPrice";
-            this.tbProdPrice.Size = new System.Drawing.Size(199, 22);
-            this.tbProdPrice.TabIndex = 17;
-            // 
-            // tbProdName
-            // 
-            this.tbProdName.Location = new System.Drawing.Point(93, 107);
-            this.tbProdName.Name = "tbProdName";
-            this.tbProdName.Size = new System.Drawing.Size(199, 22);
-            this.tbProdName.TabIndex = 16;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 155);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(75, 17);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "Prod-Price";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox6);
-            this.groupBox6.Controls.Add(this.button8);
-            this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Controls.Add(this.comboBox3);
-            this.groupBox6.Controls.Add(this.label25);
-            this.groupBox6.Controls.Add(this.button9);
-            this.groupBox6.Controls.Add(this.textBox7);
-            this.groupBox6.Controls.Add(this.textBox8);
-            this.groupBox6.Controls.Add(this.button10);
-            this.groupBox6.Controls.Add(this.button11);
-            this.groupBox6.Controls.Add(this.label26);
-            this.groupBox6.Controls.Add(this.label27);
-            this.groupBox6.Controls.Add(this.label28);
-            this.groupBox6.Controls.Add(this.textBox9);
-            this.groupBox6.Controls.Add(this.textBox10);
-            this.groupBox6.Controls.Add(this.label29);
-            this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(0, 0);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(300, 514);
-            this.groupBox6.TabIndex = 4;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Products Details";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(95, 226);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(199, 22);
-            this.textBox6.TabIndex = 24;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Blue;
-            this.button8.Location = new System.Drawing.Point(6, 366);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(278, 41);
-            this.button8.TabIndex = 23;
-            this.button8.Text = "Delete";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.Deletebtn_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 21);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(83, 17);
-            this.label24.TabIndex = 22;
-            this.label24.Text = "Product IDS";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(377, 76);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(91, 24);
-            this.comboBox3.TabIndex = 7;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(5, 226);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(88, 17);
-            this.label25.TabIndex = 10;
-            this.label25.Text = "Min-Quantity";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Olive;
-            this.button9.Location = new System.Drawing.Point(6, 413);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(278, 46);
-            this.button9.TabIndex = 20;
-            this.button9.Text = "Edit Stock Details";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(95, 189);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(199, 22);
-            this.textBox7.TabIndex = 18;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(95, 149);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(199, 22);
-            this.textBox8.TabIndex = 19;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(6, 467);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(278, 41);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Request";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.btnRequest_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Lime;
-            this.button11.Location = new System.Drawing.Point(6, 320);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(275, 40);
-            this.button11.TabIndex = 5;
-            this.button11.Text = "Add";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.Addbtn_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(42, 189);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(46, 17);
-            this.label26.TabIndex = 13;
-            this.label26.Text = "Brand";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(13, 69);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(80, 17);
-            this.label27.TabIndex = 11;
-            this.label27.Text = "Prod-Name";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(28, 149);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(61, 17);
-            this.label28.TabIndex = 14;
-            this.label28.Text = "Quantity";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(95, 109);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(199, 22);
-            this.textBox9.TabIndex = 17;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(95, 66);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(199, 22);
-            this.textBox10.TabIndex = 16;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(14, 114);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(75, 17);
-            this.label29.TabIndex = 12;
-            this.label29.Text = "Prod-Price";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(11, 72);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(56, 17);
-            this.label30.TabIndex = 25;
-            this.label30.Text = "Prod-ID";
-            // 
-            // tbStockId
-            // 
-            this.tbStockId.Location = new System.Drawing.Point(93, 69);
-            this.tbStockId.Name = "tbStockId";
-            this.tbStockId.ReadOnly = true;
-            this.tbStockId.Size = new System.Drawing.Size(199, 22);
-            this.tbStockId.TabIndex = 26;
-            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1060,8 +1060,12 @@
             this.Text = "Form5";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMin)).EndInit();
@@ -1076,10 +1080,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

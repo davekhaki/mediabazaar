@@ -156,7 +156,7 @@ namespace Group_2_project
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbPname.Text))
+            if (string.IsNullOrEmpty(tbProdName.Text))
             {
                 MessageBox.Show("Please enter the product name.");
                 return;
@@ -173,7 +173,7 @@ namespace Group_2_project
             */
             string restock= "Restock";
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "insert dbi434661.request (Request)values('"+restock+"') ;";
+            string query = $"insert request (Request, prodName)values('{restock}', '{tbProdName.Text}') ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 

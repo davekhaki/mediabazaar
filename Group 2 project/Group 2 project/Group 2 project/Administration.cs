@@ -57,7 +57,7 @@ namespace Group_2_project
                     this.cmeIds.Items.Add(name);
 
                 }
-
+                conn.Close();
 
             }
             catch (Exception ex)
@@ -71,7 +71,7 @@ namespace Group_2_project
         {
             {
                 MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-                string query = "select * from dbi434661.departments;";
+                string query = "select * from dbi434661.departments;";  
                 MySqlCommand command = new MySqlCommand(query, conn);
                 MySqlDataReader reader;
 
@@ -336,11 +336,12 @@ namespace Group_2_project
         private void btnShow_Click(object sender, EventArgs e)
         {
             string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.employee;", conDataBase);
+            MySqlConnection conn = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.employee;", conn);
 
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = cmdDataBase;
                 DataTable dbaTableset = new DataTable();
@@ -352,7 +353,7 @@ namespace Group_2_project
                 dShow.DataSource = bSource;
                 sda.Update(dbaTableset);
 
-
+                conn.Close();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
@@ -369,11 +370,12 @@ namespace Group_2_project
         {
             {
                 string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-                MySqlConnection conDataBase = new MySqlConnection(constring);
-                MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.departments;", conDataBase);
+                MySqlConnection conn = new MySqlConnection(constring);
+                MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.departments;", conn);
 
                 try
                 {
+                    conn.Open();
                     MySqlDataAdapter sda = new MySqlDataAdapter();
                     sda.SelectCommand = cmdDataBase;
                     DataTable dbaTableset = new DataTable();
@@ -384,6 +386,7 @@ namespace Group_2_project
 
                     this.dgDepartments.DataSource = bSource;
                     sda.Update(dbaTableset);
+                    conn.Close();
 
                 }
                 catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -474,7 +477,7 @@ namespace Group_2_project
                 command.ExecuteScalar();
 
 
-
+                conn.Close();
                 //command2.CommandType = CommandType.Text;
                 //command2.ExecuteScalar();
 
@@ -576,26 +579,26 @@ namespace Group_2_project
 
                 while (reader.Read())
                 {
-                string ID = reader.GetInt32("ID").ToString();
-                string FirstName = reader.GetString("FirstName");
-                string LastName = reader.GetString("LastName");
-                string Age = reader.GetInt32("Age").ToString();
-                string Gender = reader.GetString("Gender");
-                string DepartmentName = reader.GetString("DepartmentName");
-                string HireDate = reader.GetDateTime("HireDate").ToString();
-                string Salary = reader.GetInt32("Salary").ToString();
-                string Adress = reader.GetString("Adress");
-                string Role = reader.GetString("Role");
-                this.tbId.Text = ID;
-                this.tbFn.Text = FirstName;
-                this.tbSn.Text = LastName;
-                this.tbAge.Text = Age;
-                this.cmbGender.Text = Gender;
-                this.cmDeptNames.Text = DepartmentName;
-                this.dateTimePicker1.Text = HireDate;
-                this.tbSal.Text = Salary;
-                this.tbAdd.Text = Adress;
-                this.cmbRole.Text = Role;
+                    string ID = reader.GetInt32("ID").ToString();
+                    string FirstName = reader.GetString("FirstName");
+                    string LastName = reader.GetString("LastName");
+                    string Age = reader.GetInt32("Age").ToString();
+                    string Gender = reader.GetString("Gender");
+                    string DepartmentName = reader.GetString("DepartmentName");
+                    string HireDate = reader.GetDateTime("HireDate").ToString();
+                    string Salary = reader.GetInt32("Salary").ToString();
+                    string Adress = reader.GetString("Adress");
+                    string Role = reader.GetString("Role");
+                    this.tbId.Text = ID;
+                    this.tbFn.Text = FirstName;
+                    this.tbSn.Text = LastName;
+                    this.tbAge.Text = Age;
+                    this.cmbGender.Text = Gender;
+                    this.cmDeptNames.Text = DepartmentName;
+                    this.dateTimePicker1.Text = HireDate;
+                    this.tbSal.Text = Salary;
+                    this.tbAdd.Text = Adress;
+                    this.cmbRole.Text = Role;
 
 
 
@@ -610,6 +613,7 @@ namespace Group_2_project
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
 
         private void cmDeptNames_SelectedIndexChanged(object sender, EventArgs e)

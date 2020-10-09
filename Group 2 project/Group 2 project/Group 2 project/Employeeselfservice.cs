@@ -32,6 +32,7 @@ namespace Group_2_project
             MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM ((employee e INNER JOIN schedule s ON e.ID = s.EmployeeID) INNER JOIN login l ON l.empId = e.ID) WHERE l.username = '{username}' ;", conn);
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = query;
                 DataTable dbaTableset = new DataTable();
@@ -41,6 +42,7 @@ namespace Group_2_project
                 bSource.DataSource = dbaTableset;
                 dataGridViewSchedule.DataSource = bSource;
                 sda.Update(dbaTableset);
+                conn.Close();
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -48,11 +50,12 @@ namespace Group_2_project
         public void LoadStock()
         {
             string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conDataBase);
+            MySqlConnection conn = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conn);
 
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = cmdDataBase;
                 DataTable dbaTableset = new DataTable();
@@ -62,7 +65,7 @@ namespace Group_2_project
                 bSource.DataSource = dbaTableset;
                 dataGridViewStock.DataSource = bSource;
                 sda.Update(dbaTableset);
-
+                conn.Close();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -70,11 +73,12 @@ namespace Group_2_project
 string Done;
         public void LoadRequest() {
             string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select RequestID, Request, RequestStatus, prodName from request;", conDataBase);
+            MySqlConnection conn = new MySqlConnection(constring);
+            MySqlCommand cmdDataBase = new MySqlCommand("select RequestID, Request, RequestStatus, prodName from request;", conn);
 
             try
             {
+                conn.Open();
                 MySqlDataAdapter sda = new MySqlDataAdapter();
                 sda.SelectCommand = cmdDataBase;
                 DataTable dbaTableset = new DataTable();
@@ -84,6 +88,7 @@ string Done;
                 bSource.DataSource = dbaTableset;
                 dataGridView1.DataSource = bSource;
                 sda.Update(dbaTableset);
+                conn.Close();
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -124,6 +129,7 @@ string Done;
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
 
         private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -165,6 +171,7 @@ string Done;
 
                 MessageBox.Show(ex.Message);
             }
+            finally{ conn.Close(); }
         }
 
         private void dataGridViewSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -206,6 +213,7 @@ string Done;
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -234,6 +242,7 @@ string Done;
 
                 MessageBox.Show(ex.Message);
             }
+            finally { conn.Close(); }
         }
     }
 }

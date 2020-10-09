@@ -373,20 +373,23 @@ namespace Group_2_project
         private void btnAddDept_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "insert into dbi434661.departments(DeptID,DeptName)values('" + this.tbDeptId.Text + "','" + this.tbDeptName.Text + "');";
+            string query = "insert into dbi434661.departments(DeptName)values('" + this.tbDeptName.Text + "');";
             MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
+            
 
             try
             {
                 conn.Open();
-                reader = command.ExecuteReader();
-                MessageBox.Show("New Department added");
+                int rows = command.ExecuteNonQuery();
 
-                while (reader.Read())
+                if (rows == 1)
                 {
-
+                    MessageBox.Show("New Department added!");
                 }
+                else MessageBox.Show("Error adding the new department.");
+              
+
+
 
 
             }

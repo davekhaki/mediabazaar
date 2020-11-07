@@ -21,11 +21,12 @@ namespace Group_2_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginManager loginM = new LoginManager();
+            ArtichokeData.LoginManager LoginManager = new ArtichokeData.LoginManager();
+      
 
-            if(loginM.Login(tbEmail.Text, tbPassword.Text))
+            if(LoginManager.Login(tbEmail.Text, tbPassword.Text))
             {
-                switch (loginM.GetRole(tbEmail.Text)) {
+                switch (LoginManager.GetRole(tbEmail.Text)) {
                     case "Manager":
                         Manager form5 = new Manager();
                         form5.Show();

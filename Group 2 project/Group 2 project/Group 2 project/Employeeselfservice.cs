@@ -17,39 +17,26 @@ namespace Group_2_project
         {
             InitializeComponent();
             this.Text = username;
-          
+
+            ArtichokeData.employee.ScheduleManager scheduleManager = new ArtichokeData.employee.ScheduleManager();
+            scheduleManager.GetWeeklySchedule(username, CurrentWeekShiftsDataGrid, shiftDateTimePicker.Value.Date);
+
+
+            ArtichokeData.StockManager stockManager = new ArtichokeData.StockManager();
+            stockManager.LoadStock(dataGridViewStock, stockPageNumeric);
+
+
             LoadRequest();
-            LoadStock();
-           GetSchedule(username);
-            dataGridViewSchedule.DefaultCellStyle.ForeColor = Color.Black;
+            //LoadStock();
+           
+            
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             dataGridViewStock.DefaultCellStyle.ForeColor = Color.Black;
            
         }
-
-        public void GetSchedule(string username) {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM ((employee e INNER JOIN schedule s ON e.ID = s.EmployeeID) INNER JOIN login l ON l.empId = e.ID) WHERE l.username = '{username}' ;", conn);
-            try
-            {
-                conn.Open();
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = query;
-                DataTable dbaTableset = new DataTable();
-                sda.Fill(dbaTableset);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dbaTableset;
-                dataGridViewSchedule.DataSource = bSource;
-                sda.Update(dbaTableset);
-                conn.Close();
-
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-        }
-        public void LoadStock()
+        /*public void LoadStock()
         {
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            string constring = "Persist Security Info=False;database=artitest;server=localhost;Connect Timeout=30;user id=root;";
             MySqlConnection conn = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conn);
 
@@ -68,11 +55,11 @@ namespace Group_2_project
                 conn.Close();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-        }
+        }*/
 
 string Done;
         public void LoadRequest() {
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
+            string constring = "Persist Security Info=False;database=artitest;server=localhost;Connect Timeout=30;user id=root;";
             MySqlConnection conn = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand("select RequestID, Request, RequestStatus, prodName from request;", conn);
 
@@ -110,7 +97,7 @@ string Done;
         private void btnDone_Click(object sender, EventArgs e)
         {
             string DoneTask = "Done";
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=artitest;server=localhost;Connect Timeout=30;user id=root;");
             string query = "update dbi434661.request set RequestStatus='"+DoneTask+"' where RequestID="+Done+" ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
@@ -176,7 +163,7 @@ string Done;
 
         private void dataGridViewSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridViewSchedule.ForeColor = System.Drawing.Color.Black;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -243,6 +230,23 @@ string Done;
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+        }
+
+        private void CurrentWeekShiftsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            ArtichokeData.employee.ScheduleManager scheduleManager = new ArtichokeData.employee.ScheduleManager();
+            scheduleManager.GetWeeklySchedule(this.Text, CurrentWeekShiftsDataGrid, shiftDateTimePicker.Value.Date);
+        }
+
+        private void stockPageNumeric_ValueChanged(object sender, EventArgs e)
+        {
+            ArtichokeData.StockManager stockManager = new ArtichokeData.StockManager();
+            stockManager.LoadStock(dataGridViewStock, stockPageNumeric);
         }
     }
 }

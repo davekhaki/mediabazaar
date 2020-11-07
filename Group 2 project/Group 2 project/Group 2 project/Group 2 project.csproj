@@ -101,7 +101,6 @@
     <Compile Include="Administration.Designer.cs">
       <DependentUpon>Administration.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigClass.cs" />
     <Compile Include="Employeeselfservice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,7 +119,6 @@
     <Compile Include="Manager.Designer.cs">
       <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Administration.resx">
@@ -157,6 +155,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArtichokeData\ArtichokeData.csproj">
+      <Project>{af1fe5a9-8304-47f1-95f4-2618b7a540a8}</Project>
+      <Name>ArtichokeData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ArtichokeLogic\ArtichokeLogic.csproj">
+      <Project>{a192b2c3-6b2b-46db-8ed4-7152b64e64f3}</Project>
+      <Name>ArtichokeLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

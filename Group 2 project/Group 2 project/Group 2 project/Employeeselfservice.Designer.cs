@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.shiftDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.CurrentWeekShiftsDataGrid = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.stockPageNumeric = new System.Windows.Forms.NumericUpDown();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbQuantity = new System.Windows.Forms.TextBox();
@@ -45,9 +49,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentWeekShiftsDataGrid)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPageNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,8 +62,10 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Teal;
+            this.tabPage2.Controls.Add(this.shiftDateTimePicker);
+            this.tabPage2.Controls.Add(this.CurrentWeekShiftsDataGrid);
+            this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.dataGridViewSchedule);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -66,27 +73,45 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "My Shift Schedules";
             // 
+            // shiftDateTimePicker
+            // 
+            this.shiftDateTimePicker.Location = new System.Drawing.Point(651, 117);
+            this.shiftDateTimePicker.Name = "shiftDateTimePicker";
+            this.shiftDateTimePicker.Size = new System.Drawing.Size(329, 22);
+            this.shiftDateTimePicker.TabIndex = 8;
+            this.shiftDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // CurrentWeekShiftsDataGrid
+            // 
+            this.CurrentWeekShiftsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CurrentWeekShiftsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CurrentWeekShiftsDataGrid.Location = new System.Drawing.Point(97, 117);
+            this.CurrentWeekShiftsDataGrid.Name = "CurrentWeekShiftsDataGrid";
+            this.CurrentWeekShiftsDataGrid.RowHeadersWidth = 51;
+            this.CurrentWeekShiftsDataGrid.RowTemplate.Height = 24;
+            this.CurrentWeekShiftsDataGrid.Size = new System.Drawing.Size(406, 437);
+            this.CurrentWeekShiftsDataGrid.TabIndex = 7;
+            this.CurrentWeekShiftsDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CurrentWeekShiftsDataGrid_CellContentClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(224, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Your shifts for this week";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(38, 191);
+            this.button2.Location = new System.Drawing.Point(1017, 529);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 40);
             this.button2.TabIndex = 4;
             this.button2.Text = "Sign Out";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dataGridViewSchedule
-            // 
-            this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(261, 49);
-            this.dataGridViewSchedule.Name = "dataGridViewSchedule";
-            this.dataGridViewSchedule.RowHeadersWidth = 51;
-            this.dataGridViewSchedule.RowTemplate.Height = 24;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(661, 348);
-            this.dataGridViewSchedule.TabIndex = 0;
-            this.dataGridViewSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSchedule_CellContentClick);
             // 
             // tabPage1
             // 
@@ -102,6 +127,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.stockPageNumeric);
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.tbQuantity);
@@ -109,12 +136,39 @@
             this.groupBox2.Controls.Add(this.tbID);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(566, 15);
+            this.groupBox2.Location = new System.Drawing.Point(533, 15);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(633, 532);
+            this.groupBox2.Size = new System.Drawing.Size(666, 532);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Stock Update";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(326, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 17);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Page Number:";
+            // 
+            // stockPageNumeric
+            // 
+            this.stockPageNumeric.Location = new System.Drawing.Point(456, 21);
+            this.stockPageNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.stockPageNumeric.Name = "stockPageNumeric";
+            this.stockPageNumeric.Size = new System.Drawing.Size(171, 22);
+            this.stockPageNumeric.TabIndex = 23;
+            this.stockPageNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.stockPageNumeric.ValueChanged += new System.EventHandler(this.stockPageNumeric_ValueChanged);
             // 
             // btnUpdate
             // 
@@ -147,19 +201,19 @@
             // 
             this.dataGridViewStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewStock.Location = new System.Drawing.Point(16, 21);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewStock.Location = new System.Drawing.Point(16, 64);
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
             this.dataGridViewStock.RowTemplate.Height = 24;
-            this.dataGridViewStock.Size = new System.Drawing.Size(611, 414);
+            this.dataGridViewStock.Size = new System.Drawing.Size(611, 371);
             this.dataGridViewStock.TabIndex = 10;
             // 
             // tbID
@@ -234,10 +288,12 @@
             this.Name = "Employeeselfservice";
             this.Text = "Employeeselfservice";
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentWeekShiftsDataGrid)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPageNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStock)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -261,7 +317,11 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridViewSchedule;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView CurrentWeekShiftsDataGrid;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker shiftDateTimePicker;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown stockPageNumeric;
     }
 }

@@ -687,3 +687,7 @@ C:\Users\sbokk\Moment\artichoke\Group 2 project\Group 2 project\Group 2 project\
 C:\Users\sbokk\Moment\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group 2 project.pdb
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Login.resources
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\obj\Debug\Group_2_project.Manager.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\ArtichokeData.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\ArtichokeData.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\ArtichokeLogic.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Group 2 project\Group 2 project\Group 2 project\bin\Debug\ArtichokeLogic.pdb

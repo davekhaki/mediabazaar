@@ -10,141 +10,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Group_2_project
 {
     public partial class Manager : Form
     {
+        ArtichokeData.StockManager stockManager = new ArtichokeData.StockManager();
+        ArtichokeData.employee.ScheduleManager scheduleManager = new ArtichokeData.employee.ScheduleManager();
+        ArtichokeData.EmployeeManager employeeManager = new ArtichokeData.EmployeeManager();
+        ArtichokeData.RequestManager requestManager = new ArtichokeData.RequestManager();
+
         public Manager()
         {
             InitializeComponent();
-            GetEmp();
-            MinQuantity();
-            LoadStock();
+           
+            stockManager.LoadStock(dataGridViewStock, stockNumeric);
+            stockManager.LoadOutofStock(dataGridViewMin);
+
+            employeeManager.GetAllEmployees(empListForSchedule);
+
             empListForSchedule.DefaultCellStyle.ForeColor = Color.Black;
             scheduleGridView.DefaultCellStyle.ForeColor = Color.Black;
             dataGridViewStock.DefaultCellStyle.ForeColor = Color.Black;
             dataGridViewMin.DefaultCellStyle.ForeColor = Color.Black;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-     
-        public void MinQuantity() {
-
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock where Quantity < MinimumQuantity;", conDataBase);
-
-            try
-            {
-                conDataBase.Open();
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = cmdDataBase;
-                DataTable dbaTableset = new DataTable();
-                sda.Fill(dbaTableset);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dbaTableset;
-                dataGridViewMin.DataSource = bSource;
-                sda.Update(dbaTableset);
-
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            finally { conDataBase.Close(); }
-        }
-
-        public void /*private List<TempStock> */ LoadStock()
-        {
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from stock;", conDataBase);
-
-            try
-            {
-                conDataBase.Open();
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = cmdDataBase;
-                DataTable dbaTableset = new DataTable();
-                sda.Fill(dbaTableset);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dbaTableset;
-                dataGridViewStock.DataSource = bSource;
-                sda.Update(dbaTableset);
-
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            finally { conDataBase.Close(); }
-            /*
-            List<TempStock> stocks = new List<TempStock>();
-
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT * FROM stock", conn);
-
-            conn.Open();
-
-            var reader = query.ExecuteReader();
-            while (reader.Read())
-            {
-                TempStock item = new TempStock
-                {
-                    id = reader.GetInt32(0),
-                    name = reader.GetString(1),
-                    price = reader.GetInt32(2),
-                    brand = reader.GetString(3),
-                    quantity = reader.GetInt32(4)
-                };
-
-                stocks.Add(item);
-                stockBox.Items.Add(item);
-            }
-            conn.Close();
-
-            return stocks;
-            */
-
-        }
         
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "update dbi434661.stock set ProductID='" + this.tbStockId.Text + "',ProductName='" + this.tbProdName.Text + "',ProductPrice='" + this.tbProdPrice.Text + "',Brand='" + this.tbProdBrand.Text + "',Quantity='" + this.tbProdQuantity.Text + "' ,MinimumQuantity='"+ this.tbMinQuantity.Text+"' where ProductID='" + this.tbStockId.Text + "' ;";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
-
-            try
-            {
-                conn.Open();
-                reader = command.ExecuteReader();
-                MessageBox.Show("Product Details Updated successfully!");
-                MinQuantity();
-                LoadStock();
-
-                /*   while (reader.Read())
-                   {
-
-                   }*/
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
+            stockManager.EditStock(Convert.ToInt32(tbStockId.Text), tbProdName.Text, Convert.ToInt32(tbProdPrice.Text), tbProdBrand.Text, Convert.ToInt32(tbProdQuantity.Text), Convert.ToInt32(tbMinQuantity.Text));
+            stockManager.LoadStock(dataGridViewStock, stockNumeric);
+            stockManager.LoadOutofStock(dataGridViewMin);
         }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-            
-
-        }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -153,7 +48,6 @@ namespace Group_2_project
             this.Hide();
         }
 
-
         private void btnRequest_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbProdName.Text))
@@ -161,44 +55,13 @@ namespace Group_2_project
                 MessageBox.Show("Please enter the product name.");
                 return;
             }
-            //Comments by Mary
-            //I suggest if you click this request button  it should take you to another form
-            //The form should have a way to show all stocks that are below minimum quantity and there fore
-            //From that the mnager shud be able to do all requests
-            //Manager shud be able to all all functionalities related to low stocks
-            /*
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
-            */
-            string restock= "Restock";
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = $"insert request (Request, prodName)values('{restock}', '{tbProdName.Text}') ;";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
-
-            try
-            {
-                conn.Open();
-                reader = command.ExecuteReader();
-                MessageBox.Show("Request Sent successfully!");
-                LoadStock();
-
-                /*   while (reader.Read())
-                   {
-
-                   }*/
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
-
+            requestManager.SendRequest(tbProdName.Text);
+            stockManager.LoadStock(dataGridViewStock, stockNumeric);
         }
+
+
+
+
         string restock;
 
         private void dataGridViewStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -243,15 +106,8 @@ namespace Group_2_project
                 conn.Open();
                 reader = command.ExecuteReader();
                 MessageBox.Show("Product Details Updated successfully!");
-                MinQuantity();
-                LoadStock();
-
-                /*   while (reader.Read())
-                   {
-
-                   }*/
-
-
+                stockManager.LoadOutofStock(dataGridViewMin);
+                stockManager.LoadStock(dataGridViewStock, stockNumeric);
             }
             catch (Exception ex)
             {
@@ -277,7 +133,7 @@ namespace Group_2_project
                 conn.Open();
                 reader = command.ExecuteReader();
                 MessageBox.Show("New Product added");
-                LoadStock();
+                stockManager.LoadStock(dataGridViewStock, stockNumeric);
 
                 while (reader.Read())
                 {
@@ -326,129 +182,39 @@ namespace Group_2_project
 
         private void button4_Click(object sender, EventArgs e) //add shift btn
         {
-            TimeOfDayInput = GetTimeOfDay();
-
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-
-            //first need a query to get the id based on the filled in name 
-            int empId = 0;
-            MySqlCommand idQuery = new MySqlCommand($"SELECT ID FROM employee WHERE FirstName = '{addShiftFirstNameText.Text}' AND LastName = '{addShiftSurnameText.Text}'", conn);
-            conn.Open();
-            var reader = idQuery.ExecuteReader();
-            while (reader.Read())
-            {
-                empId = reader.GetInt32(0);
-            }
-            conn.Close();
-            
-            MySqlCommand addQuery = new MySqlCommand($"INSERT INTO `schedule` (`EmployeeID`, `TimeOfDay`, `Day`) VALUES ('{empId}', '{TimeOfDayInput}', '{dateTimeShiftPicker.Text}')", conn);
-
-            conn.Open();
-
-            int affectedRows = addQuery.ExecuteNonQuery();
-
-            if (affectedRows == 0)
-            {
-                MessageBox.Show("Error adding the shift");
-            }
-            else MessageBox.Show("Shift added successfully!");
-
-            conn.Close();
+            scheduleManager.AddSchedule(addShiftFirstNameText.Text, addShiftSurnameText.Text, GetTimeOfDay(), dateTimeShiftPicker);
         }
 
-        private void GetEmp()
+        private void button3_Click(object sender, EventArgs e) // get schedules based on first and last name button
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT `ID`,`FirstName`,`LastName` FROM employee", conn);
-
-            try
-            {
-                conn.Open();
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = query;
-                DataTable dbaTableset = new DataTable();
-                sda.Fill(dbaTableset);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dbaTableset;
-                empListForSchedule.DataSource = bSource;
-                sda.Update(dbaTableset);
-                conn.Close();
-
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            scheduleManager.GetScheduleByName(scheduleGridView, firstnametxt.Text, lastnametxt.Text);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Deletebtn_Click(object sender, EventArgs e) //stock delete button
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            MySqlCommand query = new MySqlCommand($"SELECT e.FirstName, e.LastName, s.EmployeeID, s.TimeOfDay, s.Day FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID WHERE e.FirstName = '{firstnametxt.Text}' AND LastName = '{lastnametxt.Text}'", conn);
-            //MySqlCommand query = new MySqlCommand($"SELECT * FROM schedule WHERE FirstName = '{firstnametxt.Text}' AND LastName = '{lastnametxt.Text}'", conn);
-
-            try
-            {
-                conn.Open();
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = query;
-                DataTable dbaTableset = new DataTable();
-                sda.Fill(dbaTableset);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dbaTableset;
-                scheduleGridView.DataSource = bSource;
-                sda.Update(dbaTableset);
-                conn.Close();
-
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            finally { conn.Close(); }
-        }
-
-        private void Deletebtn_Click(object sender, EventArgs e)
-        {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "delete from dbi434661.stock where ProductID=" + this.tbStockId.Text + " ;";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
-
-            try
-            {
-                conn.Open();
-                reader = command.ExecuteReader();
-                LoadStock();
-                MessageBox.Show("Deleted successfully!");
-                conn.Close();
-
-                /*   while (reader.Read())
-                   {
-
-                   }*/
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
+            stockManager.DeleteStock(Convert.ToInt32(tbStockId.Text));
+            //reload the stock after deleting
+            stockManager.LoadStock(dataGridViewStock, stockNumeric);
+            stockManager.LoadOutofStock(dataGridViewMin);
         }
 
         private void tbId_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void scheduleGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
+        {         
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
         }
 
-       
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+        }
     }
 }

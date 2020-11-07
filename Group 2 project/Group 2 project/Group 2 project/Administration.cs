@@ -13,9 +13,16 @@ namespace Group_2_project
 {
     public partial class Administration : Form
     {
+        ArtichokeData.EmployeeManager employeeManager = new ArtichokeData.EmployeeManager();
+        ArtichokeData.DepartmentManager departmentManager = new ArtichokeData.DepartmentManager();
         public Administration()
         {
             InitializeComponent();
+
+            employeeManager.GetAllEmployees(dShow);
+
+            departmentManager.GetAllDepartments(dgDepartments);
+
             FillEmployeeIds();
             FillDeptIds();
             dShow.DefaultCellStyle.ForeColor = Color.Black;
@@ -99,11 +106,6 @@ namespace Group_2_project
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private string GeneratePassword()
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -172,11 +174,7 @@ namespace Group_2_project
                 return;
             }
 
-
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-
-
-
 
             string firstName = tbFn.Text;
             string lastName = tbSn.Text;
@@ -187,7 +185,7 @@ namespace Group_2_project
 
             MySqlCommand command = new MySqlCommand(query, conn);
 
-
+            string password = GeneratePassword();
 
             try
             {
@@ -222,7 +220,7 @@ namespace Group_2_project
                     conn.Close();
 
 
-                    string insertLogin = $"INSERT INTO `login` (`empId`, `username`, `password`) VALUES ('{loginID}', '{firstName}1', '{GeneratePassword()}')";
+                    string insertLogin = $"INSERT INTO `login` (`empId`, `username`, `password`) VALUES ('{loginID}', '{firstName}1', '{password}')";
 
                     MySqlCommand command2 = new MySqlCommand(insertLogin, conn);
 
@@ -244,6 +242,16 @@ namespace Group_2_project
                 conn.Close();
                 ClearBoxes();
             }
+
+
+            ArtichokeLogic.MailLogic MailManager = new ArtichokeLogic.MailLogic();
+
+
+            string username = firstName + "1";
+
+            MailManager.SendLoginDetails(username, password, empEmailBox.Text);
+
+
 
 
 
@@ -333,64 +341,11 @@ namespace Group_2_project
             form3.Show();
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-            MySqlConnection conn = new MySqlConnection(constring);
-            MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.employee;", conn);
-
-            try
-            {
-                conn.Open();
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = cmdDataBase;
-                DataTable dbaTableset = new DataTable();
-                sda.Fill(dbaTableset);
-                BindingSource bSource = new BindingSource();
-
-                bSource.DataSource = dbaTableset;
-
-                dShow.DataSource = bSource;
-                sda.Update(dbaTableset);
-
-                conn.Close();
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-
-        }
-
         private void btnSignoUT_Click(object sender, EventArgs e)
         {
             Login form3 = new Login();
             form3.Show();
             this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            {
-                string constring = "Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot";
-                MySqlConnection conn = new MySqlConnection(constring);
-                MySqlCommand cmdDataBase = new MySqlCommand("select * from dbi434661.departments;", conn);
-
-                try
-                {
-                    conn.Open();
-                    MySqlDataAdapter sda = new MySqlDataAdapter();
-                    sda.SelectCommand = cmdDataBase;
-                    DataTable dbaTableset = new DataTable();
-                    sda.Fill(dbaTableset);
-                    BindingSource bSource = new BindingSource();
-
-                    bSource.DataSource = dbaTableset;
-
-                    this.dgDepartments.DataSource = bSource;
-                    sda.Update(dbaTableset);
-                    conn.Close();
-
-                }
-                catch (Exception ex) { MessageBox.Show(ex.Message); }
-            }
         }
 
         private void btnAddDept_Click(object sender, EventArgs e)
@@ -429,7 +384,6 @@ namespace Group_2_project
             string query = $"update departments set DeptName='{this.tbDeptName.Text}' where DeptID='{tbDeptId.Text}' ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             
-
             try
             {
                 conn.Open();
@@ -443,14 +397,9 @@ namespace Group_2_project
                 }
                 conn.Close();
                 return;
-             
-
-
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -490,13 +439,8 @@ namespace Group_2_project
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
-
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -504,64 +448,6 @@ namespace Group_2_project
             this.Hide();
             Login form3 = new Login();
             form3.Show();
-        }
-
-        private void btnGetEmployee_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmEmployeeNames_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            //string query = "select * from dbi434661.employee where FirstName='"+this.cmEmployeeNames.Text+"';";
-            //MySqlCommand command = new MySqlCommand(query, conn);
-            //MySqlDataReader reader;
-
-            //try
-            //{
-            //    conn.Open();
-            //    reader = command.ExecuteReader();
-
-
-            //    while (reader.Read())
-            //    {
-            //        string ID = reader.GetInt32("ID").ToString();
-            //        string FirstName = reader.GetString("FirstName");
-            //        string LastName = reader.GetString("LastName");
-            //        string Age = reader.GetInt32("Age").ToString();
-            //        string Gender = reader.GetString("Gender");
-            //        string DepartmentID = reader.GetInt32("DepartmentID").ToString();
-            //        string HireDate = reader.GetString("HireDate");
-            //        string Salary = reader.GetInt32("Salary").ToString();
-            //        string Adress = reader.GetString("Adress");
-            //        string Role = reader.GetString("Role");
-            //        this.tbId.Text = ID;
-            //        this.tbFn.Text= FirstName;
-            //        this.tbSn.Text= LastName;
-            //        this.tbAge.Text = Age;
-            //        this.tbGen.Text = Gender;
-            //        this.tbDeptId.Text= DepartmentID;
-            //        this.dateTimePicker1.Text = HireDate;
-            //        this.tbSal.Text = Salary;
-            //        this.tbAdd.Text = Adress;
-            //        this.tbRole.Text = Role;
-
-
-
-
-
-            //    }
-
-
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show(ex.Message);
-            //}
-
-
         }
 
         private void cmeIds_SelectedIndexChanged(object sender, EventArgs e)
@@ -599,14 +485,7 @@ namespace Group_2_project
                     this.tbSal.Text = Salary;
                     this.tbAdd.Text = Adress;
                     this.cmbRole.Text = Role;
-
-
-
-
-
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -657,11 +536,8 @@ namespace Group_2_project
         {
             ClearBoxes();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }   
-

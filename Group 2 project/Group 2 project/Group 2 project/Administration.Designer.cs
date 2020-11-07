@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSignoUT = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dShow = new System.Windows.Forms.DataGridView();
-            this.btnShow = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,7 +49,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmDeptIds = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.dgDepartments = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -83,6 +81,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.empEmailBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -147,7 +147,6 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Teal;
             this.groupBox3.Controls.Add(this.dShow);
-            this.groupBox3.Controls.Add(this.btnShow);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(32, 33);
             this.groupBox3.Name = "groupBox3";
@@ -159,31 +158,20 @@
             // dShow
             // 
             this.dShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dShow.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dShow.DefaultCellStyle = dataGridViewCellStyle1;
             this.dShow.Location = new System.Drawing.Point(21, 20);
             this.dShow.Name = "dShow";
             this.dShow.RowHeadersWidth = 51;
             this.dShow.RowTemplate.Height = 24;
-            this.dShow.Size = new System.Drawing.Size(763, 378);
+            this.dShow.Size = new System.Drawing.Size(763, 453);
             this.dShow.TabIndex = 1;
-            // 
-            // btnShow
-            // 
-            this.btnShow.BackColor = System.Drawing.Color.Lime;
-            this.btnShow.Location = new System.Drawing.Point(150, 404);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(386, 52);
-            this.btnShow.TabIndex = 0;
-            this.btnShow.Text = "Show All Employees";
-            this.btnShow.UseVisualStyleBackColor = false;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // tabPage3
             // 
@@ -296,7 +284,6 @@
             // 
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.cmDeptIds);
-            this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Controls.Add(this.dgDepartments);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(476, 10);
@@ -309,7 +296,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(422, 410);
+            this.label14.Location = new System.Drawing.Point(420, 440);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(128, 17);
             this.label14.TabIndex = 10;
@@ -318,40 +305,29 @@
             // cmDeptIds
             // 
             this.cmDeptIds.FormattingEnabled = true;
-            this.cmDeptIds.Location = new System.Drawing.Point(556, 407);
+            this.cmDeptIds.Location = new System.Drawing.Point(554, 440);
             this.cmDeptIds.Name = "cmDeptIds";
             this.cmDeptIds.Size = new System.Drawing.Size(121, 24);
             this.cmDeptIds.TabIndex = 8;
             this.cmDeptIds.SelectedIndexChanged += new System.EventHandler(this.cmDeptNames_SelectedIndexChanged);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(28, 437);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(313, 48);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "View All ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // dgDepartments
             // 
             this.dgDepartments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgDepartments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDepartments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgDepartments.Location = new System.Drawing.Point(28, 33);
             this.dgDepartments.Name = "dgDepartments";
             this.dgDepartments.RowHeadersWidth = 51;
             this.dgDepartments.RowTemplate.Height = 24;
-            this.dgDepartments.Size = new System.Drawing.Size(658, 352);
+            this.dgDepartments.Size = new System.Drawing.Size(658, 385);
             this.dgDepartments.TabIndex = 1;
             // 
             // tabPage1
@@ -417,6 +393,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.empEmailBox);
             this.groupBox1.Controls.Add(this.cmbRole);
             this.groupBox1.Controls.Add(this.cmDeptNames);
             this.groupBox1.Controls.Add(this.cmbGender);
@@ -676,6 +654,22 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Dept-Name";
             // 
+            // empEmailBox
+            // 
+            this.empEmailBox.Location = new System.Drawing.Point(570, 378);
+            this.empEmailBox.Name = "empEmailBox";
+            this.empEmailBox.Size = new System.Drawing.Size(225, 22);
+            this.empEmailBox.TabIndex = 29;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(567, 350);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 17);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Employee Email";
+            // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -731,7 +725,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.DataGridView dShow;
         private System.Windows.Forms.Button btnSignoUT;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -747,7 +740,6 @@
         private System.Windows.Forms.TextBox tbDeptId;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgDepartments;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label15;
@@ -759,5 +751,7 @@
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.ComboBox cmDeptNames;
         private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox empEmailBox;
     }
 }

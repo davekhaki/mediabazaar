@@ -117,6 +117,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.stockNumeric = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -132,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.scheduleGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -148,6 +151,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Teal;
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.stockNumeric);
             this.panel4.Controls.Add(this.groupBox5);
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Controls.Add(this.groupBox1);
@@ -1048,6 +1053,33 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Select a time:";
             // 
+            // stockNumeric
+            // 
+            this.stockNumeric.Location = new System.Drawing.Point(983, 18);
+            this.stockNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.stockNumeric.Name = "stockNumeric";
+            this.stockNumeric.ReadOnly = true;
+            this.stockNumeric.Size = new System.Drawing.Size(172, 22);
+            this.stockNumeric.TabIndex = 24;
+            this.stockNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(878, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 17);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Page Number:";
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1080,6 +1112,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1173,5 +1206,7 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown stockNumeric;
     }
 }

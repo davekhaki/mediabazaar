@@ -69,5 +69,10 @@ namespace ArtichokeData
             conn.Close();
             return role;
         }
+
+        public bool ChangePassword(string oldPassword, string newPassword, string repeatNewPassword)
+        {
+            return true;
+        }
     }
 }

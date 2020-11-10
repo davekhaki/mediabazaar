@@ -55,7 +55,7 @@ namespace ArtichokeData
         public string GetRole(string username)
         {
             string role = "";
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=artitest;server=localhost;Connect Timeout=30;user id=root;");
+            MySqlConnection conn = new MySqlConnection(Config.conString);
             MySqlCommand query = new MySqlCommand($"SELECT e.Role FROM employee e INNER JOIN login l ON e.ID = l.empId WHERE l.username = '{username}'", conn);
 
             conn.Open();
@@ -70,9 +70,29 @@ namespace ArtichokeData
             return role;
         }
 
-        public bool ChangePassword(string oldPassword, string newPassword, string repeatNewPassword)
+        public void ChangePassword(string oldPassword, string newPassword)
         {
-            return true;
+            MySqlConnection conn = new MySqlConnection(Config.conString);
+            string sql = "UPDATE login SET password = @newPass WHERE password = @oldPass";
+
+            try
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@newPass", MySqlDbType.String).Value = newPassword;
+                cmd.Parameters.Add("@oldPass", MySqlDbType.String).Value = oldPassword;
+
+                cmd.ExecuteNonQuery();
+            }
+            catch( Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }            
         }
     }
 }

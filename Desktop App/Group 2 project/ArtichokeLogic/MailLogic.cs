@@ -31,5 +31,9 @@ namespace ArtichokeLogic
         }
 
         //change password email ? with code to validate *
+        public void SendNewPasswordConfirm(string receiver)
+        {
+
+        }
     }
 }

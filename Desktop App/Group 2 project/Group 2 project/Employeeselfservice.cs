@@ -59,7 +59,7 @@ namespace Group_2_project
 
 string Done;
         public void LoadRequest() {
-            string constring = "Persist Security Info=False;database=artitest;server=localhost;Connect Timeout=30;user id=root;";
+            string constring = "Persist Security Info=False;database=artichoke;server=localhost;Connect Timeout=30;user id=root;";
             MySqlConnection conn = new MySqlConnection(constring);
             MySqlCommand cmdDataBase = new MySqlCommand("select RequestID, Request, RequestStatus, prodName from request;", conn);
 
@@ -97,7 +97,7 @@ string Done;
         private void btnDone_Click(object sender, EventArgs e)
         {
             string DoneTask = "Done";
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=artitest;server=localhost;Connect Timeout=30;user id=root;");
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=artichoke;server=localhost;Connect Timeout=30;user id=root;");
             string query = "update dbi434661.request set RequestStatus='"+DoneTask+"' where RequestID="+Done+" ;";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
@@ -243,7 +243,7 @@ string Done;
             scheduleManager.GetWeeklySchedule(this.Text, CurrentWeekShiftsDataGrid, shiftDateTimePicker.Value.Date);
         }
 
-        private void stockPageNumeric_ValueChanged(object sender, EventArgs e)
+        private void stockPageNumeric_ValueChanged_1(object sender, EventArgs e)
         {
             ArtichokeData.StockManager stockManager = new ArtichokeData.StockManager();
             stockManager.LoadStock(dataGridViewStock, stockPageNumeric);

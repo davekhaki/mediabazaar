@@ -33,7 +33,19 @@ namespace ArtichokeLogic
         //change password email ? with code to validate *
         public void SendNewPasswordConfirm(string receiver)
         {
+            MailMessage message = new MailMessage(Config.Mail, receiver);
+            message.Subject = "Password Change";
+            message.Body = $"Your password has been changed, if this was not you, please contact a system administrator.";
 
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential()
+            {
+                UserName = Config.Mail,
+                Password = Config.MailPassword
+            };
+            smtp.EnableSsl = true;
+            smtp.Send(message);
         }
     }
 }

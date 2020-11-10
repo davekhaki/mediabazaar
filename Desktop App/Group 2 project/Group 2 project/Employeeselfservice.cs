@@ -16,6 +16,8 @@ namespace Group_2_project
         ArtichokeData.employee.ScheduleManager scheduleManager = new ArtichokeData.employee.ScheduleManager();
         ArtichokeData.StockManager stockManager = new ArtichokeData.StockManager();
         ArtichokeData.LoginManager loginManager = new ArtichokeData.LoginManager();
+
+        ArtichokeLogic.MailLogic MailManager = new ArtichokeLogic.MailLogic();
         public Employeeselfservice(string username)
         {
             InitializeComponent();
@@ -223,6 +225,7 @@ namespace Group_2_project
         private void button1_Click(object sender, EventArgs e)
         {
             loginManager.ChangePassword(this.Text, oldPasswordText.Text, newPasswordText.Text);
+            MailManager.SendNewPasswordConfirm(emailText.Text);
             MessageBox.Show("Password Changed Successfully");
 
             Login form3 = new Login();

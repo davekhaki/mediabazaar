@@ -55,6 +55,8 @@
             this.dataGridViewStock = new System.Windows.Forms.DataGridView();
             this.tbID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.emailText = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentWeekShiftsDataGrid)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -184,6 +186,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.emailText);
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.changePasswordButton);
@@ -205,14 +209,14 @@
             // 
             // newPasswordText
             // 
-            this.newPasswordText.Location = new System.Drawing.Point(118, 104);
+            this.newPasswordText.Location = new System.Drawing.Point(116, 89);
             this.newPasswordText.Name = "newPasswordText";
             this.newPasswordText.Size = new System.Drawing.Size(196, 22);
             this.newPasswordText.TabIndex = 2;
             // 
             // changePasswordButton
             // 
-            this.changePasswordButton.Location = new System.Drawing.Point(95, 162);
+            this.changePasswordButton.Location = new System.Drawing.Point(88, 175);
             this.changePasswordButton.Name = "changePasswordButton";
             this.changePasswordButton.Size = new System.Drawing.Size(131, 37);
             this.changePasswordButton.TabIndex = 3;
@@ -232,7 +236,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 104);
+            this.label6.Location = new System.Drawing.Point(6, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 17);
             this.label6.TabIndex = 1;
@@ -355,6 +359,22 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "ProductID";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 134);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Email";
+            // 
+            // emailText
+            // 
+            this.emailText.Location = new System.Drawing.Point(116, 131);
+            this.emailText.Name = "emailText";
+            this.emailText.Size = new System.Drawing.Size(196, 22);
+            this.emailText.TabIndex = 1;
+            // 
             // Employeeselfservice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -411,5 +431,7 @@
         private System.Windows.Forms.DataGridView dataGridViewStock;
         private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox emailText;
+        private System.Windows.Forms.Label label1;
     }
 }

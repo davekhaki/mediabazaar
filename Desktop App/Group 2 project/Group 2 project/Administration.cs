@@ -27,9 +27,161 @@ namespace Group_2_project
             FillDeptIds();
             dShow.DefaultCellStyle.ForeColor = Color.Black;
             dgDepartments.DefaultCellStyle.ForeColor = Color.Black;
-     
+            autoLoadAgeChart();
+            autoLoadSalaryChart();
+            autoLoadGenderChart();
+            autoLoadEmployeesChart();
+            autoLoadSchedulesChart();
+
         }
-        void ClearBoxes() {
+        void autoLoadAgeChart()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT DepartmentName, AVG(Age) AS 'avgAge' FROM employee GROUP BY DepartmentName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart3.Series["Age"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("avgAge"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
+
+        }
+        void autoLoadSalaryChart()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT DepartmentName, SUM(Salary) AS 'totalSalary' FROM employee GROUP BY DepartmentName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart6.Series["Salary"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("totalSalary"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
+        }
+        void autoLoadGenderChart()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT Gender, COUNT(Gender) AS 'countGender' FROM employee GROUP BY Gender";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart4.Series["Gender"].Points.AddXY(reader.GetString("Gender"), reader.GetInt32("countGender"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
+        }
+        void autoLoadEmployeesChart()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT DepartmentName, COUNT(ID) AS 'totalEmployees' FROM employee GROUP BY DepartmentName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart1.Series["Departments"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("totalEmployees"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
+        }
+        void autoLoadSchedulesChart()
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT concat(e.FirstName,' ', e.LastName) AS 'Employee Name', COUNT(s.EmployeeID) AS 'Shifts Worked' FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID GROUP BY e.FirstName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart2.Series["Employee Name"].Points.AddXY(reader.GetString("Employee Name"), reader.GetInt32("Shifts Worked"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
+
+    
+    void ClearBoxes() {
 
             tbDeptName.Clear();
             tbFn.Clear();
@@ -538,6 +690,152 @@ namespace Group_2_project
         }
         private void tabPage1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnGender_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT Gender, COUNT(Gender) AS 'countGender' FROM employee GROUP BY Gender";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart4.Series["Gender"].Points.AddXY(reader.GetString("Gender"), reader.GetInt32("countGender"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT DepartmentName, COUNT(ID) AS 'totalEmployees' FROM employee GROUP BY DepartmentName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart1.Series["Departments"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("totalEmployees"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
+
+        private void btnSchedules_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT concat(e.FirstName,' ', e.LastName) AS 'Employee Name', COUNT(s.EmployeeID) AS 'Shifts Worked' FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID GROUP BY e.FirstName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart2.Series["Employee Name"].Points.AddXY(reader.GetString("Employee Name"), reader.GetInt32("Shifts Worked"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+
+        }
+
+        private void btnAge_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT DepartmentName, AVG(Age) AS 'avgAge' FROM employee GROUP BY DepartmentName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart3.Series["Age"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("avgAge"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+        }
+
+        private void btnSalary_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string query = "SELECT DepartmentName, SUM(Salary) AS 'totalSalary' FROM employee GROUP BY DepartmentName";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    this.chart6.Series["Salary"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("totalSalary"));
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
         }
     }
 }   

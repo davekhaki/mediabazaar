@@ -70,10 +70,10 @@ namespace ArtichokeData
             return role;
         }
 
-        public void ChangePassword(string oldPassword, string newPassword)
+        public void ChangePassword(string username, string oldPassword, string newPassword)
         {
             MySqlConnection conn = new MySqlConnection(Config.conString);
-            string sql = "UPDATE login SET password = @newPass WHERE password = @oldPass";
+            string sql = "UPDATE login SET password = @newPass WHERE password = @oldPass AND username = @username";
 
             try
             {
@@ -82,6 +82,7 @@ namespace ArtichokeData
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.Add("@newPass", MySqlDbType.String).Value = newPassword;
                 cmd.Parameters.Add("@oldPass", MySqlDbType.String).Value = oldPassword;
+                cmd.Parameters.Add("@username", MySqlDbType.String).Value = username;
 
                 cmd.ExecuteNonQuery();
             }

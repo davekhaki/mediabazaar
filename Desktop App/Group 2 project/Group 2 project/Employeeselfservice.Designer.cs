@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.shiftDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CurrentWeekShiftsDataGrid = new System.Windows.Forms.DataGridView();
@@ -40,9 +40,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.oldPasswordText = new System.Windows.Forms.TextBox();
+            this.newPasswordText = new System.Windows.Forms.TextBox();
+            this.changePasswordButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -186,9 +186,9 @@
             // 
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.changePasswordButton);
+            this.groupBox3.Controls.Add(this.newPasswordText);
+            this.groupBox3.Controls.Add(this.oldPasswordText);
             this.groupBox3.Location = new System.Drawing.Point(19, 17);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(320, 227);
@@ -196,28 +196,29 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Change Password";
             // 
-            // textBox1
+            // oldPasswordText
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 22);
-            this.textBox1.TabIndex = 1;
+            this.oldPasswordText.Location = new System.Drawing.Point(118, 44);
+            this.oldPasswordText.Name = "oldPasswordText";
+            this.oldPasswordText.Size = new System.Drawing.Size(196, 22);
+            this.oldPasswordText.TabIndex = 1;
             // 
-            // textBox2
+            // newPasswordText
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 22);
-            this.textBox2.TabIndex = 2;
+            this.newPasswordText.Location = new System.Drawing.Point(118, 104);
+            this.newPasswordText.Name = "newPasswordText";
+            this.newPasswordText.Size = new System.Drawing.Size(196, 22);
+            this.newPasswordText.TabIndex = 2;
             // 
-            // button1
+            // changePasswordButton
             // 
-            this.button1.Location = new System.Drawing.Point(95, 162);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 37);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Change Password";
-            this.button1.UseVisualStyleBackColor = true;
+            this.changePasswordButton.Location = new System.Drawing.Point(95, 162);
+            this.changePasswordButton.Name = "changePasswordButton";
+            this.changePasswordButton.Size = new System.Drawing.Size(131, 37);
+            this.changePasswordButton.TabIndex = 3;
+            this.changePasswordButton.Text = "Change Password";
+            this.changePasswordButton.UseVisualStyleBackColor = true;
+            this.changePasswordButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -323,14 +324,14 @@
             // 
             this.dataGridViewStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStock.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStock.Location = new System.Drawing.Point(16, 64);
             this.dataGridViewStock.Name = "dataGridViewStock";
             this.dataGridViewStock.RowHeadersWidth = 51;
@@ -397,9 +398,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button changePasswordButton;
+        private System.Windows.Forms.TextBox newPasswordText;
+        private System.Windows.Forms.TextBox oldPasswordText;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label7;

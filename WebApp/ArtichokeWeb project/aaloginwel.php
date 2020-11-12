@@ -10,7 +10,7 @@ $result = mysqli_query($conn1, $sql);
 
 <html>
 <head>
-	<title>Manager Panel | Media Bazaar</title>
+	<title>Admin Panel | Media Bazaar</title>
 	<link rel="stylesheet" type="text/css" href="styleemplogin.css">
 </head>
 <body>
@@ -21,13 +21,18 @@ include ("aaheader.php");
 
 	<div class="divider"></div>
 	<div id="divimg">
-		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;"> Depleting Stock </h2>
+		<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;"> Employees </h2>
 			<table>
 
 			<tr bgcolor="#000">
-				<th align = "center">Employee</th>
-				<th align = "center">TimeofDay</th>
-				<th align = "center">Day</th>
+				<th align = "center">Emp. ID</th>
+				<th align = "center">Name</th>
+				<th align = "center">Age</th>
+				<th align = "center">Gender</th>
+				<th align = "center">DepartmentName</th>
+				<th align = "center">HireDate</th>
+				<th align = "center">EndDate</th>
+				<th align = "center">Adress</th>
 
 
 
@@ -37,12 +42,18 @@ include ("aaheader.php");
 
 			<?php
 
-				while ($stock = mysqli_fetch_assoc($result)) {
+				while ($employee = mysqli_fetch_assoc($result)) {
 					echo "<tr>";
+					echo "<td>".$employee['ID']."</td>";
+				//	echo "<td><img src='process/".$employee['pic']."' height = 60px width = 60px></td>";
+					echo "<td>".$employee['FirstName']." ".$employee['LastName']."</td>";
 
-					echo "<td>".$stock['EmployeeId']."</td>";
-						echo "<td>".$stock['TimeofDay']."</td>";
-							echo "<td>".$stock['Day']."</td>";
+					echo "<td>".$employee['Age']."</td>";
+					echo "<td>".$employee['Gender']."</td>";
+					echo "<td>".$employee['DepartmentName']."</td>";
+					echo "<td>".$employee['HireDate']."</td>";
+					echo "<td>".$employee['EndDate']."</td>";
+					echo "<td>".$employee['Adress']."</td>";
 
 
 

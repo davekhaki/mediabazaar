@@ -61,7 +61,7 @@ $result = mysqli_query($conn1, $sql);
                 <div class="card-heading"></div>
                <div class="card-body">
                     <h2 class="title">My Info</h2>
-                    <form method="POST" action="amyprofileup.php?empId=<?php echo $id;?>" >
+                    <form method="POST" action="aaprofileup.php?empId=<?php echo $id;?>" >
 
 <!--
                         <div class="input-group">

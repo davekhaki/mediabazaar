@@ -12,13 +12,14 @@ if(isset($_POST['insert']))
   $id = mysqli_real_escape_string($conn1, $_POST['empId']);
   $gender1 = mysqli_real_escape_string($conn1, $_POST['gender']);
   $adress1 = mysqli_real_escape_string($conn1, $_POST['adress']);
-	$firstname1 = mysqli_real_escape_string($conn1, $_POST['gender']);
-	$lastname1 = mysqli_real_escape_string($conn1, $_POST['adress']);
-	$age1 = mysqli_real_escape_string($conn1, $_POST['gender']);
-  $deparmtment1 = mysqli_real_escape_string($conn1, $_POST['adress']);
-	$hiredate1 = mysqli_real_escape_string($conn1, $_POST['gender']);
-	$enddate1 = mysqli_real_escape_string($conn1, $_POST['adress']);
-	$salary1 = mysqli_real_escape_string($conn1, $_POST['gender']);
+	$firstname1 = mysqli_real_escape_string($conn1, $_POST['firstname']);
+	$lastname1 = mysqli_real_escape_string($conn1, $_POST['lastname']);
+	$age1 = mysqli_real_escape_string($conn1, $_POST['age']);
+  $deparmtment1 = mysqli_real_escape_string($conn1, $_POST['department']);
+	$hiredate1 = mysqli_real_escape_string($conn1, $_POST['hiredate']);
+	$enddate1 = mysqli_real_escape_string($conn1, $_POST['enddate']);
+	$salary1 = mysqli_real_escape_string($conn1, $_POST['salary']);
+	$role1 = mysqli_real_escape_string($conn1, $_POST['role']);
 
 
 function GeneratePassword(){
@@ -31,29 +32,15 @@ function GeneratePassword(){
  }
  return implode($pass); //turn the array into a string
 }
- $result3 = mysqli_query($conn1, "INSERT INTO employee(FirstName,LastName,Age
-,Adress
-,Gender
-,DepartmentName
-,HireDate
-,EndDate
-,Salary) VALUES($gender1
-,$adress1
-,$firstname1
-,$lastname1
-,$age1
-,$deparmtment1
-,$hiredate1
-,$enddate1
-,$salary1)");
+ $result3 = mysqli_query($conn1, "INSERT INTO employee(FirstName,LastName,Age,Adress,Gender,DepartmentName,Role,HireDate,EndDate,Salary) VALUES('$firstname1','$lastname1','$age1','$adress1','$gender1','$deparmtment1','$role1','$hiredate1','$enddate1','$salary1')");
+/*
 $password = GeneratePassword();
-$result4 = mysqli_query("INSERT INTO `login` (`empId`, `username`, `password`) VALUES ('$id', '$firstname11', '$password')";
-);
+$result4 = mysqli_query("INSERT INTO login ('empId', 'username', 'password') VALUES ('$id', '$firstname1', '$password')");*/
 
 
  echo ("<SCRIPT LANGUAGE='JavaScript'>
     window.alert('Succesfully Updated')
-    window.location.href='aaloginwel.php.php?empId=$id  ';
+    window.location.href='aaloginwel.php?empId=$id  ';
     </SCRIPT>");
 
 
@@ -114,7 +101,7 @@ $result4 = mysqli_query("INSERT INTO `login` (`empId`, `username`, `password`) V
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Update Employee Info</h2>
-                    <form id = "registration" action="aamyprofileup.php" method="POST">
+                    <form id = "registration" action="addemp.php" method="POST">
 											<div class="input-group">
 												<p>First Name</p>
 													<input class="input--style-1" type="text" name="firstname">
@@ -133,16 +120,37 @@ $result4 = mysqli_query("INSERT INTO `login` (`empId`, `username`, `password`) V
                             <input class="input--style-1" type="text" name="gender">
                         </div>
 												<div class="input-group">
-													<p>Department Name</p>
-														<input class="input--style-1" type="text" name="department">
+
+													<label for="department">Choose a Department:</label>
+
+<!-- The value for `for=""` and `id=""` has to be same. -->
+	<p>
+<select id="department" name ="department">
+  <option value="marketing">Marketing</option>
+  <option value="logistic">Logistic</option>
+  <option value="engineering">Engineering</option>
+  <option value="finance">Finance</option>
+</select>
+</p>
 												</div>
 												<div class="input-group">
+													<label for="role">Pick a Role:</label>
+
+<!-- The value for `for=""` and `id=""` has to be same. -->
+	<p>
+<select id="role" name ="role">
+	<option value="employee">Employee</option>
+	<option value="admin">Admin</option>
+	<option value="manager">Manager</option>
+</select>
+</p>
+												<div class="input-group">
 													<p>Hire Date</p>
-														<input class="input--style-1" type="datepicker" name="hiredate">
+														<input class="input--style-1" type="date" name="hiredate">
 														</div>
 														<div class="input-group">
 															<p>End Date</p>
-																<input class="input--style-1" type="datepicker" name="enddate">
+																<input class="input--style-1" type="date" name="enddate">
 												</div>
 
 
@@ -153,8 +161,13 @@ $result4 = mysqli_query("INSERT INTO `login` (`empId`, `username`, `password`) V
                             <input class="input--style-1" type="text"  name="adress">
                         </div>
 
+												<div class="input-group">
+												 <p>Salary</p>
+													 <input class="input--style-1" type="text"  name="salary">
+											 </div>
 
 
+<input type="hidden" name="empId" id="textField" value="<?php echo $id;?>" required="required"><br><br>
                         <div class="p-t-20">
                             <button class="btn btn--radius btn--green" type="submit" name="insert">Submit</button>
                         </div>

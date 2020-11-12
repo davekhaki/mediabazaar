@@ -19,7 +19,7 @@ if(isset($_POST['update']))
 
  echo ("<SCRIPT LANGUAGE='JavaScript'>
     window.alert('Succesfully Updated')
-    window.location.href='myprofile.php?empId=$id  ';
+    window.location.href='aaprofile.php?empId=$id  ';
     </SCRIPT>");
 
 
@@ -68,19 +68,7 @@ if(isset($_POST['update']))
     <link href="css/main.css" rel="stylesheet" media="all">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Update.</h1>
-      <ul id="navli">
-        <li><a class="homeblack" href="eloginwel.php?empId=<?php echo $id?>">HOME</a></li>
-        <li><a class="homered" href="myprofile.php?empId=<?php echo $id?>">My Profile</a></li>
-        <!--
-        <li><a class="homeblack" href="applyleave.php?id=<?php echo $id?>">Apply Leave</a></li>
-      -->
-        <li><a class="homeblack" href="elogin.html">Log Out</a></li>
-      </ul>
-    </nav>
-  </header>
+<?php include ('aaheader.php');?>
 
   <div class="divider"></div>
 
@@ -92,7 +80,7 @@ if(isset($_POST['update']))
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Update Employee Info</h2>
-                    <form action="myprofileup.php" method="POST">
+                    <form id = "registration" action="aaprofileup.php" method="POST">
 
 
 

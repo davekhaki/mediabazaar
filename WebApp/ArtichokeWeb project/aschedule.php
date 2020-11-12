@@ -31,7 +31,7 @@ $result = mysqli_query($conn1, $sql);
 	</header>
 
 
-			<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;"> Depleting Stock </h2>
+			<h2 style="font-family: 'Montserrat', sans-serif; font-size: 25px; text-align: center;"> Employee Schedule </h2>
 	    	<table>
 
 				<tr bgcolor="#000">
@@ -50,8 +50,8 @@ $result = mysqli_query($conn1, $sql);
 					while ($stock = mysqli_fetch_assoc($result)) {
 						echo "<tr>";
 
-						echo "<td>".$stock['EmployeeId']."</td>";
-						 	echo "<td>".$stock['TimeofDay']."</td>";
+						echo "<td>".$stock['EmployeeID']."</td>";
+						 	echo "<td>".$stock['TimeOfDay']."</td>";
 								echo "<td>".$stock['Day']."</td>";
 
 

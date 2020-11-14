@@ -14,17 +14,17 @@ $result = mysqli_query($conn, $sql);
 
 <html>
 <head>
-	<title>Employee Leave | Admin Panel | XYZ Corporation</title>
+	<title>Employee Leave | Admin Panel</title>
 	<link rel="stylesheet" type="text/css" href="styleview.css">
 </head>
 <body>
-	
+
 	<header>
 		<nav>
 			<h1>XYZ Corp.</h1>
 			<ul id="navli">
 				<li><a class="homeblack" href="aloginwel.php">HOME</a></li>
-				
+
 				<li><a class="homeblack" href="addemp.php">Add Employee</a></li>
 				<li><a class="homeblack" href="viewemp.php">View Employee</a></li>
 				<li><a class="homeblack" href="assign.php">Assign Project</a></li>
@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $sql);
 			</ul>
 		</nav>
 	</header>
-	 
+
 	<div class="divider"></div>
 	<div id="divimg">
 		<table>
@@ -64,7 +64,7 @@ $result = mysqli_query($conn, $sql);
 					echo "<td>".$employee['id']."</td>";
 					echo "<td>".$employee['token']."</td>";
 					echo "<td>".$employee['firstName']." ".$employee['lastName']."</td>";
-					
+
 					echo "<td>".$employee['start']."</td>";
 					echo "<td>".$employee['end']."</td>";
 					echo "<td>".$interval->days."</td>";
@@ -78,7 +78,7 @@ $result = mysqli_query($conn, $sql);
 			?>
 
 		</table>
-		
+
 	</div>
 </body>
 </html>

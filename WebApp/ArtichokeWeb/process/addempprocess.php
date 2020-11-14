@@ -38,7 +38,7 @@ $salaryQ = mysqli_query($conn, $sqlS);
 $rank = mysqli_query($conn, "INSERT INTO `rank`(`eid`) VALUES ('$last_id')");
 
 if(($result) == 1){
-    
+
     echo ("<SCRIPT LANGUAGE='JavaScript'>
     window.alert('Succesfully Registered')
     window.location.href='..//viewemp.php';
@@ -68,7 +68,7 @@ $salaryQ = mysqli_query($conn, $sqlS);
 $rank = mysqli_query($conn, "INSERT INTO `rank`(`eid`) VALUES ('$last_id')");
 
 if(($result) == 1){
-    
+
     echo ("<SCRIPT LANGUAGE='JavaScript'>
     window.alert('Succesfully Registered')
     window.location.href='..//viewemp.php';

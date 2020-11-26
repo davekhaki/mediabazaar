@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlLogIn = new System.Windows.Forms.Panel();
             this.chbPassword = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -37,13 +36,8 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlLogIn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogIn
@@ -57,9 +51,9 @@
             this.pnlLogIn.Controls.Add(this.tbEmail);
             this.pnlLogIn.Controls.Add(this.tbPassword);
             this.pnlLogIn.Controls.Add(this.btnLogin);
-            this.pnlLogIn.Location = new System.Drawing.Point(524, 86);
+            this.pnlLogIn.Location = new System.Drawing.Point(83, 76);
             this.pnlLogIn.Name = "pnlLogIn";
-            this.pnlLogIn.Size = new System.Drawing.Size(551, 332);
+            this.pnlLogIn.Size = new System.Drawing.Size(571, 349);
             this.pnlLogIn.TabIndex = 1;
             this.pnlLogIn.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogIn_Paint);
             // 
@@ -78,7 +72,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(137, 25);
+            this.label4.Location = new System.Drawing.Point(202, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(167, 24);
             this.label4.TabIndex = 4;
@@ -133,68 +127,31 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(532, 332);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(197, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(636, 32);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Welcome to Jupiter Ware Eindhoven,We care!";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Silver;
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.pnlLogIn);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(30, 63);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1075, 540);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Welcome to your Personal Environment";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Teal;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(381, 463);
+            this.label2.Location = new System.Drawing.Point(221, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(311, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Media Bazaar-Eindhoven!";
             // 
-            // Form3
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1172, 636);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.ClientSize = new System.Drawing.Size(761, 459);
+            this.Controls.Add(this.pnlLogIn);
+            this.Controls.Add(this.label2);
+            this.Name = "Login";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.pnlLogIn.ResumeLayout(false);
             this.pnlLogIn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,9 +165,6 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chbPassword;

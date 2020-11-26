@@ -829,3 +829,14 @@ C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Gr
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\obj\Debug\Group 2 project.csproj.CopyComplete
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Syncfusion.Core.XForms.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Syncfusion.Core.XForms.xml
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\obj\Debug\XamlC.stamp

@@ -11,10 +11,22 @@ namespace ArtichokeData
     {
         //all the employee related data access
 
-        public void GetAllEmployees(DataGridView dataGrid)
+        public void GetAllEmployees(DataGridView dataGrid, int page)
         {
+
+            int offset;
+
+            if (page == 1)
+            {
+                offset = 0;
+            }
+            else
+            {
+                offset = (page - 1) * 15;
+            }
+            
             MySqlConnection conn = new MySqlConnection(Config.conString);
-            string sql = "SELECT * FROM employee";
+            string sql = $"SELECT * FROM employee LIMIT 15 OFFSET {offset}";
             try
             {
                 conn.Open();

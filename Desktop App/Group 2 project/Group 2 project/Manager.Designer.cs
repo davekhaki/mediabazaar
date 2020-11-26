@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.stockNumeric = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
             this.tbStockId = new System.Windows.Forms.TextBox();
@@ -91,7 +93,6 @@
             this.dataGridViewStock = new System.Windows.Forms.DataGridView();
             this.loadStockBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Stock = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -117,9 +118,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.stockNumeric = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockNumeric)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -134,13 +134,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.scheduleGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(587, 436);
+            this.button2.Location = new System.Drawing.Point(1121, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(218, 40);
             this.button2.TabIndex = 3;
@@ -162,6 +161,33 @@
             this.panel4.Size = new System.Drawing.Size(1200, 579);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(878, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 17);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Page Number:";
+            // 
+            // stockNumeric
+            // 
+            this.stockNumeric.Location = new System.Drawing.Point(983, 18);
+            this.stockNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.stockNumeric.Name = "stockNumeric";
+            this.stockNumeric.ReadOnly = true;
+            this.stockNumeric.Size = new System.Drawing.Size(172, 22);
+            this.stockNumeric.TabIndex = 24;
+            this.stockNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // groupBox5
             // 
@@ -692,7 +718,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.dataGridViewMin);
             this.groupBox1.Controls.Add(this.dataGridViewStock);
@@ -777,18 +802,6 @@
             this.label3.Size = new System.Drawing.Size(117, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Stock Portal";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Teal;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(492, -3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(335, 29);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Welcome to Managers Space!";
             // 
             // tabControl1
             // 
@@ -1053,45 +1066,19 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Select a time:";
             // 
-            // stockNumeric
-            // 
-            this.stockNumeric.Location = new System.Drawing.Point(983, 18);
-            this.stockNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.stockNumeric.Name = "stockNumeric";
-            this.stockNumeric.ReadOnly = true;
-            this.stockNumeric.Size = new System.Drawing.Size(172, 22);
-            this.stockNumeric.TabIndex = 24;
-            this.stockNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(878, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 17);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Page Number:";
-            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1351, 660);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label10);
             this.Name = "Manager";
-            this.Text = "Form5";
+            this.Text = "Manager";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockNumeric)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1112,9 +1099,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empListForSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockNumeric)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1140,7 +1125,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Stock;
         private System.Windows.Forms.TabPage tabPage2;

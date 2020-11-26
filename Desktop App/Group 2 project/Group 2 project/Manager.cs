@@ -26,7 +26,7 @@ namespace Group_2_project
             stockManager.LoadStock(dataGridViewStock, stockNumeric);
             stockManager.LoadOutofStock(dataGridViewMin);
 
-            employeeManager.GetAllEmployees(empListForSchedule);
+            employeeManager.GetAllEmployees(empListForSchedule, 1);
 
             empListForSchedule.DefaultCellStyle.ForeColor = Color.Black;
             scheduleGridView.DefaultCellStyle.ForeColor = Color.Black;

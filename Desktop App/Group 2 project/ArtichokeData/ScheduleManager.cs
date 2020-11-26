@@ -129,5 +129,73 @@ namespace ArtichokeData.employee
             }
 
         }
+
+        public DateTime[] TestGetSchedule(string username)
+        {
+            List<DateTime> daysList = new List<DateTime>();
+
+            MySqlConnection conn = new MySqlConnection(Config.conString);
+            string sql = "SELECT s.Day FROM((employee e INNER JOIN schedule s ON e.ID = s.EmployeeID) INNER JOIN login l on l.empId = e.ID) WHERE l.username = @username";
+            try
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@username", MySqlDbType.String).Value = username;
+
+                var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    daysList.Add(reader.GetDateTime(0)); 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();    
+                
+            }
+            DateTime[] daysArray = daysList.ToArray();
+            return daysArray;
+        }
+
+        public void GetScheduleTime(DataGridView dataGrid, string username, DateTime day)
+        {
+            MySqlConnection conn = new MySqlConnection(Config.conString);
+            string sql = "SELECT s.TimeOfDay FROM((employee e INNER JOIN schedule s ON e.ID = s.EmployeeID) INNER JOIN login l on l.empId = e.ID) WHERE l.username = @username AND s.Day = @day";
+            try
+            {
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@username", MySqlDbType.String).Value = username;
+                cmd.Parameters.Add("@day", MySqlDbType.DateTime).Value = day;
+
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbaTableset = new DataTable();
+                sda.Fill(dbaTableset);
+
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = dbaTableset;
+                dataGrid.DataSource = bSource;
+
+                sda.Update(dbaTableset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+        }
    }
 }

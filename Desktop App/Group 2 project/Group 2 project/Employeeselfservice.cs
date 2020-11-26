@@ -23,7 +23,7 @@ namespace Group_2_project
             InitializeComponent();
             this.Text = username;
 
-            scheduleManager.GetWeeklySchedule(username, CurrentWeekShiftsDataGrid, shiftDateTimePicker.Value.Date);
+            this.scheduleCalender.BoldedDates = scheduleManager.TestGetSchedule(username);
 
             stockManager.LoadStock(dataGridViewStock, stockPageNumeric);
 
@@ -146,11 +146,6 @@ namespace Group_2_project
             this.Hide();
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnDone_Click_1(object sender, EventArgs e)
         {
             string DoneTask = "Done";
@@ -205,15 +200,9 @@ namespace Group_2_project
             finally { conn.Close(); }
         }
 
-        private void CurrentWeekShiftsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             ArtichokeData.employee.ScheduleManager scheduleManager = new ArtichokeData.employee.ScheduleManager();
-            scheduleManager.GetWeeklySchedule(this.Text, CurrentWeekShiftsDataGrid, shiftDateTimePicker.Value.Date);
         }
 
         private void stockPageNumeric_ValueChanged_1(object sender, EventArgs e)
@@ -232,6 +221,11 @@ namespace Group_2_project
             form3.Show();
             this.Hide();
 
+        }
+
+        private void scheduleCalender_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            scheduleManager.GetScheduleTime(scheduleDataGrid, this.Text, scheduleCalender.SelectionRange.Start);
         }
     }
 }

@@ -15,25 +15,47 @@ namespace Group_2_project
     {
         ArtichokeData.EmployeeManager employeeManager = new ArtichokeData.EmployeeManager();
         ArtichokeData.DepartmentManager departmentManager = new ArtichokeData.DepartmentManager();
+
+        ArtichokeLogic.DataGridFilterLogic filter = new ArtichokeLogic.DataGridFilterLogic();
+        ArtichokeLogic.MailLogic MailManager = new ArtichokeLogic.MailLogic();
+
+        int empPageNumber = 1;
         public Administration()
         {
             InitializeComponent();
 
-            employeeManager.GetAllEmployees(dShow);
+            employeeManager.GetAllEmployees(dShow, empPageNumber);
+            
 
             departmentManager.GetAllDepartments(dgDepartments);
 
             FillEmployeeIds();
-            FillDeptIds();
+            ShowDepartmentNames();
+
             dShow.DefaultCellStyle.ForeColor = Color.Black;
+            dShow.RowHeadersVisible = false;
             dgDepartments.DefaultCellStyle.ForeColor = Color.Black;
+
+            pageNumberTextBox.Text = empPageNumber.ToString();
+
             autoLoadAgeChart();
             autoLoadSalaryChart();
             autoLoadGenderChart();
             autoLoadEmployeesChart();
             autoLoadSchedulesChart();
 
+            AddCheckBoxes();
+            this.ApplyStandardFilter();
         }
+
+        private void ShowDepartmentNames()
+        {
+            foreach(string name in departmentManager.GetAllDepartmentNames())
+            {
+                cmDeptIds.Items.Add(name);
+            }
+        }
+
         void autoLoadAgeChart()
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
@@ -149,7 +171,6 @@ namespace Group_2_project
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
-
         }
         void autoLoadSchedulesChart()
         {
@@ -179,9 +200,8 @@ namespace Group_2_project
             }
             finally { conn.Close(); }
         }
-
-    
-    void ClearBoxes() {
+        void ClearBoxes()
+        {
 
             tbDeptName.Clear();
             tbFn.Clear();
@@ -189,7 +209,7 @@ namespace Group_2_project
             tbSn.Clear();
             tbSal.Clear();
             tbAge.Clear();
-            cmbGender.Text="";
+            cmbGender.Text = "";
             cmDeptNames.Text = "";
             tbSal.Clear();
             tbAdd.Clear();
@@ -208,83 +228,19 @@ namespace Group_2_project
                 conn.Open();
                 reader = command.ExecuteReader();
 
-
                 while (reader.Read())
                 {
                     string name = reader.GetString(1);
-                    
                     this.cmeIds.Items.Add(name);
-
                 }
                 conn.Close();
 
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
-
         }
-        void FillDeptIds()
-        {
-            {
-                MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-                string query = "select * from dbi434661.departments;";  
-                MySqlCommand command = new MySqlCommand(query, conn);
-                MySqlDataReader reader;
-
-                try
-                {
-                    conn.Open();
-                    reader = command.ExecuteReader();
-
-
-                    while (reader.Read())
-                    {
-                        string dpname = reader.GetString("DeptName");
-                        this.cmDeptIds.Items.Add(dpname);
-
-                    }
-                    conn.Close();
-
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message);
-                }
-
-            }
-        }
-
-        private string GeneratePassword()
-        {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-            var stringChars = new char[8];
-            var random = new Random();
-
-            for (int i = 0; i < stringChars.Length; i++)
-            {
-                stringChars[i] = chars[random.Next(chars.Length)];
-            }
-
-            return new String(stringChars);
-        }
-
-      /*  private void CreateLoginDetails()
-        {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query2 = $"INSERT INTO `login` (`empId`, `username`, `password`) VALUES ('{this.tbId.Text}', '{tbFn.Text}1', '{GeneratePassword()}')";
-
-            MySqlCommand command2 = new MySqlCommand(query2, conn);
-
-            conn.Open();
-            MySqlDataReader reader;
-            reader = command2.ExecuteReader();
-
-            conn.Close();
-        }*/
 
         private bool CheckExistingEmployee()
         {
@@ -296,15 +252,15 @@ namespace Group_2_project
 
             conn.Open();
             int rows = command.ExecuteNonQuery();
-            if(rows == 0 || rows == -1)
+            if (rows == 0 || rows == -1)
             {
                 doesExist = false;
-                
+
             }
             else
             {
                 doesExist = true;
-                
+
             }
 
             conn.Close();
@@ -314,13 +270,13 @@ namespace Group_2_project
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //check if there a inputs
-            if(string.IsNullOrEmpty(tbFn.Text) || string.IsNullOrEmpty(tbSn.Text))
+            if (string.IsNullOrEmpty(tbFn.Text) || string.IsNullOrEmpty(tbSn.Text))
             {
                 MessageBox.Show("Please fill in all the details.");
                 return;
             }
 
-            if(CheckExistingEmployee() == true)
+            if (CheckExistingEmployee() == true)
             {
                 MessageBox.Show("A previously selected employee's ID cannot be used");
                 return;
@@ -333,11 +289,11 @@ namespace Group_2_project
             int salary = int.Parse(tbSal.Text);
 
             string query = "insert into dbi434661.employee(Firstname,LastName,Age,Gender,DepartmentName" +
-                ",HireDate,EndDate,Salary,Adress,Role)values('" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.cmbGender.Text + "','" + this.cmDeptNames.Text + "','" + this.dateTimePicker1.Text + "','" + this.dateTimePicker2.Text + "','" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.cmbRole.Text + "');";
+                ",HireDate,Salary,Adress,Role)values('" + this.tbFn.Text + "','" + this.tbSn.Text + "','" + this.tbAge.Text + "','" + this.cmbGender.Text + "','" + this.cmDeptNames.Text + "','" + this.dateTimePicker1.Text + "','" + this.tbSal.Text + "','" + this.tbAdd.Text + "','" + this.cmbRole.Text + "');";
 
             MySqlCommand command = new MySqlCommand(query, conn);
 
-            string password = GeneratePassword();
+            string password = ArtichokeLogic.PasswordLogic.GeneratePassword();
 
             try
             {
@@ -394,33 +350,22 @@ namespace Group_2_project
                 conn.Close();
                 ClearBoxes();
             }
-
-
-            ArtichokeLogic.MailLogic MailManager = new ArtichokeLogic.MailLogic();
-
-
             string username = firstName + "1";
-
             MailManager.SendLoginDetails(username, password, empEmailBox.Text);
-
-
-
-
-
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "update dbi434661.employee set ID='" + this.tbId.Text + "',FirstName='" + this.tbFn.Text + "',LastName='" + this.tbSn.Text + "',Age='" + this.tbAge.Text + "',Gender='" + this.cmbGender.Text+ "',DepartmentName='" + this.cmDeptNames.Text+ "',HireDate='" + this.dateTimePicker1.Text + "',EndDate='"+this.dateTimePicker2.Text+"',Salary='" + this.tbSal.Text + "',Adress='" + this.tbAdd.Text + "',Role='" + this.cmbRole.Text + "' where ID='" + this.tbId.Text + "' ;";
+            string query = "update dbi434661.employee set ID='" + this.tbId.Text + "',FirstName='" + this.tbFn.Text + "',LastName='" + this.tbSn.Text + "',Age='" + this.tbAge.Text + "',Gender='" + this.cmbGender.Text + "',DepartmentName='" + this.cmDeptNames.Text + "',HireDate='" + this.dateTimePicker1.Text + "',Salary='" + this.tbSal.Text + "',Adress='" + this.tbAdd.Text + "',Role='" + this.cmbRole.Text + "' where ID='" + this.tbId.Text + "' ;";
             MySqlCommand command = new MySqlCommand(query, conn);
-            
+
 
             try
             {
                 conn.Open();
                 int rows = command.ExecuteNonQuery();
-                if(rows == 0 || rows == -1)
+                if (rows == 0 || rows == -1)
                 {
                     MessageBox.Show("Error changing this employees details.");
                 }
@@ -428,7 +373,7 @@ namespace Group_2_project
                 {
                     MessageBox.Show("Employee Details Updated successfully!");
                 }
-              
+
 
                 conn.Close();
             }
@@ -439,58 +384,8 @@ namespace Group_2_project
             }
 
 
-           
-
-        }
-
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "delete from dbi434661.employee where ID='" + this.tbId.Text + "';";
-            string query2 = "delete from dbi434661.departments where DeptName='" + this.cmDeptNames.Text + "';";
-            string query3 = "delete from dbi434661.login where eID='" + this.cmDeptNames.Text + "';";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlCommand command2 = new MySqlCommand(query2, conn);
-            MySqlCommand command3 = new MySqlCommand(query3, conn);
-
-            try
-            {
-                conn.Open();
 
 
-                // Object result = command.ExecuteScalar();
-                //Object result2 = command2.ExecuteScalar();
-
-                command.CommandType = CommandType.Text;
-                command.ExecuteScalar();
-
-
-
-                command2.CommandType = CommandType.Text;
-                command2.ExecuteScalar();
-
-                command3.CommandType = CommandType.Text;
-                command3.ExecuteScalar();
-
-                MessageBox.Show("Deleted");
-                conn.Close();
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-
-            ClearBoxes();
-
-        }
-
-        private void btnSignoutAdmin_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login form3 = new Login();
-            form3.Show();
         }
 
         private void btnSignoUT_Click(object sender, EventArgs e)
@@ -505,7 +400,7 @@ namespace Group_2_project
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = "insert into dbi434661.departments(DeptName)values('" + this.tbDeptName.Text + "');";
             MySqlCommand command = new MySqlCommand(query, conn);
-            
+
 
             try
             {
@@ -535,7 +430,7 @@ namespace Group_2_project
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
             string query = $"update departments set DeptName='{this.tbDeptName.Text}' where DeptID='{tbDeptId.Text}' ;";
             MySqlCommand command = new MySqlCommand(query, conn);
-            
+
             try
             {
                 conn.Open();
@@ -543,7 +438,8 @@ namespace Group_2_project
                 if (rows == 0)
                 {
                     MessageBox.Show("Error changing the department details");
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Department Details Updated successfully!");
                 }
@@ -648,11 +544,9 @@ namespace Group_2_project
         }
 
         private void cmDeptNames_SelectedIndexChanged(object sender, EventArgs e)
-        
-
         {
             MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = $"select * from departments WHERE DeptName = '{cmDeptIds.SelectedItem.ToString()}'";
+            string query = $"select * from departments WHERE DeptName = '{cmDeptIds.SelectedItem}'";
             MySqlCommand command = new MySqlCommand(query, conn);
             MySqlDataReader reader;
 
@@ -663,14 +557,14 @@ namespace Group_2_project
 
 
                 while (reader.Read())
-                 {
-                
-                string dptmentId = reader.GetInt32("DeptID").ToString();
-                string dptName = reader.GetString("DeptName");
-                this.tbDeptId.Text = dptmentId;
-                this.tbDeptName.Text = dptName;
+                {
 
-                 }
+                    string dptmentId = reader.GetInt32("DeptID").ToString();
+                    string dptName = reader.GetString("DeptName");
+                    this.tbDeptId.Text = dptmentId;
+                    this.tbDeptName.Text = dptName;
+
+                }
 
                 conn.Close();
 
@@ -688,154 +582,133 @@ namespace Group_2_project
         {
             ClearBoxes();
         }
-        private void tabPage1_Click(object sender, EventArgs e)
+
+        private void idCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            filter.FilterColumn(dShow, "ID");
         }
 
-        private void btnGender_Click(object sender, EventArgs e)
+        private void firstNameCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "SELECT Gender, COUNT(Gender) AS 'countGender' FROM employee GROUP BY Gender";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
-
-            try
-            {
-                conn.Open();
-                reader = command.ExecuteReader();
-
-
-                while (reader.Read())
-                {
-                    this.chart4.Series["Gender"].Points.AddXY(reader.GetString("Gender"), reader.GetInt32("countGender"));
-
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
+            filter.FilterColumn(dShow, "FirstName");
         }
 
-        private void btnEmployees_Click(object sender, EventArgs e)
+        private void lastNameCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "SELECT DepartmentName, COUNT(ID) AS 'totalEmployees' FROM employee GROUP BY DepartmentName";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
-
-            try
-            {
-                conn.Open();
-                reader = command.ExecuteReader();
-
-
-                while (reader.Read())
-                {
-                    this.chart1.Series["Departments"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("totalEmployees"));
-
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
+            filter.FilterColumn(dShow, "LastName");
         }
 
-        private void btnSchedules_Click(object sender, EventArgs e)
+        private void ageCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "SELECT concat(e.FirstName,' ', e.LastName) AS 'Employee Name', COUNT(s.EmployeeID) AS 'Shifts Worked' FROM employee e INNER JOIN schedule s ON e.ID = s.EmployeeID GROUP BY e.FirstName";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
+            filter.FilterColumn(dShow, "Age");
+        }
 
-            try
-            {
-                conn.Open();
-                reader = command.ExecuteReader();
+        private void genderCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            filter.FilterColumn(dShow, "Gender");
+        }
 
+        private void departmentNameCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            filter.FilterColumn(dShow, "DepartmentName");
+        }
 
-                while (reader.Read())
-                {
-                    this.chart2.Series["Employee Name"].Points.AddXY(reader.GetString("Employee Name"), reader.GetInt32("Shifts Worked"));
+        private void hireDateCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            filter.FilterColumn(dShow, "HireDate");
+        }
 
-                }
+        private void endDateCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            filter.FilterColumn(dShow, "EndDate");
+        }
 
+        private void salaryCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            filter.FilterColumn(dShow, "Salary");
+        }
 
-            }
-            catch (Exception ex)
-            {
+        private void addressCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            filter.FilterColumn(dShow, "Adress");
+        }
 
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
+        private void roleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            filter.FilterColumn(dShow, "Role");
+        }
+
+        private void ApplyStandardFilter()
+        {
+            this.idCheckBox.Checked = true;
+            this.firstNameCheckBox.Checked = true;
+            this.lastNameCheckBox.Checked = true;
+            this.ageCheckBox.Checked = false;
+            this.genderCheckBox.Checked = false;
+            this.departmentNameCheckBox.Checked = true;
+            this.hireDateCheckBox.Checked = true;     
+            this.endDateCheckBox.Checked = false;
+            this.salaryCheckBox.Checked = true;
+            this.addressCheckBox.Checked = false;
+            this.roleCheckBox.Checked = false;
 
         }
 
-        private void btnAge_Click(object sender, EventArgs e)
+        private void empNextPageBtn_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "SELECT DepartmentName, AVG(Age) AS 'avgAge' FROM employee GROUP BY DepartmentName";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
-
-            try
-            {
-                conn.Open();
-                reader = command.ExecuteReader();
-
-
-                while (reader.Read())
-                {
-                    this.chart3.Series["Age"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("avgAge"));
-
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally { conn.Close(); }
+            empPageNumber++;
+            pageNumberTextBox.Text = empPageNumber.ToString();
+            this.ApplyStandardFilter();
+            employeeManager.GetAllEmployees(dShow, empPageNumber);
         }
 
-        private void btnSalary_Click(object sender, EventArgs e)
+        private void empPrevPageBtn_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-            string query = "SELECT DepartmentName, SUM(Salary) AS 'totalSalary' FROM employee GROUP BY DepartmentName";
-            MySqlCommand command = new MySqlCommand(query, conn);
-            MySqlDataReader reader;
+            if (empPageNumber == 1) return;
+            else empPageNumber--;
+            pageNumberTextBox.Text = empPageNumber.ToString();
+            this.ApplyStandardFilter();
+            employeeManager.GetAllEmployees(dShow, empPageNumber);
+        }
 
-            try
+        List<CheckBox> checkBoxes = new List<CheckBox>();
+        private void AddCheckBoxes()
+        {
+            checkBoxes.Add(idCheckBox);
+            checkBoxes.Add(firstNameCheckBox);
+            checkBoxes.Add(lastNameCheckBox);
+            checkBoxes.Add(ageCheckBox);
+            checkBoxes.Add(genderCheckBox);
+            checkBoxes.Add(departmentNameCheckBox);
+            checkBoxes.Add(hireDateCheckBox);
+            checkBoxes.Add(endDateCheckBox);
+            checkBoxes.Add(salaryCheckBox);
+            checkBoxes.Add(addressCheckBox);
+            checkBoxes.Add(roleCheckBox);
+        }
+
+        private void EnableAllCheckBoxes()
+        {
+            foreach (CheckBox box in checkBoxes)
             {
-                conn.Open();
-                reader = command.ExecuteReader();
-
-
-                while (reader.Read())
-                {
-                    this.chart6.Series["Salary"].Points.AddXY(reader.GetString("DepartmentName"), reader.GetInt32("totalSalary"));
-
-                }
-
-
+                box.Checked = true;
             }
-            catch (Exception ex)
+        }
+
+        private void enableAllBtn_Click(object sender, EventArgs e)
+        {
+            EnableAllCheckBoxes();
+        }
+        private void DisableAllCheckBoxes()
+        {
+            foreach (CheckBox box in checkBoxes)
             {
-
-                MessageBox.Show(ex.Message);
+                box.Checked = false;
             }
-            finally { conn.Close(); }
+        }
+        private void disableAllBtn_Click(object sender, EventArgs e)
+        {
+            DisableAllCheckBoxes();
         }
     }
-}   
+}

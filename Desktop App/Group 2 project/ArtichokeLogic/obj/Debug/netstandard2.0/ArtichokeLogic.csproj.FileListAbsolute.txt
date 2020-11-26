@@ -38,7 +38,7 @@ C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Ar
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.csprojAssemblyReference.cache
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.AssemblyInfoInputs.cache
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.AssemblyInfo.cs
-C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.csproj.CoreCompileInputs.cache
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.csproj.CopyComplete
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.dll
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\ArtichokeLogic\obj\Debug\netstandard2.0\ArtichokeLogic.csproj.CoreCompileInputs.cache

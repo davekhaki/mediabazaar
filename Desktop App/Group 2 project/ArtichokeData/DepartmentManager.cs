@@ -10,10 +10,11 @@ namespace ArtichokeData
     public class DepartmentManager
     {
         // all the department related data access
+        List<string> departmentNames = new List<string>();
+        MySqlConnection conn = new MySqlConnection(Config.conString);
 
         public void GetAllDepartments(DataGridView dataGrid)
-        {
-            MySqlConnection conn = new MySqlConnection(Config.conString);
+        {           
             string sql = "SELECT * FROM departments";
             try
             {
@@ -40,6 +41,34 @@ namespace ArtichokeData
             {
                 conn.Close();
             }
+        }
+
+        public List<string> GetAllDepartmentNames()
+        {
+            string sql = "SELECT DeptName FROM departments";
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = null;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    departmentNames.Add(reader.GetString("DeptName"));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return departmentNames;
         }
     }
 }

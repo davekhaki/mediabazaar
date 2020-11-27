@@ -26,7 +26,7 @@ $userDetails=$userClass->userDetails($session_empId);
     <link href="css/main.css" rel="stylesheet" media="all">
 </head>
 <body>
-  <?php include ("inc/empheader.php"); ?>
+  <?php include ('inc/headerctrl.inc.php');  ?>
 
   <div class="divider"></div>
 

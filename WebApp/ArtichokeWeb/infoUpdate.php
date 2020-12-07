@@ -29,7 +29,7 @@ $userDetails=$userClass->userDetails($session_empId);
     <link href="css/main.css" rel="stylesheet" media="all">
 </head>
 <body>
-  <?php include ("inc/empheader.php"); ?>
+  <?php include ('inc/headerctrl.inc.php');  ?>
 
   <div class="divider"></div>
 
@@ -55,11 +55,14 @@ $userDetails=$userClass->userDetails($session_empId);
 </div>
 <div class="input-group">
     <label> Gender</label>
-    <input class="input--style-1" type="text" name="gender" value="<?php echo $userDetails->Gender;?>">
+    <br><br>
     <select id="gender" name="gender">
+    <!--<option hidden disabled selected value> -- select an option -- </option> -->
+      <option value =" <?php echo $userDetails->Gender;?>"> <?php echo $userDetails->Gender; ?> </option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
     </select>
+    <br>
 </div>
 <div class="input-group">
     <label> Address </label>

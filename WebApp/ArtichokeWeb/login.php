@@ -1,6 +1,6 @@
 <?php
 include ('class/dbh.class.php');
-include ('class/user.class.php');
+include ('class/User.class.php');
 $userClass = new User();
 
 $errorMsgReg='';

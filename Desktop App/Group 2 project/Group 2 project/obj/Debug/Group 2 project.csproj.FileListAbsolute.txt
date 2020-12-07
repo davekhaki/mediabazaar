@@ -840,3 +840,4 @@ C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Gr
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\obj\Debug\XamlC.stamp
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\Group 2 project\Group 2 project\bin\Debug\Google.Protobuf.pdb

@@ -11,9 +11,9 @@ class User extends DB {
   $stmt->execute();
   $count=$stmt->rowCount();
   $data=$stmt->fetch(PDO::FETCH_OBJ);
-
-  if($count)
-  {
+$hashed_password = $this->data->password;
+if(md5($password) == $hashed_password){
+  //if($count){
   $_SESSION['empId']=$data->empId; // Storing user session value
   $_SESSION['role']=$data->Role;
   return true;
@@ -22,6 +22,7 @@ class User extends DB {
   {
   return false;
   }
+
   }
   catch(PDOException $e) {
   echo '{"error":{"text":'. $e->getMessage() .'}}';

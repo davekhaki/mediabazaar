@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "plspLfYdFevoH6IZ12Uoqp1OyWOGy9zcTw0GDVAZWRMeu2g21GXqMDmcThejZF7xGUo5Y5Vnh5KnuCk2gBZMgA==",
+  "dgSpecHash": "C2Hq27u+/QbHZ9sT29qTJrd8biuI50sLiVLWc6vlITf8ZqJ0CBLCE71DyjMlZZKdTRIBYgVHOLZmYXlb2JKqpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\david\\OneDrive\\Documents\\CB-S2\\artichoke\\Desktop App\\Group 2 project\\ArtichokeLogic\\ArtichokeLogic.csproj",
+  "projectFilePath": "C:\\Users\\sbokk\\artichoke\\Desktop App\\Group 2 project\\ArtichokeLogic\\ArtichokeLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

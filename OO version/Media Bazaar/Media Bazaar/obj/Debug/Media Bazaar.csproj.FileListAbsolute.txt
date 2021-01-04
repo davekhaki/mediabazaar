@@ -40,3 +40,45 @@ C:\Users\david\source\repos\Media Bazaar\Media Bazaar\bin\Debug\System.Numerics.
 C:\Users\david\source\repos\Media Bazaar\Media Bazaar\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\david\source\repos\Media Bazaar\Media Bazaar\obj\Debug\Media_Bazaar.ManagerForm.resources
 C:\Users\david\source\repos\Media Bazaar\Media Bazaar\obj\Debug\Media_Bazaar.AdminForm.resources
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe.config
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Media Bazaar.pdb
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Google.Protobuf.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Media Bazaar Logic.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\MySql.Data.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Renci.SshNet.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Buffers.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Memory.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Zstandard.Net.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Media Bazaar Data Access Logic.dll
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Media Bazaar Logic.pdb
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Google.Protobuf.pdb
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Google.Protobuf.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\MySql.Data.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Renci.SshNet.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Buffers.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Memory.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\bin\Debug\Media Bazaar Data Access Logic.pdb
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media_Bazaar.AdminForm.resources
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media_Bazaar.EmployeeForm.resources
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media_Bazaar.LoginForm.resources
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media_Bazaar.ManagerForm.resources
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.CoreCompileInputs.cache
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.CopyComplete
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media Bazaar.exe
+C:\Users\sbokk\artichoke\OO version\Media Bazaar\Media Bazaar\obj\Debug\Media Bazaar.pdb

@@ -49,7 +49,8 @@ public function sendLogin($username,$password){
 }
 
 public function addEmployee($firstname,$lastname,$age,$gender,$department,$hiredate,$address,$role,$salary){
-  $pass = $this->passwordGen();
+//  $pass = $this->passwordGen();
+$pass = "12345";
 
   try{
   $stmt = $this->connect()->prepare("INSERT INTO employee(FirstName,LastName,Age,Gender,DepartmentName,HireDate,Adress,Role,Salary) VALUES(?,?,?,?,?,?,?,?,?)");
@@ -58,6 +59,7 @@ public function addEmployee($firstname,$lastname,$age,$gender,$department,$hired
   $stmt1->execute([$firstname,$lastname]);
   $data=$stmt1->fetch(PDO::FETCH_OBJ);
   $id = $data->ID;
+  $pass = md5($pass);
   $stmt2 = $this->connect()->prepare("INSERT INTO login(empId,username,password) VALUES(?,?,?)");
 //$email = $this->sendLogin($firstname."1",$pass);
   $stmt2 ->execute([$id,$firstname."1",$pass]);

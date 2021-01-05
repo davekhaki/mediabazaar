@@ -10,7 +10,7 @@ namespace MediaBazaarOOD_1.Class
     {
 
         //Fields
-        private static int id;
+        private int id;
         private string firstName;
         private string lastName;
         private int age;
@@ -32,18 +32,36 @@ namespace MediaBazaarOOD_1.Class
             this.Gender = givenGender;
             this.DepartmentName = givenDname;
             this.HireDate = givenHireDate;
-            // this.EndDate = givenENdDate;
+            //this.EndDate = givenEndDate;
             this.Salary = givenSalary;
             this.Address = givenAddress;
             this.Role = givenRole;
-            Person.id++;
+            //Person.id++;
         }
+        //constructor
+        public Person(int id, string givenFirstName, string givenLastName, int givenAge, string givenGender, string givenDname, DateTime givenHireDate, int givenSalary, string givenAddress, string givenRole)
+        {
+            this.FirstName = givenFirstName;
+            this.LastName = givenLastName;
+            this.Age = givenAge;
+            this.Gender = givenGender;
+            this.DepartmentName = givenDname;
+            this.HireDate = givenHireDate;
+            //this.EndDate = givenEndDate;
+            this.Salary = givenSalary;
+            this.Address = givenAddress;
+            this.Role = givenRole;
+            this.id = id;
+        }
+
+
+
 
         //Properties
         public int Id
         {
-            get { return Person.id; }
-            set { Person.id = value; }
+            get { return id; }
+            set { id = value; }
         }
 
         public string FirstName
@@ -55,7 +73,7 @@ namespace MediaBazaarOOD_1.Class
                 this.firstName = value;
             }
         }
-       
+
         public string LastName
         {
             get => this.lastName;
@@ -89,8 +107,14 @@ namespace MediaBazaarOOD_1.Class
             set { this.hireDate = value; }
 
         }
+        //public DateTime EndDate
+        //{
+        //    get { return this.endDate; }
+        //    set { this.endDate = value; }
+
+        //}
         public DateTime? EndDate { get; set; }
-        
+
         public int Salary
         {
             get { return this.salary; }

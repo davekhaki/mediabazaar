@@ -92,5 +92,24 @@ namespace MediaBazaarOOD_1.Forms
                 }
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Edit edit = new Edit();
+            edit.Show();
+            this.Hide();
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            Statistics stats = new Statistics();
+            stats.Show();
+            this.Hide();
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

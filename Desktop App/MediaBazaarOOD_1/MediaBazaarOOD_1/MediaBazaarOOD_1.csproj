@@ -75,6 +75,7 @@
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,6 +98,7 @@
     <Compile Include="Class\Employee.cs" />
     <Compile Include="Class\Manager.cs" />
     <Compile Include="Class\Person.cs" />
+    <Compile Include="Class\PersonStats.cs" />
     <Compile Include="Class\Product.cs" />
     <Compile Include="Class\Requests.cs" />
     <Compile Include="Class\Schedule.cs" />
@@ -106,12 +108,19 @@
     <Compile Include="DataLayer\DepartmentData.cs" />
     <Compile Include="DataLayer\Request.cs" />
     <Compile Include="DataLayer\ScheduleData.cs" />
+    <Compile Include="DataLayer\StatisticsData.cs" />
     <Compile Include="DataLayer\StockData.cs" />
     <Compile Include="Forms\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Manager.cs">
       <SubType>Form</SubType>
@@ -131,16 +140,26 @@
     <Compile Include="Forms\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogicLayer\DepartmentManager.cs" />
     <Compile Include="LogicLayer\EmployeeLog.cs" />
     <Compile Include="LogicLayer\PersonManager.cs" />
     <Compile Include="LogicLayer\RequestManager.cs" />
     <Compile Include="LogicLayer\ScheduleManager.cs" />
+    <Compile Include="LogicLayer\StatisticsManager.cs" />
     <Compile Include="LogicLayer\StockManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
@@ -151,6 +170,9 @@
     <EmbeddedResource Include="Forms\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -159,6 +181,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -174,6 +197,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\stats.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

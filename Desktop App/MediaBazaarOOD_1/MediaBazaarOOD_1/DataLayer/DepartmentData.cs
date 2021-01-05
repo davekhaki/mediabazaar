@@ -5,22 +5,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MediaBazaarOOD_1.DataLayer
 {
     public class DepartmentData
-    {
-        //About Departments
+    {//About Departments
         public static void AddDepartment(Department department)
         {
             try
             {
                 string dptName = department.DeptName;
-                int id = department.DeptId;
 
                 MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-                string query = "insert into dbi434661.departments(`id`, `DepartmentName`)values(`id`, `dptName`)";
+                string query = "insert into dbi434661.departments(`DeptName`)values(@DeptName)";
                 MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("@DeptName", department.DeptName);
                 conn.Open();
                 command.ExecuteNonQuery();
                 conn.Close();
@@ -32,9 +32,9 @@ namespace MediaBazaarOOD_1.DataLayer
         }
         public static List<Department> GetAllDepartments()
         {
-            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot"); ;
-            string sql = "SELECT * FROM Departments";
-            List<Department> allDepartments = null;
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string sql = "SELECT * FROM departments";
+            List<Department> allDepartments = new List<Department>();
 
             try
             {
@@ -43,17 +43,19 @@ namespace MediaBazaarOOD_1.DataLayer
                 MySqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    string dName = dr[2].ToString();
-                    int id = Convert.ToInt32(dr[1]);
-                    Department department = new Department(id, dName);
+                    Department department;
+                    int id = Convert.ToInt32(dr[0]);
+                    string dName = dr[1].ToString();
+                    department = new Department(id, dName);
                     allDepartments.Add(department);
 
                 }
+
                 return allDepartments;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                MessageBox.Show(ex.ToString());
                 return new List<Department>();
             }
             finally
@@ -62,18 +64,64 @@ namespace MediaBazaarOOD_1.DataLayer
             }
 
         }
-        public static void EditDepartmentDetails()
+        public static void EditDepartmentDetails(int id, string departmentName)
         {
+            MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+            string sql = "UPDATE `departments` SET `DeptID` = @id ,`DeptName` = @deptName";
+            try
+            {
+
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", MySqlDbType.Int32).Value = id;
+                cmd.Parameters.AddWithValue("@deptName", MySqlDbType.String).Value = departmentName;
+
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+                //conn.Close();
+            }
+            finally
+            {
+                conn.Close();
+            }
 
         }
-        public static void DeleteDepartment()
+        public static void DeleteDepartment(int id)
         {
+
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(Config.conString);
+                string sql = "delete from dbi434661.departments where DeptId=@DeptId";
+
+                conn.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@DeptId", MySqlDbType.Int32).Value = id;//ID
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted!");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.ToString());
+
+            }
+            //finally
+            //{
+
+            //}
 
         }
         public static void GetDepartmentById()
         {
 
         }
-
     }
 }

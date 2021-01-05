@@ -28,11 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnSignOut = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddDepartment = new System.Windows.Forms.Button();
+            this.tbDptName = new System.Windows.Forms.TextBox();
+            this.btnEditDepartment = new System.Windows.Forms.Button();
+            this.tbDptId = new System.Windows.Forms.TextBox();
+            this.btnRemoveDepartment = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnViewEmployees = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,49 +62,212 @@
             this.tbSalary = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnSignOut = new System.Windows.Forms.Button();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.cmbDepartmentName = new System.Windows.Forms.ComboBox();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
             this.cmbRole = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnViewEmployees = new System.Windows.Forms.Button();
-            this.btnAddDepartment = new System.Windows.Forms.Button();
-            this.btnEditDepartment = new System.Windows.Forms.Button();
-            this.btnRemoveDepartment = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tbDptId = new System.Windows.Forms.TextBox();
-            this.tbDptName = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.btnStatistics = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // btnSignOut
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(50, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(918, 488);
-            this.tabControl1.TabIndex = 0;
+            this.btnSignOut.BackColor = System.Drawing.Color.Red;
+            this.btnSignOut.Location = new System.Drawing.Point(705, -1);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(157, 32);
+            this.btnSignOut.TabIndex = 23;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Teal;
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.ForeColor = System.Drawing.Color.White;
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(910, 459);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Departments";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.btnRemoveDepartment);
+            this.groupBox1.Controls.Add(this.tbDptId);
+            this.groupBox1.Controls.Add(this.btnEditDepartment);
+            this.groupBox1.Controls.Add(this.tbDptName);
+            this.groupBox1.Controls.Add(this.btnAddDepartment);
+            this.groupBox1.Location = new System.Drawing.Point(21, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(335, 407);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // btnAddDepartment
+            // 
+            this.btnAddDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddDepartment.Location = new System.Drawing.Point(22, 179);
+            this.btnAddDepartment.Name = "btnAddDepartment";
+            this.btnAddDepartment.Size = new System.Drawing.Size(214, 36);
+            this.btnAddDepartment.TabIndex = 0;
+            this.btnAddDepartment.Text = "Add";
+            this.btnAddDepartment.UseVisualStyleBackColor = false;
+            // 
+            // tbDptName
+            // 
+            this.tbDptName.Location = new System.Drawing.Point(108, 97);
+            this.tbDptName.Name = "tbDptName";
+            this.tbDptName.Size = new System.Drawing.Size(100, 22);
+            this.tbDptName.TabIndex = 6;
+            // 
+            // btnEditDepartment
+            // 
+            this.btnEditDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEditDepartment.Location = new System.Drawing.Point(22, 221);
+            this.btnEditDepartment.Name = "btnEditDepartment";
+            this.btnEditDepartment.Size = new System.Drawing.Size(214, 36);
+            this.btnEditDepartment.TabIndex = 1;
+            this.btnEditDepartment.Text = "Edit";
+            this.btnEditDepartment.UseVisualStyleBackColor = false;
+            // 
+            // tbDptId
+            // 
+            this.tbDptId.Location = new System.Drawing.Point(108, 43);
+            this.tbDptId.Name = "tbDptId";
+            this.tbDptId.Size = new System.Drawing.Size(100, 22);
+            this.tbDptId.TabIndex = 5;
+            // 
+            // btnRemoveDepartment
+            // 
+            this.btnRemoveDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnRemoveDepartment.Location = new System.Drawing.Point(22, 263);
+            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
+            this.btnRemoveDepartment.Size = new System.Drawing.Size(214, 37);
+            this.btnRemoveDepartment.TabIndex = 2;
+            this.btnRemoveDepartment.Text = "Remove Department";
+            this.btnRemoveDepartment.UseVisualStyleBackColor = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(19, 102);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 17);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Dpt Name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 48);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Dpt Id";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Location = new System.Drawing.Point(362, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(542, 407);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(28, 33);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(508, 348);
+            this.dataGridView2.TabIndex = 9;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.Teal;
+            this.tabPage2.Controls.Add(this.btnViewEmployees);
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(910, 459);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "View";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(47, 32);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(529, 370);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // btnViewEmployees
+            // 
+            this.btnViewEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnViewEmployees.Location = new System.Drawing.Point(85, 408);
+            this.btnViewEmployees.Name = "btnViewEmployees";
+            this.btnViewEmployees.Size = new System.Drawing.Size(249, 34);
+            this.btnViewEmployees.TabIndex = 1;
+            this.btnViewEmployees.Text = "View Employees";
+            this.btnViewEmployees.UseVisualStyleBackColor = false;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Teal;
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.tbSalary);
+            this.tabPage1.Controls.Add(this.tbAddress);
+            this.tabPage1.Controls.Add(this.tbFirstName);
+            this.tabPage1.Controls.Add(this.tbAge);
+            this.tabPage1.Controls.Add(this.tbLastName);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.btnSearch);
+            this.tabPage1.Controls.Add(this.btnStatistics);
             this.tabPage1.Controls.Add(this.cmbRole);
             this.tabPage1.Controls.Add(this.dtpHireDate);
             this.tabPage1.Controls.Add(this.dtpEndDate);
@@ -101,11 +275,6 @@
             this.tabPage1.Controls.Add(this.cmbGender);
             this.tabPage1.Controls.Add(this.btnEdit);
             this.tabPage1.Controls.Add(this.btnAdd);
-            this.tabPage1.Controls.Add(this.tbSalary);
-            this.tabPage1.Controls.Add(this.tbAddress);
-            this.tabPage1.Controls.Add(this.tbFirstName);
-            this.tabPage1.Controls.Add(this.tbAge);
-            this.tabPage1.Controls.Add(this.tbLastName);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
@@ -124,41 +293,6 @@
             this.tabPage1.Size = new System.Drawing.Size(910, 459);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Employees";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.Teal;
-            this.tabPage2.Controls.Add(this.btnViewEmployees);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(910, 459);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "View";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Teal;
-            this.tabPage3.Controls.Add(this.groupBox2);
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.ForeColor = System.Drawing.Color.White;
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(910, 459);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Departments";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(771, 381);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Statistics";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -297,9 +431,11 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAdd.Location = new System.Drawing.Point(625, 48);
+            this.btnAdd.Image = global::MediaBazaarOOD_1.Properties.Resources.Add;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd.Location = new System.Drawing.Point(625, 23);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(156, 40);
+            this.btnAdd.Size = new System.Drawing.Size(263, 54);
             this.btnAdd.TabIndex = 21;
             this.btnAdd.Text = "Add New Employee";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -308,22 +444,15 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(625, 108);
+            this.btnEdit.Image = global::MediaBazaarOOD_1.Properties.Resources.update1;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnEdit.Location = new System.Drawing.Point(625, 96);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(156, 40);
+            this.btnEdit.Size = new System.Drawing.Size(263, 64);
             this.btnEdit.TabIndex = 22;
             this.btnEdit.Text = "Edit Details";
             this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackColor = System.Drawing.Color.Red;
-            this.btnSignOut.Location = new System.Drawing.Point(705, -1);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(157, 32);
-            this.btnSignOut.TabIndex = 23;
-            this.btnSignOut.Text = "Sign Out";
-            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // cmbGender
             // 
@@ -376,123 +505,256 @@
             this.cmbRole.Size = new System.Drawing.Size(121, 24);
             this.cmbRole.TabIndex = 27;
             // 
-            // dataGridView1
+            // btnStatistics
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(529, 370);
-            this.dataGridView1.TabIndex = 0;
+            this.btnStatistics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnStatistics.Image = global::MediaBazaarOOD_1.Properties.Resources.stats;
+            this.btnStatistics.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnStatistics.Location = new System.Drawing.Point(625, 176);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(263, 56);
+            this.btnStatistics.TabIndex = 28;
+            this.btnStatistics.Text = "Go To Statistics";
+            this.btnStatistics.UseVisualStyleBackColor = false;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
-            // btnViewEmployees
+            // btnSearch
             // 
-            this.btnViewEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnViewEmployees.Location = new System.Drawing.Point(85, 408);
-            this.btnViewEmployees.Name = "btnViewEmployees";
-            this.btnViewEmployees.Size = new System.Drawing.Size(249, 34);
-            this.btnViewEmployees.TabIndex = 1;
-            this.btnViewEmployees.Text = "View Employees";
-            this.btnViewEmployees.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSearch.Image = global::MediaBazaarOOD_1.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnSearch.Location = new System.Drawing.Point(604, 243);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(268, 66);
+            this.btnSearch.TabIndex = 29;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // btnAddDepartment
+            // label14
             // 
-            this.btnAddDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAddDepartment.Location = new System.Drawing.Point(22, 179);
-            this.btnAddDepartment.Name = "btnAddDepartment";
-            this.btnAddDepartment.Size = new System.Drawing.Size(214, 36);
-            this.btnAddDepartment.TabIndex = 0;
-            this.btnAddDepartment.Text = "Add";
-            this.btnAddDepartment.UseVisualStyleBackColor = false;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(620, 312);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(226, 25);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Enter Employee Name";
             // 
-            // btnEditDepartment
+            // textBox1
             // 
-            this.btnEditDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEditDepartment.Location = new System.Drawing.Point(22, 221);
-            this.btnEditDepartment.Name = "btnEditDepartment";
-            this.btnEditDepartment.Size = new System.Drawing.Size(214, 36);
-            this.btnEditDepartment.TabIndex = 1;
-            this.btnEditDepartment.Text = "Edit";
-            this.btnEditDepartment.UseVisualStyleBackColor = false;
+            this.textBox1.Location = new System.Drawing.Point(650, 358);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 22);
+            this.textBox1.TabIndex = 31;
             // 
-            // btnRemoveDepartment
+            // tabControl1
             // 
-            this.btnRemoveDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRemoveDepartment.Location = new System.Drawing.Point(22, 263);
-            this.btnRemoveDepartment.Name = "btnRemoveDepartment";
-            this.btnRemoveDepartment.Size = new System.Drawing.Size(214, 37);
-            this.btnRemoveDepartment.TabIndex = 2;
-            this.btnRemoveDepartment.Text = "Remove Department";
-            this.btnRemoveDepartment.UseVisualStyleBackColor = false;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(50, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(918, 488);
+            this.tabControl1.TabIndex = 0;
             // 
-            // label12
+            // tabPage4
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 48);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 17);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Dpt Id";
+            this.tabPage4.BackColor = System.Drawing.Color.Gray;
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.button2);
+            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Controls.Add(this.textBox7);
+            this.tabPage4.Controls.Add(this.textBox6);
+            this.tabPage4.Controls.Add(this.textBox5);
+            this.tabPage4.Controls.Add(this.textBox4);
+            this.tabPage4.Controls.Add(this.textBox3);
+            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.dataGridView3);
+            this.tabPage4.Controls.Add(this.label21);
+            this.tabPage4.Controls.Add(this.label20);
+            this.tabPage4.Controls.Add(this.label19);
+            this.tabPage4.Controls.Add(this.label18);
+            this.tabPage4.Controls.Add(this.label17);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.Controls.Add(this.label15);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(910, 459);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "View Stock";
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // label13
+            // tabPage5
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(19, 102);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 17);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Dpt Name";
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(910, 459);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "DownLoadPdfs";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tbDptId
+            // label15
             // 
-            this.tbDptId.Location = new System.Drawing.Point(108, 43);
-            this.tbDptId.Name = "tbDptId";
-            this.tbDptId.Size = new System.Drawing.Size(100, 22);
-            this.tbDptId.TabIndex = 5;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label15.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(70, 60);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(159, 23);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Select Columns";
             // 
-            // tbDptName
+            // label16
             // 
-            this.tbDptName.Location = new System.Drawing.Point(108, 97);
-            this.tbDptName.Name = "tbDptName";
-            this.tbDptName.Size = new System.Drawing.Size(100, 22);
-            this.tbDptName.TabIndex = 6;
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(80, 125);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 17);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Product Id";
             // 
-            // groupBox1
+            // label17
             // 
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.btnRemoveDepartment);
-            this.groupBox1.Controls.Add(this.tbDptId);
-            this.groupBox1.Controls.Add(this.btnEditDepartment);
-            this.groupBox1.Controls.Add(this.tbDptName);
-            this.groupBox1.Controls.Add(this.btnAddDepartment);
-            this.groupBox1.Location = new System.Drawing.Point(21, 26);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 407);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(71, 168);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(45, 17);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Name";
             // 
-            // groupBox2
+            // label18
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Location = new System.Drawing.Point(362, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(542, 407);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(71, 213);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(40, 17);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Price";
             // 
-            // dataGridView2
+            // label19
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(28, 33);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(508, 348);
-            this.dataGridView2.TabIndex = 9;
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(71, 258);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(46, 17);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Brand";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(71, 308);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 17);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Quantity";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(71, 355);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(108, 17);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "MinimumQuatity";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(322, 111);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(495, 277);
+            this.dataGridView3.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(171, 125);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(171, 168);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 10;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(171, 208);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 11;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(171, 253);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 12;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(171, 303);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 22);
+            this.textBox6.TabIndex = 13;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(180, 350);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(422, 401);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 35);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Disable All";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(543, 401);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(96, 35);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Enable ALL";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(680, 407);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 29);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Reload";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Admin
             // 
@@ -503,27 +765,49 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Admin";
             this.Text = "Admin";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnRemoveDepartment;
+        private System.Windows.Forms.TextBox tbDptId;
+        private System.Windows.Forms.Button btnEditDepartment;
+        private System.Windows.Forms.TextBox tbDptName;
+        private System.Windows.Forms.Button btnAddDepartment;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btnViewEmployees;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbSalary;
+        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.TextBox tbFirstName;
+        private System.Windows.Forms.TextBox tbAge;
+        private System.Windows.Forms.TextBox tbLastName;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnStatistics;
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.DateTimePicker dtpHireDate;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
@@ -531,11 +815,6 @@
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox tbSalary;
-        private System.Windows.Forms.TextBox tbAddress;
-        private System.Windows.Forms.TextBox tbFirstName;
-        private System.Windows.Forms.TextBox tbAge;
-        private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -547,18 +826,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnSignOut;
-        private System.Windows.Forms.Button btnViewEmployees;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnRemoveDepartment;
-        private System.Windows.Forms.TextBox tbDptId;
-        private System.Windows.Forms.Button btnEditDepartment;
-        private System.Windows.Forms.TextBox tbDptName;
-        private System.Windows.Forms.Button btnAddDepartment;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

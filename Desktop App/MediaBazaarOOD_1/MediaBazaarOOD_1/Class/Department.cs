@@ -11,6 +11,11 @@ namespace MediaBazaarOOD_1.Class
         //fields
         private int deptId;
         private string deptName;
+        public Department(int id)
+        {
+            this.deptId = id;
+
+        }
         public Department(int id, string dName)
         {
             this.deptId = id;

@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtgEdit = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbIdEdit = new System.Windows.Forms.TextBox();
-            this.tbFnEdit = new System.Windows.Forms.TextBox();
-            this.tbLnEdit = new System.Windows.Forms.TextBox();
-            this.tbAgeEdit = new System.Windows.Forms.TextBox();
-            this.tbAddressEdit = new System.Windows.Forms.TextBox();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbSalaryEdit = new System.Windows.Forms.TextBox();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.cmbDnameEdit = new System.Windows.Forms.ComboBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.tbSalaryEdit = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.tbAddressEdit = new System.Windows.Forms.TextBox();
+            this.tbAgeEdit = new System.Windows.Forms.TextBox();
+            this.tbLnEdit = new System.Windows.Forms.TextBox();
+            this.tbFnEdit = new System.Windows.Forms.TextBox();
+            this.tbIdEdit = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dtgEdit = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEdit)).BeginInit();
             this.SuspendLayout();
@@ -94,16 +94,209 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // dtgEdit
+            // cmbDnameEdit
             // 
-            this.dtgEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEdit.Location = new System.Drawing.Point(332, 21);
-            this.dtgEdit.Name = "dtgEdit";
-            this.dtgEdit.RowHeadersWidth = 51;
-            this.dtgEdit.RowTemplate.Height = 24;
-            this.dtgEdit.Size = new System.Drawing.Size(483, 431);
-            this.dtgEdit.TabIndex = 0;
-            this.dtgEdit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEdit_CellContentClick);
+            this.cmbDnameEdit.FormattingEnabled = true;
+            this.cmbDnameEdit.Items.AddRange(new object[] {
+            "Finance",
+            "Marketing",
+            "Logistics",
+            "HR",
+            "Customer Care"});
+            this.cmbDnameEdit.Location = new System.Drawing.Point(130, 240);
+            this.cmbDnameEdit.Name = "cmbDnameEdit";
+            this.cmbDnameEdit.Size = new System.Drawing.Size(121, 24);
+            this.cmbDnameEdit.TabIndex = 27;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEdit.Location = new System.Drawing.Point(351, 462);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(175, 45);
+            this.btnEdit.TabIndex = 26;
+            this.btnEdit.Text = "Update";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // dtpHireDate
+            // 
+            this.dtpHireDate.Location = new System.Drawing.Point(116, 296);
+            this.dtpHireDate.Name = "dtpHireDate";
+            this.dtpHireDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpHireDate.TabIndex = 25;
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Location = new System.Drawing.Point(116, 343);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpEndDate.TabIndex = 24;
+            // 
+            // tbSalaryEdit
+            // 
+            this.tbSalaryEdit.Location = new System.Drawing.Point(130, 389);
+            this.tbSalaryEdit.Name = "tbSalaryEdit";
+            this.tbSalaryEdit.Size = new System.Drawing.Size(121, 22);
+            this.tbSalaryEdit.TabIndex = 23;
+            this.tbSalaryEdit.TextChanged += new System.EventHandler(this.tbSalary_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(35, 476);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 17);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Role";
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Admin",
+            "Manager",
+            "Employee"});
+            this.cmbRole.Location = new System.Drawing.Point(130, 469);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(121, 24);
+            this.cmbRole.TabIndex = 20;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(130, 169);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(121, 24);
+            this.cmbGender.TabIndex = 19;
+            // 
+            // tbAddressEdit
+            // 
+            this.tbAddressEdit.Location = new System.Drawing.Point(130, 430);
+            this.tbAddressEdit.Name = "tbAddressEdit";
+            this.tbAddressEdit.Size = new System.Drawing.Size(121, 22);
+            this.tbAddressEdit.TabIndex = 16;
+            // 
+            // tbAgeEdit
+            // 
+            this.tbAgeEdit.Location = new System.Drawing.Point(130, 141);
+            this.tbAgeEdit.Name = "tbAgeEdit";
+            this.tbAgeEdit.Size = new System.Drawing.Size(121, 22);
+            this.tbAgeEdit.TabIndex = 15;
+            // 
+            // tbLnEdit
+            // 
+            this.tbLnEdit.Location = new System.Drawing.Point(130, 113);
+            this.tbLnEdit.Name = "tbLnEdit";
+            this.tbLnEdit.Size = new System.Drawing.Size(121, 22);
+            this.tbLnEdit.TabIndex = 14;
+            // 
+            // tbFnEdit
+            // 
+            this.tbFnEdit.Location = new System.Drawing.Point(130, 82);
+            this.tbFnEdit.Name = "tbFnEdit";
+            this.tbFnEdit.Size = new System.Drawing.Size(121, 22);
+            this.tbFnEdit.TabIndex = 13;
+            // 
+            // tbIdEdit
+            // 
+            this.tbIdEdit.Location = new System.Drawing.Point(130, 52);
+            this.tbIdEdit.Name = "tbIdEdit";
+            this.tbIdEdit.Size = new System.Drawing.Size(121, 22);
+            this.tbIdEdit.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(35, 435);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 17);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Address";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(35, 392);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 17);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Salary";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(35, 343);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 17);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "End Date";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(35, 296);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 17);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Hire Date";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 243);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 17);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Department Name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 176);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Gender";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(70, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 17);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Age";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Last Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "FirstName";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Id";
             // 
             // button1
             // 
@@ -118,203 +311,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // dtgEdit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Id";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "FirstName";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Last Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Age";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Gender";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 243);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 17);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Department Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 296);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Hire Date";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 343);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 17);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "End Date";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 392);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 17);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Salary";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(35, 435);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 17);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Address";
-            // 
-            // tbIdEdit
-            // 
-            this.tbIdEdit.Location = new System.Drawing.Point(130, 52);
-            this.tbIdEdit.Name = "tbIdEdit";
-            this.tbIdEdit.Size = new System.Drawing.Size(121, 22);
-            this.tbIdEdit.TabIndex = 12;
-            // 
-            // tbFnEdit
-            // 
-            this.tbFnEdit.Location = new System.Drawing.Point(130, 82);
-            this.tbFnEdit.Name = "tbFnEdit";
-            this.tbFnEdit.Size = new System.Drawing.Size(121, 22);
-            this.tbFnEdit.TabIndex = 13;
-            // 
-            // tbLnEdit
-            // 
-            this.tbLnEdit.Location = new System.Drawing.Point(130, 113);
-            this.tbLnEdit.Name = "tbLnEdit";
-            this.tbLnEdit.Size = new System.Drawing.Size(121, 22);
-            this.tbLnEdit.TabIndex = 14;
-            // 
-            // tbAgeEdit
-            // 
-            this.tbAgeEdit.Location = new System.Drawing.Point(130, 141);
-            this.tbAgeEdit.Name = "tbAgeEdit";
-            this.tbAgeEdit.Size = new System.Drawing.Size(121, 22);
-            this.tbAgeEdit.TabIndex = 15;
-            // 
-            // tbAddressEdit
-            // 
-            this.tbAddressEdit.Location = new System.Drawing.Point(130, 430);
-            this.tbAddressEdit.Name = "tbAddressEdit";
-            this.tbAddressEdit.Size = new System.Drawing.Size(121, 22);
-            this.tbAddressEdit.TabIndex = 16;
-            // 
-            // cmbGender
-            // 
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(130, 169);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(121, 24);
-            this.cmbGender.TabIndex = 19;
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Items.AddRange(new object[] {
-            "Admin",
-            "Manager",
-            "Employee"});
-            this.cmbRole.Location = new System.Drawing.Point(130, 469);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(121, 24);
-            this.cmbRole.TabIndex = 20;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(35, 476);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 17);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Role";
-            // 
-            // tbSalaryEdit
-            // 
-            this.tbSalaryEdit.Location = new System.Drawing.Point(130, 389);
-            this.tbSalaryEdit.Name = "tbSalaryEdit";
-            this.tbSalaryEdit.Size = new System.Drawing.Size(121, 22);
-            this.tbSalaryEdit.TabIndex = 23;
-            this.tbSalaryEdit.TextChanged += new System.EventHandler(this.tbSalary_TextChanged);
-            // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.Location = new System.Drawing.Point(116, 343);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(200, 22);
-            this.dtpEndDate.TabIndex = 24;
-            // 
-            // dtpHireDate
-            // 
-            this.dtpHireDate.Location = new System.Drawing.Point(116, 296);
-            this.dtpHireDate.Name = "dtpHireDate";
-            this.dtpHireDate.Size = new System.Drawing.Size(200, 22);
-            this.dtpHireDate.TabIndex = 25;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(351, 462);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(175, 45);
-            this.btnEdit.TabIndex = 26;
-            this.btnEdit.Text = "Update";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // cmbDnameEdit
-            // 
-            this.cmbDnameEdit.FormattingEnabled = true;
-            this.cmbDnameEdit.Location = new System.Drawing.Point(130, 240);
-            this.cmbDnameEdit.Name = "cmbDnameEdit";
-            this.cmbDnameEdit.Size = new System.Drawing.Size(121, 24);
-            this.cmbDnameEdit.TabIndex = 27;
+            this.dtgEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEdit.Location = new System.Drawing.Point(332, 21);
+            this.dtgEdit.Name = "dtgEdit";
+            this.dtgEdit.RowHeadersWidth = 51;
+            this.dtgEdit.RowTemplate.Height = 24;
+            this.dtgEdit.Size = new System.Drawing.Size(483, 431);
+            this.dtgEdit.TabIndex = 0;
+            this.dtgEdit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEdit_CellContentClick);
             // 
             // Edit
             // 

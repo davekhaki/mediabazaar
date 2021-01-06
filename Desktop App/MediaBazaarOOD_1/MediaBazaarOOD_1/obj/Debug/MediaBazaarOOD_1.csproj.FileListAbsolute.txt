@@ -36,3 +36,45 @@ C:\Users\sbokk\Downloads\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Runt
 C:\Users\sbokk\Downloads\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.csproj.CopyComplete
 C:\Users\sbokk\Downloads\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.exe
 C:\Users\sbokk\Downloads\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.pdb
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.csprojAssemblyReference.cache
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.Forms.Admin.resources
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.Forms.Edit.resources
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.Forms.Manager.resources
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.Form1.resources
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.Forms.Employee.resources
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.Forms.Statistics.resources
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.Properties.Resources.resources
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.csproj.GenerateResource.cache
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.csproj.CoreCompileInputs.cache
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.exe
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.pdb
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\MediaBazaarOOD_1.exe.config
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\MediaBazaarOOD_1.exe
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\MediaBazaarOOD_1.pdb
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\Google.Protobuf.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\itextsharp.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\MySql.Data.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\Renci.SshNet.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Buffers.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Memory.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\Zstandard.Net.dll
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\Google.Protobuf.pdb
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\Google.Protobuf.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\itextsharp.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\MySql.Data.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\Renci.SshNet.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Buffers.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Memory.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\sbokk\artichoke\Desktop App\MediaBazaarOOD_1\MediaBazaarOOD_1\obj\Debug\MediaBazaarOOD_1.csproj.CopyComplete

@@ -9,9 +9,11 @@ using System.Windows.Forms;
 
 namespace MediaBazaarOOD_1.DataLayer
 {
-    public static class PersonData
+    public class PersonData
     {
-        // private static object ID;
+        //private static object ID;
+
+        readonly DbHelper dbHelper = new DbHelper();
 
         public static void AddPerson(Person person)
         {
@@ -51,7 +53,7 @@ namespace MediaBazaarOOD_1.DataLayer
             List<Person> persons = new List<Person>();
             try
             {
-                MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
+                MySqlConnection conn = new MySqlConnection("server=localhost;database=dbi434661;uid=root;");
                 string sql = "SELECT * FROM employee";
 
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -86,35 +88,40 @@ namespace MediaBazaarOOD_1.DataLayer
 
 
         }
-        public static void EditPersonDetails(string FirstName, string LastName, int Age, string Gender, string DepartmentName, DateTime HireDate, int Salary, string Adress, string Role)
+        public void EditPersonDetails(int id, string FirstName, string LastName, int Age, string Gender, string DepartmentName, DateTime HireDate, int Salary, string Adress, string Role)
         {
             try
             {
-                MySqlConnection conn = new MySqlConnection("Persist Security Info=False;database=dbi434661;server=studmysql01.fhict.local;Connect Timeout=30;user id=dbi434661; pwd=daivbot");
-                string sql = "UPDATE `employee` SET `FirstName` = @FirstName, `LastName` = @LastName, `Age` = @Age, `Gender` = @Gender, `DepartmentName` = @DepartmentName, `HireDate` = @HireDate, `Salary` = @Salary, `Adress` = @Adress, `Role` = @Role WHERE id = @id";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@FirstName", FirstName);
-                cmd.Parameters.AddWithValue("@LastName", LastName);
-                cmd.Parameters.AddWithValue("@Age", Age);
-                cmd.Parameters.AddWithValue("@Gender", Gender);
-                cmd.Parameters.AddWithValue("@DepartmentName", DepartmentName);
-                cmd.Parameters.AddWithValue("@HireDate", HireDate);
+                string sql = "UPDATE dbi434661.employee SET FirstName = @FirstName, LastName = @LastName, Age = @Age, Gender = @Gender, DepartmentName = @DepartmentName, HireDate = @HireDate, Salary = @Salary, Adress = @Adress, Role = @Role WHERE id = @id";
+                dbHelper.Conn.Open();
+                dbHelper.Cmd = new MySqlCommand(sql, dbHelper.Conn);
+
+                dbHelper.Cmd.Parameters.AddWithValue("@id", id);
+                dbHelper.Cmd.Parameters.AddWithValue("@FirstName", FirstName);
+                dbHelper.Cmd.Parameters.AddWithValue("@LastName", LastName);
+                dbHelper.Cmd.Parameters.AddWithValue("@Age", Age);
+                dbHelper.Cmd.Parameters.AddWithValue("@Gender", Gender);
+                dbHelper.Cmd.Parameters.AddWithValue("@DepartmentName", DepartmentName);
+                dbHelper.Cmd.Parameters.AddWithValue("@HireDate", HireDate);
                 //cmd.Parameters.AddWithValue("@EndDate", EndDate);
-                cmd.Parameters.AddWithValue("@Salary", Salary);
-                cmd.Parameters.AddWithValue("@Adress", Adress);
-                cmd.Parameters.AddWithValue("@Role", Role);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                dbHelper.Cmd.Parameters.AddWithValue("@Salary", Salary);
+                dbHelper.Cmd.Parameters.AddWithValue("@Adress", Adress);
+                dbHelper.Cmd.Parameters.AddWithValue("@Role", Role);
+
+                dbHelper.Cmd.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
+            finally {
+                dbHelper.Conn.Close();
+            }
 
         }
-
+       
 
         public static void DeletePersonDetails()
         {

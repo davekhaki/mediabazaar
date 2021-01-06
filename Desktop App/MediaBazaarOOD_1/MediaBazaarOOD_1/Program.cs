@@ -16,7 +16,7 @@ namespace MediaBazaarOOD_1.Forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Manager());
+            Application.Run(new Edit());
         }
     }
 }

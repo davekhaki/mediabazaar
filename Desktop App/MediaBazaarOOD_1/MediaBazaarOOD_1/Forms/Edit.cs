@@ -35,8 +35,13 @@ namespace MediaBazaarOOD_1.Forms
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
+
         {
-            personManager.EditEmployeeInfo(tbIdEdit.Text, tbFnEdit.Text, Convert.ToInt32(tbLnEdit.Text), this.cmbGender.Text,this.cmbDnameEdit.Text, Convert.ToDateTime(this.dtpHireDate.Text), Convert.ToInt32(tbSalaryEdit), this.tbAddressEdit.Text,this.cmbRole.Text);
+
+            string gender = this.cmbGender.Text;
+            string dpname = this.cmbDnameEdit.Text;
+            personManager.EditEmployeeInfo(Convert.ToInt32(tbIdEdit.Text), tbFnEdit.Text,tbLnEdit.Text, Convert.ToInt32(tbAgeEdit.Text),gender, dpname, Convert.ToDateTime(this.dtpHireDate.Text), Convert.ToInt32(tbSalaryEdit.Text), this.tbAddressEdit.Text,this.cmbRole.Text);
+            AutoFillPersonGridEdit();
         }
 
         private void tbSalary_TextChanged(object sender, EventArgs e)
@@ -49,6 +54,7 @@ namespace MediaBazaarOOD_1.Forms
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow dgvr = dtgEdit.Rows[e.RowIndex];
+                tbIdEdit.Text = dgvr.Cells["ID"].Value.ToString();
                 tbFnEdit.Text = dgvr.Cells["FirstName"].Value.ToString();
                 tbLnEdit.Text = dgvr.Cells["LastName"].Value.ToString();
                 tbAgeEdit.Text = dgvr.Cells["Age"].Value.ToString();

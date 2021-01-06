@@ -11,7 +11,9 @@ namespace MediaBazaarOOD_1.LogicLayer
     public class PersonManager
     {
 
+
         //all the employee related data access
+        PersonData pd = new PersonData();
         List<Person> persons;
         public PersonManager()
         {
@@ -68,10 +70,10 @@ namespace MediaBazaarOOD_1.LogicLayer
         {
             return PersonData.GetAllIds();
         }
-        public void EditEmployeeInfo(string firstName, string lastName, int age, string gender, string dName, DateTime hireDate, int salary, string address, string role)
+        public void EditEmployeeInfo(int id, string firstName, string lastName, int age, string gender, string dName, DateTime hireDate, int salary, string address, string role)
         {
             //this method edits any of the persons details.....
-            PersonData.EditPersonDetails(firstName, lastName, age, gender, dName, hireDate, salary, address, role);
+            pd.EditPersonDetails(id,firstName, lastName, age, gender, dName, hireDate, salary, address, role);
         }
 
 

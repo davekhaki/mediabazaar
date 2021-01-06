@@ -26,7 +26,7 @@ namespace MediaBazaarOOD_1.LogicLayer
 
         public int GetAverageSalary()
         {
-            return 
+            return 1; 
         }
 
         public int GetNrPerGender(string gender)

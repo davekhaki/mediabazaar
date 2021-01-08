@@ -18,7 +18,7 @@ $email = $_POST['email'];
 $userInsert=$admin->addEmployee($firstname,$lastname,$age,$gender,$departmentName,$hireDate,$address,$role,$salary,$email);
 echo ("<SCRIPT LANGUAGE='JavaScript'>
    window.alert('Succesfully Updated')
-   window.location.href='filetest.php ';
+   window.location.href='addEmployee.php ';
    </SCRIPT>");
 }
 $userDetails=$userClass->userInfo($session_empId);

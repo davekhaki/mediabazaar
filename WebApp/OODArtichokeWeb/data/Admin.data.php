@@ -78,8 +78,8 @@ $mail->addAddress($email, $name);     // Add a recipient
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Login Info';
-$mail->Body    = 'We are glad to have you in our team, <b>'.$name.'!</b>';
-$mail->AltBody = 'Login info <p>Username: '.$username.'</p> <p>Password: '.$password.' </p>';
+$mail->Body    = 'We are glad to have you in our team, <b>'.$name.'!</b> <p>Login info</p> <p>Username: '.$username.'</p> <p>Password: '.$password.' </p>';
+//$mail->AltBody = 'Login info <p>Username: '.$username.'</p> <p>Password: '.$password.' </p>';
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
@@ -104,7 +104,7 @@ public function addEmployee($firstname,$lastname,$age,$gender,$department,$hired
   $id = $data->ID;
   $stmt2 = $this->connect()->prepare("INSERT INTO login(empId,username,password) VALUES(?,?,?)");
 //$email = $this->sendLogin($firstn4ame."1",$pass);
-$email =$this->sendMail($firstname." ".$lastname,$email,$firstname."1",$pas );
+$email =$this->sendMail($firstname." ".$lastname,$email,$pass,$firstname."1" );
   $stmt2 ->execute([$id,$firstname."1",$hashpassword]);
 
   } catch(PDOException $e) {

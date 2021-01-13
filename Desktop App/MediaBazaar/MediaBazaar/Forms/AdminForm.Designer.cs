@@ -1,0 +1,564 @@
+﻿namespace MediaBazaarOO.Forms
+{
+    partial class AdminForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.employeesDataGrid = new System.Windows.Forms.DataGridView();
+            this.disableAllBtn = new System.Windows.Forms.Button();
+            this.enableAllBtn = new System.Windows.Forms.Button();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.idCheckBox = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.departmentsDataGrid = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbDptId = new System.Windows.Forms.TextBox();
+            this.btnEditDepartment = new System.Windows.Forms.Button();
+            this.tbDptName = new System.Windows.Forms.TextBox();
+            this.btnAddDepartment = new System.Windows.Forms.Button();
+            this.stockDataGrid = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsDataGrid)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGrid)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Location = new System.Drawing.Point(5, 34);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1026, 681);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1018, 652);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Add Employee";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1018, 652);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Departments";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1018, 652);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Statistics";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.stockDataGrid);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1018, 652);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Stock";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.groupBox3);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1018, 652);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Download PDF";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.disableAllBtn);
+            this.tabPage1.Controls.Add(this.enableAllBtn);
+            this.tabPage1.Controls.Add(this.checkBox11);
+            this.tabPage1.Controls.Add(this.checkBox10);
+            this.tabPage1.Controls.Add(this.checkBox9);
+            this.tabPage1.Controls.Add(this.checkBox8);
+            this.tabPage1.Controls.Add(this.checkBox7);
+            this.tabPage1.Controls.Add(this.checkBox6);
+            this.tabPage1.Controls.Add(this.checkBox5);
+            this.tabPage1.Controls.Add(this.checkBox4);
+            this.tabPage1.Controls.Add(this.checkBox3);
+            this.tabPage1.Controls.Add(this.checkBox2);
+            this.tabPage1.Controls.Add(this.idCheckBox);
+            this.tabPage1.Controls.Add(this.employeesDataGrid);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1018, 652);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "View Employees";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // employeesDataGrid
+            // 
+            this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.employeesDataGrid.Location = new System.Drawing.Point(6, 6);
+            this.employeesDataGrid.Name = "employeesDataGrid";
+            this.employeesDataGrid.RowHeadersWidth = 51;
+            this.employeesDataGrid.RowTemplate.Height = 24;
+            this.employeesDataGrid.Size = new System.Drawing.Size(729, 640);
+            this.employeesDataGrid.TabIndex = 0;
+            // 
+            // disableAllBtn
+            // 
+            this.disableAllBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.disableAllBtn.ForeColor = System.Drawing.Color.Black;
+            this.disableAllBtn.Location = new System.Drawing.Point(810, 495);
+            this.disableAllBtn.Name = "disableAllBtn";
+            this.disableAllBtn.Size = new System.Drawing.Size(136, 33);
+            this.disableAllBtn.TabIndex = 51;
+            this.disableAllBtn.Text = "Disable All";
+            this.disableAllBtn.UseVisualStyleBackColor = false;
+            this.disableAllBtn.Click += new System.EventHandler(this.disableAllBtn_Click);
+            // 
+            // enableAllBtn
+            // 
+            this.enableAllBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.enableAllBtn.Location = new System.Drawing.Point(810, 438);
+            this.enableAllBtn.Name = "enableAllBtn";
+            this.enableAllBtn.Size = new System.Drawing.Size(136, 34);
+            this.enableAllBtn.TabIndex = 50;
+            this.enableAllBtn.Text = "Enable All";
+            this.enableAllBtn.UseVisualStyleBackColor = false;
+            this.enableAllBtn.Click += new System.EventHandler(this.enableAllBtn_Click);
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Checked = true;
+            this.checkBox11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox11.Location = new System.Drawing.Point(834, 400);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(59, 21);
+            this.checkBox11.TabIndex = 49;
+            this.checkBox11.Text = "Role";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Checked = true;
+            this.checkBox10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox10.Location = new System.Drawing.Point(834, 373);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(82, 21);
+            this.checkBox10.TabIndex = 48;
+            this.checkBox10.Text = "Address";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Checked = true;
+            this.checkBox9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox9.Location = new System.Drawing.Point(834, 346);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(70, 21);
+            this.checkBox9.TabIndex = 47;
+            this.checkBox9.Text = "Salary";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Checked = true;
+            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox8.Location = new System.Drawing.Point(834, 319);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(89, 21);
+            this.checkBox8.TabIndex = 46;
+            this.checkBox8.Text = "End Date";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Checked = true;
+            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox7.Location = new System.Drawing.Point(834, 292);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(90, 21);
+            this.checkBox7.TabIndex = 45;
+            this.checkBox7.Text = "Hire Date";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Location = new System.Drawing.Point(834, 265);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(101, 21);
+            this.checkBox6.TabIndex = 44;
+            this.checkBox6.Text = "Dept Name";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Location = new System.Drawing.Point(834, 238);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(78, 21);
+            this.checkBox5.TabIndex = 43;
+            this.checkBox5.Text = "Gender";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(834, 211);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(55, 21);
+            this.checkBox4.TabIndex = 42;
+            this.checkBox4.Text = "Age";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(834, 184);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(98, 21);
+            this.checkBox3.TabIndex = 41;
+            this.checkBox3.Text = "Last Name";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(834, 157);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(98, 21);
+            this.checkBox2.TabIndex = 40;
+            this.checkBox2.Text = "First Name";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // idCheckBox
+            // 
+            this.idCheckBox.AutoSize = true;
+            this.idCheckBox.Checked = true;
+            this.idCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.idCheckBox.Location = new System.Drawing.Point(834, 130);
+            this.idCheckBox.Name = "idCheckBox";
+            this.idCheckBox.Size = new System.Drawing.Size(43, 21);
+            this.idCheckBox.TabIndex = 39;
+            this.idCheckBox.Text = "ID";
+            this.idCheckBox.UseVisualStyleBackColor = true;
+            this.idCheckBox.CheckedChanged += new System.EventHandler(this.idCheckBox_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.departmentsDataGrid);
+            this.groupBox2.Location = new System.Drawing.Point(500, 16);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(498, 619);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Departments";
+            // 
+            // departmentsDataGrid
+            // 
+            this.departmentsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.departmentsDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.departmentsDataGrid.Location = new System.Drawing.Point(20, 33);
+            this.departmentsDataGrid.Name = "departmentsDataGrid";
+            this.departmentsDataGrid.RowHeadersWidth = 51;
+            this.departmentsDataGrid.RowTemplate.Height = 24;
+            this.departmentsDataGrid.Size = new System.Drawing.Size(462, 573);
+            this.departmentsDataGrid.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.tbDptId);
+            this.groupBox1.Controls.Add(this.btnEditDepartment);
+            this.groupBox1.Controls.Add(this.tbDptName);
+            this.groupBox1.Controls.Add(this.btnAddDepartment);
+            this.groupBox1.Location = new System.Drawing.Point(19, 16);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(475, 619);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Details";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(124, 156);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Dpt Id";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(124, 218);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 17);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Dpt Name";
+            // 
+            // tbDptId
+            // 
+            this.tbDptId.Location = new System.Drawing.Point(241, 156);
+            this.tbDptId.Name = "tbDptId";
+            this.tbDptId.Size = new System.Drawing.Size(100, 22);
+            this.tbDptId.TabIndex = 5;
+            // 
+            // btnEditDepartment
+            // 
+            this.btnEditDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEditDepartment.Location = new System.Drawing.Point(127, 494);
+            this.btnEditDepartment.Name = "btnEditDepartment";
+            this.btnEditDepartment.Size = new System.Drawing.Size(214, 36);
+            this.btnEditDepartment.TabIndex = 1;
+            this.btnEditDepartment.Text = "Edit";
+            this.btnEditDepartment.UseVisualStyleBackColor = false;
+            this.btnEditDepartment.Click += new System.EventHandler(this.btnEditDepartment_Click);
+            // 
+            // tbDptName
+            // 
+            this.tbDptName.Location = new System.Drawing.Point(241, 218);
+            this.tbDptName.Name = "tbDptName";
+            this.tbDptName.Size = new System.Drawing.Size(100, 22);
+            this.tbDptName.TabIndex = 6;
+            // 
+            // btnAddDepartment
+            // 
+            this.btnAddDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddDepartment.Location = new System.Drawing.Point(127, 390);
+            this.btnAddDepartment.Name = "btnAddDepartment";
+            this.btnAddDepartment.Size = new System.Drawing.Size(214, 36);
+            this.btnAddDepartment.TabIndex = 0;
+            this.btnAddDepartment.Text = "Add";
+            this.btnAddDepartment.UseVisualStyleBackColor = false;
+            this.btnAddDepartment.Click += new System.EventHandler(this.btnAddDepartment_Click);
+            // 
+            // stockDataGrid
+            // 
+            this.stockDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stockDataGrid.Location = new System.Drawing.Point(19, 20);
+            this.stockDataGrid.Name = "stockDataGrid";
+            this.stockDataGrid.RowHeadersWidth = 51;
+            this.stockDataGrid.RowTemplate.Height = 24;
+            this.stockDataGrid.Size = new System.Drawing.Size(979, 617);
+            this.stockDataGrid.TabIndex = 1;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Gray;
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.radioButton3);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1012, 646);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Download PDF";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4.Location = new System.Drawing.Point(365, 514);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(248, 69);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Download";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(107, 56);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(64, 21);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Stock";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(438, 56);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(110, 21);
+            this.radioButton3.TabIndex = 3;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Departments";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // AdminForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1043, 727);
+            this.Controls.Add(this.tabControl1);
+            this.Name = "AdminForm";
+            this.Text = "AdminForm";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsDataGrid)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGrid)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button disableAllBtn;
+        private System.Windows.Forms.Button enableAllBtn;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox idCheckBox;
+        private System.Windows.Forms.DataGridView employeesDataGrid;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView departmentsDataGrid;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbDptId;
+        private System.Windows.Forms.Button btnEditDepartment;
+        private System.Windows.Forms.TextBox tbDptName;
+        private System.Windows.Forms.Button btnAddDepartment;
+        private System.Windows.Forms.DataGridView stockDataGrid;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton3;
+    }
+}

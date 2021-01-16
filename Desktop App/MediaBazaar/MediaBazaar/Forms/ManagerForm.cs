@@ -23,15 +23,6 @@ namespace MediaBazaarOO.Forms
 
 
 
-
-
-
-        private void scheduleOverviewDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-            var sm = new ScheduleManager();
-            scheduleOverviewDataGrid.DataSource = sm.GetOverview(scheduleOverviewDatePicker.Value);
-        }
-
         private void assignBtn_Click(object sender, EventArgs e)
         {
             var checkedButton = manualAssignGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
@@ -51,6 +42,19 @@ namespace MediaBazaarOO.Forms
             var loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void scheduleOverviewCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            scheduleManager.GetLatestSchedules();
+            scheduleOverviewDataGrid.DataSource = scheduleManager.GetOverview(scheduleOverviewCalendar.SelectionRange.Start.Date);
+        }
+
+        private void tabPage3_Enter(object sender, EventArgs e)
+        {
+            scheduleManager.GetLatestSchedules();
+            scheduleOverviewDataGrid.DataSource = scheduleManager.GetOverview(scheduleOverviewCalendar.SelectionRange.Start.Date);
+
         }
     }
 }

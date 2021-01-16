@@ -11,9 +11,14 @@ namespace MediaBazaar.Logic
 {
     public class ScheduleManager
     {
-        private readonly List<Schedule> schedules;
+        private List<Schedule> schedules;
 
         public ScheduleManager()
+        {
+            schedules = ScheduleData.GetAllSchedules();
+        }
+
+        public void GetLatestSchedules()
         {
             schedules = ScheduleData.GetAllSchedules();
         }

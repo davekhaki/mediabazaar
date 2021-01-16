@@ -72,8 +72,13 @@
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.scheduleOverviewDataGrid = new System.Windows.Forms.DataGridView();
-            this.scheduleOverviewDatePicker = new System.Windows.Forms.DateTimePicker();
             this.signOutBtn = new System.Windows.Forms.Button();
+            this.scheduleOverviewCalendar = new System.Windows.Forms.MonthCalendar();
+            this.idCheckBox = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -322,7 +327,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1031, 507);
+            this.tabPage2.Size = new System.Drawing.Size(1031, 504);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Assign Schedules";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -505,32 +510,30 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.checkBox4);
+            this.tabPage3.Controls.Add(this.checkBox3);
+            this.tabPage3.Controls.Add(this.checkBox2);
+            this.tabPage3.Controls.Add(this.checkBox1);
+            this.tabPage3.Controls.Add(this.idCheckBox);
+            this.tabPage3.Controls.Add(this.scheduleOverviewCalendar);
             this.tabPage3.Controls.Add(this.scheduleOverviewDataGrid);
-            this.tabPage3.Controls.Add(this.scheduleOverviewDatePicker);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1031, 507);
+            this.tabPage3.Size = new System.Drawing.Size(1031, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Schedules Overview";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
             // 
             // scheduleOverviewDataGrid
             // 
             this.scheduleOverviewDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.scheduleOverviewDataGrid.Location = new System.Drawing.Point(401, 119);
+            this.scheduleOverviewDataGrid.Location = new System.Drawing.Point(283, 91);
             this.scheduleOverviewDataGrid.Name = "scheduleOverviewDataGrid";
             this.scheduleOverviewDataGrid.RowHeadersWidth = 51;
             this.scheduleOverviewDataGrid.RowTemplate.Height = 24;
-            this.scheduleOverviewDataGrid.Size = new System.Drawing.Size(523, 282);
+            this.scheduleOverviewDataGrid.Size = new System.Drawing.Size(514, 282);
             this.scheduleOverviewDataGrid.TabIndex = 1;
-            // 
-            // scheduleOverviewDatePicker
-            // 
-            this.scheduleOverviewDatePicker.Location = new System.Drawing.Point(140, 171);
-            this.scheduleOverviewDatePicker.Name = "scheduleOverviewDatePicker";
-            this.scheduleOverviewDatePicker.Size = new System.Drawing.Size(200, 22);
-            this.scheduleOverviewDatePicker.TabIndex = 0;
-            this.scheduleOverviewDatePicker.ValueChanged += new System.EventHandler(this.scheduleOverviewDatePicker_ValueChanged);
             // 
             // signOutBtn
             // 
@@ -542,6 +545,63 @@
             this.signOutBtn.Text = "Sign Out";
             this.signOutBtn.UseVisualStyleBackColor = false;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
+            // 
+            // scheduleOverviewCalendar
+            // 
+            this.scheduleOverviewCalendar.Location = new System.Drawing.Point(9, 111);
+            this.scheduleOverviewCalendar.Name = "scheduleOverviewCalendar";
+            this.scheduleOverviewCalendar.TabIndex = 2;
+            this.scheduleOverviewCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.scheduleOverviewCalendar_DateChanged);
+            // 
+            // idCheckBox
+            // 
+            this.idCheckBox.AutoSize = true;
+            this.idCheckBox.Location = new System.Drawing.Point(823, 111);
+            this.idCheckBox.Name = "idCheckBox";
+            this.idCheckBox.Size = new System.Drawing.Size(109, 21);
+            this.idCheckBox.TabIndex = 3;
+            this.idCheckBox.Text = "Employee ID";
+            this.idCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(823, 139);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 21);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "First Name";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(823, 166);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(98, 21);
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "Last Name";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(823, 193);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(106, 21);
+            this.checkBox3.TabIndex = 6;
+            this.checkBox3.Text = "Time of Day";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(823, 220);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(55, 21);
+            this.checkBox4.TabIndex = 7;
+            this.checkBox4.Text = "Day";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // ManagerForm
             // 
@@ -566,6 +626,7 @@
             this.manualAssignGroupBox.ResumeLayout(false);
             this.manualAssignGroupBox.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleOverviewDataGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -596,7 +657,6 @@
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView scheduleOverviewDataGrid;
-        private System.Windows.Forms.DateTimePicker scheduleOverviewDatePicker;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -619,5 +679,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button signOutBtn;
+        private System.Windows.Forms.MonthCalendar scheduleOverviewCalendar;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox idCheckBox;
     }
 }

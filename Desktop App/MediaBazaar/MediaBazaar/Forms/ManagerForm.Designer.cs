@@ -322,6 +322,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Teal;
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.manualAssignGroupBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
@@ -330,7 +331,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1031, 504);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Assign Schedules";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -510,6 +510,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Teal;
             this.tabPage3.Controls.Add(this.checkBox4);
             this.tabPage3.Controls.Add(this.checkBox3);
             this.tabPage3.Controls.Add(this.checkBox2);
@@ -522,17 +523,17 @@
             this.tabPage3.Size = new System.Drawing.Size(1031, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Schedules Overview";
-            this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
             // 
             // scheduleOverviewDataGrid
             // 
             this.scheduleOverviewDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.scheduleOverviewDataGrid.Location = new System.Drawing.Point(283, 91);
+            this.scheduleOverviewDataGrid.Location = new System.Drawing.Point(314, 91);
             this.scheduleOverviewDataGrid.Name = "scheduleOverviewDataGrid";
+            this.scheduleOverviewDataGrid.RowHeadersVisible = false;
             this.scheduleOverviewDataGrid.RowHeadersWidth = 51;
             this.scheduleOverviewDataGrid.RowTemplate.Height = 24;
-            this.scheduleOverviewDataGrid.Size = new System.Drawing.Size(514, 282);
+            this.scheduleOverviewDataGrid.Size = new System.Drawing.Size(483, 282);
             this.scheduleOverviewDataGrid.TabIndex = 1;
             // 
             // signOutBtn
@@ -556,52 +557,67 @@
             // idCheckBox
             // 
             this.idCheckBox.AutoSize = true;
-            this.idCheckBox.Location = new System.Drawing.Point(823, 111);
+            this.idCheckBox.Checked = true;
+            this.idCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.idCheckBox.Location = new System.Drawing.Point(823, 166);
             this.idCheckBox.Name = "idCheckBox";
             this.idCheckBox.Size = new System.Drawing.Size(109, 21);
             this.idCheckBox.TabIndex = 3;
             this.idCheckBox.Text = "Employee ID";
             this.idCheckBox.UseVisualStyleBackColor = true;
+            this.idCheckBox.CheckedChanged += new System.EventHandler(this.idCheckBox_CheckedChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(823, 139);
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(823, 111);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(98, 21);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "First Name";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(823, 166);
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(823, 139);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(98, 21);
             this.checkBox2.TabIndex = 5;
             this.checkBox2.Text = "Last Name";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(823, 193);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(106, 21);
             this.checkBox3.TabIndex = 6;
             this.checkBox3.Text = "Time of Day";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(823, 220);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(55, 21);
             this.checkBox4.TabIndex = 7;
             this.checkBox4.Text = "Day";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // ManagerForm
             // 

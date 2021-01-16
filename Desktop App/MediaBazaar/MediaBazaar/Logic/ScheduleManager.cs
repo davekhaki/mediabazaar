@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MediaBazaar.Data;
 using MediaBazaarOO.Entities;
+using MediaBazaarOO.Logic;
 using MediaBazaarOO.Logic.Interfaces;
 
 namespace MediaBazaar.Logic
@@ -50,7 +52,7 @@ namespace MediaBazaar.Logic
             //return schedules.Where(s => s.EmpId == employeeId && s.Day >= DateTime.Now).ToList();
         }
 
-        public List<Schedule> GetOverview(DateTime day)
+        private List<Schedule> GetOverview(DateTime day)
         {
             var list = new List<Schedule>();
             foreach (var s in schedules)
@@ -59,6 +61,32 @@ namespace MediaBazaar.Logic
             }
 
             return list;
+        }
+
+        public DataTable GetOverview(PersonManager pm, DateTime date)
+        {
+            GetLatestSchedules();
+
+            var dt = new DataTable();
+
+            dt.Columns.Add(new DataColumn(("First Name"), typeof(string)));
+            dt.Columns.Add(new DataColumn(("Last Name"), typeof(string)));
+            dt.Columns.Add(new DataColumn(("Employee ID"), typeof(int)));
+            dt.Columns.Add(new DataColumn(("Time"), typeof(string)));
+            dt.Columns.Add(new DataColumn(("Day"), typeof(DateTime)));
+
+            foreach (var s in GetOverview(date))
+            {
+                var row = dt.NewRow();
+                row["First Name"] = pm.GetFirstName(s.EmpId);
+                row["Last Name"] = pm.GetLastName(s.EmpId);
+                row["Employee ID"] = s.EmpId;
+                row["Time"] = s.TimeOfDay;
+                row["Day"] = s.Day;
+                dt.Rows.Add(row);
+            }
+
+            return dt;
         }
     }
 }

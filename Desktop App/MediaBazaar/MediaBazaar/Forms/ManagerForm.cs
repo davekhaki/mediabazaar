@@ -19,6 +19,7 @@ namespace MediaBazaarOO.Forms
         {
             InitializeComponent();
             Text = "Manager | " + username;
+            
         }
 
 
@@ -46,15 +47,37 @@ namespace MediaBazaarOO.Forms
 
         private void scheduleOverviewCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
-            scheduleManager.GetLatestSchedules();
-            scheduleOverviewDataGrid.DataSource = scheduleManager.GetOverview(scheduleOverviewCalendar.SelectionRange.Start.Date);
+            scheduleOverviewDataGrid.DataSource = scheduleManager.GetOverview(personManager, scheduleOverviewCalendar.SelectionRange.Start.Date);
         }
 
         private void tabPage3_Enter(object sender, EventArgs e)
         {
-            scheduleManager.GetLatestSchedules();
-            scheduleOverviewDataGrid.DataSource = scheduleManager.GetOverview(scheduleOverviewCalendar.SelectionRange.Start.Date);
+            scheduleOverviewDataGrid.DataSource = scheduleManager.GetOverview(personManager, scheduleOverviewCalendar.SelectionRange.Start.Date);
+        }
 
+        private void idCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            scheduleOverviewDataGrid.Columns["Employee ID"].Visible = !scheduleOverviewDataGrid.Columns["Employee ID"].Visible;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            scheduleOverviewDataGrid.Columns["First Name"].Visible = !scheduleOverviewDataGrid.Columns["First Name"].Visible;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            scheduleOverviewDataGrid.Columns["Last Name"].Visible = !scheduleOverviewDataGrid.Columns["Last Name"].Visible;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            scheduleOverviewDataGrid.Columns["Time"].Visible = !scheduleOverviewDataGrid.Columns["Time"].Visible;
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            scheduleOverviewDataGrid.Columns["Day"].Visible = !scheduleOverviewDataGrid.Columns["Day"].Visible;
         }
     }
 }

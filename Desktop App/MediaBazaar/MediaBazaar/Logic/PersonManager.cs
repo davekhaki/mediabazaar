@@ -81,6 +81,31 @@ namespace MediaBazaarOO.Logic
             return PersonData.GetIdFromUsername(username);
         }
 
+        public string GetFirstName(int id)
+        {
+            foreach(var p in persons)
+            {
+                if (p.Id == id)
+                {
+                    return p.FirstName;
+                }
+            }
+
+            return null;
+        }
+        public string GetLastName(int id)
+        {
+            foreach (var p in persons)
+            {
+                if (p.Id == id)
+                {
+                    return p.LastName;
+                }
+            }
+
+            return null;
+        }
+
         public int GetIdFromFirstAndLastname(string first, string last)
         {
             // LINQ expression returns a person ID where first and lastname match

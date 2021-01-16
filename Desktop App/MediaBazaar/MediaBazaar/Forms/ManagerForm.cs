@@ -18,7 +18,7 @@ namespace MediaBazaarOO.Forms
         public ManagerForm(string username)
         {
             InitializeComponent();
-            Text = username;
+            Text = "Manager | " + username;
         }
 
 
@@ -28,7 +28,8 @@ namespace MediaBazaarOO.Forms
 
         private void scheduleOverviewDatePicker_ValueChanged(object sender, EventArgs e)
         {
-            scheduleOverviewDataGrid.DataSource = scheduleManager.GetOverview(scheduleOverviewDatePicker.Value);
+            var sm = new ScheduleManager();
+            scheduleOverviewDataGrid.DataSource = sm.GetOverview(scheduleOverviewDatePicker.Value);
         }
 
         private void assignBtn_Click(object sender, EventArgs e)
@@ -40,10 +41,16 @@ namespace MediaBazaarOO.Forms
 
         private void autoAssignBtn_Click(object sender, EventArgs e)
         {
-            //AutoScheduleAlgorithm algorithm = new AutoScheduleAlgorithm(personManager.GetEmployees(), dateTimePicker1.Value, dateTimePicker2.Value);
-            //algorithm.AssignSchedules();
-            //MessageBox.Show("Schedules Assigned.");
-            MessageBox.Show("____");
+            var algorithm = new AutoScheduleAlgorithm(dateTimePicker1.Value, dateTimePicker2.Value);
+            algorithm.AssignSchedules();
+            MessageBox.Show("Schedules Assigned.");
+        }
+
+        private void signOutBtn_Click(object sender, EventArgs e)
+        {
+            var loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

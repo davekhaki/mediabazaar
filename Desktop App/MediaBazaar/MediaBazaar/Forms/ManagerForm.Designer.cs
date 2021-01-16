@@ -73,6 +73,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.scheduleOverviewDataGrid = new System.Windows.Forms.DataGridView();
             this.scheduleOverviewDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.signOutBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -321,7 +322,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1031, 504);
+            this.tabPage2.Size = new System.Drawing.Size(1031, 507);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Assign Schedules";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -508,7 +509,7 @@
             this.tabPage3.Controls.Add(this.scheduleOverviewDatePicker);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1031, 504);
+            this.tabPage3.Size = new System.Drawing.Size(1031, 507);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Schedules Overview";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -531,11 +532,23 @@
             this.scheduleOverviewDatePicker.TabIndex = 0;
             this.scheduleOverviewDatePicker.ValueChanged += new System.EventHandler(this.scheduleOverviewDatePicker_ValueChanged);
             // 
+            // signOutBtn
+            // 
+            this.signOutBtn.BackColor = System.Drawing.Color.Red;
+            this.signOutBtn.Location = new System.Drawing.Point(870, 12);
+            this.signOutBtn.Name = "signOutBtn";
+            this.signOutBtn.Size = new System.Drawing.Size(165, 49);
+            this.signOutBtn.TabIndex = 3;
+            this.signOutBtn.Text = "Sign Out";
+            this.signOutBtn.UseVisualStyleBackColor = false;
+            this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 586);
+            this.Controls.Add(this.signOutBtn);
             this.Controls.Add(this.tabControl1);
             this.Name = "ManagerForm";
             this.Text = "ManagerForm";
@@ -605,5 +618,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button signOutBtn;
     }
 }

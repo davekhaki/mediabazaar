@@ -141,5 +141,12 @@ namespace MediaBazaarOO.Forms
                 departmentManager.ExportDepartmentsToPdf(t, @"C:\Users\david\OneDrive\Desktop\deps.pdf", "Departments", departmentsDataGrid);
             }
         }
+
+        private void signOutBtn_Click(object sender, EventArgs e)
+        {
+            var loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }

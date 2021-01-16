@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MediaBazaar.Entities;
 using MediaBazaarOO.Data;
 using MediaBazaarOO.Entities;
 

@@ -15,3 +15,20 @@ C:\Users\david\source\repos\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.exe
 C:\Users\david\source\repos\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.pdb
 C:\Users\david\source\repos\MediaBazaar\MediaBazaar\bin\Debug\itextsharp.dll
 C:\Users\david\source\repos\MediaBazaar\MediaBazaar\bin\Debug\itextsharp.xml
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\bin\Debug\MediaBazaar.exe.config
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\bin\Debug\MediaBazaar.exe
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\bin\Debug\MediaBazaar.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\bin\Debug\itextsharp.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\bin\Debug\MySql.Data.dll
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\bin\Debug\itextsharp.xml
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.csprojAssemblyReference.cache
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaarOO.Forms.AdminForm.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaarOO.Forms.EmployeeForm.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaarOO.Forms.LoginForm.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaarOO.Forms.ManagerForm.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.Properties.Resources.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.csproj.GenerateResource.cache
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.csproj.CopyComplete
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.exe
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.pdb

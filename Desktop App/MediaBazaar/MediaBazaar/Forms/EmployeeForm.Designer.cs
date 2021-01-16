@@ -373,12 +373,13 @@
             // 
             // signOutBtn
             // 
+            this.signOutBtn.BackColor = System.Drawing.Color.Red;
             this.signOutBtn.Location = new System.Drawing.Point(1019, 5);
             this.signOutBtn.Name = "signOutBtn";
             this.signOutBtn.Size = new System.Drawing.Size(165, 43);
             this.signOutBtn.TabIndex = 2;
             this.signOutBtn.Text = "Sign Out";
-            this.signOutBtn.UseVisualStyleBackColor = true;
+            this.signOutBtn.UseVisualStyleBackColor = false;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
             // EmployeeForm

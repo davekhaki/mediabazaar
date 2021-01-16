@@ -60,6 +60,7 @@
     <Compile Include="Data\ScheduleData.cs" />
     <Compile Include="Data\StockData.cs" />
     <Compile Include="Entities\Department.cs" />
+    <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Request.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\AutoScheduleAlgorithm.cs" />
     <Compile Include="Logic\DepartmentManager.cs" />
     <Compile Include="Logic\Interfaces\ScheduleComparer.cs" />
     <Compile Include="Logic\PersonManager.cs" />

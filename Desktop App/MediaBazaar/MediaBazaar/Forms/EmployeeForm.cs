@@ -21,6 +21,7 @@ namespace MediaBazaarOO.Forms
         {
             InitializeComponent();
             Username = username;
+
             Text = "Employee | " + Username;
 
             requestDataGrid.DataSource = requestManager.GetRequests();
@@ -32,8 +33,6 @@ namespace MediaBazaarOO.Forms
 
             stockDataGrid.DefaultCellStyle.ForeColor = Color.Black;
         }
-
-
 
         private void signOutBtn_Click(object sender, EventArgs e)
         {

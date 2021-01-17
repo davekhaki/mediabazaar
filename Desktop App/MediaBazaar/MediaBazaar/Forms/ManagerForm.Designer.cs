@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -71,8 +73,13 @@
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.idCheckBox = new System.Windows.Forms.CheckBox();
+            this.scheduleOverviewCalendar = new System.Windows.Forms.MonthCalendar();
             this.scheduleOverviewDataGrid = new System.Windows.Forms.DataGridView();
-            this.scheduleOverviewDatePicker = new System.Windows.Forms.DateTimePicker();
             this.signOutBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -135,6 +142,14 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.Location = new System.Drawing.Point(9, 274);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
@@ -145,12 +160,21 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView3.Location = new System.Drawing.Point(6, 21);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(669, 221);
             this.dataGridView3.TabIndex = 0;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // groupBox4
             // 
@@ -204,6 +228,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEditProduct
             // 
@@ -214,6 +239,7 @@
             this.btnEditProduct.TabIndex = 13;
             this.btnEditProduct.Text = "Edit Product";
             this.btnEditProduct.UseVisualStyleBackColor = false;
+            this.btnEditProduct.Click += new System.EventHandler(this.btnEditProduct_Click);
             // 
             // btnAddProduct
             // 
@@ -224,6 +250,7 @@
             this.btnAddProduct.TabIndex = 12;
             this.btnAddProduct.Text = "Add";
             this.btnAddProduct.UseVisualStyleBackColor = false;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btnRequest
             // 
@@ -234,6 +261,7 @@
             this.btnRequest.TabIndex = 10;
             this.btnRequest.Text = "Request";
             this.btnRequest.UseVisualStyleBackColor = false;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // tbMinimumQuantity
             // 
@@ -317,15 +345,15 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Teal;
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.manualAssignGroupBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1031, 507);
+            this.tabPage2.Size = new System.Drawing.Size(1031, 504);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Assign Schedules";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -334,6 +362,7 @@
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(378, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(642, 485);
@@ -343,12 +372,14 @@
             // 
             // autoAssignBtn
             // 
-            this.autoAssignBtn.Location = new System.Drawing.Point(224, 356);
+            this.autoAssignBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.autoAssignBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoAssignBtn.Location = new System.Drawing.Point(225, 328);
             this.autoAssignBtn.Name = "autoAssignBtn";
             this.autoAssignBtn.Size = new System.Drawing.Size(178, 94);
             this.autoAssignBtn.TabIndex = 4;
             this.autoAssignBtn.Text = "Assign Shifts";
-            this.autoAssignBtn.UseVisualStyleBackColor = true;
+            this.autoAssignBtn.UseVisualStyleBackColor = false;
             this.autoAssignBtn.Click += new System.EventHandler(this.autoAssignBtn_Click);
             // 
             // dateTimePicker2
@@ -396,6 +427,7 @@
             this.manualAssignGroupBox.Controls.Add(this.label3);
             this.manualAssignGroupBox.Controls.Add(this.lastNameTextBox);
             this.manualAssignGroupBox.Controls.Add(this.firstNameTextBox);
+            this.manualAssignGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.manualAssignGroupBox.Location = new System.Drawing.Point(6, 6);
             this.manualAssignGroupBox.Name = "manualAssignGroupBox";
             this.manualAssignGroupBox.Size = new System.Drawing.Size(366, 485);
@@ -405,12 +437,14 @@
             // 
             // assignBtn
             // 
+            this.assignBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.assignBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.assignBtn.Location = new System.Drawing.Point(86, 386);
             this.assignBtn.Name = "assignBtn";
             this.assignBtn.Size = new System.Drawing.Size(174, 64);
             this.assignBtn.TabIndex = 5;
             this.assignBtn.Text = "Assign Shift";
-            this.assignBtn.UseVisualStyleBackColor = true;
+            this.assignBtn.UseVisualStyleBackColor = false;
             this.assignBtn.Click += new System.EventHandler(this.assignBtn_Click);
             // 
             // label6
@@ -505,32 +539,104 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Teal;
+            this.tabPage3.Controls.Add(this.checkBox4);
+            this.tabPage3.Controls.Add(this.checkBox3);
+            this.tabPage3.Controls.Add(this.checkBox2);
+            this.tabPage3.Controls.Add(this.checkBox1);
+            this.tabPage3.Controls.Add(this.idCheckBox);
+            this.tabPage3.Controls.Add(this.scheduleOverviewCalendar);
             this.tabPage3.Controls.Add(this.scheduleOverviewDataGrid);
-            this.tabPage3.Controls.Add(this.scheduleOverviewDatePicker);
+            this.tabPage3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1031, 507);
+            this.tabPage3.Size = new System.Drawing.Size(1031, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Schedules Overview";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(823, 220);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(55, 21);
+            this.checkBox4.TabIndex = 7;
+            this.checkBox4.Text = "Day";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(823, 193);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(106, 21);
+            this.checkBox3.TabIndex = 6;
+            this.checkBox3.Text = "Time of Day";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(823, 139);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(98, 21);
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "Last Name";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(823, 111);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 21);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "First Name";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // idCheckBox
+            // 
+            this.idCheckBox.AutoSize = true;
+            this.idCheckBox.Checked = true;
+            this.idCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.idCheckBox.Location = new System.Drawing.Point(823, 166);
+            this.idCheckBox.Name = "idCheckBox";
+            this.idCheckBox.Size = new System.Drawing.Size(109, 21);
+            this.idCheckBox.TabIndex = 3;
+            this.idCheckBox.Text = "Employee ID";
+            this.idCheckBox.UseVisualStyleBackColor = true;
+            this.idCheckBox.CheckedChanged += new System.EventHandler(this.idCheckBox_CheckedChanged);
+            // 
+            // scheduleOverviewCalendar
+            // 
+            this.scheduleOverviewCalendar.Location = new System.Drawing.Point(9, 111);
+            this.scheduleOverviewCalendar.Name = "scheduleOverviewCalendar";
+            this.scheduleOverviewCalendar.TabIndex = 2;
+            this.scheduleOverviewCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.scheduleOverviewCalendar_DateChanged);
             // 
             // scheduleOverviewDataGrid
             // 
             this.scheduleOverviewDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.scheduleOverviewDataGrid.Location = new System.Drawing.Point(401, 119);
+            this.scheduleOverviewDataGrid.Location = new System.Drawing.Point(314, 91);
             this.scheduleOverviewDataGrid.Name = "scheduleOverviewDataGrid";
+            this.scheduleOverviewDataGrid.RowHeadersVisible = false;
             this.scheduleOverviewDataGrid.RowHeadersWidth = 51;
             this.scheduleOverviewDataGrid.RowTemplate.Height = 24;
-            this.scheduleOverviewDataGrid.Size = new System.Drawing.Size(523, 282);
+            this.scheduleOverviewDataGrid.Size = new System.Drawing.Size(483, 282);
             this.scheduleOverviewDataGrid.TabIndex = 1;
-            // 
-            // scheduleOverviewDatePicker
-            // 
-            this.scheduleOverviewDatePicker.Location = new System.Drawing.Point(140, 171);
-            this.scheduleOverviewDatePicker.Name = "scheduleOverviewDatePicker";
-            this.scheduleOverviewDatePicker.Size = new System.Drawing.Size(200, 22);
-            this.scheduleOverviewDatePicker.TabIndex = 0;
-            this.scheduleOverviewDatePicker.ValueChanged += new System.EventHandler(this.scheduleOverviewDatePicker_ValueChanged);
             // 
             // signOutBtn
             // 
@@ -566,6 +672,7 @@
             this.manualAssignGroupBox.ResumeLayout(false);
             this.manualAssignGroupBox.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleOverviewDataGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -596,7 +703,6 @@
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView scheduleOverviewDataGrid;
-        private System.Windows.Forms.DateTimePicker scheduleOverviewDatePicker;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -619,5 +725,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button signOutBtn;
+        private System.Windows.Forms.MonthCalendar scheduleOverviewCalendar;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox idCheckBox;
     }
 }

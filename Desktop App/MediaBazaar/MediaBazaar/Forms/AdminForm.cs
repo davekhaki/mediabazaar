@@ -7,7 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using iTextSharp.text.pdf;
 using MediaBazaar.Entities;
+using MediaBazaar.Forms;
 using MediaBazaar.Logic;
+using MediaBazaarOO.Entities;
 using MediaBazaarOO.Logic;
 
 namespace MediaBazaarOO.Forms
@@ -17,13 +19,17 @@ namespace MediaBazaarOO.Forms
         private readonly PersonManager personManager = new PersonManager();
         private readonly DepartmentManager departmentManager = new DepartmentManager();
         private readonly StockManager stockManager = new StockManager();
-        public AdminForm()
+        private string username;
+        public AdminForm(string username)
         {
             InitializeComponent();
 
             employeesDataGrid.DataSource = personManager.GetAllEmployees();
             departmentsDataGrid.DataSource = departmentManager.GetAllDepartments();
             stockDataGrid.DataSource = stockManager.GetAllStock();
+            this.username = username;
+
+            Text = "Admin | " + username;
         }
 
 
@@ -40,6 +46,7 @@ namespace MediaBazaarOO.Forms
             checkBox9.Checked = true;
             checkBox10.Checked = true;
             checkBox11.Checked = true;
+            checkBox1.Checked = true;
         }
 
         private void disableAllBtn_Click(object sender, EventArgs e)
@@ -55,6 +62,7 @@ namespace MediaBazaarOO.Forms
             checkBox9.Checked = false;
             checkBox10.Checked = false;
             checkBox11.Checked = false;
+            checkBox1.Checked = false;
         }
 
         private void idCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -128,24 +136,79 @@ namespace MediaBazaarOO.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(filePathTextBox.Text)) MessageBox.Show("Please choose a file path");
+            if (string.IsNullOrEmpty(fileNameTextBox.Text)) MessageBox.Show("Please give the PDF a name");
             if (radioButton1.Checked)
             {
                 PdfPTable t = new PdfPTable(stockDataGrid.Rows.Count);
 
-                stockManager.ExportStockToPdf(t, @"C:\Users\david\OneDrive\Desktop\stock.pdf", "Stock", stockDataGrid);
+                stockManager.ExportStockToPdf(t, filePathTextBox.Text + "/" + fileNameTextBox.Text + ".pdf", fileNameTextBox.Text, stockDataGrid);
             }
             else if (radioButton3.Checked)
             {
                 PdfPTable t = new PdfPTable(departmentsDataGrid.Rows.Count);
 
-                departmentManager.ExportDepartmentsToPdf(t, @"C:\Users\david\OneDrive\Desktop\deps.pdf", "Departments", departmentsDataGrid);
+                departmentManager.ExportDepartmentsToPdf(t, filePathTextBox.Text + "/" + fileNameTextBox.Text + ".pdf", fileNameTextBox.Text, departmentsDataGrid);
             }
+
+            MessageBox.Show("PDF downloaded");
         }
 
         private void signOutBtn_Click(object sender, EventArgs e)
         {
             var loginForm = new LoginForm();
             loginForm.Show();
+            this.Hide();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            employeesDataGrid.Columns["Preference"].Visible = !employeesDataGrid.Columns["Preference"].Visible;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            personManager.AddNewPerson(tbFirstName.Text, tbLastName.Text, Convert.ToDateTime(dobPicker.Text),
+                cmbGender.Text, cmbDepartmentName.Text, dtpHireDate.Value, 
+                Convert.ToInt32(tbSalary.Text), tbAddress.Text, cmbRole.Text, emailTextBox.Text);
+            personManager.RefreshEmployees();
+            employeesDataGrid.DataSource = personManager.GetAllEmployees();
+
+            MessageBox.Show("Person Added");
+
+            tbFirstName.Text = "";
+            tbLastName.Text = "";
+            dobPicker.Value = DateTime.Today;
+            dtpHireDate.Value = DateTime.Today;
+            tbSalary.Text = "";
+            tbAddress.Text = "";
+            
+           
+
+        }
+
+        private void chooseLocationBtn_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            fbd.Description = "Custom Description";
+
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                filePathTextBox.Text = fbd.SelectedPath;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var form = new StatisticsForm(username);
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            var form = new EditEmployeeForm(username);
+            form.Show();
             this.Hide();
         }
     }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using MediaBazaar.Entities;
+using MediaBazaar.Logic;
 using MediaBazaarOO.Data;
 using MediaBazaarOO.Entities;
 
@@ -9,8 +11,13 @@ namespace MediaBazaarOO.Logic
 {
     public class PersonManager
     {
-        private readonly List<Person> persons;
+        private List<Person> persons;
         public PersonManager()
+        {
+            persons = PersonData.GetAllPersons();
+        }
+
+        public void RefreshEmployees()
         {
             persons = PersonData.GetAllPersons();
         }
@@ -31,34 +38,29 @@ namespace MediaBazaarOO.Logic
             return list;
         }
 
-        public void AddNewPerson(Person person)
+        public void AddNewPerson(string firstname, string lastname, DateTime dob, string gender, string department, DateTime hireDate, int salary, string address, string role, string email)
         {
-            //bool exist = false;
-            try
+            var today = DateTime.Today;
+            var age = today.Year - dob.Year;
 
-            {
-                //foreach (Person p in persons)
-                //{
-                /*if (persons.Contains(p))
-                {
-                    throw new ArgumentException("Person already exists");
-                }*/
-                PersonData.AddPerson(person);
-                persons.Add(person);
-                //exist = true;
-                //}
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-            //return exist;
+            var p = new Person(firstname, lastname, age, gender, department, hireDate, salary, address, role);
+
+            var username = firstname + persons[persons.Count - 1].Id;
+            
+            string password = PasswordManager.GeneratePassword();
+            var hash = PasswordManager.HashPassword(password);
+
+            PersonData.AddPerson(firstname, lastname, dob, gender, department, hireDate, salary, address, role, username, hash);
+            persons.Add(p);
+
+            MailManager.SendMail($"Welcome to Media Bazaar! \nHere are you Login Credentials: Username: {username}, Password: {password}", email, "Login Details");
+
         }
 
         public bool ValidLogin(string username, string password)
         {
-
-            var valid = PersonData.ValidateUsernamePassword(username, password);
+            var hash = PasswordManager.HashPassword(password);
+            var valid = PersonData.ValidateUsernamePassword(username, hash);
             switch (valid)
             {
                 case 1: // 1 = login valid
@@ -71,6 +73,16 @@ namespace MediaBazaarOO.Logic
             return false;
         }
 
+        public int GetNewUser(string username) 
+        {
+            return PersonData.GetnewUser(username);
+        }
+
+        public void CompleteFirstLogin(string username)
+        {
+            PersonData.CompleteFirstLogin(username);
+        }
+
         public string GetRole(string username) //gets a users role based on username
         {
             return PersonData.GetRole(username);
@@ -79,6 +91,31 @@ namespace MediaBazaarOO.Logic
         public int GetIdFromUsername(string username)
         {
             return PersonData.GetIdFromUsername(username);
+        }
+
+        public string GetFirstName(int id)
+        {
+            foreach(var p in persons)
+            {
+                if (p.Id == id)
+                {
+                    return p.FirstName;
+                }
+            }
+
+            return null;
+        }
+        public string GetLastName(int id)
+        {
+            foreach (var p in persons)
+            {
+                if (p.Id == id)
+                {
+                    return p.LastName;
+                }
+            }
+
+            return null;
         }
 
         public int GetIdFromFirstAndLastname(string first, string last)
@@ -95,11 +132,13 @@ namespace MediaBazaarOO.Logic
 
         public void ChangePassword(string username, string oldPassword, string newPassword)
         {
-            var valid = PersonData.ValidateUsernamePassword(username, oldPassword);
+            var hash = PasswordManager.HashPassword(oldPassword);
+            var newHash = PasswordManager.HashPassword(newPassword);
+            var valid = PersonData.ValidateUsernamePassword(username, hash);
             switch (valid)
             {
                 case 1: // 1 = login valid
-                    PersonData.ChangePassword(username, oldPassword, newPassword);
+                    PersonData.ChangePassword(username, hash, newHash);
                     break;
                 case 0: // 0 = login invalid
                     throw new Exception("Old password incorrect");
@@ -119,6 +158,21 @@ namespace MediaBazaarOO.Logic
                     PersonData.UpdatePreference(userId, p.Preference);
                 }
             }
+        }
+
+        public List<bool> GetPreference(int id)
+        {
+            return PersonData.GetPreference(id);
+        }
+
+        public void EditEmployeeInfo(int id, string firstName, string lastName, DateTime dob, string gender, string dName, DateTime hireDate, int salary, string address, string role)
+        {
+            PersonData.EditPersonDetails(id, firstName, lastName, dob, gender, dName, hireDate, salary, address, role);
+        }
+
+        public DateTime GetDob(int id)
+        {
+            return PersonData.GetDob(id);
         }
     }
 }

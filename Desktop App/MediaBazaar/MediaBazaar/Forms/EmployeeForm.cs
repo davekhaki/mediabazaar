@@ -21,10 +21,17 @@ namespace MediaBazaarOO.Forms
         {
             InitializeComponent();
             Username = username;
+
             Text = "Employee | " + Username;
 
             requestDataGrid.DataSource = requestManager.GetRequests();
             stockDataGrid.DataSource = stockManager.GetAllStock();
+
+            checkBox2.Checked = personManager.GetPreference(personManager.GetIdFromUsername(username))[0];
+            checkBox3.Checked = personManager.GetPreference(personManager.GetIdFromUsername(username))[1];
+            checkBox4.Checked = personManager.GetPreference(personManager.GetIdFromUsername(username))[2];
+
+            stockDataGrid.DefaultCellStyle.ForeColor = Color.Black;
         }
 
         private void signOutBtn_Click(object sender, EventArgs e)
@@ -65,7 +72,7 @@ namespace MediaBazaarOO.Forms
 
         private void updatePreferenceBtn_Click(object sender, EventArgs e)
         {
-            personManager.UpdatePreference(Text, checkBox1.Checked, checkBox2.Checked, checkBox3.Checked, checkBox4.Checked);
+            personManager.UpdatePreference(Username, checkBox2.Checked, checkBox2.Checked, checkBox3.Checked, checkBox4.Checked);
             MessageBox.Show("Preference Updated.");
         }
 

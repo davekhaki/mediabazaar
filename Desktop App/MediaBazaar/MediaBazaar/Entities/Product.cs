@@ -14,7 +14,7 @@ namespace MediaBazaar.Entities
         private int productPrice;
         private string brand;
         private int productQuantity;
-        //private int minProductQuantity;
+        private int minProductQuantity;
         public Product(string pName, int pPrice, string pBrand, int pQuantity)
         {
             this.ProductName = pName;
@@ -32,7 +32,7 @@ namespace MediaBazaar.Entities
             this.ProductPrice = pPrice;
             this.Brand = pBrand;
             this.ProductQuantity = pQuantity;
-            //  this.minProductQuantity = pMinimumQuantity;
+            this.minProductQuantity = MinProductQuantity;
 
         }
         public Product(int id)
@@ -71,12 +71,11 @@ namespace MediaBazaar.Entities
             set { this.productQuantity = value; }
 
         }
-        // public int MinProductQuantity
-        //  {
-        //   get { return this.minProductQuantity; }
-        //  set { this.minProductQuantity = value; }
-
-        //  }
+        public int MinProductQuantity
+        { 
+            get { return this.minProductQuantity; }
+            set { this.minProductQuantity = value; }
+        }
 
         public override String ToString()
         {

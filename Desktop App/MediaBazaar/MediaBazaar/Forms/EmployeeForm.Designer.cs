@@ -42,7 +42,6 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbNewPassword = new System.Windows.Forms.TextBox();
             this.tbOldPassword = new System.Windows.Forms.TextBox();
@@ -128,7 +127,8 @@
             // 
             // btnDone
             // 
-            this.btnDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDone.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDone.Location = new System.Drawing.Point(776, 103);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(319, 53);
@@ -165,7 +165,7 @@
             this.groupBox3.Controls.Add(this.checkBox4);
             this.groupBox3.Controls.Add(this.checkBox3);
             this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Location = new System.Drawing.Point(597, 23);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(520, 354);
@@ -175,12 +175,13 @@
             // 
             // updatePreferenceBtn
             // 
+            this.updatePreferenceBtn.BackColor = System.Drawing.Color.LightSeaGreen;
             this.updatePreferenceBtn.Location = new System.Drawing.Point(95, 212);
             this.updatePreferenceBtn.Name = "updatePreferenceBtn";
             this.updatePreferenceBtn.Size = new System.Drawing.Size(198, 50);
             this.updatePreferenceBtn.TabIndex = 4;
             this.updatePreferenceBtn.Text = "Update my preference";
-            this.updatePreferenceBtn.UseVisualStyleBackColor = true;
+            this.updatePreferenceBtn.UseVisualStyleBackColor = false;
             this.updatePreferenceBtn.Click += new System.EventHandler(this.updatePreferenceBtn_Click);
             // 
             // checkBox4
@@ -213,24 +214,15 @@
             this.checkBox2.Text = "Mornings";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(113, 52);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 21);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Weekends";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
             this.groupBox1.Controls.Add(this.tbNewPassword);
             this.groupBox1.Controls.Add(this.tbOldPassword);
             this.groupBox1.Controls.Add(this.changePasswordBtn);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(28, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(529, 354);
@@ -254,7 +246,7 @@
             // 
             // changePasswordBtn
             // 
-            this.changePasswordBtn.BackColor = System.Drawing.Color.Cyan;
+            this.changePasswordBtn.BackColor = System.Drawing.Color.LightSeaGreen;
             this.changePasswordBtn.Location = new System.Drawing.Point(164, 244);
             this.changePasswordBtn.Name = "changePasswordBtn";
             this.changePasswordBtn.Size = new System.Drawing.Size(169, 43);
@@ -361,7 +353,7 @@
             // 
             // updateStockBtn
             // 
-            this.updateStockBtn.BackColor = System.Drawing.Color.Teal;
+            this.updateStockBtn.BackColor = System.Drawing.Color.LightSeaGreen;
             this.updateStockBtn.ForeColor = System.Drawing.Color.White;
             this.updateStockBtn.Location = new System.Drawing.Point(810, 324);
             this.updateStockBtn.Name = "updateStockBtn";
@@ -425,7 +417,6 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbNewPassword;
         private System.Windows.Forms.TextBox tbOldPassword;

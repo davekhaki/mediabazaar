@@ -32,3 +32,6 @@ C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaB
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.csproj.CopyComplete
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.exe
 C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.pdb
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.Forms.NewUserForm.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.Forms.StatisticsForm.resources
+C:\Users\david\OneDrive\Documents\CB-S2\artichoke\Desktop App\MediaBazaar\MediaBazaar\obj\Debug\MediaBazaar.Forms.EditEmployeeForm.resources

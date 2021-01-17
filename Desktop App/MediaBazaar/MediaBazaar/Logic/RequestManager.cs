@@ -30,5 +30,10 @@ namespace MediaBazaar.Logic
                 RequestData.CompleteRequest(requestId);
             }
         }
+
+        public void AddRequest(string product)
+        {
+            RequestData.AddRequest(product);
+        }
     }
 }

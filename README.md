@@ -16,3 +16,17 @@ Instruction before running the application:
 2. Download **finalScript.sql**
 3. Import the script to your phpMyAdmin
 4. Run application
+
+Accounts:
+
+Employee: 
+username - Lola1
+password - OK
+
+Manager:
+username - davewww
+password - dave
+
+Admin: 
+username - maryjo
+password - maryjo

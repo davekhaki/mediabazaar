@@ -70,8 +70,9 @@ public function userEditDetails($firstname,$lastname,$age,$gender,$address,$empI
 public function newPassword($password,$empId){
 
   try{
+    $hash = md5($password);
   //"SELECT e.Role FROM employee e INNER JOIN login l ON e.ID = l.empId WHERE l.username = '$email'";
-  $stmt = $this->connect()->prepare("UPDATE login SET password='$password', newUser='0' WHERE empId=:empId");
+  $stmt = $this->connect()->prepare("UPDATE login SET password='$hash', newUser='0' WHERE empId=:empId");
   $stmt->bindParam("empId", $empId,PDO::PARAM_INT);
 
   $stmt->execute();

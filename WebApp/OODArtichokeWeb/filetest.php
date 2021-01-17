@@ -47,7 +47,7 @@ $userDetails=$userClass->userInfo($session_empId);
     <br>
     <br>
     <label> BirthDate </label>
-    <input class="input--style-1" type="date" name="birthdate" value="<?php echo $userDetails->Age;?>"readonly>
+    <input class="input--style-1" type="date" name="birthdate" value="<?php echo $userDetails->birthDate;?>"readonly>
     <br>
     <br>
     <label> Gender</label>

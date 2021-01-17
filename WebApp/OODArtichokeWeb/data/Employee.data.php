@@ -15,7 +15,7 @@ $stmt->execute();
 
       echo "<tr>
          <td>".$stock['TimeOfDay']."</td>
-           <td>".$stock['Day']."</td></tr>";
+           <td>".$stock['Days']."</td></tr>";
   }
 }
 }

@@ -12,7 +12,7 @@ TRELLO link: https://trello.com/invite/b/ZYA7ARuh/1a790eb32fed897ff743fbf8e449fa
 
 Instruction Before running it:
 
-**Important: This runs on a local database(XAMPP)**
+**Important: This runs on a local database(XAMPP-phpMyAdmin)**
 
 1. Get the script from the folder **DatabaseScripts**
 2. Download **finalScript.sql**

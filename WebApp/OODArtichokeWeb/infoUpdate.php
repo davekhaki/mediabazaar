@@ -6,11 +6,11 @@ if (!empty($_POST['update']))
 
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
-$age=$_POST['age'];
+$bday=$_POST['birthdate'];
 $gender=$_POST['gender'];
 $address=$_POST['address'];
 
-$userUpdate=$userClass->editDetails($firstname,$lastname,$age,$gender,$address,$session_empId);
+$userUpdate=$userClass->editDetails($firstname,$lastname,$bday,$gender,$address,$session_empId);
 echo ("<SCRIPT LANGUAGE='JavaScript'>
    window.alert('Succesfully Updated')
    window.location.href='filetest.php ';
@@ -50,8 +50,8 @@ $userDetails=$userClass->userInfo($session_empId);
     <input class="input--style-1" type="text" name="lastname" value="<?php echo $userDetails->LastName;?>">
 </div>
 <div class="input-group">
-    <label> Age </label>
-    <input class="input--style-1"type="text" name="age" value="<?php echo $userDetails->Age;?>">
+    <label> Birthdate </label>
+    <input class="input--style-1"type="date" name="birthdate" value="<?php echo $userDetails->birthDate;?>">
 </div>
 <div class="input-group">
     <label> Gender</label>

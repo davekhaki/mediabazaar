@@ -21,7 +21,7 @@ class Admin extends User{
   echo "<tr>
    <td>".$employee['ID']."</td>
    <td>".$employee['FirstName']." ".$employee['LastName']."</td>
-   <td>".$employee['Age']."</td>
+   <td>".$employee['birthDate']."</td>
    <td>".$employee['Gender']."</td>
    <td>".$employee['DepartmentName']."</td>
   <td>".$employee['HireDate']."</td>
@@ -78,7 +78,7 @@ $mail->addAddress($email, $name);     // Add a recipient
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Login Info';
-$mail->Body    = 'We are glad to have you in our team, <b>'.$name.'!</b> <p>Login info</p> <p>Username: '.$username.'</p> <p>Password: '.$password.' </p>';
+$mail->Body    = 'We are glad to have you in our team, <b>'.$name.'!</b> <p>Login info</p> <p>Username: '.$username.'</p> <p>Password: '.$password.' </p><p> This is a momentary password. You would be asked to change it at login</p>';
 //$mail->AltBody = 'Login info <p>Username: '.$username.'</p> <p>Password: '.$password.' </p>';
 
 if(!$mail->send()) {
@@ -89,23 +89,22 @@ if(!$mail->send()) {
 }
 }
 
-public function addEmployee($firstname,$lastname,$age,$gender,$department,$hiredate,$address,$role,$salary,$email){
+public function addEmployee($firstname,$lastname,$bday,$gender,$department,$hiredate,$address,$role,$salary,$email){
   //$pass = $this->passwordGen();
-  $pass = $this->passwordGen();;
+  $pass = $this->passwordGen();
 //  $hashpassword = base64_encode($pass);
   $hashpassword = md5($pass);
   try{
-  $stmt = $this->connect()->prepare("INSERT INTO employee(FirstName,LastName,Age,Gender,DepartmentName,HireDate,Adress,Role,Salary,E-mail) VALUES(?,?,?,?,?,?,?,?,?,?)");
-  $stmt->execute([$firstname,$lastname,$age,$gender,$department,$hiredate,$address,$role,$salary,$email
-]);
+  $stmt = $this->connect()->prepare("INSERT INTO employee(FirstName,LastName,birthDate,Gender,DepartmentName,HireDate,Adress,Role,Salary) VALUES(?,?,?,?,?,?,?,?,?)");
+  $stmt->execute([$firstname,$lastname,$bday,$gender,$department,$hiredate,$address,$role,$salary]);
   $stmt1= $this->connect()->prepare("SELECT * FROM employee WHERE firstname = ? AND lastname = ?");
   $stmt1->execute([$firstname,$lastname]);
   $data=$stmt1->fetch(PDO::FETCH_OBJ);
   $id = $data->ID;
-  $stmt2 = $this->connect()->prepare("INSERT INTO login(empId,username,password) VALUES(?,?,?)");
+  $stmt2 = $this->connect()->prepare("INSERT INTO login(empId,username,password,newUser) VALUES(?,?,?,?)");
 //$email = $this->sendLogin($firstn4ame."1",$pass);
 $email =$this->sendMail($firstname." ".$lastname,$email,$pass,$firstname."1" );
-  $stmt2 ->execute([$id,$firstname."1",$hashpassword]);
+  $stmt2 ->execute([$id,$firstname."1",$hashpassword,"1"]);
 
   } catch(PDOException $e) {
   echo '{"error":{"text":'. $e->getMessage() .'}}';

@@ -7,7 +7,7 @@ if (!empty($_POST['insert']))
 {
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
-$age=$_POST['age'];
+$bday=$_POST['birthdate'];
 $gender=$_POST['gender'];
 $departmentName=$_POST['departmentName'];
 $hireDate=$_POST['hireDate'];
@@ -15,7 +15,7 @@ $address=$_POST['address'];
 $role=$_POST['role'];
 $salary=$_POST['salary'];
 $email = $_POST['email'];
-$userInsert=$admin->addEmployee($firstname,$lastname,$age,$gender,$departmentName,$hireDate,$address,$role,$salary,$email);
+$userInsert=$admin->addEmployee($firstname,$lastname,$bday,$gender,$departmentName,$hireDate,$address,$role,$salary,$email);
 echo ("<SCRIPT LANGUAGE='JavaScript'>
    window.alert('Succesfully Updated')
    window.location.href='addEmployee.php ';
@@ -48,20 +48,20 @@ $userDetails=$userClass->userInfo($session_empId);
     <form id ="registration" method="post" action="addEmployee.php" name="update">
       <div class="input-group">
     <label> FirstName</label>
-    <input class="input--style-1" type="text" name="firstname" placeholder="Insert Firstname">
+    <input class="input--style-1" type="text" name="firstname" placeholder="Insert Firstname" required>
 </div>
 <div class="input-group">
     <label> LastName</label>
-    <input class="input--style-1" type="text" name="lastname" placeholder="Insert Lastname">
+    <input class="input--style-1" type="text" name="lastname" placeholder="Insert Lastname" required>
 </div>
 <div class="input-group">
-    <label> Age </label>
-    <input class="input--style-1"type="number" name="age" placeholder="Insert age">
+    <label> Birthdate </label>
+    <input class="input--style-1"type="date" name="birthdate" required>
 </div>
 <div class="input-group">
     <label> Gender</label>
     <br> <br>
-    <select id="gender" name="gender">
+    <select id="gender" name="gender" required>
       <option hidden disabled selected value> -- select an option -- </option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
@@ -70,7 +70,7 @@ $userDetails=$userClass->userInfo($session_empId);
     <div class="input-group">
         <label> DepartmentName</label>
         <br><br>
-        <select id="departmentName" name="departmentName">
+        <select id="departmentName" name="departmentName" required>
           <option hidden disabled selected value> -- select an option -- </option>
           <option value="Logistic">Logistic</option>
           <option value="Marketing">Marketing</option>
@@ -80,17 +80,17 @@ $userDetails=$userClass->userInfo($session_empId);
     </div>
     <div class="input-group">
         <label> Hire Date</label>
-        <input class="input--style-1" type="date" name="hireDate">
+        <input class="input--style-1" type="date" name="hireDate" required>
     </div>
 
 <div class="input-group">
     <label> Address </label>
-    <input class="input--style-1" type="text" name="address" placeholder="Insert address">
+    <input class="input--style-1" type="text" name="address" placeholder="Insert address" required>
 </div>
 <div class="input-group">
     <label> Role </label>
     <br><br>
-    <select id="role" name="role">
+    <select id="role" name="role" required>
       <option hidden disabled selected value> -- select an option -- </option>
       <option value="Manager">Manager</option>
       <option value="Employee">Employee</option>
@@ -99,12 +99,12 @@ $userDetails=$userClass->userInfo($session_empId);
 </div>
 <div class="input-group">
     <label> Salary </label>
-    <input class="input--style-1" type="number" name="salary" placeholder="Insert salary here">
+    <input class="input--style-1" type="number" name="salary" placeholder="Insert salary here" required>
 </div>
 
 <div class="input-group">
     <label> E-mail </label>
-    <input class="input--style-1" type="text" name="email" placeholder="Insert Email">
+    <input class="input--style-1" type="text" name="email" placeholder="Insert Email" required>
 </div>
     <div class="p-t-20">
     <input type="submit"class="btn btn--radius btn--green" name="insert" value="Submit"></button>

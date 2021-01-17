@@ -6,7 +6,7 @@ class DB
 	private $servername = "localhost";
 	private	$dbUsername = "root";
 	private $dbPassword = "";
-	private $dbName = "dbi434661";
+	private $dbName = "artichoke";
 
 
 	 function connect(){

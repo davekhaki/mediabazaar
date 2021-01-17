@@ -24,6 +24,7 @@ $userDetails=$userClass->userInfo($session_empId);
    <div class ="divider"></div>
 <table>
   <tr>
+    <h1> Employee Schedule</h1>
   <?php $schedule->Schedule(); ?>
 
     </tr>

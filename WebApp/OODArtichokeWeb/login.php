@@ -16,8 +16,16 @@ $empId=$userClass->Login($username,$password);
 
 if($empId)
 {
-$url=BASE_URL.'home.php';
-header("Location: $url"); // Page redirecting to home.php
+  if($_SESSION['firsTime'] == 1){
+
+    $url=BASE_URL.'newPassword.php';
+    header("Location: $url"); // Page redirecting to home.php
+
+  } else{
+    $url=BASE_URL.'home.php';
+    header("Location: $url"); // Page redirecting to home.php
+  }
+
 }
 else
 {
@@ -29,7 +37,7 @@ $errorMsgLogin="Please check login details.";
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Testing</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="css/stylelogin.css"</head>
 <body>
   <div class="divider"></div>

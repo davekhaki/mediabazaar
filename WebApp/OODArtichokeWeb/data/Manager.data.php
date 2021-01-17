@@ -2,12 +2,12 @@
 class Manager extends User{
 
 public function viewEmp(){
-  $stmt = $this->connect()->query("SELECT FirstName,LastName,Age,Adress,Gender,DepartmentName,Role,HireDate,EndDate,Salary FROM employee");
+  $stmt = $this->connect()->query("SELECT FirstName,LastName,birthDate,Adress,Gender,DepartmentName,Role,HireDate,EndDate,Salary FROM employee");
 $stmt->execute();
 $stmt->fetchAll();
 echo '<th align = "center">ID</th>';
 echo '<th align = "center">Name</th>';
-echo '<th align = "center">Age</th>';
+echo '<th align = "center">Birthdate</th>';
 echo '<th align = "center">Gender</th>';
 echo '<th align = "center">DepartmentName</th>';
 echo '<th align = "center">HireDate</th>';
@@ -18,7 +18,7 @@ while ($employee == $stmt) {
 echo "<tr>
    <td>".$employee['ID']."</td>
    <td>".$employee['FirstName']." ".$employee['LastName']."</td>
-   <td>".$employee['Age']."</td>
+   <td>".$employee['birthDate']."</td>
    <td>".$employee['Gender']."</td>
    <td>".$employee['DepartmentName']."</td>
   <td>".$employee['HireDate']."</td>
@@ -53,8 +53,8 @@ foreach ($stmt as $stock) {
 }
 
 public function viewSchedule(){
-  $stmt = $this->connect()->query("SELECT e.FirstName as Name,s.TimeOfDay,DATE_FORMAT(s.Day, '%d-%b-%y') AS Day FROM schedule s
-  INNER JOIN employee e ON s.EmployeeID = e.ID GROUP BY Day, s.TimeOfDay ORDER BY Day DESC, CASE WHEN TimeOfDay='Morning' THEN '1' WHEN TimeOfDay= 'Afternoon' THEN '2'WHEN TimeOfDay='Evening' THEN '3' END ");
+  $stmt = $this->connect()->query("SELECT e.FirstName as Name,s.TimeOfDay,DATE_FORMAT(s.Day, '%d-%b-%y') AS Days FROM schedule s
+  INNER JOIN employee e ON s.EmployeeID = e.ID GROUP BY Days, s.TimeOfDay ORDER BY s.Day DESC, CASE WHEN TimeOfDay='Morning' THEN '1' WHEN TimeOfDay= 'Afternoon' THEN '2'WHEN TimeOfDay='Evening' THEN '3' END ");
 //$stmt->execute();
 //$stmt->fetchAll();
 echo '<th align = "center">Employee</th>';
@@ -64,7 +64,7 @@ echo '<th align = "center">Day</th>';
     echo "<tr>
      <td>".$stock['Name']."</td>
        <td>".$stock['TimeOfDay']."</td>
-         <td>".$stock['Day']."</td></tr>";
+         <td>".$stock['Days']."</td></tr>";
 
 
 

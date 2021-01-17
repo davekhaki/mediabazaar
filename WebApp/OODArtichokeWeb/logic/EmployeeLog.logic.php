@@ -10,7 +10,7 @@ class EmployeeLog{
     $this->employee = new Employee();
 
     }
-  public function Scehdule($empId){
+  public function Schedule($empId){
 
     $this->employee->viewSchedule($empId);
   }

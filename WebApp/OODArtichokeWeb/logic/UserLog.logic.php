@@ -26,5 +26,10 @@ public function editDetails($firstname,$lastname,$age,$gender,$address,$empId){
   $this->user->userEditDetails($firstname,$lastname,$age,$gender,$address,$empId);
 }
 
+public function newPassword($password,$empId){
+
+  $this->user->newPassword($password,$empId);
+}
+
 }
  ?>

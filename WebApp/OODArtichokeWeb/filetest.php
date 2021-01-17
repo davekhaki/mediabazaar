@@ -46,8 +46,8 @@ $userDetails=$userClass->userInfo($session_empId);
     <input class="input--style-1" type="text" name="lastname" value="<?php echo $userDetails->LastName;?>"readonly>
     <br>
     <br>
-    <label> Age </label>
-    <input class="input--style-1" type="text" name="age" value="<?php echo $userDetails->Age;?>"readonly>
+    <label> BirthDate </label>
+    <input class="input--style-1" type="date" name="birthdate" value="<?php echo $userDetails->Age;?>"readonly>
     <br>
     <br>
     <label> Gender</label>

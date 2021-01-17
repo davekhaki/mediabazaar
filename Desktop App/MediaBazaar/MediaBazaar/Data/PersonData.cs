@@ -52,6 +52,7 @@ namespace MediaBazaarOO.Data
 
             try
             {
+                var today = DateTime.Today;
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 conn.Open();
                 MySqlDataReader dr = cmd.ExecuteReader();
@@ -59,7 +60,9 @@ namespace MediaBazaarOO.Data
                 {
                     string firstName = dr[1].ToString();
                     string lastName = dr[2].ToString();
-                    int age = Convert.ToInt32(dr[3]);
+                    DateTime dob = Convert.ToDateTime(dr[3]);
+                    var age = today.Year - dob.Year;
+
                     string gender = dr[4].ToString();
                     string dName = dr[5].ToString();
                     DateTime hireDate = Convert.ToDateTime(dr[6]);
@@ -305,6 +308,40 @@ namespace MediaBazaarOO.Data
             {
                 conn.Close();
             }
+        }
+
+        public static List<bool> GetPreference(int id)
+        {
+            var list = new List<bool>();
+            var sql = "SELECT MorningPreference, AfternoonPreference, EveningPreference FROM employee WHERE ID = @id";
+            var conn = new MySqlConnection(Config.ConString);
+            var query = new MySqlCommand(sql, conn);
+            query.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+            try
+            {
+                conn.Open();
+
+                var reader = query.ExecuteReader();
+                while (reader.Read())
+                {
+                    var morning = Convert.ToBoolean(Convert.ToInt16(reader.GetInt32(0)));
+                    var afternoon = Convert.ToBoolean(Convert.ToInt16(reader.GetInt32(1)));
+                    var evening = Convert.ToBoolean(Convert.ToInt16(reader.GetInt32(2)));
+                    list.Add(morning);
+                    list.Add(afternoon);
+                    list.Add(evening);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return list;
         }
     }
 }

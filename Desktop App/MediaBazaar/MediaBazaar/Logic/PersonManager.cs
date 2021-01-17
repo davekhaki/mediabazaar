@@ -145,5 +145,10 @@ namespace MediaBazaarOO.Logic
                 }
             }
         }
+
+        public List<bool> GetPreference(int id)
+        {
+            return PersonData.GetPreference(id);
+        }
     }
 }

@@ -51,6 +51,7 @@
             this.passwordTextBox.Size = new System.Drawing.Size(125, 22);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordTextBox_KeyPress);
             // 
             // loginBtn
             // 
@@ -69,7 +70,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(118, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 21);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Username:";
             // 
@@ -78,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(118, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 21);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password:";
             // 

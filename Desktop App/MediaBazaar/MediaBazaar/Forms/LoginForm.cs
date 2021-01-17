@@ -47,5 +47,13 @@ namespace MediaBazaarOO.Forms
         {
             passwordTextBox.UseSystemPasswordChar = !passwordTextBox.UseSystemPasswordChar;
         }
+
+        private void passwordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != (char)13) return; // 13 = ENTER
+            e.Handled = true;
+            loginBtn_Click(new object(), new EventArgs());
+
+        }
     }
 }

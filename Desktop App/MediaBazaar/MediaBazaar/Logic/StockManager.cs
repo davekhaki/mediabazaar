@@ -14,7 +14,7 @@ namespace MediaBazaar.Logic
 {
     public class StockManager
     {
-        private readonly List<Product> stock;
+        private List<Product> stock;
         private readonly StockData stockData = new StockData();
 
         public StockManager()
@@ -22,9 +22,42 @@ namespace MediaBazaar.Logic
             stock = stockData.GetAllStock();
         }
 
+        public void RefreshStock()
+        {
+            stock = stockData.GetAllStock();
+        }
+
+        public List<Product> GetUnderStocked()
+        {
+            RefreshStock();
+            var list = new List<Product>();
+            foreach (var p in stock)
+            {
+                if (p.MinProductQuantity > p.ProductQuantity)
+                {
+                    list.Add(p);
+                }
+            }
+
+            return list;
+        }
+
         public List<Product> GetAllStock()
         {
             return stock;
+        }
+
+        public Product GetProduct(int id)
+        {
+            foreach (var p in stock)
+            {
+                if (p.ProductId == id)
+                {
+                    return p;
+                }
+            }
+
+            return null;
         }
 
         public void UpdateProduct(int productId, int quantity)
@@ -38,6 +71,24 @@ namespace MediaBazaar.Logic
                 }
 
             }
+        }
+
+        public void DeleteProduct(int id)
+        {
+            stock.Remove(GetProduct(id));
+            stockData.DeleteProduct(id);
+
+        }
+
+        public void AddProduct(Product p)
+        {
+            stock.Add(p);
+            stockData.AddProduct(p);
+        }
+
+        public void EditStock(int id, string pName, int pPrice, string pBrand, int pQuantity, int min)
+        {
+            stockData.EditProductDetails(id, pName, pPrice, pBrand, pQuantity, min);
         }
 
         public void ExportStockToPdf(PdfPTable pdfptable, String strPdfPath, string strHeader, DataGridView dataGrid)

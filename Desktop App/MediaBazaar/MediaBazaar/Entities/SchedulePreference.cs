@@ -21,5 +21,10 @@ namespace MediaBazaarOO.Entities
             WorkEvening = evening;
             ExcludedDays = excluded;
         }
+
+        public override string ToString()
+        {
+            return $"Morning: {WorkMorning}, Afternoon: {WorkAfternoon}, Evening: {WorkEvening}";
+        }
     }
 }

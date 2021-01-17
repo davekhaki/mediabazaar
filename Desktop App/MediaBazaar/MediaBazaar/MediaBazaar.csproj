@@ -90,9 +90,17 @@
     <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\AutoScheduleAlgorithm.cs" />
     <Compile Include="Logic\DepartmentManager.cs" />
     <Compile Include="Logic\Interfaces\ScheduleComparer.cs" />
+    <Compile Include="Logic\MailManager.cs" />
+    <Compile Include="Logic\PasswordManager.cs" />
     <Compile Include="Logic\PersonManager.cs" />
     <Compile Include="Logic\RequestManager.cs" />
     <Compile Include="Logic\ScheduleManager.cs" />
@@ -110,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewUserForm.resx">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

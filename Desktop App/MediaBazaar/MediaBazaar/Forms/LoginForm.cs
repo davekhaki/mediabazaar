@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using MediaBazaar.Forms;
 using MediaBazaarOO.Logic;
 
 namespace MediaBazaarOO.Forms
@@ -21,23 +22,32 @@ namespace MediaBazaarOO.Forms
         {
             if (personManager.ValidLogin(usernameTextBox.Text, passwordTextBox.Text))
             {
-                switch (personManager.GetRole(usernameTextBox.Text))
+                if (personManager.GetNewUser(usernameTextBox.Text) == 1)
                 {
-                    case "Manager":
-                        var form = new ManagerForm(usernameTextBox.Text);
-                        form.Show();
-                        this.Hide();
-                        break;
-                    case "Admin":
-                        var formAdmin = new AdminForm();
-                        formAdmin.Show();
-                        this.Hide();
-                        break;
-                    case "Employee":
-                        var formEmployee = new EmployeeForm(usernameTextBox.Text);
-                        formEmployee.Show();
-                        this.Hide();
-                        break;
+                    var form = new NewUserForm(usernameTextBox.Text, passwordTextBox.Text);
+                    form.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    switch (personManager.GetRole(usernameTextBox.Text))
+                    {
+                        case "Manager":
+                            var form = new ManagerForm(usernameTextBox.Text);
+                            form.Show();
+                            this.Hide();
+                            break;
+                        case "Admin":
+                            var formAdmin = new AdminForm();
+                            formAdmin.Show();
+                            this.Hide();
+                            break;
+                        case "Employee":
+                            var formEmployee = new EmployeeForm(usernameTextBox.Text);
+                            formEmployee.Show();
+                            this.Hide();
+                            break;
+                    }
                 }
             }
             else MessageBox.Show("Login Failed.");

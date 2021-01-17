@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Text;
+using MediaBazaar.Data;
 using MediaBazaarOO.Entities;
 using MySql.Data.MySqlClient;
 
@@ -8,40 +10,70 @@ namespace MediaBazaarOO.Data
 {
     public static class PersonData
     {
-        public static void AddPerson(Person person)
+        public static void AddPerson(string FirstName, string LastName, DateTime Dob, string Gender, string Department, DateTime HireDate, int Salary, string Address, string Role, string username, string password)
         {
+            MySqlConnection conn = new MySqlConnection(Config.ConString);
             try
             {
-                MySqlConnection conn = new MySqlConnection(Config.ConString);
-
-                string query = "INSERT INTO `login`(`username`, `password`) VALUES (@username,@password);" +
-                    "insert into dbi434661.employee(`FirstName`,`LastName`, `Age`, `Gender`, `DepartmentName`, `HireDate`, `Salary`,`Address`, `Role`) VALUES(@FirstName,@LastName,@Age,@Gender,@HireDate,@DepartmentName,@Salary,@Address,@Role)";
+                string query = "insert into employee(`FirstName`,`LastName`, `birthDate`, `Gender`, `DepartmentName`, `HireDate`, `Salary`,`Adress`, `Role`) VALUES(@FirstName, @LastName, @Dob, @Gender, @DepartmentName, @HireDate, @Salary, @Address, @Role)";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@username", "temporaryUsername");
-                cmd.Parameters.AddWithValue("@password", "temporaryPassword");
-                cmd.Parameters.AddWithValue("@FirstName", person.FirstName);
-                cmd.Parameters.AddWithValue("@LastName", person.LastName);
-                cmd.Parameters.AddWithValue("@Age", person.Age);
-                cmd.Parameters.AddWithValue("@Gender", person.Gender);
-                cmd.Parameters.AddWithValue("@DepartmentName", person.DepartmentName);
-                cmd.Parameters.AddWithValue("@HireDate", person.HireDate);
-                //cmd.Parameters.AddWithValue("@EndDate", person.EndDate);
-                cmd.Parameters.AddWithValue("@Salary", person.Salary);
-                cmd.Parameters.AddWithValue("@Address", person.Address);
-                cmd.Parameters.AddWithValue("@Role", person.Role);
+                cmd.Parameters.AddWithValue("@FirstName", FirstName);
+                cmd.Parameters.AddWithValue("@LastName", LastName);
+                cmd.Parameters.AddWithValue("@Dob", Dob);
+                cmd.Parameters.AddWithValue("@Gender", Gender);
+                cmd.Parameters.AddWithValue("@DepartmentName", Department);
+                cmd.Parameters.AddWithValue("@HireDate", HireDate);
+                cmd.Parameters.AddWithValue("@Salary", Salary);
+                cmd.Parameters.AddWithValue("@Address", Address);
+                cmd.Parameters.AddWithValue("@Role", Role);
                 conn.Open();
 
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
+                try
+                {
+                    int id= 0;
+                    string sql =
+                        "SELECT ID FROM employee WHERE FirstName = @first AND LastName = @last AND birthDate = @dob AND Adress = @address";
+                    var command = new MySqlCommand(sql, conn);
+                    command.Parameters.AddWithValue("@first", FirstName);
+                    command.Parameters.AddWithValue("@last", LastName);
+                    command.Parameters.AddWithValue("@dob", Dob);
+                    command.Parameters.AddWithValue("@address", Address);
+                    conn.Open();
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        id = reader.GetInt32(0);
+                    }
 
+                    conn.Close();
+                    conn.Open();
+                    int newUser = 1;
+                    string insertSql = "INSERT INTO login (empId, username, password, newUser) VALUES (@id, @username, @password, @newUser)";
+                    var cmd2 = new MySqlCommand(insertSql, conn);
+
+                    cmd2.Parameters.AddWithValue("@id", id);
+                    cmd2.Parameters.AddWithValue("@username", username);
+                    cmd2.Parameters.AddWithValue("@password", password);
+                    cmd2.Parameters.AddWithValue("@newUser", newUser);
+
+                    cmd2.ExecuteNonQuery();
+
+                }
+                finally
+                {
+                    conn.Close();
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
+
         }
 
         public static List<Person> GetAllPersons()
@@ -100,7 +132,7 @@ namespace MediaBazaarOO.Data
                 cmd.Parameters.AddWithValue("@Age", age);
                 cmd.Parameters.AddWithValue("@Gender", gender);
                 cmd.Parameters.AddWithValue("@DepartmentName", dName);
-                cmd.Parameters.AddWithValue("@HireDate", hireDate);
+                cmd.Parameters.AddWithValue("@hireDate", hireDate);
                 //cmd.Parameters.AddWithValue("@EndDate", person.EndDate);
                 cmd.Parameters.AddWithValue("@Salary", salary);
                 cmd.Parameters.AddWithValue("@Address", address);
@@ -342,6 +374,60 @@ namespace MediaBazaarOO.Data
 
             }
             return list;
+        }
+
+        public static int GetnewUser(string username)
+        {
+            var newUser = 0;
+            var sql = "SELECT l.newUser FROM employee e INNER JOIN login l ON e.ID = l.empId WHERE l.username = @username";
+            var conn = new MySqlConnection(Config.ConString);
+            var query = new MySqlCommand(sql, conn);
+            query.Parameters.Add("@username", MySqlDbType.String).Value = username;
+            try
+            {
+                conn.Open();
+
+                var reader = query.ExecuteReader();
+                while (reader.Read())
+                {
+                    newUser = reader.GetInt32(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return newUser;
+        }
+
+        public static void CompleteFirstLogin(string username)
+        {
+            var sql = "UPDATE login SET newUser = @newUser WHERE username = @username";
+            var conn = new MySqlConnection(Config.ConString);
+            var query = new MySqlCommand(sql, conn);
+            query.Parameters.Add("@username", MySqlDbType.String).Value = username;
+            query.Parameters.Add("@newUser", MySqlDbType.Int16).Value = 0;
+            try
+            {
+                conn.Open();
+
+                query.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
     }
 }

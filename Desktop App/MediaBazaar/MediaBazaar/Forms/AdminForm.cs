@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using iTextSharp.text.pdf;
 using MediaBazaar.Entities;
 using MediaBazaar.Logic;
+using MediaBazaarOO.Entities;
 using MediaBazaarOO.Logic;
 
 namespace MediaBazaarOO.Forms
@@ -147,6 +148,20 @@ namespace MediaBazaarOO.Forms
             var loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            employeesDataGrid.Columns["Preference"].Visible = !employeesDataGrid.Columns["Preference"].Visible;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            personManager.AddNewPerson(tbFirstName.Text, tbLastName.Text, Convert.ToDateTime(dobPicker.Text),
+                cmbGender.Text, cmbDepartmentName.Text, dtpHireDate.Value, 
+                Convert.ToInt32(tbSalary.Text), tbAddress.Text, cmbRole.Text, emailTextBox.Text);
+
+            
         }
     }
 }

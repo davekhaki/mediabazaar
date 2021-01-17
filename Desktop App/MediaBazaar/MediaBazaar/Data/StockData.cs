@@ -25,7 +25,7 @@ namespace MediaBazaar.Data
                 //   int minimumQuantity = product.MinProductQuantity;
 
 
-                string sql = "INSERT INTO dbi434661.stock(ProductName, ProductPrice,Brand,Quantity)values(@name, @price, @brand, @quantity)";
+                string sql = "INSERT INTO stock(ProductName, ProductPrice,Brand,Quantity, MinimumQuantity)values(@name, @price, @brand, @quantity, '100')";
 
                 dbHelper.Conn.Open();
                 dbHelper.Cmd = new MySqlCommand(sql, dbHelper.Conn);
@@ -38,7 +38,7 @@ namespace MediaBazaar.Data
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error changing department details:" + ex);
+                MessageBox.Show("Error changing stock details:" + ex);
             }
             finally
             {
@@ -72,7 +72,7 @@ namespace MediaBazaar.Data
                     product.ProductPrice = Convert.ToInt32(dr[2]);
                     product.Brand = dr[3].ToString();
                     product.ProductQuantity = Convert.ToInt32(dr[4]);
-                    //product.MinProductQuantity = Convert.ToInt32(dr[5]);
+                    product.MinProductQuantity = Convert.ToInt32(dr[5]);
                     newProducts.Add(product);
                 }
             }
@@ -88,7 +88,7 @@ namespace MediaBazaar.Data
             return newProducts;
         }
 
-        public void EditProductDetails(int id, string pName, int pPrice, string pBrand, int pQuantity)
+        public void EditProductDetails(int id, string pName, int pPrice, string pBrand, int pQuantity, int MinProductQuantity)
         {
             try
             {
@@ -99,7 +99,7 @@ namespace MediaBazaar.Data
                 // int quantity = product.ProductQuantity;
                 //int minimumQuantity = product.MinProductQuantity;
 
-                string sql = "UPDATE dbi434661.stock SET ProductName = @name, ProductPrice=@price,Brand=@brand,Quantity=@quantity WHERE ProductID = @id";
+                string sql = "UPDATE stock SET ProductName = @name, ProductPrice=@price,Brand=@brand,Quantity=@quantity, MinimumQuantity =@minimumQuantity WHERE ProductID = @id";
 
                 dbHelper.Conn.Open();
 
@@ -109,7 +109,7 @@ namespace MediaBazaar.Data
                 dbHelper.Cmd.Parameters.Add("@price", MySqlDbType.Int32).Value = pPrice;
                 dbHelper.Cmd.Parameters.Add("@brand", MySqlDbType.String).Value = pBrand;
                 dbHelper.Cmd.Parameters.Add("@quantity", MySqlDbType.Int32).Value = pQuantity;
-                //dbHelper.Cmd.Parameters.Add("@minimumQuantity", MySqlDbType.Int32).Value = minimumQuantity;
+                dbHelper.Cmd.Parameters.Add("@minimumQuantity", MySqlDbType.Int32).Value = MinProductQuantity;
                 dbHelper.Cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -128,7 +128,7 @@ namespace MediaBazaar.Data
             try
             {
 
-                string sql = "delete from dbi434661.stock where ProductID=@id";
+                string sql = "delete from stock where ProductID=@id";
 
                 dbHelper.Conn.Open();
                 dbHelper.Cmd = new MySqlCommand(sql, dbHelper.Conn);

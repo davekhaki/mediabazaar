@@ -14,7 +14,7 @@ Instruction Before running it:
 
 **Important: This runs on a local database(XAMPP)**
 
-1. Get the script from the folder **DatabaseScripts **
+1. Get the script from the folder **DatabaseScripts**
 2. Download **finalScript.sql**
 3. Add import to your MYSQL administration tool
-4.Run applciaiton
+4. Run applciaiton

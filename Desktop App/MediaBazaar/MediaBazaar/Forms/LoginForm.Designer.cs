@@ -55,11 +55,11 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.White;
-            this.loginBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.loginBtn.Location = new System.Drawing.Point(267, 291);
+            this.loginBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.loginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loginBtn.Location = new System.Drawing.Point(223, 283);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(133, 54);
+            this.loginBtn.Size = new System.Drawing.Size(180, 74);
             this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -68,6 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(118, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
@@ -77,6 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(118, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
@@ -86,6 +88,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBox1.Location = new System.Drawing.Point(434, 194);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(120, 21);
@@ -108,7 +111,7 @@
             this.Controls.Add(this.usernameTextBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

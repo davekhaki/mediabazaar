@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using MediaBazaar.Entities;
 using MediaBazaar.Logic;
@@ -10,8 +11,13 @@ namespace MediaBazaarOO.Logic
 {
     public class PersonManager
     {
-        private readonly List<Person> persons;
+        private List<Person> persons;
         public PersonManager()
+        {
+            persons = PersonData.GetAllPersons();
+        }
+
+        public void RefreshEmployees()
         {
             persons = PersonData.GetAllPersons();
         }
@@ -39,7 +45,8 @@ namespace MediaBazaarOO.Logic
 
             var p = new Person(firstname, lastname, age, gender, department, hireDate, salary, address, role);
 
-            string username = firstname + "1";
+            var username = firstname + persons[persons.Count - 1].Id;
+            
             string password = PasswordManager.GeneratePassword();
             var hash = PasswordManager.HashPassword(password);
 
@@ -156,6 +163,16 @@ namespace MediaBazaarOO.Logic
         public List<bool> GetPreference(int id)
         {
             return PersonData.GetPreference(id);
+        }
+
+        public void EditEmployeeInfo(int id, string firstName, string lastName, DateTime dob, string gender, string dName, DateTime hireDate, int salary, string address, string role)
+        {
+            PersonData.EditPersonDetails(id, firstName, lastName, dob, gender, dName, hireDate, salary, address, role);
+        }
+
+        public DateTime GetDob(int id)
+        {
+            return PersonData.GetDob(id);
         }
     }
 }

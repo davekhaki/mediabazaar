@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,12 @@
     <Compile Include="Forms\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditEmployeeForm.Designer.cs">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +103,12 @@
     <Compile Include="Forms\NewUserForm.Designer.cs">
       <DependentUpon>NewUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatisticsForm.Designer.cs">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\AutoScheduleAlgorithm.cs" />
     <Compile Include="Logic\DepartmentManager.cs" />
     <Compile Include="Logic\Interfaces\ScheduleComparer.cs" />
@@ -104,11 +117,15 @@
     <Compile Include="Logic\PersonManager.cs" />
     <Compile Include="Logic\RequestManager.cs" />
     <Compile Include="Logic\ScheduleManager.cs" />
+    <Compile Include="Logic\StatisticsManager.cs" />
     <Compile Include="Logic\StockManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditEmployeeForm.resx">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
@@ -121,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewUserForm.resx">
       <DependentUpon>NewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatisticsForm.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -38,7 +38,7 @@ namespace MediaBazaarOO.Forms
                             this.Hide();
                             break;
                         case "Admin":
-                            var formAdmin = new AdminForm();
+                            var formAdmin = new AdminForm(usernameTextBox.Text);
                             formAdmin.Show();
                             this.Hide();
                             break;

@@ -25,6 +25,10 @@ namespace MediaBazaarOO.Forms
 
             dataGridView3.DataSource = stockManager.GetAllStock();
             dataGridView2.DataSource = stockManager.GetUnderStocked();
+
+            dataGridView3.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView2.DefaultCellStyle.ForeColor = Color.Black;
+            scheduleOverviewDataGrid.DefaultCellStyle.ForeColor = Color.Black;
         }
 
 
@@ -34,6 +38,7 @@ namespace MediaBazaarOO.Forms
             var checkedButton = manualAssignGroupBox.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             if (checkedButton != null)
                 scheduleManager.AddSchedule(scheduleDatePicker.Value, checkedButton.Text, personManager.GetIdFromFirstAndLastname(firstNameTextBox.Text, lastNameTextBox.Text));
+            MessageBox.Show("Schedule Assigned");
         }
 
         private void autoAssignBtn_Click(object sender, EventArgs e)

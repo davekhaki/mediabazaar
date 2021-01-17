@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -142,14 +142,14 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.Location = new System.Drawing.Point(9, 274);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
@@ -160,14 +160,14 @@
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView3.Location = new System.Drawing.Point(6, 21);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
@@ -362,6 +362,7 @@
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(378, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(642, 485);
@@ -371,12 +372,14 @@
             // 
             // autoAssignBtn
             // 
-            this.autoAssignBtn.Location = new System.Drawing.Point(224, 356);
+            this.autoAssignBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.autoAssignBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoAssignBtn.Location = new System.Drawing.Point(225, 328);
             this.autoAssignBtn.Name = "autoAssignBtn";
             this.autoAssignBtn.Size = new System.Drawing.Size(178, 94);
             this.autoAssignBtn.TabIndex = 4;
             this.autoAssignBtn.Text = "Assign Shifts";
-            this.autoAssignBtn.UseVisualStyleBackColor = true;
+            this.autoAssignBtn.UseVisualStyleBackColor = false;
             this.autoAssignBtn.Click += new System.EventHandler(this.autoAssignBtn_Click);
             // 
             // dateTimePicker2
@@ -424,6 +427,7 @@
             this.manualAssignGroupBox.Controls.Add(this.label3);
             this.manualAssignGroupBox.Controls.Add(this.lastNameTextBox);
             this.manualAssignGroupBox.Controls.Add(this.firstNameTextBox);
+            this.manualAssignGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.manualAssignGroupBox.Location = new System.Drawing.Point(6, 6);
             this.manualAssignGroupBox.Name = "manualAssignGroupBox";
             this.manualAssignGroupBox.Size = new System.Drawing.Size(366, 485);
@@ -433,12 +437,14 @@
             // 
             // assignBtn
             // 
+            this.assignBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.assignBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.assignBtn.Location = new System.Drawing.Point(86, 386);
             this.assignBtn.Name = "assignBtn";
             this.assignBtn.Size = new System.Drawing.Size(174, 64);
             this.assignBtn.TabIndex = 5;
             this.assignBtn.Text = "Assign Shift";
-            this.assignBtn.UseVisualStyleBackColor = true;
+            this.assignBtn.UseVisualStyleBackColor = false;
             this.assignBtn.Click += new System.EventHandler(this.assignBtn_Click);
             // 
             // label6
@@ -541,6 +547,7 @@
             this.tabPage3.Controls.Add(this.idCheckBox);
             this.tabPage3.Controls.Add(this.scheduleOverviewCalendar);
             this.tabPage3.Controls.Add(this.scheduleOverviewDataGrid);
+            this.tabPage3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1031, 504);

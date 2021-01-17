@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.disableAllBtn = new System.Windows.Forms.Button();
             this.enableAllBtn = new System.Windows.Forms.Button();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
@@ -46,9 +48,11 @@
             this.idCheckBox = new System.Windows.Forms.CheckBox();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.dobPicker = new System.Windows.Forms.DateTimePicker();
             this.cmbRole = new System.Windows.Forms.ComboBox();
             this.dtpHireDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.cmbDepartmentName = new System.Windows.Forms.ComboBox();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -60,7 +64,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,18 +81,19 @@
             this.tbDptName = new System.Windows.Forms.TextBox();
             this.btnAddDepartment = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.stockDataGrid = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.filePathTextBox = new System.Windows.Forms.TextBox();
+            this.chooseLocationBtn = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.fileNameTextBox = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.signOutBtn = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.dobPicker = new System.Windows.Forms.DateTimePicker();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
@@ -98,6 +102,7 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departmentsDataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGrid)).BeginInit();
             this.tabPage6.SuspendLayout();
@@ -136,6 +141,7 @@
             this.tabPage1.Controls.Add(this.checkBox2);
             this.tabPage1.Controls.Add(this.idCheckBox);
             this.tabPage1.Controls.Add(this.employeesDataGrid);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -143,10 +149,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "View Employees";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(834, 428);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(100, 21);
+            this.checkBox1.TabIndex = 52;
+            this.checkBox1.Text = "Preference";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // disableAllBtn
             // 
             this.disableAllBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.disableAllBtn.ForeColor = System.Drawing.Color.Black;
+            this.disableAllBtn.ForeColor = System.Drawing.Color.White;
             this.disableAllBtn.Location = new System.Drawing.Point(810, 544);
             this.disableAllBtn.Name = "disableAllBtn";
             this.disableAllBtn.Size = new System.Drawing.Size(136, 33);
@@ -312,6 +331,14 @@
             // employeesDataGrid
             // 
             this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employeesDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.employeesDataGrid.Location = new System.Drawing.Point(6, 6);
             this.employeesDataGrid.Name = "employeesDataGrid";
             this.employeesDataGrid.RowHeadersWidth = 51;
@@ -327,7 +354,6 @@
             this.tabPage2.Controls.Add(this.dobPicker);
             this.tabPage2.Controls.Add(this.cmbRole);
             this.tabPage2.Controls.Add(this.dtpHireDate);
-            this.tabPage2.Controls.Add(this.dtpEndDate);
             this.tabPage2.Controls.Add(this.cmbDepartmentName);
             this.tabPage2.Controls.Add(this.cmbGender);
             this.tabPage2.Controls.Add(this.btnEdit);
@@ -339,19 +365,42 @@
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1018, 652);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Add Employee";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(329, 148);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 17);
+            this.label11.TabIndex = 52;
+            this.label11.Text = "Email";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(332, 186);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(200, 22);
+            this.emailTextBox.TabIndex = 51;
+            // 
+            // dobPicker
+            // 
+            this.dobPicker.Location = new System.Drawing.Point(34, 299);
+            this.dobPicker.Name = "dobPicker";
+            this.dobPicker.Size = new System.Drawing.Size(200, 22);
+            this.dobPicker.TabIndex = 50;
             // 
             // cmbRole
             // 
@@ -371,13 +420,6 @@
             this.dtpHireDate.Name = "dtpHireDate";
             this.dtpHireDate.Size = new System.Drawing.Size(200, 22);
             this.dtpHireDate.TabIndex = 48;
-            // 
-            // dtpEndDate
-            // 
-            this.dtpEndDate.Location = new System.Drawing.Point(332, 184);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(200, 22);
-            this.dtpEndDate.TabIndex = 47;
             // 
             // cmbDepartmentName
             // 
@@ -407,19 +449,20 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(701, 335);
+            this.btnEdit.Location = new System.Drawing.Point(681, 342);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(156, 40);
+            this.btnEdit.Size = new System.Drawing.Size(212, 90);
             this.btnEdit.TabIndex = 44;
             this.btnEdit.Text = "Edit Details";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAdd.Location = new System.Drawing.Point(701, 231);
+            this.btnAdd.Location = new System.Drawing.Point(681, 169);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(156, 40);
+            this.btnAdd.Size = new System.Drawing.Size(212, 90);
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Add New Employee";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -434,7 +477,7 @@
             // 
             // tbAddress
             // 
-            this.tbAddress.Location = new System.Drawing.Point(336, 410);
+            this.tbAddress.Location = new System.Drawing.Point(332, 410);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(196, 22);
             this.tbAddress.TabIndex = 41;
@@ -479,15 +522,6 @@
             this.label8.Size = new System.Drawing.Size(48, 17);
             this.label8.TabIndex = 35;
             this.label8.Text = "Salary";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(329, 136);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 17);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "End Date";
             // 
             // label6
             // 
@@ -557,6 +591,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.departmentsDataGrid);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(500, 16);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(498, 619);
@@ -567,14 +602,14 @@
             // departmentsDataGrid
             // 
             this.departmentsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.departmentsDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.departmentsDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.departmentsDataGrid.Location = new System.Drawing.Point(20, 33);
             this.departmentsDataGrid.Name = "departmentsDataGrid";
             this.departmentsDataGrid.RowHeadersWidth = 51;
@@ -590,6 +625,7 @@
             this.groupBox1.Controls.Add(this.btnEditDepartment);
             this.groupBox1.Controls.Add(this.tbDptName);
             this.groupBox1.Controls.Add(this.btnAddDepartment);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(19, 16);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(475, 619);
@@ -653,12 +689,25 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.Teal;
+            this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1018, 652);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Statistics";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(364, 258);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(253, 138);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Open Statistics Menu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage5
             // 
@@ -693,6 +742,10 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Teal;
+            this.groupBox3.Controls.Add(this.filePathTextBox);
+            this.groupBox3.Controls.Add(this.chooseLocationBtn);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.fileNameTextBox);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.radioButton1);
             this.groupBox3.Controls.Add(this.radioButton3);
@@ -703,6 +756,41 @@
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Download PDF";
+            // 
+            // filePathTextBox
+            // 
+            this.filePathTextBox.Location = new System.Drawing.Point(773, 316);
+            this.filePathTextBox.Name = "filePathTextBox";
+            this.filePathTextBox.ReadOnly = true;
+            this.filePathTextBox.Size = new System.Drawing.Size(100, 22);
+            this.filePathTextBox.TabIndex = 7;
+            // 
+            // chooseLocationBtn
+            // 
+            this.chooseLocationBtn.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.chooseLocationBtn.Location = new System.Drawing.Point(773, 220);
+            this.chooseLocationBtn.Name = "chooseLocationBtn";
+            this.chooseLocationBtn.Size = new System.Drawing.Size(158, 65);
+            this.chooseLocationBtn.TabIndex = 6;
+            this.chooseLocationBtn.Text = "Choose Save Location";
+            this.chooseLocationBtn.UseVisualStyleBackColor = false;
+            this.chooseLocationBtn.Click += new System.EventHandler(this.chooseLocationBtn_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(770, 34);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 17);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "File Name:";
+            // 
+            // fileNameTextBox
+            // 
+            this.fileNameTextBox.Location = new System.Drawing.Point(770, 74);
+            this.fileNameTextBox.Name = "fileNameTextBox";
+            this.fileNameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.fileNameTextBox.TabIndex = 4;
             // 
             // button4
             // 
@@ -750,42 +838,6 @@
             this.signOutBtn.UseVisualStyleBackColor = false;
             this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(834, 428);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(100, 21);
-            this.checkBox1.TabIndex = 52;
-            this.checkBox1.Text = "Preference";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // dobPicker
-            // 
-            this.dobPicker.Location = new System.Drawing.Point(34, 299);
-            this.dobPicker.Name = "dobPicker";
-            this.dobPicker.Size = new System.Drawing.Size(200, 22);
-            this.dobPicker.TabIndex = 50;
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.Location = new System.Drawing.Point(701, 84);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(200, 22);
-            this.emailTextBox.TabIndex = 51;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(698, 42);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 17);
-            this.label11.TabIndex = 52;
-            this.label11.Text = "Email";
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -806,6 +858,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.departmentsDataGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGrid)).EndInit();
             this.tabPage6.ResumeLayout(false);
@@ -871,12 +924,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpEndDate;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button signOutBtn;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dobPicker;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox fileNameTextBox;
+        private System.Windows.Forms.TextBox filePathTextBox;
+        private System.Windows.Forms.Button chooseLocationBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

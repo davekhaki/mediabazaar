@@ -119,19 +119,20 @@ namespace MediaBazaarOO.Data
             }
 
         }
-        public static void EditPersonDetails(string firstName, string lastName, int age, string gender, string dName, DateTime hireDate, int salary, string address, string role)
+        public static void EditPersonDetails(int id, string firstName, string lastName, DateTime dob, string gender, string dName, DateTime hireDate, int salary, string address, string role)
         {
             try
             {
                 MySqlConnection conn = new MySqlConnection(Config.ConString);
-                string sql = "UPDATE `employees` SET `FirstName` = @firstName, `LastName` = @lastName, `Age` = @age, `Gender` = @gender, `DepartmentName` = @dName, `HireDate` = @hireDate, `Salary` = @salary, `Address` = @address, `Role` = @role  WHERE id = @id";
+                string sql = "UPDATE `employee` SET `FirstName` = @firstName, `LastName` = @lastName, `birthDate` = @dob, `Gender` = @gender, `DepartmentName` = @dName, `HireDate` = @hireDate, `Salary` = @salary, `Adress` = @address, `Role` = @role  WHERE id = @id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
 
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@FirstName", firstName);
                 cmd.Parameters.AddWithValue("@LastName", lastName);
-                cmd.Parameters.AddWithValue("@Age", age);
+                cmd.Parameters.AddWithValue("@dob", dob);
                 cmd.Parameters.AddWithValue("@Gender", gender);
-                cmd.Parameters.AddWithValue("@DepartmentName", dName);
+                cmd.Parameters.AddWithValue("@dName", dName);
                 cmd.Parameters.AddWithValue("@hireDate", hireDate);
                 //cmd.Parameters.AddWithValue("@EndDate", person.EndDate);
                 cmd.Parameters.AddWithValue("@Salary", salary);
@@ -428,6 +429,35 @@ namespace MediaBazaarOO.Data
                 conn.Close();
             }
 
+        }
+
+        public static DateTime GetDob(int id)
+        {
+            var dob = DateTime.Today;
+            var sql = "SELECT birthDate FROM employee WHERE ID = @id";
+            var conn = new MySqlConnection(Config.ConString);
+            var query = new MySqlCommand(sql, conn);
+            query.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+            try
+            {
+                conn.Open();
+
+                var reader = query.ExecuteReader();
+                while (reader.Read())
+                {
+                    dob = reader.GetDateTime(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+
+            }
+            return dob;
         }
     }
 }

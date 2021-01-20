@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2021 at 11:54 PM
+-- Generation Time: Jan 20, 2021 at 10:22 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `artichoke`
+-- Database: `finalscript`
 --
 
 -- --------------------------------------------------------
@@ -73,20 +73,13 @@ CREATE TABLE `employee` (
 INSERT INTO `employee` (`ID`, `FirstName`, `LastName`, `birthDate`, `Gender`, `DepartmentName`, `HireDate`, `EndDate`, `Salary`, `Adress`, `Role`, `MorningPreference`, `AfternoonPreference`, `EveningPreference`) VALUES
 (1, 'MARY', 'JOSEPH', '2018-06-13', 'Male', 'Customer Care', '2020-09-30', NULL, 5200, 'XSE', 'Admin', 1, 1, 0),
 (2, 'DAVID', 'JOSEPH', '2018-06-13', 'Male', 'Logistics', '2020-08-10', NULL, 5200, 'XDE', 'Employee', 0, 0, 0),
-(3, 'Musee', 'Paul', '2000-03-21', 'Male', '', '2020-03-21', NULL, 7000, 'DeeUsel', 'Employee', 1, 1, 1),
-(5, 'DAVID', 'CATE', '2018-06-13', 'Male', 'Engineering', '2020-08-10', NULL, 5000, 'XTR', 'Employee', 0, 0, 0),
 (7, 'DAV', 'CATE', '2018-06-13', 'Male', 'Customer Care', '2020-08-10', NULL, 5000, 'XTR', 'Employee', 0, 0, 0),
-(8, 'DAVE', 'CATER', '2018-06-13', 'Male', 'Customer Care', '2020-08-10', NULL, 5000, 'XTRR', 'Employee', 0, 0, 0),
-(9, 'DAVE', 'CATER', '2018-06-13', 'Male', 'Customer Care', '2020-08-10', NULL, 5000, 'XTRR', 'Employee', 0, 0, 0),
 (10, 'DAVEWW', 'cater', '2018-06-13', ' Male', 'Logistics', '2020-08-10', NULL, 5000, 'XTRRWE', 'Manager', 0, 0, 0),
 (11, 'NewLogintest', 'ggwp', '2018-06-13', 'Male', 'Marketing', '2020-10-02', NULL, 2000, 'Home', 'Admin', 0, 0, 0),
 (12, 'LoginCredtest', 'IDC', '2018-06-13', 'Male', 'Logistics', '2020-10-02', NULL, 2, 'home', 'Admin', 0, 0, 0),
 (13, 'Test', 'Test', '2018-06-13', 'Test', 'Logistics', '2020-10-05', NULL, 20, 'Test', 'Employee', 0, 0, 0),
-(14, 'QWERTY', 'OIUY', '2018-06-13', 'MALE', '', '2020-09-15', NULL, 2555, 'CVB', 'Employee', 0, 0, 0),
 (18, 'Lola', 'Perez', '2017-06-01', 'Female', 'Marketing', '2020-10-03', NULL, 9000, 'Capucijn 98', 'Employee', 1, 1, 0),
 (19, 'Martin', 'Lopez', '2018-06-13', 'Male', 'Marketing', '2020-10-03', NULL, 3000, 'Concordia 45', 'Employee', 0, 0, 0),
-(50, 'Dylan', 'Dennis', '2018-06-13', 'Male', '', '2020-09-27', NULL, 5000, 'WED', 'Employee', 0, 0, 0),
-(56, 'DSE', 'WERT', '2018-06-13', 'FEMALE', '', '2020-09-08', NULL, 234, 'RTE', 'Employee', 0, 0, 0),
 (69, 'John', 'Kennedy', '2018-06-13', 'Male', 'Marketing', '2020-10-08', NULL, 60000, 'Washington Av 98', 'Admin', 0, 0, 0),
 (200, 'john', 'greg', '2018-06-13', 'Male', 'Marketing', '2020-10-05', NULL, 200, 'Eindhoven', 'Manager', 0, 0, 0),
 (1962, 'Sebastian', 'Grandez', '2018-06-13', 'Male', 'Marketing', '2020-10-03', NULL, 10000, 'Rosee 98', 'Admin', 0, 0, 0),
@@ -103,21 +96,9 @@ INSERT INTO `employee` (`ID`, `FirstName`, `LastName`, `birthDate`, `Gender`, `D
 (1973, 'pleasework', 'please', '2000-01-23', 'Male', 'Logistics', '2020-10-08', NULL, 1203, 'i beg....', 'Admin', 0, 0, 0),
 (1974, 'DAVID', 'CATE', '2018-06-13', 'Male', 'Engineering', '2020-08-10', NULL, 5000, 'XTR', 'Employee', 0, 0, 0),
 (1975, 'CATE', 'WARU', '2018-06-13', 'Female', 'Finance', '2020-09-30', NULL, 23444, 'FGR', 'Employee', 0, 0, 0),
-(1976, 'DSE', 'WERT', '2018-06-13', 'Female', '', '2020-09-08', NULL, 234, 'RTE', 'Employee', 0, 0, 0),
 (1977, 'pleasework', 'nice.', '2000-01-23', 'Male', 'Logistics', '2020-10-08', NULL, 1203, 'i beg....', 'Admin', 0, 0, 0),
 (1978, 'yeahe', 'yeahewq', '2018-06-13', 'Female', 'Logistics', '2020-10-09', NULL, 2, 'for real', 'Employee', 0, 0, 0),
-(1979, 'Demo', 'Jack', '2018-06-13', 'Male', 'Logistics', '2020-10-09', NULL, 200, 'Home', 'Employee', 0, 0, 0),
-(1980, 'dobtest', 'dobtest', '1990-07-14', 'Female', '2021-01-17 00:00:00 ', '2021-01-03', NULL, 1414, 'dwadwa', 'Manager', 0, 0, 0),
-(1981, 'yes', 'dwadwa', '2021-01-17', 'Female', '2021-01-20 00:00:00 ', '2021-01-01', NULL, 123, 'awd', 'Admin', 0, 0, 0),
-(1984, 'gggggg', 'ttttttt', '2021-01-05', 'Male', 'Logistics', '2021-01-12', NULL, 123, 'lllll', 'Manager', 0, 0, 0),
-(1990, 'adb', '123', '2021-01-17', 'Male', '2021-02-01 00:00:00 ', '2021-01-05', NULL, 32, 'awd', 'Employee', 0, 0, 0),
-(1993, 'hire', 'date', '2021-01-17', 'Female', 'Logistics', '2021-01-17', NULL, 12, 'ddddd', 'Manager', 0, 0, 0),
-(1994, 'new', 'list', '2021-01-17', 'Female', 'Marketing', '2021-01-17', NULL, 1122, 'ddda', 'Manager', 0, 0, 0),
-(1995, 'new2', 'listed', '2021-01-17', 'Female', 'Engineering', '2021-01-17', NULL, 123, 'dddda', 'Manager', 0, 0, 0),
-(1996, 'last', 'new', '2021-01-17', 'Female', 'Engineering', '2021-01-17', NULL, 123213, 'dawd', 'Manager', 0, 0, 0),
-(1997, 'Ronald', 'dddd', '2021-01-17', 'Male', 'Logistics', '2021-01-17', NULL, 234, 'wad', 'Employee', 0, 0, 0),
-(1998, 'Ronald', 'dwjwad', '2021-01-17', 'Male', 'Marketing', '2021-01-17', NULL, 123, 'Home', 'Manager', 0, 0, 0),
-(1999, 'DAVID', 'WDWADWADWADWa', '2021-01-17', 'Male', 'Marketing', '2021-01-17', NULL, 332123, 'dddddd', 'Manager', 0, 0, 0);
+(1979, 'Demo', 'Jack', '2018-06-13', 'Male', 'Logistics', '2020-10-09', NULL, 200, 'Home', 'Employee', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -151,20 +132,10 @@ INSERT INTO `login` (`empId`, `username`, `password`, `newUser`) VALUES
 (1973, 'pleasework1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
 (1974, 'DAVID1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
 (1975, 'CATE1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
-(1976, 'DSE1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
 (1977, 'pleasework1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
 (1978, 'yeahe1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
 (1979, 'Demo1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
-(1963, 'cate123', '0DAAFEE45FC7A606186954810D8EE59D', 0),
-(3, 'musee1', '0DAAFEE45FC7A606186954810D8EE59D', 0),
-(1990, 'adb1', '0DAAFEE45FC7A606186954810D8EE59D', 1),
-(1993, 'hire1', '1B3231655CEBB7A1F783EDDF27D254CA', 0),
-(1994, 'new1', '3EA638E31FF28249A6F9137912356BBF', 1),
-(1995, 'new21', 'EC705A7CDE86864F3E0DEEC4120C9E8C', 1),
-(1996, 'last1', 'E52AE1A9FD045478E4D72ADD5A39653E', 1),
-(1997, 'RonaldNNJUmwkX', '2B2BCC0E327C0167631D35AC04A5E3BD', 1),
-(1998, 'Ronald1997', '41302D7842CA0F7817BA50AE408603AA', 1),
-(1999, 'DAVID1998', '65F03AFE78B9BE54AEEC5FAD8B635007', 1);
+(1963, 'cate123', '0DAAFEE45FC7A606186954810D8EE59D', 0);
 
 -- --------------------------------------------------------
 
